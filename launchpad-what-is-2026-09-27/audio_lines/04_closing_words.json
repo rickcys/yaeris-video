@@ -1,0 +1,52 @@
+[
+  {
+    "word": "That's",
+    "start": 0.0,
+    "end": 0.32
+  },
+  {
+    "word": "Launchpad,",
+    "start": 0.32,
+    "end": 0.82
+  },
+  {
+    "word": "deploy",
+    "start": 1.24,
+    "end": 1.5
+  },
+  {
+    "word": "infrastructure",
+    "start": 1.5,
+    "end": 2.08
+  },
+  {
+    "word": "without",
+    "start": 2.08,
+    "end": 2.62
+  },
+  {
+    "word": "owning",
+    "start": 2.62,
+    "end": 3.0
+  },
+  {
+    "word": "infrastructure,",
+    "start": 3.0,
+    "end": 3.66
+  },
+  {
+    "word": "built",
+    "start": 4.12,
+    "end": 4.4
+  },
+  {
+    "word": "by",
+    "start": 4.4,
+    "end": 4.68
+  },
+  {
+    "word": "Yaris.",
+    "start": 4.68,
+    "end": 5.02
+  }
+]

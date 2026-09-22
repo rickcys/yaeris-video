@@ -1,0 +1,62 @@
+[
+  {
+    "word": "That's",
+    "start": 0.0,
+    "end": 0.34
+  },
+  {
+    "word": "D",
+    "start": 0.34,
+    "end": 0.5
+  },
+  {
+    "word": "-Review,",
+    "start": 0.5,
+    "end": 0.78
+  },
+  {
+    "word": "free",
+    "start": 1.26,
+    "end": 1.5
+  },
+  {
+    "word": "visibility",
+    "start": 1.5,
+    "end": 1.94
+  },
+  {
+    "word": "for",
+    "start": 1.94,
+    "end": 2.28
+  },
+  {
+    "word": "the",
+    "start": 2.28,
+    "end": 2.4
+  },
+  {
+    "word": "AI",
+    "start": 2.4,
+    "end": 2.74
+  },
+  {
+    "word": "tool",
+    "start": 2.74,
+    "end": 3.0
+  },
+  {
+    "word": "you",
+    "start": 3.0,
+    "end": 3.28
+  },
+  {
+    "word": "actually",
+    "start": 3.28,
+    "end": 3.66
+  },
+  {
+    "word": "built.",
+    "start": 3.66,
+    "end": 3.94
+  }
+]

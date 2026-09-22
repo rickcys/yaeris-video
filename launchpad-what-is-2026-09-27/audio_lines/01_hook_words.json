@@ -1,0 +1,62 @@
+[
+  {
+    "word": "Deploying",
+    "start": 0.0,
+    "end": 0.56
+  },
+  {
+    "word": "a",
+    "start": 0.56,
+    "end": 0.68
+  },
+  {
+    "word": "headless",
+    "start": 0.68,
+    "end": 1.08
+  },
+  {
+    "word": "CMS",
+    "start": 1.08,
+    "end": 1.44
+  },
+  {
+    "word": "shouldn't",
+    "start": 1.44,
+    "end": 2.1
+  },
+  {
+    "word": "mean",
+    "start": 2.1,
+    "end": 2.2
+  },
+  {
+    "word": "you're",
+    "start": 2.2,
+    "end": 2.42
+  },
+  {
+    "word": "suddenly",
+    "start": 2.42,
+    "end": 2.8
+  },
+  {
+    "word": "the",
+    "start": 2.8,
+    "end": 3.2
+  },
+  {
+    "word": "one",
+    "start": 3.2,
+    "end": 3.44
+  },
+  {
+    "word": "managing",
+    "start": 3.44,
+    "end": 3.88
+  },
+  {
+    "word": "servers.",
+    "start": 3.88,
+    "end": 4.32
+  }
+]

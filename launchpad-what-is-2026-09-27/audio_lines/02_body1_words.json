@@ -1,0 +1,162 @@
+[
+  {
+    "word": "Launchpad",
+    "start": 0.0,
+    "end": 0.54
+  },
+  {
+    "word": "is",
+    "start": 0.54,
+    "end": 0.74
+  },
+  {
+    "word": "usage",
+    "start": 0.74,
+    "end": 1.08
+  },
+  {
+    "word": "-based",
+    "start": 1.08,
+    "end": 1.4
+  },
+  {
+    "word": "hosting",
+    "start": 1.4,
+    "end": 1.84
+  },
+  {
+    "word": "for",
+    "start": 1.84,
+    "end": 2.12
+  },
+  {
+    "word": "Strapi",
+    "start": 2.12,
+    "end": 2.6
+  },
+  {
+    "word": "and",
+    "start": 2.6,
+    "end": 2.84
+  },
+  {
+    "word": "other",
+    "start": 2.84,
+    "end": 3.1
+  },
+  {
+    "word": "headless",
+    "start": 3.1,
+    "end": 3.58
+  },
+  {
+    "word": "CMS",
+    "start": 3.58,
+    "end": 4.0
+  },
+  {
+    "word": "apps.",
+    "start": 4.0,
+    "end": 4.52
+  },
+  {
+    "word": "Push",
+    "start": 5.26,
+    "end": 5.34
+  },
+  {
+    "word": "to",
+    "start": 5.34,
+    "end": 5.5
+  },
+  {
+    "word": "GitHub,",
+    "start": 5.5,
+    "end": 5.74
+  },
+  {
+    "word": "and",
+    "start": 6.3,
+    "end": 6.42
+  },
+  {
+    "word": "it",
+    "start": 6.42,
+    "end": 6.54
+  },
+  {
+    "word": "builds,",
+    "start": 6.54,
+    "end": 6.9
+  },
+  {
+    "word": "deploys,",
+    "start": 7.1,
+    "end": 7.7
+  },
+  {
+    "word": "and",
+    "start": 7.78,
+    "end": 7.84
+  },
+  {
+    "word": "routes",
+    "start": 7.84,
+    "end": 8.14
+  },
+  {
+    "word": "your",
+    "start": 8.14,
+    "end": 8.3
+  },
+  {
+    "word": "app",
+    "start": 8.3,
+    "end": 8.52
+  },
+  {
+    "word": "automatically,",
+    "start": 8.52,
+    "end": 9.18
+  },
+  {
+    "word": "the",
+    "start": 9.72,
+    "end": 9.8
+  },
+  {
+    "word": "same",
+    "start": 9.8,
+    "end": 10.04
+  },
+  {
+    "word": "way",
+    "start": 10.04,
+    "end": 10.26
+  },
+  {
+    "word": "Versal",
+    "start": 10.26,
+    "end": 10.66
+  },
+  {
+    "word": "does",
+    "start": 10.66,
+    "end": 10.88
+  },
+  {
+    "word": "for",
+    "start": 10.88,
+    "end": 11.12
+  },
+  {
+    "word": "a",
+    "start": 11.12,
+    "end": 11.24
+  },
+  {
+    "word": "frontend.",
+    "start": 11.24,
+    "end": 11.7
+  }
+]

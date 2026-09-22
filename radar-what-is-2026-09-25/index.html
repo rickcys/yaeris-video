@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #1A1A2E; }
+      :root {
+        --bg: #1A1A2E; --bg-deep: #141220; --card: #241F3D;
+        --violet: #6B2FA0; --violet-deep: #4A2070; --cyan: #29ABE2; --green: #25D366; --danger: #E5484D;
+        --ink: #F2F1F7; --ink-soft: #B8B5C9; --ink-faint: #847F9C;
+        --disp: "Outfit", -apple-system, "Segoe UI", sans-serif;
+        --sans: "Inter", -apple-system, "Segoe UI", sans-serif;
+        --mono: "Space Mono", "SFMono-Regular", Consolas, monospace;
+      }
+      #root { width: 100%; height: 100%; position: relative; font-family: var(--sans); color: var(--ink); background: var(--bg); }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 88px; text-align: center; }
+      .eyebrow { font-family: var(--disp); font-weight: 600; font-size: 32px; letter-spacing: 0.08em; color: var(--cyan); text-transform: uppercase; margin-bottom: 26px; }
+      .headline { font-family: var(--disp); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; font-size: 68px; color: var(--ink); }
+      .headline .accent { color: var(--cyan); }
+      .headline .accent2 { color: var(--green); }
+      .sub { margin-top: 36px; font-size: 34px; font-weight: 400; line-height: 1.4; color: var(--ink-soft); max-width: 860px; }
+      .hook-headline { font-size: 78px; font-weight: 800; line-height: 1.18; letter-spacing: -0.02em; }
+      .hook-headline .accent { color: var(--cyan); } .hook-headline .accent2 { color: var(--green); }
+      .chip-row { display: flex; gap: 20px; margin-top: 48px; flex-wrap: wrap; justify-content: center; }
+      .stat-chip { display: flex; flex-direction: column; align-items: center; gap: 8px; background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 26px 30px; min-width: 200px; }
+      .stat-chip .sc-val { font-family: var(--disp); font-weight: 800; font-size: 36px; color: var(--cyan); }
+      .icon-row { display: flex; gap: 28px; margin-top: 52px; flex-wrap: wrap; justify-content: center; }
+      .icon-pill { display: flex; align-items: center; gap: 12px; background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 100px; padding: 16px 28px; font-family: var(--sans); font-size: 30px; color: var(--ink-soft); }
+      .caption-pill { position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%); background: rgba(10,9,16,0.86); color: #fff; font-family: var(--sans); font-weight: 500; font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%; text-align: center; line-height: 1.3; }
+      .subscribe-pop { position: absolute; right: 6%; bottom: 20%; display: flex; align-items: center; gap: 14px; background: linear-gradient(135deg, var(--violet-deep), var(--violet)); border-radius: 100px; padding: 16px 30px 16px 18px; box-shadow: 0 16px 32px -12px rgba(0,0,0,.5); }
+      .subscribe-pop .bell { width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,.18); display: flex; align-items: center; justify-content: center; font-size: 28px; flex: none; }
+      .subscribe-pop .sp-text { font-family: var(--disp); font-weight: 700; font-size: 30px; color: #fff; white-space: nowrap; }
+      .endcard { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;
+        background: radial-gradient(38% 46% at 22% 24%, rgba(107,47,160,.85), transparent 70%), radial-gradient(42% 50% at 78% 30%, rgba(41,171,226,.65), transparent 70%), radial-gradient(46% 54% at 50% 88%, rgba(37,211,102,.5), transparent 70%), var(--violet-deep); }
+      .endcard .ec-brand { font-family: var(--disp); font-weight: 800; font-size: 60px; color: #fff; letter-spacing: -0.01em; }
+      .endcard .ec-tag { font-family: var(--sans); font-size: 30px; color: rgba(255,255,255,.85); text-align: center; padding: 0 12%; }
+      .endcard .ec-sub-cta { display: flex; align-items: center; gap: 16px; margin-top: 18px; }
+      .endcard .ec-bell { width: 68px; height: 68px; border-radius: 50%; background: rgba(255,255,255,.16); display: flex; align-items: center; justify-content: center; font-size: 36px; flex: none; }
+      .endcard .ec-cta { font-family: var(--mono); font-size: 30px; color: #fff; background: rgba(255,255,255,.16); padding: 12px 30px; border-radius: 100px; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="36.539" data-width="1080" data-height="1920">
+      <audio id="audio-hook" src="audio_lines/01_hook.wav" data-start="0.0" data-duration="6.72" data-track-index="10" data-volume="1"></audio>
+      <audio id="audio-b1" src="audio_lines/02_body1.wav" data-start="6.72" data-duration="11.029" data-track-index="10" data-volume="1"></audio>
+      <audio id="audio-b2" src="audio_lines/03_body2.wav" data-start="17.749" data-duration="9.664" data-track-index="10" data-volume="1"></audio>
+      <audio id="audio-close" src="audio_lines/04_closing.wav" data-start="27.413" data-duration="5.632" data-track-index="10" data-volume="1"></audio>
+
+      <div class="beat clip" id="hook" data-start="0.0" data-duration="7.02" data-track-index="0">
+        <div class="hook-headline" id="hook-text">Most businesses have no idea what <span class="accent">ChatGPT</span> or <span class="accent2">Google's AI Overview</span> says about them.</div>
+      </div>
+
+      <div class="beat clip" id="b1" data-start="6.72" data-duration="11.329" data-track-index="0">
+        <div class="eyebrow" id="b1-eb">What Radar Does</div>
+        <div class="headline" id="b1-head">Tracks AI mentions <span class="accent">and</span> local SEO rankings</div>
+        <div class="sub" id="b1-sub">So you're not flying blind on either one.</div>
+        <div class="chip-row" id="b1-chips">
+          <div class="stat-chip"><div class="sc-val">AI Search</div></div>
+          <div class="stat-chip"><div class="sc-val">Local SEO</div></div>
+        </div>
+      </div>
+
+      <div class="subscribe-pop clip" id="sub-pop" data-start="11.13" data-duration="4.0" data-track-index="6">
+        <div class="bell" id="sub-bell">&#128276;</div>
+        <div class="sp-text">Subscribe</div>
+      </div>
+
+      <div class="beat clip" id="b2" data-start="17.749" data-duration="9.964" data-track-index="0">
+        <div class="eyebrow" id="b2-eb">Built In</div>
+        <div class="headline" id="b2-head">Finds a lead? <span class="accent">Automated outreach</span> follows.</div>
+        <div class="sub" id="b2-sub">Email or an AI phone call — no manual prospect list.</div>
+        <div class="icon-row" id="b2-icons">
+          <div class="icon-pill">Email</div>
+          <div class="icon-pill">AI Call</div>
+        </div>
+      </div>
+
+      <div class="beat clip" id="close" data-start="27.413" data-duration="5.932" data-track-index="0">
+        <div class="headline" id="close-head">AI visibility <span class="accent">+</span> outreach. One dashboard.</div>
+      </div>
+
+      <div class="endcard clip" id="endcard" data-start="33.045" data-duration="3.494" data-track-index="0">
+        <div class="ec-brand" id="ec-brand">radar.yaeris.com</div>
+        <div class="ec-tag" id="ec-tag">AI visibility & outreach, built for real leads.</div>
+        <div class="ec-sub-cta" id="ec-cta-row">
+          <div class="ec-bell">&#128276;</div>
+          <div class="ec-cta">Subscribe for more</div>
+        </div>
+      </div>
+
+      <div class="caption-pill clip" id="cap0" data-start="0.0" data-duration="1.7" data-track-index="5">Most businesses have no idea</div>
+      <div class="caption-pill clip" id="cap1" data-start="1.7" data-duration="2.56" data-track-index="5">what ChatGPT or Google's</div>
+      <div class="caption-pill clip" id="cap2" data-start="4.26" data-duration="2.1" data-track-index="5">AI overview actually says about</div>
+      <div class="caption-pill clip" id="cap3" data-start="6.36" data-duration="0.3" data-track-index="5">them.</div>
+      <div class="caption-pill clip" id="cap4" data-start="6.72" data-duration="1.52" data-track-index="5">Radar checks that directly.</div>
+      <div class="caption-pill clip" id="cap5" data-start="8.94" data-duration="1.48" data-track-index="5">It tracks whether AI search</div>
+      <div class="caption-pill clip" id="cap6" data-start="10.42" data-duration="1.56" data-track-index="5">engines mention your business,</div>
+      <div class="caption-pill clip" id="cap7" data-start="12.44" data-duration="2.0" data-track-index="5">alongside your regular local SEO</div>
+      <div class="caption-pill clip" id="cap8" data-start="14.44" data-duration="1.92" data-track-index="5">rankings, so you're not flying</div>
+      <div class="caption-pill clip" id="cap9" data-start="16.36" data-duration="1.24" data-track-index="5">blind on either one.</div>
+      <div class="caption-pill clip" id="cap10" data-start="17.749" data-duration="0.9" data-track-index="5">When it finds a real</div>
+      <div class="caption-pill clip" id="cap11" data-start="18.649" data-duration="1.02" data-track-index="5">lead worth chasing,</div>
+      <div class="caption-pill clip" id="cap12" data-start="20.229" data-duration="1.62" data-track-index="5">it can trigger automated outreach,</div>
+      <div class="caption-pill clip" id="cap13" data-start="22.449" data-duration="1.56" data-track-index="5">email, or an AI phone</div>
+      <div class="caption-pill clip" id="cap14" data-start="24.009" data-duration="1.98" data-track-index="5">call without you manually building</div>
+      <div class="caption-pill clip" id="cap15" data-start="25.989" data-duration="1.14" data-track-index="5">a prospect list first.</div>
+      <div class="caption-pill clip" id="cap16" data-start="27.413" data-duration="2.4" data-track-index="5">That's Radar, AI visibility tracking</div>
+      <div class="caption-pill clip" id="cap17" data-start="29.813" data-duration="1.68" data-track-index="5">and outreach in one dashboard,</div>
+      <div class="caption-pill clip" id="cap18" data-start="31.873" data-duration="0.9" data-track-index="5">built by Yaeris.</div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const XF = 0.3;
+      function beat(id, start, end, hasExit = true) {
+        tl.fromTo(`#${id}`, { opacity: 0, scale: 1.05 }, { opacity: 1, scale: 1, duration: XF, ease: "power1.out" }, start);
+        if (hasExit) {
+          tl.fromTo(`#${id}`, { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.96, duration: XF, ease: "power1.in" }, end);
+        }
+      }
+
+      beat("hook", 0.0, 6.72);
+      beat("b1", 6.72, 17.749);
+      tl.fromTo("#b1-chips .stat-chip", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, stagger: 0.15 }, 7.32);
+      tl.fromTo("#sub-pop", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2.4)" }, 11.13);
+      tl.to("#sub-pop", { opacity: 0, scale: 0.85, duration: 0.4, ease: "power1.in" }, 14.53);
+      tl.to("#sub-bell", { rotation: -14, duration: 0.15, repeat: 3, yoyo: true, transformOrigin: "50% 0%" }, 11.53);
+      beat("b2", 17.749, 27.413);
+      tl.fromTo("#b2-icons .icon-pill", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.4, stagger: 0.2 }, 18.35);
+      beat("close", 27.413, 33.045, false);
+
+      tl.fromTo("#endcard", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 33.045);
+      tl.fromTo("#ec-brand", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 33.45);
+      tl.fromTo("#ec-tag", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 33.75);
+      tl.fromTo("#ec-cta-row", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2)" }, 34.15);
+      tl.to("#ec-cta-row .ec-bell", { rotation: -14, duration: 0.15, repeat: 5, yoyo: true, transformOrigin: "50% 0%" }, 34.84);
+
+      tl.fromTo("#cap0", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 0.0);
+      tl.fromTo("#cap1", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 1.7);
+      tl.fromTo("#cap2", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 4.26);
+      tl.fromTo("#cap3", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 6.36);
+      tl.fromTo("#cap4", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 6.72);
+      tl.fromTo("#cap5", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 8.94);
+      tl.fromTo("#cap6", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 10.42);
+      tl.fromTo("#cap7", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 12.44);
+      tl.fromTo("#cap8", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 14.44);
+      tl.fromTo("#cap9", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 16.36);
+      tl.fromTo("#cap10", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 17.749);
+      tl.fromTo("#cap11", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 18.649);
+      tl.fromTo("#cap12", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 20.229);
+      tl.fromTo("#cap13", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 22.449);
+      tl.fromTo("#cap14", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 24.009);
+      tl.fromTo("#cap15", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 25.989);
+      tl.fromTo("#cap16", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 27.413);
+      tl.fromTo("#cap17", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 29.813);
+      tl.fromTo("#cap18", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 31.873);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,132 @@
+[
+  {
+    "word": "If",
+    "start": 0.0,
+    "end": 0.12
+  },
+  {
+    "word": "you've",
+    "start": 0.12,
+    "end": 0.32
+  },
+  {
+    "word": "ever",
+    "start": 0.32,
+    "end": 0.54
+  },
+  {
+    "word": "tried",
+    "start": 0.54,
+    "end": 0.78
+  },
+  {
+    "word": "to",
+    "start": 0.78,
+    "end": 0.92
+  },
+  {
+    "word": "scrape",
+    "start": 0.92,
+    "end": 1.14
+  },
+  {
+    "word": "a",
+    "start": 1.14,
+    "end": 1.32
+  },
+  {
+    "word": "website",
+    "start": 1.32,
+    "end": 1.66
+  },
+  {
+    "word": "and",
+    "start": 1.66,
+    "end": 2.02
+  },
+  {
+    "word": "gotten",
+    "start": 2.02,
+    "end": 2.32
+  },
+  {
+    "word": "blocked,",
+    "start": 2.32,
+    "end": 2.82
+  },
+  {
+    "word": "rate",
+    "start": 3.4,
+    "end": 3.48
+  },
+  {
+    "word": "limited,",
+    "start": 3.48,
+    "end": 3.88
+  },
+  {
+    "word": "or",
+    "start": 4.38,
+    "end": 4.46
+  },
+  {
+    "word": "served",
+    "start": 4.46,
+    "end": 4.86
+  },
+  {
+    "word": "garbage",
+    "start": 4.86,
+    "end": 5.32
+  },
+  {
+    "word": "HTML,",
+    "start": 5.32,
+    "end": 5.94
+  },
+  {
+    "word": "you",
+    "start": 6.66,
+    "end": 6.78
+  },
+  {
+    "word": "know",
+    "start": 6.78,
+    "end": 6.94
+  },
+  {
+    "word": "the",
+    "start": 6.94,
+    "end": 7.14
+  },
+  {
+    "word": "real",
+    "start": 7.14,
+    "end": 7.34
+  },
+  {
+    "word": "problem",
+    "start": 7.34,
+    "end": 7.8
+  },
+  {
+    "word": "isn't",
+    "start": 7.8,
+    "end": 8.14
+  },
+  {
+    "word": "writing",
+    "start": 8.14,
+    "end": 8.44
+  },
+  {
+    "word": "a",
+    "start": 8.44,
+    "end": 8.6
+  },
+  {
+    "word": "scraper.",
+    "start": 8.6,
+    "end": 9.0
+  }
+]

@@ -1,0 +1,127 @@
+[
+  {
+    "word": "It",
+    "start": 0.0,
+    "end": 0.12
+  },
+  {
+    "word": "handles",
+    "start": 0.12,
+    "end": 0.5
+  },
+  {
+    "word": "the",
+    "start": 0.5,
+    "end": 0.68
+  },
+  {
+    "word": "escalation",
+    "start": 0.68,
+    "end": 1.26
+  },
+  {
+    "word": "automatically.",
+    "start": 1.26,
+    "end": 2.04
+  },
+  {
+    "word": "Simple",
+    "start": 3.02,
+    "end": 3.26
+  },
+  {
+    "word": "requests",
+    "start": 3.26,
+    "end": 3.74
+  },
+  {
+    "word": "get",
+    "start": 3.74,
+    "end": 4.02
+  },
+  {
+    "word": "simple",
+    "start": 4.02,
+    "end": 4.38
+  },
+  {
+    "word": "fetches,",
+    "start": 4.38,
+    "end": 4.88
+  },
+  {
+    "word": "harder",
+    "start": 5.3,
+    "end": 5.5
+  },
+  {
+    "word": "ones",
+    "start": 5.5,
+    "end": 5.8
+  },
+  {
+    "word": "get",
+    "start": 5.8,
+    "end": 6.02
+  },
+  {
+    "word": "real",
+    "start": 6.02,
+    "end": 6.38
+  },
+  {
+    "word": "browser",
+    "start": 6.38,
+    "end": 6.8
+  },
+  {
+    "word": "rendering,",
+    "start": 6.8,
+    "end": 7.28
+  },
+  {
+    "word": "and",
+    "start": 7.66,
+    "end": 7.84
+  },
+  {
+    "word": "it",
+    "start": 7.84,
+    "end": 7.92
+  },
+  {
+    "word": "respects",
+    "start": 7.92,
+    "end": 8.36
+  },
+  {
+    "word": "robots",
+    "start": 8.36,
+    "end": 8.88
+  },
+  {
+    "word": ".txt",
+    "start": 8.88,
+    "end": 9.8
+  },
+  {
+    "word": "the",
+    "start": 9.8,
+    "end": 10.16
+  },
+  {
+    "word": "whole",
+    "start": 10.16,
+    "end": 10.36
+  },
+  {
+    "word": "way",
+    "start": 10.36,
+    "end": 10.64
+  },
+  {
+    "word": "through.",
+    "start": 10.64,
+    "end": 10.9
+  }
+]

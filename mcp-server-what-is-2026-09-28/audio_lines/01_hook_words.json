@@ -1,0 +1,67 @@
+[
+  {
+    "word": "AI",
+    "start": 0.0,
+    "end": 0.38
+  },
+  {
+    "word": "agents",
+    "start": 0.38,
+    "end": 0.9
+  },
+  {
+    "word": "are",
+    "start": 0.9,
+    "end": 1.22
+  },
+  {
+    "word": "only",
+    "start": 1.22,
+    "end": 1.5
+  },
+  {
+    "word": "as",
+    "start": 1.5,
+    "end": 1.68
+  },
+  {
+    "word": "useful",
+    "start": 1.68,
+    "end": 2.04
+  },
+  {
+    "word": "as",
+    "start": 2.04,
+    "end": 2.56
+  },
+  {
+    "word": "the",
+    "start": 2.56,
+    "end": 2.72
+  },
+  {
+    "word": "tools",
+    "start": 2.72,
+    "end": 3.02
+  },
+  {
+    "word": "they",
+    "start": 3.02,
+    "end": 3.28
+  },
+  {
+    "word": "can",
+    "start": 3.28,
+    "end": 3.42
+  },
+  {
+    "word": "actually",
+    "start": 3.42,
+    "end": 3.82
+  },
+  {
+    "word": "reach.",
+    "start": 3.82,
+    "end": 4.16
+  }
+]

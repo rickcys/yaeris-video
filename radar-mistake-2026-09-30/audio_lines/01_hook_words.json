@@ -1,0 +1,97 @@
+[
+  {
+    "word": "The",
+    "start": 0.0,
+    "end": 0.1
+  },
+  {
+    "word": "number",
+    "start": 0.1,
+    "end": 0.28
+  },
+  {
+    "word": "one",
+    "start": 0.28,
+    "end": 0.58
+  },
+  {
+    "word": "mistake",
+    "start": 0.58,
+    "end": 0.96
+  },
+  {
+    "word": "businesses",
+    "start": 0.96,
+    "end": 1.54
+  },
+  {
+    "word": "make",
+    "start": 1.54,
+    "end": 2.02
+  },
+  {
+    "word": "with",
+    "start": 2.02,
+    "end": 2.24
+  },
+  {
+    "word": "AI",
+    "start": 2.24,
+    "end": 2.68
+  },
+  {
+    "word": "search",
+    "start": 2.68,
+    "end": 3.02
+  },
+  {
+    "word": "visibility",
+    "start": 3.02,
+    "end": 3.64
+  },
+  {
+    "word": "is",
+    "start": 3.64,
+    "end": 4.3
+  },
+  {
+    "word": "assuming",
+    "start": 4.3,
+    "end": 4.68
+  },
+  {
+    "word": "it",
+    "start": 4.68,
+    "end": 5.02
+  },
+  {
+    "word": "works",
+    "start": 5.02,
+    "end": 5.28
+  },
+  {
+    "word": "exactly",
+    "start": 5.28,
+    "end": 5.74
+  },
+  {
+    "word": "like",
+    "start": 5.74,
+    "end": 6.12
+  },
+  {
+    "word": "regular",
+    "start": 6.12,
+    "end": 6.56
+  },
+  {
+    "word": "Google",
+    "start": 6.56,
+    "end": 6.88
+  },
+  {
+    "word": "SEO.",
+    "start": 6.88,
+    "end": 7.34
+  }
+]

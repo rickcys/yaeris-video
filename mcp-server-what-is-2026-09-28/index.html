@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { margin: 0; width: 1080px; height: 1920px; overflow: hidden; background: #1A1A2E; }
+      :root {
+        --bg: #1A1A2E; --bg-deep: #141220; --card: #241F3D;
+        --violet: #6B2FA0; --violet-deep: #4A2070; --cyan: #29ABE2; --green: #25D366; --danger: #E5484D;
+        --ink: #F2F1F7; --ink-soft: #B8B5C9; --ink-faint: #847F9C;
+        --disp: "Outfit", -apple-system, "Segoe UI", sans-serif;
+        --sans: "Inter", -apple-system, "Segoe UI", sans-serif;
+        --mono: "Space Mono", "SFMono-Regular", Consolas, monospace;
+      }
+      #root { width: 100%; height: 100%; position: relative; font-family: var(--sans); color: var(--ink); background: var(--bg); }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 0 88px; text-align: center; }
+      .eyebrow { font-family: var(--disp); font-weight: 600; font-size: 32px; letter-spacing: 0.08em; color: var(--cyan); text-transform: uppercase; margin-bottom: 26px; }
+      .headline { font-family: var(--disp); font-weight: 800; line-height: 1.15; letter-spacing: -0.02em; font-size: 68px; color: var(--ink); }
+      .headline .accent { color: var(--cyan); }
+      .headline .accent2 { color: var(--green); }
+      .sub { margin-top: 36px; font-size: 34px; font-weight: 400; line-height: 1.4; color: var(--ink-soft); max-width: 860px; }
+      .hook-headline { font-size: 78px; font-weight: 800; line-height: 1.18; letter-spacing: -0.02em; }
+      .hook-headline .accent { color: var(--cyan); } .hook-headline .accent2 { color: var(--green); }
+      .chip-row { display: flex; gap: 20px; margin-top: 48px; flex-wrap: wrap; justify-content: center; }
+      .stat-chip { display: flex; flex-direction: column; align-items: center; gap: 8px; background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 20px; padding: 26px 30px; min-width: 200px; }
+      .stat-chip .sc-val { font-family: var(--disp); font-weight: 800; font-size: 36px; color: var(--cyan); }
+      .icon-row { display: flex; gap: 28px; margin-top: 52px; flex-wrap: wrap; justify-content: center; }
+      .icon-pill { display: flex; align-items: center; gap: 12px; background: var(--card); border: 1px solid rgba(255,255,255,0.08); border-radius: 100px; padding: 16px 28px; font-family: var(--sans); font-size: 30px; color: var(--ink-soft); }
+      .caption-pill { position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%); background: rgba(10,9,16,0.86); color: #fff; font-family: var(--sans); font-weight: 500; font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%; text-align: center; line-height: 1.3; }
+      .subscribe-pop { position: absolute; right: 6%; bottom: 20%; display: flex; align-items: center; gap: 14px; background: linear-gradient(135deg, var(--violet-deep), var(--violet)); border-radius: 100px; padding: 16px 30px 16px 18px; box-shadow: 0 16px 32px -12px rgba(0,0,0,.5); }
+      .subscribe-pop .bell { width: 52px; height: 52px; border-radius: 50%; background: rgba(255,255,255,.18); display: flex; align-items: center; justify-content: center; font-size: 28px; flex: none; }
+      .subscribe-pop .sp-text { font-family: var(--disp); font-weight: 700; font-size: 30px; color: #fff; white-space: nowrap; }
+      .endcard { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 20px;
+        background: radial-gradient(38% 46% at 22% 24%, rgba(107,47,160,.85), transparent 70%), radial-gradient(42% 50% at 78% 30%, rgba(41,171,226,.65), transparent 70%), radial-gradient(46% 54% at 50% 88%, rgba(37,211,102,.5), transparent 70%), var(--violet-deep); }
+      .endcard .ec-brand { font-family: var(--disp); font-weight: 800; font-size: 60px; color: #fff; letter-spacing: -0.01em; }
+      .endcard .ec-tag { font-family: var(--sans); font-size: 30px; color: rgba(255,255,255,.85); text-align: center; padding: 0 12%; }
+      .endcard .ec-sub-cta { display: flex; align-items: center; gap: 16px; margin-top: 18px; }
+      .endcard .ec-bell { width: 68px; height: 68px; border-radius: 50%; background: rgba(255,255,255,.16); display: flex; align-items: center; justify-content: center; font-size: 36px; flex: none; }
+      .endcard .ec-cta { font-family: var(--mono); font-size: 30px; color: #fff; background: rgba(255,255,255,.16); padding: 12px 30px; border-radius: 100px; }
+
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="36.07" data-width="1080" data-height="1920">
+      <audio id="audio-hook" src="audio_lines/01_hook.wav" data-start="0.0" data-duration="4.373" data-track-index="10" data-volume="1"></audio>
+      <audio id="audio-b1" src="audio_lines/02_body1.wav" data-start="4.373" data-duration="14.144" data-track-index="10" data-volume="1"></audio>
+      <audio id="audio-b2" src="audio_lines/03_body2.wav" data-start="18.517" data-duration="8.555" data-track-index="10" data-volume="1"></audio>
+      <audio id="audio-close" src="audio_lines/04_closing.wav" data-start="27.072" data-duration="5.504" data-track-index="10" data-volume="1"></audio>
+
+      <div class="beat clip" id="hook" data-start="0.0" data-duration="4.673" data-track-index="0">
+        <div class="hook-headline" id="hook-text">AI agents are only as useful as the <span class="accent">tools</span> they can reach.</div>
+      </div>
+
+      <div class="beat clip" id="b1" data-start="4.373" data-duration="14.444" data-track-index="0">
+        <div class="eyebrow" id="b1-eb">MCP Server</div>
+        <div class="headline" id="b1-head">One gateway. <span class="accent">Every tool</span> connected.</div>
+        <div class="sub" id="b1-sub">Through the Model Context Protocol — no one-off integrations.</div>
+        <div class="chip-row" id="b1-chips">
+          <div class="stat-chip"><div class="sc-val">Web</div></div>
+          <div class="stat-chip"><div class="sc-val">Data</div></div>
+          <div class="stat-chip"><div class="sc-val">Actions</div></div>
+        </div>
+      </div>
+
+      <div class="subscribe-pop clip" id="sub-pop" data-start="10.03" data-duration="4.0" data-track-index="6">
+        <div class="bell" id="sub-bell">&#128276;</div>
+        <div class="sp-text">Subscribe</div>
+      </div>
+
+      <div class="beat clip" id="b2" data-start="18.517" data-duration="8.855" data-track-index="0">
+        <div class="eyebrow" id="b2-eb">Built For Agents</div>
+        <div class="headline" id="b2-head">Search, query, or <span class="accent">trigger an action</span></div>
+        <div class="sub" id="b2-sub">All through the same gateway.</div>
+      </div>
+
+      <div class="beat clip" id="close" data-start="27.072" data-duration="5.804" data-track-index="0">
+        <div class="headline" id="close-head">One gateway, <span class="accent">every tool</span> your agent needs.</div>
+      </div>
+
+      <div class="endcard clip" id="endcard" data-start="32.576" data-duration="3.494" data-track-index="0">
+        <div class="ec-brand" id="ec-brand">mcp.yaeris.com</div>
+        <div class="ec-tag" id="ec-tag">The gateway between your AI agent and real tools.</div>
+        <div class="ec-sub-cta" id="ec-cta-row">
+          <div class="ec-bell">&#128276;</div>
+          <div class="ec-cta">Subscribe for more</div>
+        </div>
+      </div>
+
+      <div class="caption-pill clip" id="cap0" data-start="0.0" data-duration="1.68" data-track-index="5">AI agents are only as</div>
+      <div class="caption-pill clip" id="cap1" data-start="1.68" data-duration="1.6" data-track-index="5">useful as the tools they</div>
+      <div class="caption-pill clip" id="cap2" data-start="3.28" data-duration="0.88" data-track-index="5">can actually reach.</div>
+      <div class="caption-pill clip" id="cap3" data-start="4.373" data-duration="1.9" data-track-index="5">The Yaeris MCP server is</div>
+      <div class="caption-pill clip" id="cap4" data-start="6.273" data-duration="1.94" data-track-index="5">a gateway that connects AI</div>
+      <div class="caption-pill clip" id="cap5" data-start="8.213" data-duration="1.68" data-track-index="5">agents to real tools and</div>
+      <div class="caption-pill clip" id="cap6" data-start="9.893" data-duration="1.8" data-track-index="5">data sources through the model</div>
+      <div class="caption-pill clip" id="cap7" data-start="11.693" data-duration="2.96" data-track-index="5">context protocol. One connection point,</div>
+      <div class="caption-pill clip" id="cap8" data-start="15.033" data-duration="1.24" data-track-index="5">instead of wiring up a</div>
+      <div class="caption-pill clip" id="cap9" data-start="16.273" data-duration="1.76" data-track-index="5">separate integration for every single</div>
+      <div class="caption-pill clip" id="cap10" data-start="18.033" data-duration="0.3" data-track-index="5">tool.</div>
+      <div class="caption-pill clip" id="cap11" data-start="18.517" data-duration="1.24" data-track-index="5">Whether you're building an agent</div>
+      <div class="caption-pill clip" id="cap12" data-start="19.757" data-duration="1.1" data-track-index="5">that needs to search the</div>
+      <div class="caption-pill clip" id="cap13" data-start="20.857" data-duration="1.58" data-track-index="5">web, query a database,</div>
+      <div class="caption-pill clip" id="cap14" data-start="22.977" data-duration="1.26" data-track-index="5">or trigger an action in</div>
+      <div class="caption-pill clip" id="cap15" data-start="24.237" data-duration="1.76" data-track-index="5">another app, it goes through</div>
+      <div class="caption-pill clip" id="cap16" data-start="25.997" data-duration="0.78" data-track-index="5">the same gateway.</div>
+      <div class="caption-pill clip" id="cap17" data-start="27.072" data-duration="1.24" data-track-index="5">That's MCP Server,</div>
+      <div class="caption-pill clip" id="cap18" data-start="28.892" data-duration="1.48" data-track-index="5">one gateway every tool your</div>
+      <div class="caption-pill clip" id="cap19" data-start="30.372" data-duration="1.92" data-track-index="5">agent needs, built by Yaeris.</div>
+    </div>
+
+    <script>
+      const tl = gsap.timeline({ paused: true });
+      const XF = 0.3;
+      function beat(id, start, end, hasExit = true) {
+        tl.fromTo(`#${id}`, { opacity: 0, scale: 1.05 }, { opacity: 1, scale: 1, duration: XF, ease: "power1.out" }, start);
+        if (hasExit) {
+          tl.fromTo(`#${id}`, { opacity: 1, scale: 1 }, { opacity: 0, scale: 0.96, duration: XF, ease: "power1.in" }, end);
+        }
+      }
+
+      beat("hook", 0.0, 4.373);
+      beat("b1", 4.373, 18.517);
+      tl.fromTo("#b1-chips .stat-chip", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, stagger: 0.15 }, 4.97);
+      tl.fromTo("#sub-pop", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2.4)" }, 10.03);
+      tl.to("#sub-pop", { opacity: 0, scale: 0.85, duration: 0.4, ease: "power1.in" }, 13.43);
+      tl.to("#sub-bell", { rotation: -14, duration: 0.15, repeat: 3, yoyo: true, transformOrigin: "50% 0%" }, 10.43);
+      beat("b2", 18.517, 27.072);
+      beat("close", 27.072, 32.576, false);
+
+      tl.fromTo("#endcard", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 32.576);
+      tl.fromTo("#ec-brand", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 32.98);
+      tl.fromTo("#ec-tag", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 33.28);
+      tl.fromTo("#ec-cta-row", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2)" }, 33.68);
+      tl.to("#ec-cta-row .ec-bell", { rotation: -14, duration: 0.15, repeat: 5, yoyo: true, transformOrigin: "50% 0%" }, 34.38);
+
+      tl.fromTo("#cap0", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 0.0);
+      tl.fromTo("#cap1", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 1.68);
+      tl.fromTo("#cap2", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 3.28);
+      tl.fromTo("#cap3", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 4.373);
+      tl.fromTo("#cap4", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 6.273);
+      tl.fromTo("#cap5", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 8.213);
+      tl.fromTo("#cap6", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 9.893);
+      tl.fromTo("#cap7", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 11.693);
+      tl.fromTo("#cap8", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 15.033);
+      tl.fromTo("#cap9", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 16.273);
+      tl.fromTo("#cap10", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 18.033);
+      tl.fromTo("#cap11", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 18.517);
+      tl.fromTo("#cap12", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 19.757);
+      tl.fromTo("#cap13", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 20.857);
+      tl.fromTo("#cap14", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 22.977);
+      tl.fromTo("#cap15", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 24.237);
+      tl.fromTo("#cap16", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 25.997);
+      tl.fromTo("#cap17", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 27.072);
+      tl.fromTo("#cap18", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 28.892);
+      tl.fromTo("#cap19", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 30.372);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+[
+  {
+    "word": "That's",
+    "start": 0.0,
+    "end": 0.3
+  },
+  {
+    "word": "the",
+    "start": 0.3,
+    "end": 0.36
+  },
+  {
+    "word": "Mistake",
+    "start": 0.36,
+    "end": 0.78
+  },
+  {
+    "word": "Radar",
+    "start": 0.78,
+    "end": 1.08
+  },
+  {
+    "word": "Fixes,",
+    "start": 1.08,
+    "end": 1.44
+  },
+  {
+    "word": "built",
+    "start": 2.02,
+    "end": 2.16
+  },
+  {
+    "word": "by",
+    "start": 2.16,
+    "end": 2.42
+  },
+  {
+    "word": "Yaris.",
+    "start": 2.42,
+    "end": 2.74
+  }
+]

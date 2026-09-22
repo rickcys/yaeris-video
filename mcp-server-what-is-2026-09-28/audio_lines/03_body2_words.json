@@ -1,0 +1,137 @@
+[
+  {
+    "word": "Whether",
+    "start": 0.0,
+    "end": 0.2
+  },
+  {
+    "word": "you're",
+    "start": 0.2,
+    "end": 0.48
+  },
+  {
+    "word": "building",
+    "start": 0.48,
+    "end": 0.7
+  },
+  {
+    "word": "an",
+    "start": 0.7,
+    "end": 0.92
+  },
+  {
+    "word": "agent",
+    "start": 0.92,
+    "end": 1.24
+  },
+  {
+    "word": "that",
+    "start": 1.24,
+    "end": 1.48
+  },
+  {
+    "word": "needs",
+    "start": 1.48,
+    "end": 1.68
+  },
+  {
+    "word": "to",
+    "start": 1.68,
+    "end": 1.94
+  },
+  {
+    "word": "search",
+    "start": 1.94,
+    "end": 2.12
+  },
+  {
+    "word": "the",
+    "start": 2.12,
+    "end": 2.34
+  },
+  {
+    "word": "web,",
+    "start": 2.34,
+    "end": 2.6
+  },
+  {
+    "word": "query",
+    "start": 3.08,
+    "end": 3.24
+  },
+  {
+    "word": "a",
+    "start": 3.24,
+    "end": 3.5
+  },
+  {
+    "word": "database,",
+    "start": 3.5,
+    "end": 3.92
+  },
+  {
+    "word": "or",
+    "start": 4.46,
+    "end": 4.66
+  },
+  {
+    "word": "trigger",
+    "start": 4.66,
+    "end": 4.98
+  },
+  {
+    "word": "an",
+    "start": 4.98,
+    "end": 5.16
+  },
+  {
+    "word": "action",
+    "start": 5.16,
+    "end": 5.48
+  },
+  {
+    "word": "in",
+    "start": 5.48,
+    "end": 5.72
+  },
+  {
+    "word": "another",
+    "start": 5.72,
+    "end": 6.0
+  },
+  {
+    "word": "app,",
+    "start": 6.0,
+    "end": 6.36
+  },
+  {
+    "word": "it",
+    "start": 6.74,
+    "end": 6.9
+  },
+  {
+    "word": "goes",
+    "start": 6.9,
+    "end": 7.14
+  },
+  {
+    "word": "through",
+    "start": 7.14,
+    "end": 7.48
+  },
+  {
+    "word": "the",
+    "start": 7.48,
+    "end": 7.66
+  },
+  {
+    "word": "same",
+    "start": 7.66,
+    "end": 7.92
+  },
+  {
+    "word": "gateway.",
+    "start": 7.92,
+    "end": 8.26
+  }
+]

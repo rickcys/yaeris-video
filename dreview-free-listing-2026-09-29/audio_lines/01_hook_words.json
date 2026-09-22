@@ -1,0 +1,117 @@
+[
+  {
+    "word": "If",
+    "start": 0.0,
+    "end": 0.12
+  },
+  {
+    "word": "you",
+    "start": 0.12,
+    "end": 0.26
+  },
+  {
+    "word": "built",
+    "start": 0.26,
+    "end": 0.46
+  },
+  {
+    "word": "an",
+    "start": 0.46,
+    "end": 0.66
+  },
+  {
+    "word": "MCP",
+    "start": 0.66,
+    "end": 1.22
+  },
+  {
+    "word": "server",
+    "start": 1.22,
+    "end": 1.68
+  },
+  {
+    "word": "or",
+    "start": 1.68,
+    "end": 2.12
+  },
+  {
+    "word": "an",
+    "start": 2.12,
+    "end": 2.3
+  },
+  {
+    "word": "AI",
+    "start": 2.3,
+    "end": 2.68
+  },
+  {
+    "word": "tool,",
+    "start": 2.68,
+    "end": 2.96
+  },
+  {
+    "word": "the",
+    "start": 3.44,
+    "end": 3.5
+  },
+  {
+    "word": "hardest",
+    "start": 3.5,
+    "end": 3.8
+  },
+  {
+    "word": "part",
+    "start": 3.8,
+    "end": 4.18
+  },
+  {
+    "word": "usually",
+    "start": 4.18,
+    "end": 4.56
+  },
+  {
+    "word": "isn't",
+    "start": 4.56,
+    "end": 5.06
+  },
+  {
+    "word": "building",
+    "start": 5.06,
+    "end": 5.26
+  },
+  {
+    "word": "it.",
+    "start": 5.26,
+    "end": 5.66
+  },
+  {
+    "word": "It's",
+    "start": 6.1,
+    "end": 6.32
+  },
+  {
+    "word": "getting",
+    "start": 6.32,
+    "end": 6.5
+  },
+  {
+    "word": "anyone",
+    "start": 6.5,
+    "end": 6.86
+  },
+  {
+    "word": "to",
+    "start": 6.86,
+    "end": 7.08
+  },
+  {
+    "word": "find",
+    "start": 7.08,
+    "end": 7.3
+  },
+  {
+    "word": "it.",
+    "start": 7.3,
+    "end": 7.54
+  }
+]

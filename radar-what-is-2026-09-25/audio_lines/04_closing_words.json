@@ -1,0 +1,67 @@
+[
+  {
+    "word": "That's",
+    "start": 0.0,
+    "end": 0.32
+  },
+  {
+    "word": "Radar,",
+    "start": 0.32,
+    "end": 0.66
+  },
+  {
+    "word": "AI",
+    "start": 1.5,
+    "end": 1.5
+  },
+  {
+    "word": "visibility",
+    "start": 1.5,
+    "end": 1.84
+  },
+  {
+    "word": "tracking",
+    "start": 1.84,
+    "end": 2.4
+  },
+  {
+    "word": "and",
+    "start": 2.4,
+    "end": 2.66
+  },
+  {
+    "word": "outreach",
+    "start": 2.66,
+    "end": 3.0
+  },
+  {
+    "word": "in",
+    "start": 3.0,
+    "end": 3.36
+  },
+  {
+    "word": "one",
+    "start": 3.36,
+    "end": 3.6
+  },
+  {
+    "word": "dashboard,",
+    "start": 3.6,
+    "end": 4.08
+  },
+  {
+    "word": "built",
+    "start": 4.46,
+    "end": 4.78
+  },
+  {
+    "word": "by",
+    "start": 4.78,
+    "end": 5.04
+  },
+  {
+    "word": "Yaris.",
+    "start": 5.04,
+    "end": 5.36
+  }
+]

@@ -1,0 +1,67 @@
+[
+  {
+    "word": "That's",
+    "start": 0.0,
+    "end": 0.3
+  },
+  {
+    "word": "MCP",
+    "start": 0.3,
+    "end": 0.84
+  },
+  {
+    "word": "Server,",
+    "start": 0.84,
+    "end": 1.24
+  },
+  {
+    "word": "one",
+    "start": 1.82,
+    "end": 1.94
+  },
+  {
+    "word": "gateway",
+    "start": 1.94,
+    "end": 2.34
+  },
+  {
+    "word": "every",
+    "start": 2.34,
+    "end": 2.8
+  },
+  {
+    "word": "tool",
+    "start": 2.8,
+    "end": 3.1
+  },
+  {
+    "word": "your",
+    "start": 3.1,
+    "end": 3.3
+  },
+  {
+    "word": "agent",
+    "start": 3.3,
+    "end": 3.64
+  },
+  {
+    "word": "needs,",
+    "start": 3.64,
+    "end": 4.12
+  },
+  {
+    "word": "built",
+    "start": 4.26,
+    "end": 4.66
+  },
+  {
+    "word": "by",
+    "start": 4.66,
+    "end": 4.92
+  },
+  {
+    "word": "Yaris.",
+    "start": 4.92,
+    "end": 5.22
+  }
+]

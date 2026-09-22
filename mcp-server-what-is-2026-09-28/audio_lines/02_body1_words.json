@@ -1,0 +1,182 @@
+[
+  {
+    "word": "The",
+    "start": 0.0,
+    "end": 0.14
+  },
+  {
+    "word": "Yaris",
+    "start": 0.14,
+    "end": 0.48
+  },
+  {
+    "word": "MCP",
+    "start": 0.48,
+    "end": 1.18
+  },
+  {
+    "word": "server",
+    "start": 1.18,
+    "end": 1.56
+  },
+  {
+    "word": "is",
+    "start": 1.56,
+    "end": 1.9
+  },
+  {
+    "word": "a",
+    "start": 1.9,
+    "end": 2.04
+  },
+  {
+    "word": "gateway",
+    "start": 2.04,
+    "end": 2.34
+  },
+  {
+    "word": "that",
+    "start": 2.34,
+    "end": 2.92
+  },
+  {
+    "word": "connects",
+    "start": 2.92,
+    "end": 3.32
+  },
+  {
+    "word": "AI",
+    "start": 3.32,
+    "end": 3.84
+  },
+  {
+    "word": "agents",
+    "start": 3.84,
+    "end": 4.28
+  },
+  {
+    "word": "to",
+    "start": 4.28,
+    "end": 4.56
+  },
+  {
+    "word": "real",
+    "start": 4.56,
+    "end": 4.84
+  },
+  {
+    "word": "tools",
+    "start": 4.84,
+    "end": 5.24
+  },
+  {
+    "word": "and",
+    "start": 5.24,
+    "end": 5.52
+  },
+  {
+    "word": "data",
+    "start": 5.52,
+    "end": 5.76
+  },
+  {
+    "word": "sources",
+    "start": 5.76,
+    "end": 6.24
+  },
+  {
+    "word": "through",
+    "start": 6.24,
+    "end": 6.84
+  },
+  {
+    "word": "the",
+    "start": 6.84,
+    "end": 7.04
+  },
+  {
+    "word": "model",
+    "start": 7.04,
+    "end": 7.32
+  },
+  {
+    "word": "context",
+    "start": 7.32,
+    "end": 7.84
+  },
+  {
+    "word": "protocol.",
+    "start": 7.84,
+    "end": 8.38
+  },
+  {
+    "word": "One",
+    "start": 9.24,
+    "end": 9.46
+  },
+  {
+    "word": "connection",
+    "start": 9.46,
+    "end": 9.88
+  },
+  {
+    "word": "point,",
+    "start": 9.88,
+    "end": 10.28
+  },
+  {
+    "word": "instead",
+    "start": 10.66,
+    "end": 10.96
+  },
+  {
+    "word": "of",
+    "start": 10.96,
+    "end": 11.14
+  },
+  {
+    "word": "wiring",
+    "start": 11.14,
+    "end": 11.46
+  },
+  {
+    "word": "up",
+    "start": 11.46,
+    "end": 11.76
+  },
+  {
+    "word": "a",
+    "start": 11.76,
+    "end": 11.9
+  },
+  {
+    "word": "separate",
+    "start": 11.9,
+    "end": 12.14
+  },
+  {
+    "word": "integration",
+    "start": 12.14,
+    "end": 12.7
+  },
+  {
+    "word": "for",
+    "start": 12.7,
+    "end": 13.02
+  },
+  {
+    "word": "every",
+    "start": 13.02,
+    "end": 13.36
+  },
+  {
+    "word": "single",
+    "start": 13.36,
+    "end": 13.66
+  },
+  {
+    "word": "tool.",
+    "start": 13.66,
+    "end": 13.94
+  }
+]
