@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        margin: 0;
+        width: 1080px;
+        height: 1920px;
+        overflow: hidden;
+        background: #0a0e14;
+      }
+      #root {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+        color: #f4f4f5;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 0 90px;
+        text-align: center;
+      }
+      .eyebrow {
+        font-size: 34px;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        color: #2dd4a7;
+        text-transform: uppercase;
+        margin-bottom: 28px;
+      }
+      .headline {
+        font-size: 76px;
+        font-weight: 800;
+        line-height: 1.15;
+        letter-spacing: -0.02em;
+      }
+      .sub {
+        margin-top: 40px;
+        font-size: 38px;
+        font-weight: 500;
+        line-height: 1.4;
+        color: #a3a9b5;
+      }
+      .hook-headline {
+        font-size: 88px;
+        font-weight: 800;
+        line-height: 1.18;
+        letter-spacing: -0.02em;
+      }
+      .hook-headline .accent {
+        color: #2dd4a7;
+      }
+      /* Reason 1: quality-score gauge */
+      .gauge-wrap {
+        margin-top: 56px;
+        width: 100%;
+        max-width: 780px;
+      }
+      .gauge-track {
+        display: flex;
+        width: 100%;
+        height: 34px;
+        border-radius: 17px;
+        overflow: hidden;
+      }
+      .gauge-seg {
+        flex: 1;
+        height: 100%;
+      }
+      .gauge-seg.green {
+        background: #22c55e;
+      }
+      .gauge-seg.yellow {
+        background: #eab308;
+      }
+      .gauge-seg.red {
+        background: #ef4444;
+      }
+      .gauge-marker {
+        width: 6px;
+        height: 54px;
+        background: #f4f4f5;
+        border-radius: 3px;
+        position: absolute;
+        top: -10px;
+        left: 0;
+      }
+      .gauge-marker-rail {
+        position: relative;
+        width: 100%;
+      }
+      .gauge-labels {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 16px;
+        font-size: 26px;
+        color: #a3a9b5;
+        font-weight: 600;
+      }
+      /* Reason 2: volume spike bars */
+      .bars-wrap {
+        margin-top: 56px;
+        display: flex;
+        align-items: flex-end;
+        gap: 18px;
+        height: 220px;
+      }
+      .bar {
+        width: 44px;
+        border-radius: 8px 8px 0 0;
+        background: #2dd4a7;
+      }
+      .bar.spike {
+        background: #ef4444;
+      }
+      /* Reason 3: blocked badge */
+      .badge {
+        margin-top: 56px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: 8px solid #ef4444;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 90px;
+        color: #ef4444;
+        font-weight: 800;
+      }
+      /* Closing scene */
+      .checklist {
+        margin-top: 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: flex-start;
+      }
+      .check-item {
+        display: flex;
+        align-items: center;
+        gap: 22px;
+      }
+      .check-mark {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: #2dd4a7;
+        color: #0a0e14;
+        font-size: 30px;
+        font-weight: 800;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+      .check-text {
+        font-size: 38px;
+        font-weight: 600;
+        text-align: left;
+      }
+      .endcard {
+        margin-top: 64px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .endcard-brand {
+        font-size: 52px;
+        font-weight: 800;
+        letter-spacing: -0.01em;
+      }
+      .endcard-tag {
+        margin-top: 14px;
+        font-size: 30px;
+        color: #a3a9b5;
+        font-weight: 500;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="78.6"
+      data-width="1080"
+      data-height="1920"
+    >
+      <!-- ===== AUDIO (5 real Kokoro TTS lines, ffprobe-measured durations) ===== -->
+      <audio id="audio-hook" src="audio_lines/01_hook.wav" data-start="0" data-duration="6.485" data-track-index="10" data-volume="1"></audio>
+      <audio id="audio-scene1" src="audio_lines/02_scene1.wav" data-start="6.485" data-duration="22.464" data-track-index="10" data-volume="1"></audio>
+      <audio id="audio-scene2" src="audio_lines/03_scene2.wav" data-start="28.949" data-duration="14.485" data-track-index="10" data-volume="1"></audio>
+      <audio id="audio-scene3" src="audio_lines/04_scene3.wav" data-start="43.434" data-duration="17.749" data-track-index="10" data-volume="1"></audio>
+      <audio id="audio-closing" src="audio_lines/05_closing.wav" data-start="61.183" data-duration="17.323" data-track-index="10" data-volume="1"></audio>
+
+      <!-- ===== SCENE 1: HOOK (0 - 6.485s) ===== -->
+      <div class="scene clip" id="scene-hook" data-start="0" data-duration="6.485" data-track-index="0">
+        <div class="hook-headline" id="hook-text">
+          Your WhatsApp number can get banned for <span class="accent">3 specific reasons</span>.
+        </div>
+      </div>
+
+      <!-- ===== SCENE 2: REASON #1 (6.485 - 28.949s, ~22.46s) ===== -->
+      <div class="scene clip" id="scene-reason1" data-start="6.485" data-duration="22.464" data-track-index="0">
+        <div class="eyebrow" id="r1-eyebrow">Reason #1</div>
+        <div class="headline" id="r1-headline">Messaging people who never opted in</div>
+        <div class="gauge-wrap" id="r1-gauge">
+          <div class="gauge-track">
+            <div class="gauge-seg green"></div>
+            <div class="gauge-seg yellow"></div>
+            <div class="gauge-seg red"></div>
+          </div>
+          <div class="gauge-marker-rail">
+            <div class="gauge-marker" id="r1-marker"></div>
+          </div>
+          <div class="gauge-labels"><span>Green</span><span>Yellow</span><span>Red</span></div>
+        </div>
+        <div class="sub" id="r1-sub">7-day rolling quality score. 2026: unanswered messages count too.</div>
+      </div>
+
+      <!-- ===== SCENE 3: REASON #2 (28.949 - 43.434s, ~14.49s) ===== -->
+      <div class="scene clip" id="scene-reason2" data-start="28.949" data-duration="14.485" data-track-index="0">
+        <div class="eyebrow" id="r2-eyebrow">Reason #2</div>
+        <div class="headline" id="r2-headline">Sudden volume spikes</div>
+        <div class="bars-wrap" id="r2-bars">
+          <div class="bar" style="height: 40px;"></div>
+          <div class="bar" style="height: 55px;"></div>
+          <div class="bar" style="height: 48px;"></div>
+          <div class="bar spike" style="height: 220px;"></div>
+        </div>
+        <div class="sub" id="r2-sub">New number, day one, 1,000 messages: flagged.</div>
+      </div>
+
+      <!-- ===== SCENE 4: REASON #3 (43.434 - 61.183s, ~17.75s) ===== -->
+      <div class="scene clip" id="scene-reason3" data-start="43.434" data-duration="17.749" data-track-index="0">
+        <div class="eyebrow" id="r3-eyebrow">Reason #3</div>
+        <div class="headline" id="r3-headline">Unofficial tools</div>
+        <div class="badge" id="r3-badge">&times;</div>
+        <div class="sub" id="r3-sub">Modified apps + bulk senders skip compliance. No appeal process.</div>
+      </div>
+
+      <!-- ===== SCENE 5: CLOSING / THE FIX (61.183 - 78.506s, ~17.32s) ===== -->
+      <div class="scene clip" id="scene-closing" data-start="61.183" data-duration="17.323" data-track-index="0">
+        <div class="eyebrow" id="fix-eyebrow">The Fix</div>
+        <div class="checklist" id="fix-checklist">
+          <div class="check-item"><div class="check-mark">&check;</div><div class="check-text">Real opt-in consent</div></div>
+          <div class="check-item"><div class="check-mark">&check;</div><div class="check-text">Gradual send-volume ramp</div></div>
+          <div class="check-item"><div class="check-mark">&check;</div><div class="check-text">Compliant infrastructure end to end</div></div>
+        </div>
+        <div class="endcard" id="fix-endcard">
+          <div class="endcard-brand">yaeris.com</div>
+          <div class="endcard-tag">WhatsApp Blasting, done right.</div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Scene 1: hook
+      tl.fromTo("#hook-text", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.6 }, 0);
+
+      // Scene 2: reason 1
+      tl.fromTo("#r1-eyebrow", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 6.485);
+      tl.fromTo("#r1-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 6.685);
+      tl.fromTo("#r1-gauge", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 7.485);
+      tl.fromTo("#r1-marker", { x: 0 }, { x: 630, duration: 2.2, ease: "power2.inOut" }, 8.5);
+      tl.fromTo("#r1-sub", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5 }, 18.0);
+
+      // Scene 3: reason 2
+      tl.fromTo("#r2-eyebrow", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 28.949);
+      tl.fromTo("#r2-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 29.149);
+      tl.fromTo("#r2-bars .bar", { scaleY: 0 }, { scaleY: 1, duration: 0.5, stagger: 0.12, transformOrigin: "bottom" }, 30.0);
+      tl.fromTo("#r2-sub", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5 }, 33.5);
+
+      // Scene 4: reason 3
+      tl.fromTo("#r3-eyebrow", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 43.434);
+      tl.fromTo("#r3-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 43.634);
+      tl.fromTo("#r3-badge", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)" }, 44.434);
+      tl.fromTo("#r3-sub", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5 }, 47.0);
+
+      // Scene 5: closing / fix
+      tl.fromTo("#fix-eyebrow", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 61.183);
+      tl.fromTo("#fix-checklist .check-item", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.45, stagger: 0.35 }, 61.7);
+      tl.fromTo("#fix-endcard", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.6 }, 64.5);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
