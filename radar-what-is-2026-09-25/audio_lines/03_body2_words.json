@@ -1,137 +1,152 @@
 [
   {
-    "word": "When",
+    "word": "It's",
     "start": 0.0,
-    "end": 0.1
-  },
-  {
-    "word": "it",
-    "start": 0.1,
     "end": 0.22
   },
   {
-    "word": "finds",
+    "word": "pay",
     "start": 0.22,
-    "end": 0.42
+    "end": 0.4
   },
   {
-    "word": "a",
-    "start": 0.42,
-    "end": 0.62
+    "word": "-as",
+    "start": 0.4,
+    "end": 0.54
   },
   {
-    "word": "real",
-    "start": 0.62,
-    "end": 0.9
+    "word": "-you",
+    "start": 0.54,
+    "end": 0.66
   },
   {
-    "word": "lead",
-    "start": 0.9,
+    "word": "-go",
+    "start": 0.66,
+    "end": 0.84
+  },
+  {
+    "word": "credits,",
+    "start": 0.84,
     "end": 1.18
   },
   {
-    "word": "worth",
-    "start": 1.18,
-    "end": 1.4
+    "word": "no",
+    "start": 1.54,
+    "end": 1.64
   },
   {
-    "word": "chasing,",
-    "start": 1.4,
-    "end": 1.92
+    "word": "subscription,",
+    "start": 1.64,
+    "end": 2.1
   },
   {
-    "word": "it",
-    "start": 2.48,
-    "end": 2.56
-  },
-  {
-    "word": "can",
-    "start": 2.56,
-    "end": 2.7
-  },
-  {
-    "word": "trigger",
+    "word": "and",
     "start": 2.7,
-    "end": 3.0
+    "end": 2.78
   },
   {
-    "word": "automated",
-    "start": 3.0,
+    "word": "every",
+    "start": 2.78,
+    "end": 3.06
+  },
+  {
+    "word": "campaign",
+    "start": 3.06,
     "end": 3.54
   },
   {
-    "word": "outreach,",
+    "word": "runs",
     "start": 3.54,
-    "end": 4.1
+    "end": 3.92
   },
   {
-    "word": "email,",
-    "start": 4.7,
-    "end": 4.96
+    "word": "through",
+    "start": 3.92,
+    "end": 4.22
   },
   {
-    "word": "or",
-    "start": 5.38,
-    "end": 5.38
+    "word": "your",
+    "start": 4.22,
+    "end": 4.38
   },
   {
-    "word": "an",
-    "start": 5.38,
+    "word": "own",
+    "start": 4.38,
+    "end": 4.58
+  },
+  {
+    "word": "connected",
+    "start": 4.58,
+    "end": 5.02
+  },
+  {
+    "word": "accounts,",
+    "start": 5.02,
     "end": 5.56
   },
   {
-    "word": "AI",
-    "start": 5.56,
-    "end": 5.94
+    "word": "smart",
+    "start": 6.3,
+    "end": 6.32
   },
   {
-    "word": "phone",
-    "start": 5.94,
-    "end": 6.26
+    "word": "lead,",
+    "start": 6.32,
+    "end": 6.6
   },
   {
-    "word": "call",
-    "start": 6.26,
-    "end": 6.68
+    "word": "instantly,",
+    "start": 7.0,
+    "end": 7.4
   },
   {
-    "word": "without",
-    "start": 6.68,
-    "end": 7.26
+    "word": "bland",
+    "start": 7.98,
+    "end": 8.02
+  },
+  {
+    "word": ".ai,",
+    "start": 8.02,
+    "end": 8.64
+  },
+  {
+    "word": "or",
+    "start": 9.22,
+    "end": 9.36
+  },
+  {
+    "word": "retail",
+    "start": 9.36,
+    "end": 9.74
+  },
+  {
+    "word": ".ai,",
+    "start": 9.74,
+    "end": 10.14
+  },
+  {
+    "word": "so",
+    "start": 10.72,
+    "end": 10.88
   },
   {
     "word": "you",
-    "start": 7.26,
-    "end": 7.5
+    "start": 10.88,
+    "end": 11.02
   },
   {
-    "word": "manually",
-    "start": 7.5,
-    "end": 7.84
+    "word": "stay",
+    "start": 11.02,
+    "end": 11.22
   },
   {
-    "word": "building",
-    "start": 7.84,
-    "end": 8.24
+    "word": "in",
+    "start": 11.22,
+    "end": 11.4
   },
   {
-    "word": "a",
-    "start": 8.24,
-    "end": 8.46
-  },
-  {
-    "word": "prospect",
-    "start": 8.46,
-    "end": 8.82
-  },
-  {
-    "word": "list",
-    "start": 8.82,
-    "end": 9.08
-  },
-  {
-    "word": "first.",
-    "start": 9.08,
-    "end": 9.38
+    "word": "control.",
+    "start": 11.4,
+    "end": 11.76
   }
 ]

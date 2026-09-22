@@ -1,42 +1,57 @@
 [
   {
-    "word": "That's",
+    "word": "No",
     "start": 0.0,
-    "end": 0.3
+    "end": 0.22
   },
   {
-    "word": "the",
-    "start": 0.3,
-    "end": 0.36
+    "word": "more",
+    "start": 0.22,
+    "end": 0.46
   },
   {
-    "word": "Mistake",
-    "start": 0.36,
-    "end": 0.78
+    "word": "juggling",
+    "start": 0.46,
+    "end": 0.82
   },
   {
-    "word": "Radar",
-    "start": 0.78,
-    "end": 1.08
+    "word": "three",
+    "start": 0.82,
+    "end": 1.14
   },
   {
-    "word": "Fixes,",
-    "start": 1.08,
-    "end": 1.44
+    "word": "vendors",
+    "start": 1.14,
+    "end": 1.46
   },
   {
-    "word": "built",
-    "start": 2.02,
-    "end": 2.16
+    "word": "for",
+    "start": 1.46,
+    "end": 1.74
+  },
+  {
+    "word": "one",
+    "start": 1.74,
+    "end": 1.94
+  },
+  {
+    "word": "lead.",
+    "start": 1.94,
+    "end": 2.28
+  },
+  {
+    "word": "Built",
+    "start": 2.86,
+    "end": 2.9
   },
   {
     "word": "by",
-    "start": 2.16,
-    "end": 2.42
+    "start": 2.9,
+    "end": 3.14
   },
   {
     "word": "Yaris.",
-    "start": 2.42,
-    "end": 2.74
+    "start": 3.14,
+    "end": 3.48
   }
 ]

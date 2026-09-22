@@ -1,82 +1,97 @@
 [
   {
-    "word": "Most",
+    "word": "Lead",
     "start": 0.0,
-    "end": 0.28
+    "end": 0.24
   },
   {
-    "word": "businesses",
-    "start": 0.28,
-    "end": 0.66
+    "word": "generation",
+    "start": 0.24,
+    "end": 0.8
   },
   {
-    "word": "have",
-    "start": 0.66,
-    "end": 1.04
+    "word": "usually",
+    "start": 0.8,
+    "end": 1.26
   },
   {
-    "word": "no",
-    "start": 1.04,
-    "end": 1.3
+    "word": "means",
+    "start": 1.26,
+    "end": 1.72
   },
   {
-    "word": "idea",
-    "start": 1.3,
-    "end": 1.7
+    "word": "juggling",
+    "start": 1.72,
+    "end": 2.14
   },
   {
-    "word": "what",
-    "start": 1.7,
-    "end": 2.02
+    "word": "three",
+    "start": 2.14,
+    "end": 2.58
   },
   {
-    "word": "chat",
-    "start": 2.02,
-    "end": 2.34
+    "word": "different",
+    "start": 2.58,
+    "end": 2.88
   },
   {
-    "word": "GPT",
-    "start": 2.34,
-    "end": 3.02
+    "word": "tools.",
+    "start": 2.88,
+    "end": 3.32
   },
   {
-    "word": "or",
-    "start": 3.02,
-    "end": 3.74
+    "word": "One",
+    "start": 4.04,
+    "end": 4.24
   },
   {
-    "word": "Google's",
-    "start": 3.74,
-    "end": 4.26
+    "word": "for",
+    "start": 4.24,
+    "end": 4.44
   },
   {
-    "word": "AI",
-    "start": 4.26,
-    "end": 4.6
+    "word": "scraping,",
+    "start": 4.44,
+    "end": 4.88
   },
   {
-    "word": "overview",
-    "start": 4.6,
-    "end": 5.06
+    "word": "one",
+    "start": 5.3,
+    "end": 5.56
   },
   {
-    "word": "actually",
-    "start": 5.06,
-    "end": 5.82
+    "word": "for",
+    "start": 5.56,
+    "end": 5.78
   },
   {
-    "word": "says",
-    "start": 5.82,
-    "end": 6.12
+    "word": "finding",
+    "start": 5.78,
+    "end": 6.1
   },
   {
-    "word": "about",
-    "start": 6.12,
-    "end": 6.36
+    "word": "contact",
+    "start": 6.1,
+    "end": 6.6
   },
   {
-    "word": "them.",
-    "start": 6.36,
-    "end": 6.58
+    "word": "info,",
+    "start": 6.6,
+    "end": 7.06
+  },
+  {
+    "word": "one",
+    "start": 7.34,
+    "end": 7.64
+  },
+  {
+    "word": "for",
+    "start": 7.64,
+    "end": 7.86
+  },
+  {
+    "word": "outreach.",
+    "start": 7.86,
+    "end": 8.2
   }
 ]

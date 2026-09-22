@@ -1,147 +1,157 @@
 [
   {
-    "word": "It",
+    "word": "a",
     "start": 0.0,
-    "end": 0.14
+    "end": 0.16
   },
   {
-    "word": "doesn't,",
-    "start": 0.14,
-    "end": 0.56
+    "word": "scraper",
+    "start": 0.16,
+    "end": 0.52
   },
   {
-    "word": "AI",
-    "start": 0.86,
-    "end": 1.2
+    "word": "for",
+    "start": 0.52,
+    "end": 0.7
   },
   {
-    "word": "overviews",
-    "start": 1.2,
-    "end": 1.96
+    "word": "finding",
+    "start": 0.7,
+    "end": 1.04
   },
   {
-    "word": "and",
-    "start": 1.96,
-    "end": 2.08
-  },
-  {
-    "word": "chatbot",
-    "start": 2.08,
-    "end": 2.52
-  },
-  {
-    "word": "answers",
-    "start": 2.52,
-    "end": 3.04
-  },
-  {
-    "word": "pull",
-    "start": 3.04,
-    "end": 3.56
-  },
-  {
-    "word": "from",
-    "start": 3.56,
-    "end": 3.78
+    "word": "sites,",
+    "start": 1.04,
+    "end": 1.48
   },
   {
     "word": "a",
-    "start": 3.78,
-    "end": 3.9
+    "start": 1.92,
+    "end": 2.02
   },
   {
-    "word": "different",
-    "start": 3.9,
+    "word": "data",
+    "start": 2.02,
+    "end": 2.3
+  },
+  {
+    "word": "enrichment",
+    "start": 2.3,
+    "end": 2.7
+  },
+  {
+    "word": "tool",
+    "start": 2.7,
+    "end": 3.06
+  },
+  {
+    "word": "for",
+    "start": 3.06,
+    "end": 3.32
+  },
+  {
+    "word": "contact",
+    "start": 3.32,
+    "end": 3.74
+  },
+  {
+    "word": "info,",
+    "start": 3.74,
     "end": 4.16
   },
   {
-    "word": "mix",
-    "start": 4.16,
-    "end": 4.34
+    "word": "and",
+    "start": 4.6,
+    "end": 4.76
   },
   {
-    "word": "of",
-    "start": 4.34,
-    "end": 4.58
+    "word": "a",
+    "start": 4.76,
+    "end": 4.9
   },
   {
-    "word": "signals,",
-    "start": 4.58,
-    "end": 4.86
+    "word": "separate",
+    "start": 4.9,
+    "end": 5.18
+  },
+  {
+    "word": "outreach",
+    "start": 5.18,
+    "end": 5.58
+  },
+  {
+    "word": "platform,",
+    "start": 5.58,
+    "end": 6.18
+  },
+  {
+    "word": "each",
+    "start": 6.6,
+    "end": 6.86
+  },
+  {
+    "word": "with",
+    "start": 6.86,
+    "end": 7.1
+  },
+  {
+    "word": "its",
+    "start": 7.1,
+    "end": 7.22
+  },
+  {
+    "word": "own",
+    "start": 7.22,
+    "end": 7.42
+  },
+  {
+    "word": "subscription,",
+    "start": 7.42,
+    "end": 7.92
+  },
+  {
+    "word": "its",
+    "start": 8.54,
+    "end": 8.62
+  },
+  {
+    "word": "own",
+    "start": 8.62,
+    "end": 8.84
+  },
+  {
+    "word": "login,",
+    "start": 8.84,
+    "end": 9.2
+  },
+  {
+    "word": "its",
+    "start": 9.72,
+    "end": 9.88
+  },
+  {
+    "word": "own",
+    "start": 9.88,
+    "end": 10.1
+  },
+  {
+    "word": "export",
+    "start": 10.1,
+    "end": 10.58
   },
   {
     "word": "and",
-    "start": 5.5,
-    "end": 5.64
+    "start": 10.58,
+    "end": 10.86
   },
   {
-    "word": "most",
-    "start": 5.64,
-    "end": 5.9
+    "word": "import",
+    "start": 10.86,
+    "end": 11.18
   },
   {
-    "word": "businesses",
-    "start": 5.9,
-    "end": 6.34
-  },
-  {
-    "word": "have",
-    "start": 6.34,
-    "end": 6.74
-  },
-  {
-    "word": "zero",
-    "start": 6.74,
-    "end": 7.18
-  },
-  {
-    "word": "visibility",
-    "start": 7.18,
-    "end": 7.7
-  },
-  {
-    "word": "into",
-    "start": 7.7,
-    "end": 8.28
-  },
-  {
-    "word": "whether",
-    "start": 8.28,
-    "end": 8.54
-  },
-  {
-    "word": "they",
-    "start": 8.54,
-    "end": 8.8
-  },
-  {
-    "word": "are",
-    "start": 8.8,
-    "end": 8.88
-  },
-  {
-    "word": "even",
-    "start": 8.88,
-    "end": 9.16
-  },
-  {
-    "word": "being",
-    "start": 9.16,
-    "end": 9.44
-  },
-  {
-    "word": "mentioned",
-    "start": 9.44,
-    "end": 9.82
-  },
-  {
-    "word": "at",
-    "start": 9.82,
-    "end": 10.02
-  },
-  {
-    "word": "all.",
-    "start": 10.02,
-    "end": 10.24
+    "word": "step.",
+    "start": 11.18,
+    "end": 11.52
   }
 ]

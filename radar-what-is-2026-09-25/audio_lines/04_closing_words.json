@@ -2,66 +2,66 @@
   {
     "word": "That's",
     "start": 0.0,
-    "end": 0.32
+    "end": 0.28
   },
   {
-    "word": "Radar,",
-    "start": 0.32,
-    "end": 0.66
+    "word": "radar.",
+    "start": 0.28,
+    "end": 0.6
   },
   {
-    "word": "AI",
-    "start": 1.5,
-    "end": 1.5
+    "word": "Find",
+    "start": 1.3,
+    "end": 1.3
   },
   {
-    "word": "visibility",
-    "start": 1.5,
-    "end": 1.84
+    "word": "leads,",
+    "start": 1.3,
+    "end": 1.58
   },
   {
-    "word": "tracking",
-    "start": 1.84,
-    "end": 2.4
+    "word": "extract",
+    "start": 2.12,
+    "end": 2.12
   },
   {
-    "word": "and",
-    "start": 2.4,
-    "end": 2.66
+    "word": "contacts,",
+    "start": 2.12,
+    "end": 2.68
   },
   {
-    "word": "outreach",
-    "start": 2.66,
+    "word": "reach",
+    "start": 2.88,
     "end": 3.0
   },
   {
-    "word": "in",
+    "word": "out.",
     "start": 3.0,
-    "end": 3.36
+    "end": 3.32
   },
   {
-    "word": "one",
-    "start": 3.36,
-    "end": 3.6
+    "word": "One",
+    "start": 3.84,
+    "end": 3.96
   },
   {
     "word": "dashboard,",
-    "start": 3.6,
-    "end": 4.08
+    "start": 3.96,
+    "end": 4.44
   },
   {
     "word": "built",
-    "start": 4.46,
-    "end": 4.78
-  },
-  {
-    "word": "by",
-    "start": 4.78,
+    "start": 4.8,
     "end": 5.04
   },
   {
-    "word": "Yaris.",
+    "word": "by",
     "start": 5.04,
-    "end": 5.36
+    "end": 5.3
+  },
+  {
+    "word": "Yaris.",
+    "start": 5.3,
+    "end": 5.6
   }
 ]

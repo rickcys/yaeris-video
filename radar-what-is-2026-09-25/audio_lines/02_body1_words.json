@@ -2,136 +2,186 @@
   {
     "word": "Radar",
     "start": 0.0,
-    "end": 0.34
+    "end": 0.32
   },
   {
-    "word": "checks",
-    "start": 0.34,
-    "end": 0.74
+    "word": "puts",
+    "start": 0.32,
+    "end": 0.66
   },
   {
-    "word": "that",
-    "start": 0.74,
-    "end": 1.04
+    "word": "all",
+    "start": 0.66,
+    "end": 0.94
   },
   {
-    "word": "directly.",
-    "start": 1.04,
-    "end": 1.52
+    "word": "three",
+    "start": 0.94,
+    "end": 1.22
   },
   {
-    "word": "It",
-    "start": 2.22,
-    "end": 2.3
+    "word": "in",
+    "start": 1.22,
+    "end": 1.42
   },
   {
-    "word": "tracks",
-    "start": 2.3,
-    "end": 2.58
+    "word": "one",
+    "start": 1.42,
+    "end": 1.64
   },
   {
-    "word": "whether",
-    "start": 2.58,
-    "end": 2.92
+    "word": "dashboard.",
+    "start": 1.64,
+    "end": 2.08
   },
   {
-    "word": "AI",
-    "start": 2.92,
-    "end": 3.38
+    "word": "Check",
+    "start": 2.84,
+    "end": 2.98
   },
   {
-    "word": "search",
-    "start": 3.38,
-    "end": 3.7
+    "word": "Google",
+    "start": 2.98,
+    "end": 3.32
   },
   {
-    "word": "engines",
-    "start": 3.7,
-    "end": 4.28
+    "word": "rankings",
+    "start": 3.32,
+    "end": 3.68
   },
   {
-    "word": "mention",
-    "start": 4.28,
-    "end": 4.62
+    "word": "with",
+    "start": 3.68,
+    "end": 4.02
   },
   {
-    "word": "your",
-    "start": 4.62,
-    "end": 4.88
+    "word": "SERP",
+    "start": 4.02,
+    "end": 4.32
   },
   {
-    "word": "business,",
-    "start": 4.88,
-    "end": 5.26
+    "word": "lookup,",
+    "start": 4.32,
+    "end": 4.6
   },
   {
-    "word": "alongside",
-    "start": 5.72,
+    "word": "pull",
+    "start": 5.04,
+    "end": 5.32
+  },
+  {
+    "word": "real",
+    "start": 5.32,
+    "end": 5.62
+  },
+  {
+    "word": "contact",
+    "start": 5.62,
     "end": 6.14
   },
   {
-    "word": "your",
+    "word": "info",
     "start": 6.14,
-    "end": 6.56
+    "end": 6.6
   },
   {
-    "word": "regular",
-    "start": 6.56,
-    "end": 6.92
+    "word": "off",
+    "start": 6.6,
+    "end": 6.94
   },
   {
-    "word": "local",
-    "start": 6.92,
-    "end": 7.24
+    "word": "any",
+    "start": 6.94,
+    "end": 7.14
   },
   {
-    "word": "SEO",
-    "start": 7.24,
-    "end": 7.72
+    "word": "website",
+    "start": 7.14,
+    "end": 7.48
   },
   {
-    "word": "rankings,",
-    "start": 7.72,
+    "word": "with",
+    "start": 7.48,
+    "end": 7.7
+  },
+  {
+    "word": "the",
+    "start": 7.7,
+    "end": 7.84
+  },
+  {
+    "word": "crawler,",
+    "start": 7.84,
     "end": 8.22
   },
   {
-    "word": "so",
-    "start": 8.64,
-    "end": 8.88
+    "word": "and",
+    "start": 8.54,
+    "end": 8.78
   },
   {
-    "word": "you're",
-    "start": 8.88,
-    "end": 9.02
+    "word": "run",
+    "start": 8.78,
+    "end": 9.04
   },
   {
-    "word": "not",
-    "start": 9.02,
-    "end": 9.22
+    "word": "email",
+    "start": 9.04,
+    "end": 9.54
   },
   {
-    "word": "flying",
-    "start": 9.22,
-    "end": 9.64
+    "word": "or",
+    "start": 9.54,
+    "end": 9.9
   },
   {
-    "word": "blind",
-    "start": 9.64,
-    "end": 10.06
+    "word": "AI",
+    "start": 9.9,
+    "end": 10.3
   },
   {
-    "word": "on",
-    "start": 10.06,
-    "end": 10.36
+    "word": "phone",
+    "start": 10.3,
+    "end": 10.64
   },
   {
-    "word": "either",
-    "start": 10.36,
-    "end": 10.58
+    "word": "call",
+    "start": 10.64,
+    "end": 10.92
   },
   {
-    "word": "one.",
-    "start": 10.58,
-    "end": 10.88
+    "word": "campaigns",
+    "start": 10.92,
+    "end": 11.46
+  },
+  {
+    "word": "straight",
+    "start": 11.46,
+    "end": 11.94
+  },
+  {
+    "word": "from",
+    "start": 11.94,
+    "end": 12.22
+  },
+  {
+    "word": "the",
+    "start": 12.22,
+    "end": 12.38
+  },
+  {
+    "word": "same",
+    "start": 12.38,
+    "end": 12.62
+  },
+  {
+    "word": "contact",
+    "start": 12.62,
+    "end": 13.06
+  },
+  {
+    "word": "list.",
+    "start": 13.06,
+    "end": 13.32
   }
 ]

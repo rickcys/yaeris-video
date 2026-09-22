@@ -1,6 +1,6 @@
 [
   {
-    "word": "The",
+    "word": "the",
     "start": 0.0,
     "end": 0.1
   },
@@ -12,86 +12,86 @@
   {
     "word": "one",
     "start": 0.28,
-    "end": 0.58
+    "end": 0.56
   },
   {
     "word": "mistake",
-    "start": 0.58,
-    "end": 0.96
+    "start": 0.56,
+    "end": 1.04
   },
   {
-    "word": "businesses",
-    "start": 0.96,
-    "end": 1.54
+    "word": "in",
+    "start": 1.04,
+    "end": 1.36
   },
   {
-    "word": "make",
-    "start": 1.54,
-    "end": 2.02
+    "word": "lead",
+    "start": 1.36,
+    "end": 1.56
   },
   {
-    "word": "with",
-    "start": 2.02,
-    "end": 2.24
+    "word": "generation,",
+    "start": 1.56,
+    "end": 2.16
   },
   {
-    "word": "AI",
-    "start": 2.24,
-    "end": 2.68
-  },
-  {
-    "word": "search",
-    "start": 2.68,
-    "end": 3.02
-  },
-  {
-    "word": "visibility",
-    "start": 3.02,
-    "end": 3.64
-  },
-  {
-    "word": "is",
-    "start": 3.64,
-    "end": 4.3
-  },
-  {
-    "word": "assuming",
-    "start": 4.3,
-    "end": 4.68
+    "word": "running",
+    "start": 2.78,
+    "end": 3.08
   },
   {
     "word": "it",
-    "start": 4.68,
-    "end": 5.02
+    "start": 3.08,
+    "end": 3.34
   },
   {
-    "word": "works",
-    "start": 5.02,
-    "end": 5.28
+    "word": "through",
+    "start": 3.34,
+    "end": 3.56
   },
   {
-    "word": "exactly",
-    "start": 5.28,
-    "end": 5.74
+    "word": "three",
+    "start": 3.56,
+    "end": 3.94
   },
   {
-    "word": "like",
-    "start": 5.74,
-    "end": 6.12
+    "word": "separate",
+    "start": 3.94,
+    "end": 4.3
   },
   {
-    "word": "regular",
-    "start": 6.12,
-    "end": 6.56
+    "word": "tools",
+    "start": 4.3,
+    "end": 4.78
   },
   {
-    "word": "Google",
-    "start": 6.56,
-    "end": 6.88
+    "word": "that",
+    "start": 4.78,
+    "end": 5.16
   },
   {
-    "word": "SEO.",
-    "start": 6.88,
-    "end": 7.34
+    "word": "don't",
+    "start": 5.16,
+    "end": 5.4
+  },
+  {
+    "word": "talk",
+    "start": 5.4,
+    "end": 5.6
+  },
+  {
+    "word": "to",
+    "start": 5.6,
+    "end": 5.8
+  },
+  {
+    "word": "each",
+    "start": 5.8,
+    "end": 5.94
+  },
+  {
+    "word": "other.",
+    "start": 5.94,
+    "end": 6.16
   }
 ]
