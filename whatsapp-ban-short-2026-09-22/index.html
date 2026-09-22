@@ -150,52 +150,36 @@
       <audio id="audio-scene3" src="audio_lines/04_scene3.wav" data-start="43.434" data-duration="17.749" data-track-index="10" data-volume="1"></audio>
       <audio id="audio-closing" src="audio_lines/05_closing.wav" data-start="61.183" data-duration="17.323" data-track-index="10" data-volume="1"></audio>
 
-      <!-- ===== HOOK (0 - 6.485s), 2 beats ===== -->
-      <div class="beat clip" id="hook-1" data-start="0" data-duration="3.9" data-track-index="0">
+      <!-- ===== HOOK (0 - 6.485s), 1 beat ===== -->
+      <div class="beat clip" id="hook-1" data-start="0" data-duration="6.785" data-track-index="0">
         <div class="hook-headline" id="hook1-text">Your WhatsApp number can get banned for <span class="accent">3 specific reasons</span>.</div>
-      </div>
-      <div class="beat clip" id="hook-2" data-start="3.6" data-duration="3.185" data-track-index="0">
-        <div class="hook-headline" id="hook2-text">Most businesses only ever fix <span class="accent2">one</span> of them.</div>
+        <div class="sub" id="hook1-sub">Most businesses only ever fix <span class="accent2">one</span> of them.</div>
       </div>
 
-      <!-- ===== REASON #1 (6.485 - 28.949s), 4 beats ===== -->
-      <div class="beat clip" id="r1-a" data-start="6.485" data-duration="3.015" data-track-index="0">
+      <!-- ===== REASON #1 (6.485 - 28.949s), 2 beats (~8.8s, ~13.6s) ===== -->
+      <div class="beat clip" id="r1-a" data-start="6.485" data-duration="9.115" data-track-index="0">
         <div class="eyebrow" id="r1a-eb">Reason #1</div>
         <div class="headline" id="r1a-head">Messaging people who <span class="accent">never opted in</span></div>
-      </div>
-      <div class="beat clip" id="r1-b" data-start="9.2" data-duration="6.4" data-track-index="0">
-        <div class="eyebrow" id="r1b-eb">Reason #1</div>
-        <div class="headline" id="r1b-head">A rolling 7-day quality score</div>
-        <div class="chip-row" id="r1b-chips">
+        <div class="chip-row" id="r1a-chips">
           <div class="stat-chip"><div class="sc-label">Signal</div><div class="sc-val">Blocks</div></div>
           <div class="stat-chip"><div class="sc-label">Signal</div><div class="sc-val">Spam</div></div>
           <div class="stat-chip"><div class="sc-label">Signal</div><div class="sc-val">Engagement</div></div>
         </div>
+        <div class="sub" id="r1a-sub">A rolling 7-day quality score tracks all three.</div>
       </div>
-      <div class="beat clip" id="r1-c" data-start="15.3" data-duration="6.7" data-track-index="0">
-        <div class="eyebrow" id="r1c-eb">2026 Update</div>
-        <div class="headline" id="r1c-head">Unanswered messages <span class="accent">count too</span></div>
-        <div class="gauge-wrap" id="r1c-gauge">
+      <div class="beat clip" id="r1-b" data-start="15.3" data-duration="13.949" data-track-index="0">
+        <div class="eyebrow" id="r1b-eb">2026 Update</div>
+        <div class="headline" id="r1b-head">Unanswered messages <span class="accent">count too</span></div>
+        <div class="gauge-wrap" id="r1b-gauge">
           <div class="gauge-track">
             <div class="gauge-seg green"></div>
             <div class="gauge-seg yellow"></div>
             <div class="gauge-seg red"></div>
           </div>
+          <div class="gauge-marker-rail"><div class="gauge-marker" id="r1b-marker"></div></div>
           <div class="gauge-labels"><span>Green</span><span>Yellow</span><span>Red</span></div>
         </div>
-      </div>
-      <div class="beat clip" id="r1-d" data-start="21.7" data-duration="7.549" data-track-index="0">
-        <div class="eyebrow" id="r1d-eb">Reason #1</div>
-        <div class="headline" id="r1d-head">Red comes with real <span class="accent">messaging limits</span></div>
-        <div class="gauge-wrap" id="r1d-gauge">
-          <div class="gauge-track">
-            <div class="gauge-seg green"></div>
-            <div class="gauge-seg yellow"></div>
-            <div class="gauge-seg red"></div>
-          </div>
-          <div class="gauge-marker-rail"><div class="gauge-marker" id="r1d-marker"></div></div>
-          <div class="gauge-labels"><span>Green</span><span>Yellow</span><span>Red</span></div>
-        </div>
+        <div class="sub" id="r1b-sub">Red comes with real messaging limits.</div>
       </div>
 
       <!-- ===== SUBSCRIBE MID-VIDEO POP (26.5 - 30.5s, over the Reason 1/2 transition) ===== -->
@@ -204,60 +188,46 @@
         <div class="sp-text">Subscribe</div>
       </div>
 
-      <!-- ===== REASON #2 (28.949 - 43.434s), 3 beats ===== -->
-      <div class="beat clip" id="r2-a" data-start="28.949" data-duration="2.551" data-track-index="0">
+      <!-- ===== REASON #2 (28.949 - 43.434s), 2 beats (~9.2s, ~5.6s) ===== -->
+      <div class="beat clip" id="r2-a" data-start="28.949" data-duration="9.451" data-track-index="0">
         <div class="eyebrow" id="r2a-eb">Reason #2</div>
         <div class="headline" id="r2a-head">Sudden <span class="accent">volume spikes</span></div>
-      </div>
-      <div class="beat clip" id="r2-b" data-start="31.2" data-duration="7.2" data-track-index="0">
-        <div class="eyebrow" id="r2b-eb">Reason #2</div>
-        <div class="headline" id="r2b-head">New number, 1,000 messages, day one</div>
-        <div class="bars-wrap" id="r2b-bars">
+        <div class="bars-wrap" id="r2a-bars">
           <div class="bar" style="height: 40px;"></div>
           <div class="bar" style="height: 55px;"></div>
           <div class="bar" style="height: 48px;"></div>
           <div class="bar spike" style="height: 220px;"></div>
         </div>
-        <div class="sub" id="r2b-sub">Doesn't look like a real business to WhatsApp.</div>
+        <div class="sub" id="r2a-sub">New number, 1,000 messages, day one — doesn't look real.</div>
       </div>
-      <div class="beat clip" id="r2-c" data-start="38.1" data-duration="5.634" data-track-index="0">
-        <div class="eyebrow" id="r2c-eb">Reason #2</div>
-        <div class="headline" id="r2c-head">Exactly the pattern <span class="accent">they're built to catch</span></div>
+      <div class="beat clip" id="r2-b" data-start="38.4" data-duration="5.334" data-track-index="0">
+        <div class="eyebrow" id="r2b-eb">Reason #2</div>
+        <div class="headline" id="r2b-head">Exactly the pattern <span class="accent">they're built to catch</span></div>
       </div>
 
-      <!-- ===== REASON #3 (43.434 - 61.183s), 4 beats ===== -->
-      <div class="beat clip" id="r3-a" data-start="43.434" data-duration="2.316" data-track-index="0">
+      <!-- ===== REASON #3 (43.434 - 61.183s), 2 beats (~10.2s, ~7.8s) ===== -->
+      <div class="beat clip" id="r3-a" data-start="43.434" data-duration="10.516" data-track-index="0">
         <div class="eyebrow" id="r3a-eb">Reason #3</div>
         <div class="headline" id="r3a-head"><span class="accent">Unofficial</span> tools</div>
-      </div>
-      <div class="beat clip" id="r3-b" data-start="45.45" data-duration="4.25" data-track-index="0">
-        <div class="eyebrow" id="r3b-eb">Reason #3</div>
-        <div class="headline" id="r3b-head">Modified apps &amp; bulk senders</div>
-        <div class="sub" id="r3b-sub">Bypass WhatsApp's real Business API.</div>
-      </div>
-      <div class="beat clip" id="r3-c" data-start="49.4" data-duration="4.55" data-track-index="0">
-        <div class="eyebrow" id="r3c-eb">Reason #3</div>
-        <div class="icon-row" id="r3c-icons">
+        <div class="sub" id="r3a-sub">Modified apps & bulk senders bypass WhatsApp's real Business API.</div>
+        <div class="icon-row" id="r3a-icons">
           <div class="icon-pill crossed"><span class="ic">&#10003;</span> Template approval</div>
           <div class="icon-pill crossed"><span class="ic">&#10003;</span> Compliance checks</div>
         </div>
       </div>
-      <div class="beat clip" id="r3-d" data-start="53.65" data-duration="7.833" data-track-index="0">
-        <div class="eyebrow" id="r3d-eb">Reason #3</div>
-        <div class="headline" id="r3d-head">Flagged = <span class="accent">no appeal</span></div>
-        <div class="badge" id="r3d-badge">&times;</div>
-        <div class="sub" id="r3d-sub">You were never on WhatsApp's real platform.</div>
+      <div class="beat clip" id="r3-b" data-start="53.95" data-duration="7.533" data-track-index="0">
+        <div class="eyebrow" id="r3b-eb">Reason #3</div>
+        <div class="headline" id="r3b-head">Flagged = <span class="accent">no appeal</span></div>
+        <div class="badge" id="r3b-badge">&times;</div>
+        <div class="sub" id="r3b-sub">You were never on WhatsApp's real platform.</div>
       </div>
 
-      <!-- ===== CLOSING / THE FIX (61.183 - 78.506s), 3 beats ===== -->
-      <div class="beat clip" id="close-a" data-start="61.183" data-duration="2.967" data-track-index="0">
+      <!-- ===== CLOSING / THE FIX (61.183 - 78.506s), 2 beats (~9.3s, ~8.3s) ===== -->
+      <div class="beat clip" id="close-a" data-start="61.183" data-duration="9.617" data-track-index="0">
         <div class="headline" id="ca-head">None of these come from <span class="accent">one bad message</span></div>
+        <div class="sub" id="ca-sub">They come from patterns WhatsApp is <span class="accent2">built to catch</span>.</div>
       </div>
-      <div class="beat clip" id="close-b" data-start="63.85" data-duration="6.95" data-track-index="0">
-        <div class="eyebrow" id="cb-eb">The Fix</div>
-        <div class="headline" id="cb-head">Patterns WhatsApp is <span class="accent2">built to catch</span></div>
-      </div>
-      <div class="beat clip" id="close-c" data-start="70.5" data-duration="8.306" data-track-index="0">
+      <div class="beat clip" id="close-b" data-start="70.5" data-duration="8.306" data-track-index="0">
         <div class="eyebrow" id="cc-eb">The Fix</div>
         <div class="checklist" id="cc-checklist">
           <div class="check-item"><div class="check-mark">&check;</div><div class="check-text">Real opt-in consent</div></div>
@@ -337,46 +307,54 @@
         }
       }
 
-      // Hook
-      beat("hook-1", 0, 3.6);
-      beat("hook-2", 3.6, 6.485, false);
+      // Hook (0 - 6.485s), 1 beat -- headline + sub-line, gentle pulse as secondary motion
+      beat("hook-1", 0, 6.485, false);
+      tl.fromTo("#hook1-sub", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 3.6);
+      tl.to("#hook1-text .accent", { scale: 1.05, duration: 0.4, repeat: 1, yoyo: true }, 2.2);
 
-      // Reason 1
-      beat("r1-a", 6.485, 9.2);
-      beat("r1-b", 9.2, 15.3);
-      beat("r1-c", 15.3, 21.7);
-      beat("r1-d", 21.7, 28.949, false);
-      tl.fromTo("#r1d-marker", { x: 0 }, { x: 630, duration: 2.2, ease: "power2.inOut" }, 22.0);
+      // Reason 1, beat A (6.485 - 15.3s, ~8.8s): opted-in problem + quality-score chips
+      beat("r1-a", 6.485, 15.3);
+      tl.fromTo("#r1a-chips .stat-chip", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, stagger: 0.15 }, 9.2);
+      tl.fromTo("#r1a-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 12.5);
 
-      // Reason 1 supporting motion
-      tl.fromTo("#r1b-chips .stat-chip", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, stagger: 0.15 }, 10.2);
+      // Reason 1, beat B (15.3 - 28.949s, ~13.6s): 2026 update + gauge + marker sweep (2 motion beats for the long duration)
+      beat("r1-b", 15.3, 28.949, false);
+      tl.fromTo("#r1b-gauge", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 18.0);
+      tl.fromTo("#r1b-marker", { x: 0 }, { x: 630, duration: 2.4, ease: "power2.inOut" }, 19.5);
+      tl.fromTo("#r1b-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 23.5);
+      tl.to("#r1b-head .accent", { scale: 1.05, duration: 0.4, repeat: 1, yoyo: true }, 25.5);
 
       // Subscribe mid-video pop (bounce in, hold, fade out)
       tl.fromTo("#sub-pop", { opacity: 0, scale: 0.4 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2.4)" }, 26.5);
       tl.to("#sub-pop", { opacity: 0, scale: 0.85, duration: 0.4, ease: "power1.in" }, 29.9);
       tl.to("#sub-bell", { rotation: -14, duration: 0.15, repeat: 3, yoyo: true, transformOrigin: "50% 0%" }, 26.9);
 
-      // Reason 2
-      beat("r2-a", 28.949, 31.2);
-      beat("r2-b", 31.2, 38.1);
-      tl.fromTo("#r2b-bars .bar", { scaleY: 0 }, { scaleY: 1, duration: 0.45, stagger: 0.12, transformOrigin: "bottom" }, 32.6);
-      tl.fromTo("#r2b-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 35.5);
-      beat("r2-c", 38.1, 43.434, false);
-      tl.to("#r2c-head .accent", { scale: 1.06, duration: 0.35, repeat: 1, yoyo: true }, 39.5);
+      // Reason 2, beat A (28.949 - 38.4s, ~9.2s): volume spikes + bar chart
+      beat("r2-a", 28.949, 38.4);
+      tl.fromTo("#r2a-bars .bar", { scaleY: 0 }, { scaleY: 1, duration: 0.45, stagger: 0.14, transformOrigin: "bottom" }, 31.5);
+      tl.fromTo("#r2a-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 34.5);
 
-      // Reason 3
-      beat("r3-a", 43.434, 45.45);
-      beat("r3-b", 45.45, 49.4);
-      beat("r3-c", 49.4, 53.65);
-      tl.fromTo("#r3c-icons .icon-pill", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.4, stagger: 0.2 }, 49.8);
-      beat("r3-d", 53.65, 61.183, false);
-      tl.fromTo("#r3d-badge", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)" }, 56.0);
+      // Reason 2, beat B (38.4 - 43.434s, ~5.6s): the pattern they catch
+      beat("r2-b", 38.4, 43.434, false);
+      tl.to("#r2b-head .accent", { scale: 1.06, duration: 0.35, repeat: 1, yoyo: true }, 40.5);
 
-      // Closing / fix
-      beat("close-a", 61.183, 63.85);
-      beat("close-b", 63.85, 70.5);
-      beat("close-c", 70.5, 78.506, false);
-      tl.fromTo("#cc-checklist .check-item", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.4, stagger: 0.35 }, 71.0);
+      // Reason 3, beat A (43.434 - 53.95s, ~10.2s): unofficial tools + modified apps + skipped checks
+      beat("r3-a", 43.434, 53.95);
+      tl.fromTo("#r3a-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 46.0);
+      tl.fromTo("#r3a-icons .icon-pill", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.4, stagger: 0.2 }, 49.5);
+
+      // Reason 3, beat B (53.95 - 61.183s, ~7.8s): flagged / no appeal / badge
+      beat("r3-b", 53.95, 61.183, false);
+      tl.fromTo("#r3b-badge", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.7)" }, 55.5);
+      tl.fromTo("#r3b-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 58.5);
+
+      // Closing, beat A (61.183 - 70.5s, ~9.3s): not one bad message + patterns
+      beat("close-a", 61.183, 70.5);
+      tl.fromTo("#ca-sub", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 64.5);
+
+      // Closing, beat B (70.5 - 78.506s, ~8.3s): the fix checklist
+      beat("close-b", 70.5, 78.506, false);
+      tl.fromTo("#cc-checklist .check-item", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.4, stagger: 0.6 }, 71.5);
 
       // End card (fade in only -- final scene, no exit)
       tl.fromTo("#endcard", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 78.506);

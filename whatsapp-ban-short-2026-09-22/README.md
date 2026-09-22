@@ -1,6 +1,13 @@
 # WhatsApp Blasting compliance Short — "3 things that get your WhatsApp number banned"
 
-Status: rendered, brand-compliant, ffprobe-verified. v2 rebuild (2026-09-22), superseding the v1 render from the same day.
+Status: rendered, brand-compliant, ffprobe-verified. v3 rebuild (2026-09-22), superseding both v1 and v2 from the same day.
+
+**v3 note:** v2's 17-beat pacing (~4.4s average) felt too fast per Rick's direct feedback
+("i think it just too fast. let's do 8-10 secs avg between frames so we don't have to rush").
+v3 regroups the same content into ~9 beats averaging ~8.7s, still cut on real transcript pause
+boundaries. This 8-10s target is now the standing pacing rule in global memory going forward,
+overriding the earlier 1.5-4s generic short-form guidance for this channel's explainer-style
+content specifically.
 
 Full row (storyline, script, sheet tracking) lives in the Yaeris "Video" tab:
 https://docs.google.com/spreadsheets/d/1Wq-1zDPZx77c_N40Ol9I0xVxONbNad8xeXoZ_KF6aJU/edit — row 3.
@@ -18,10 +25,10 @@ every future video, not just this one:
    available in this environment — `faster-whisper`, pip-installable, was used instead as a
    legitimate ASR substitute with the same real word-timestamp output). 46 caption chunks, synced
    to real speech, burned into the composition as `.caption-pill` elements.
-2. **Pacing** — the original 5 static scenes (~15.7s average) were broken into 17 shorter visual
-   beats (~4.4s average) cut on real speech-pause boundaries from the transcript, much closer to
-   the 1.5–4s/clip standing guideline (a few beats run 6–8s where the content is genuinely
-   text-heavy/diagram-like, which the pacing rule explicitly allows).
+2. **Pacing** — the original 5 static scenes (~15.7s average) were first broken into 17 shorter
+   visual beats (~4.4s average, v2), then regrouped into ~9 beats (~8.7s average, v3) after Rick
+   said the v2 cut felt too fast. All cuts land on real speech-pause boundaries from the
+   transcript, not a fixed timer.
 3. **Smooth transitions** — every beat-to-beat cut is a real 0.3s crossfade (opacity + scale
    overlap between outgoing and incoming beats), not a hard jump-cut.
 4. **Subscribe CTA** — an animated subscribe/bell pop-up appears mid-video (26.5–30.5s, during the
