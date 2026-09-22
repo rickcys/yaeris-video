@@ -1,0 +1,232 @@
+[
+  {
+    "word": "None",
+    "start": 0.0,
+    "end": 0.2
+  },
+  {
+    "word": "of",
+    "start": 0.2,
+    "end": 0.36
+  },
+  {
+    "word": "these",
+    "start": 0.36,
+    "end": 0.54
+  },
+  {
+    "word": "bans",
+    "start": 0.54,
+    "end": 0.86
+  },
+  {
+    "word": "come",
+    "start": 0.86,
+    "end": 1.18
+  },
+  {
+    "word": "from",
+    "start": 1.18,
+    "end": 1.4
+  },
+  {
+    "word": "one",
+    "start": 1.4,
+    "end": 1.66
+  },
+  {
+    "word": "bad",
+    "start": 1.66,
+    "end": 1.92
+  },
+  {
+    "word": "message.",
+    "start": 1.92,
+    "end": 2.36
+  },
+  {
+    "word": "They",
+    "start": 2.96,
+    "end": 3.06
+  },
+  {
+    "word": "come",
+    "start": 3.06,
+    "end": 3.28
+  },
+  {
+    "word": "from",
+    "start": 3.28,
+    "end": 3.5
+  },
+  {
+    "word": "patterns",
+    "start": 3.5,
+    "end": 4.0
+  },
+  {
+    "word": "what's",
+    "start": 4.0,
+    "end": 4.42
+  },
+  {
+    "word": "apps",
+    "start": 4.42,
+    "end": 4.62
+  },
+  {
+    "word": "detection",
+    "start": 4.62,
+    "end": 5.16
+  },
+  {
+    "word": "is",
+    "start": 5.16,
+    "end": 5.42
+  },
+  {
+    "word": "specifically",
+    "start": 5.42,
+    "end": 5.92
+  },
+  {
+    "word": "designed",
+    "start": 5.92,
+    "end": 6.44
+  },
+  {
+    "word": "to",
+    "start": 6.44,
+    "end": 6.66
+  },
+  {
+    "word": "catch.",
+    "start": 6.66,
+    "end": 6.94
+  },
+  {
+    "word": "The",
+    "start": 7.7,
+    "end": 7.82
+  },
+  {
+    "word": "fix",
+    "start": 7.82,
+    "end": 8.08
+  },
+  {
+    "word": "is",
+    "start": 8.08,
+    "end": 8.36
+  },
+  {
+    "word": "straightforward.",
+    "start": 8.36,
+    "end": 8.86
+  },
+  {
+    "word": "Real",
+    "start": 9.72,
+    "end": 9.96
+  },
+  {
+    "word": "opt",
+    "start": 9.96,
+    "end": 10.24
+  },
+  {
+    "word": "-in",
+    "start": 10.24,
+    "end": 10.44
+  },
+  {
+    "word": "consent,",
+    "start": 10.44,
+    "end": 10.84
+  },
+  {
+    "word": "a",
+    "start": 11.38,
+    "end": 11.44
+  },
+  {
+    "word": "gradual",
+    "start": 11.44,
+    "end": 11.88
+  },
+  {
+    "word": "send",
+    "start": 11.88,
+    "end": 12.24
+  },
+  {
+    "word": "volume",
+    "start": 12.24,
+    "end": 12.64
+  },
+  {
+    "word": "ramp",
+    "start": 12.64,
+    "end": 13.0
+  },
+  {
+    "word": "on",
+    "start": 13.0,
+    "end": 13.18
+  },
+  {
+    "word": "any",
+    "start": 13.18,
+    "end": 13.34
+  },
+  {
+    "word": "new",
+    "start": 13.34,
+    "end": 13.52
+  },
+  {
+    "word": "number,",
+    "start": 13.52,
+    "end": 13.8
+  },
+  {
+    "word": "an",
+    "start": 14.18,
+    "end": 14.32
+  },
+  {
+    "word": "infrastructure",
+    "start": 14.32,
+    "end": 14.78
+  },
+  {
+    "word": "that's",
+    "start": 14.78,
+    "end": 15.32
+  },
+  {
+    "word": "actually",
+    "start": 15.32,
+    "end": 15.74
+  },
+  {
+    "word": "compliant",
+    "start": 15.74,
+    "end": 16.32
+  },
+  {
+    "word": "end",
+    "start": 16.32,
+    "end": 16.68
+  },
+  {
+    "word": "to",
+    "start": 16.68,
+    "end": 16.88
+  },
+  {
+    "word": "end.",
+    "start": 16.88,
+    "end": 17.14
+  }
+]
