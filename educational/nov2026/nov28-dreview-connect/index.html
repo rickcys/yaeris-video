@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0E0E1F; }
+      #root { width: 100%; height: 100%; position: relative; font-family: Inter, sans-serif; background: #0E0E1F; }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 150px 90px; }
+
+      .eyebrow { font-family: 'Space Mono', monospace; font-size: 28px; letter-spacing: 0.16em; color: #7FCBF0; text-transform: uppercase; margin-bottom: 22px; opacity: 0; }
+
+      /* Hook beat */
+      .hook-wrap { align-items: center; justify-content: center; text-align: center; }
+      .hook-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 78px; line-height: 1.18; color: #FBFBF8; letter-spacing: -0.01em; }
+
+      /* Problem / statement beat */
+      .problem-wrap { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
+      .problem-text { font-family: Outfit, sans-serif; font-weight: 800; font-size: 62px; line-height: 1.28; color: #F4F4F5; opacity: 0; }
+      .problem-text .strike { color: #DC3545; }
+      .problem-text .accent { color: #25D366; }
+
+      /* Chip flow beat */
+      .chip-flow-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 30px; align-items: center; }
+      .chip { display: flex; align-items: center; gap: 20px; border-radius: 999px; padding: 24px 44px; opacity: 0; }
+      .chip-1 { background: rgba(155,111,214,0.14); border: 3px solid #9B6FD6; }
+      .chip-2 { background: rgba(27,127,168,0.16); border: 3px solid #1B7FA8; }
+      .chip-3 { background: rgba(37,211,102,0.14); border: 3px solid #25D366; }
+      .chip-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 36px; color: #F4F4F5; text-align: center; }
+
+      /* Quote / reframe beat */
+      .quote-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; text-align: center; }
+      .quote-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 68px; line-height: 1.22; color: #FBFBF8; opacity: 0; }
+      .quote-sub { font-family: Inter, sans-serif; font-size: 30px; color: #A9A9BE; opacity: 0; max-width: 780px; }
+      .quote-brand { font-family: 'Space Mono', monospace; font-size: 28px; letter-spacing: 0.14em; color: #29ABE2; text-transform: uppercase; margin-top: 16px; opacity: 0; }
+
+      /* Follow CTA beat */
+      .follow-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .follow-label { font-family: Outfit, sans-serif; font-weight: 900; font-size: 96px; color: #FBFBF8; line-height: 1.05; opacity: 0; }
+      .follow-sub { font-family: Inter, sans-serif; font-size: 32px; color: #A9A9BE; line-height: 1.5; max-width: 780px; opacity: 0; }
+      .follow-tag { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #25D366; text-transform: uppercase; margin-top: 12px; opacity: 0; }
+      .follow-chevron { font-size: 60px; color: #7FCBF0; opacity: 0; margin-top: 10px; }
+
+      /* ---- captions (matches Brand Kit caption-pill spec) ---- */
+      .caption-pill {
+        position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%);
+        background: rgba(10,9,16,0.86); color: #fff; font-family: Inter, sans-serif; font-weight: 500;
+        font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%;
+        text-align: center; line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="59.640"
+      data-width="1080"
+      data-height="1920"
+    >
+      <audio id="a1" class="clip" data-start="0" data-duration="9.024" data-track-index="1" src="audio_lines/01_hook.wav"></audio>
+      <audio id="a2" class="clip" data-start="9.224" data-duration="6.016" data-track-index="1" src="audio_lines/02_twoamounts.wav"></audio>
+      <audio id="a3" class="clip" data-start="15.440" data-duration="6.165" data-track-index="1" src="audio_lines/03_fear.wav"></audio>
+      <audio id="a4" class="clip" data-start="21.805" data-duration="11.563" data-track-index="1" src="audio_lines/04_pattern.wav"></audio>
+      <audio id="a5" class="clip" data-start="33.568" data-duration="8.576" data-track-index="1" src="audio_lines/05_test.wav"></audio>
+      <audio id="a6" class="clip" data-start="42.344" data-duration="8.533" data-track-index="1" src="audio_lines/06_grounding.wav"></audio>
+      <audio id="a7" class="clip" data-start="51.077" data-duration="6.272" data-track-index="1" src="audio_lines/07_reframe.wav"></audio>
+      <audio id="a8" class="clip" data-start="57.549" data-duration="2.091" data-track-index="1" src="audio_lines/08_follow.wav"></audio>
+
+      <!-- Beat A: Hook, 0 - 9.224s -->
+      <div class="beat hook-wrap clip" id="beatA" data-start="0" data-duration="9.224" data-track-index="0">
+        <div class="eyebrow" id="a-eyebrow" style="opacity:1">DReview</div>
+        <div class="hook-text" id="a-text">Submitting sounds<br />like a whole new<br />marketing presence.<br />It mostly isn't.</div>
+      </div>
+
+      <!-- Beat B: Two amounts of work, 9.224 - 15.440s -->
+      <div class="beat problem-wrap clip" id="beatB" data-start="9.224" data-duration="6.216" data-track-index="0">
+        <div class="problem-text" id="b-text">There are two<br />completely different<br />amounts of new work<br />people expect here --<br />only one matches<br />reality.</div>
+      </div>
+
+      <!-- Beat C: The fear, 15.440 - 21.805s -->
+      <div class="beat problem-wrap clip" id="beatC" data-start="15.440" data-duration="6.365" data-track-index="0">
+        <div class="eyebrow" id="c-eyebrow">The Fear</div>
+        <div class="problem-text" id="c-text">New copy.<br />New assets.<br /><span class="strike">A whole parallel<br />content effort.</span></div>
+      </div>
+
+      <!-- Beat D: The actual pattern, 21.805 - 33.568s -->
+      <div class="beat clip" id="beatD" data-start="21.805" data-duration="11.763" data-track-index="0">
+        <div class="eyebrow" id="d-eyebrow">The Actual Pattern</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="d-chip1"><div class="chip-text">Your GitHub Repo</div></div>
+          <div class="chip chip-2" id="d-chip2"><div class="chip-text">Your NPM / PyPI Package</div></div>
+          <div class="chip chip-3" id="d-chip3"><div class="chip-text">Your Real Install Config &#10003;</div></div>
+        </div>
+      </div>
+
+      <!-- Beat E: The test, 33.568 - 42.344s -->
+      <div class="beat clip" id="beatE" data-start="33.568" data-duration="8.776" data-track-index="0">
+        <div class="eyebrow" id="e-eyebrow">The Test</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="e-chip1"><div class="chip-text">Could You Fill It In Now?</div></div>
+          <div class="chip chip-2" id="e-chip2"><div class="chip-text">Using What You've Already Written</div></div>
+          <div class="chip chip-3" id="e-chip3"><div class="chip-text">No New Drafting &#10003;</div></div>
+        </div>
+      </div>
+
+      <!-- Beat F: Grounding, 42.344 - 51.077s -->
+      <div class="beat clip" id="beatF" data-start="42.344" data-duration="8.733" data-track-index="0">
+        <div class="eyebrow" id="f-eyebrow">The Only New Thing</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="f-chip1"><div class="chip-text">Creator Dashboard Account</div></div>
+          <div class="chip chip-2" id="f-chip2"><div class="chip-text">Free To Create</div></div>
+          <div class="chip chip-3" id="f-chip3"><div class="chip-text">Manages Every Listing &#10003;</div></div>
+        </div>
+      </div>
+
+      <!-- Beat G: Reframe, 51.077 - 57.549s -->
+      <div class="beat quote-wrap clip" id="beatG" data-start="51.077" data-duration="6.472" data-track-index="0">
+        <div class="eyebrow" id="g-eyebrow">The Reframe</div>
+        <div class="quote-text" id="g-text">The submission<br />is just a pointer<br />to what you've<br />already built.</div>
+        <div class="quote-sub" id="g-sub">It was never asking for a second project.</div>
+        <div class="quote-brand" id="g-brand">DReview &middot; Free MCP Directory</div>
+      </div>
+
+      <!-- Beat H: Follow CTA, 57.549 - 59.640s -->
+      <div class="beat follow-wrap clip" id="beatH" data-start="57.549" data-duration="2.091" data-track-index="0">
+        <div class="eyebrow" id="h-eyebrow">Before You Go</div>
+        <div class="follow-label" id="h-label">Follow for<br />More</div>
+        <div class="follow-sub" id="h-sub">Real integration help for your AI tool or MCP server, DReview-style</div>
+        <div class="follow-tag" id="h-tag">New video every day</div>
+        <div class="follow-chevron" id="h-chevron">&#8593;</div>
+      </div>
+
+      <!-- ===== CAPTIONS (real word-level timestamps via Kokoro + transcribe) ===== -->
+      <div class="caption-pill clip" id="cap0" data-start="0.000" data-duration="1.280" data-track-index="5">Submitting to DReview</div>
+      <div class="caption-pill clip" id="cap1" data-start="1.440" data-duration="0.720" data-track-index="5">sounds like it</div>
+      <div class="caption-pill clip" id="cap2" data-start="2.320" data-duration="0.640" data-track-index="5">might mean building</div>
+      <div class="caption-pill clip" id="cap3" data-start="3.280" data-duration="0.880" data-track-index="5">a whole separate</div>
+      <div class="caption-pill clip" id="cap4" data-start="4.160" data-duration="0.960" data-track-index="5">marketing presence</div>
+      <div class="caption-pill clip" id="cap5" data-start="5.120" data-duration="1.200" data-track-index="5">for your project.</div>
+      <div class="caption-pill clip" id="cap6" data-start="6.320" data-duration="0.880" data-track-index="5">It mostly just</div>
+      <div class="caption-pill clip" id="cap7" data-start="7.200" data-duration="0.800" data-track-index="5">points at what</div>
+      <div class="caption-pill clip" id="cap8" data-start="8.000" data-duration="0.880" data-track-index="5">already exists.</div>
+
+      <div class="caption-pill clip" id="cap9" data-start="9.224" data-duration="1.360" data-track-index="5">There are two fundamentally</div>
+      <div class="caption-pill clip" id="cap10" data-start="10.584" data-duration="0.960" data-track-index="5">different amounts of</div>
+      <div class="caption-pill clip" id="cap11" data-start="11.544" data-duration="0.880" data-track-index="5">new work people</div>
+      <div class="caption-pill clip" id="cap12" data-start="12.424" data-duration="1.200" data-track-index="5">expect here, and</div>
+      <div class="caption-pill clip" id="cap13" data-start="13.624" data-duration="1.520" data-track-index="5">only one matches reality.</div>
+
+      <div class="caption-pill clip" id="cap14" data-start="15.440" data-duration="0.880" data-track-index="5">The fear,</div>
+      <div class="caption-pill clip" id="cap15" data-start="16.320" data-duration="0.800" data-track-index="5">new copy,</div>
+      <div class="caption-pill clip" id="cap16" data-start="17.120" data-duration="0.960" data-track-index="5">new assets,</div>
+      <div class="caption-pill clip" id="cap17" data-start="18.080" data-duration="1.520" data-track-index="5">a parallel content effort</div>
+      <div class="caption-pill clip" id="cap18" data-start="19.600" data-duration="0.960" data-track-index="5">running alongside the</div>
+      <div class="caption-pill clip" id="cap19" data-start="20.560" data-duration="0.960" data-track-index="5">actual project.</div>
+
+      <div class="caption-pill clip" id="cap20" data-start="21.805" data-duration="1.600" data-track-index="5">The actual pattern here.</div>
+      <div class="caption-pill clip" id="cap21" data-start="23.405" data-duration="1.200" data-track-index="5">The submission reuses</div>
+      <div class="caption-pill clip" id="cap22" data-start="24.685" data-duration="1.200" data-track-index="5">your existing GitHub</div>
+      <div class="caption-pill clip" id="cap23" data-start="25.885" data-duration="0.880" data-track-index="5">repo, your</div>
+      <div class="caption-pill clip" id="cap24" data-start="26.765" data-duration="0.960" data-track-index="5">NPM or</div>
+      <div class="caption-pill clip" id="cap25" data-start="27.965" data-duration="1.600" data-track-index="5">PyPI package,</div>
+      <div class="caption-pill clip" id="cap26" data-start="29.565" data-duration="1.120" data-track-index="5">and the same client</div>
+      <div class="caption-pill clip" id="cap27" data-start="30.765" data-duration="1.040" data-track-index="5">install config</div>
+      <div class="caption-pill clip" id="cap28" data-start="31.885" data-duration="0.800" data-track-index="5">you'd already hand</div>
+      <div class="caption-pill clip" id="cap29" data-start="32.685" data-duration="0.640" data-track-index="5">a teammate.</div>
+
+      <div class="caption-pill clip" id="cap30" data-start="33.568" data-duration="1.040" data-track-index="5">The test is simple</div>
+      <div class="caption-pill clip" id="cap31" data-start="34.768" data-duration="0.880" data-track-index="5">check how many</div>
+      <div class="caption-pill clip" id="cap32" data-start="35.648" data-duration="1.200" data-track-index="5">of the required fields</div>
+      <div class="caption-pill clip" id="cap33" data-start="36.848" data-duration="0.800" data-track-index="5">you could fill in</div>
+      <div class="caption-pill clip" id="cap34" data-start="37.648" data-duration="0.880" data-track-index="5">right now,</div>
+      <div class="caption-pill clip" id="cap35" data-start="38.528" data-duration="1.040" data-track-index="5">using things you've</div>
+      <div class="caption-pill clip" id="cap36" data-start="39.568" data-duration="0.880" data-track-index="5">already written,</div>
+      <div class="caption-pill clip" id="cap37" data-start="40.448" data-duration="0.960" data-track-index="5">without drafting</div>
+      <div class="caption-pill clip" id="cap38" data-start="41.408" data-duration="0.720" data-track-index="5">anything new.</div>
+
+      <div class="caption-pill clip" id="cap39" data-start="42.344" data-duration="1.280" data-track-index="5">The only genuinely new</div>
+      <div class="caption-pill clip" id="cap40" data-start="43.624" data-duration="0.560" data-track-index="5">thing is the</div>
+      <div class="caption-pill clip" id="cap41" data-start="44.184" data-duration="1.600" data-track-index="5">Creator Dashboard account</div>
+      <div class="caption-pill clip" id="cap42" data-start="45.784" data-duration="1.360" data-track-index="5">itself, which is</div>
+      <div class="caption-pill clip" id="cap43" data-start="47.144" data-duration="0.720" data-track-index="5">free and</div>
+      <div class="caption-pill clip" id="cap44" data-start="47.864" data-duration="1.040" data-track-index="5">where every listing</div>
+      <div class="caption-pill clip" id="cap45" data-start="48.904" data-duration="0.880" data-track-index="5">you submit gets</div>
+      <div class="caption-pill clip" id="cap46" data-start="49.784" data-duration="0.960" data-track-index="5">managed afterward.</div>
+
+      <div class="caption-pill clip" id="cap47" data-start="51.077" data-duration="1.280" data-track-index="5">The submission is really</div>
+      <div class="caption-pill clip" id="cap48" data-start="52.357" data-duration="0.880" data-track-index="5">just a pointer</div>
+      <div class="caption-pill clip" id="cap49" data-start="53.237" data-duration="0.640" data-track-index="5">to what you've</div>
+      <div class="caption-pill clip" id="cap50" data-start="53.877" data-duration="1.040" data-track-index="5">already built.</div>
+      <div class="caption-pill clip" id="cap51" data-start="54.917" data-duration="0.720" data-track-index="5">It was never</div>
+      <div class="caption-pill clip" id="cap52" data-start="55.637" data-duration="0.640" data-track-index="5">asking for</div>
+      <div class="caption-pill clip" id="cap53" data-start="56.277" data-duration="0.960" data-track-index="5">a second project.</div>
+
+      <div class="caption-pill clip" id="cap54" data-start="57.549" data-duration="0.960" data-track-index="5">Follow for more of</div>
+      <div class="caption-pill clip" id="cap55" data-start="58.509" data-duration="1.040" data-track-index="5">this kind of content.</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Beat A: Hook
+      tl.fromTo("#a-text", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.15);
+      tl.to("#beatA", { opacity: 0, duration: 0.2 }, 9.024);
+
+      // Beat B: Two amounts of work
+      tl.fromTo("#b-text", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 9.374);
+      tl.to("#beatB", { opacity: 0, duration: 0.2 }, 15.240);
+
+      // Beat C: The fear
+      tl.fromTo("#c-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 15.540);
+      tl.fromTo("#c-text", { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.4, ease: "power2.out" }, 15.690);
+      tl.to("#beatC", { opacity: 0, duration: 0.2 }, 21.605);
+
+      // Beat D: The actual pattern (chip flow)
+      tl.fromTo("#d-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 21.905);
+      tl.fromTo("#d-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35 }, 22.305);
+      tl.fromTo("#d-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35 }, 24.785);
+      tl.fromTo("#d-chip3", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 28.065);
+      tl.to("#beatD", { opacity: 0, duration: 0.2 }, 33.368);
+
+      // Beat E: The test (chip flow)
+      tl.fromTo("#e-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 33.668);
+      tl.fromTo("#e-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35 }, 33.968);
+      tl.fromTo("#e-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35 }, 37.668);
+      tl.fromTo("#e-chip3", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 40.568);
+      tl.to("#beatE", { opacity: 0, duration: 0.2 }, 42.144);
+
+      // Beat F: Grounding (chip flow)
+      tl.fromTo("#f-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 42.444);
+      tl.fromTo("#f-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35 }, 42.744);
+      tl.fromTo("#f-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35 }, 45.944);
+      tl.fromTo("#f-chip3", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 48.964);
+      tl.to("#beatF", { opacity: 0, duration: 0.2 }, 50.877);
+
+      // Beat G: Reframe
+      tl.fromTo("#g-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 51.177);
+      tl.fromTo("#g-text", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 51.427);
+      tl.fromTo("#g-sub", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 51.977);
+      tl.fromTo("#g-brand", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 52.277);
+      tl.to("#beatG", { opacity: 0, duration: 0.2 }, 57.349);
+
+      // Beat H: Follow CTA
+      tl.fromTo("#h-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 57.649);
+      tl.fromTo("#h-label", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 57.949);
+      tl.fromTo("#h-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 58.599);
+      tl.fromTo("#h-tag", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 58.999);
+      tl.fromTo("#h-chevron", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, 59.399);
+      tl.to("#h-chevron", { y: -14, duration: 0.6, repeat: -1, yoyo: true, ease: "sine.inOut" }, 59.499);
+
+      // Captions: quick fade in per chunk (real word-level timestamps)
+      tl.fromTo("#cap0", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 0.000);
+      tl.fromTo("#cap1", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 1.440);
+      tl.fromTo("#cap2", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 2.320);
+      tl.fromTo("#cap3", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 3.280);
+      tl.fromTo("#cap4", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 4.160);
+      tl.fromTo("#cap5", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 5.120);
+      tl.fromTo("#cap6", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 6.320);
+      tl.fromTo("#cap7", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 7.200);
+      tl.fromTo("#cap8", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 8.000);
+      tl.fromTo("#cap9", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 9.224);
+      tl.fromTo("#cap10", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 10.584);
+      tl.fromTo("#cap11", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 11.544);
+      tl.fromTo("#cap12", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 12.424);
+      tl.fromTo("#cap13", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 13.624);
+      tl.fromTo("#cap14", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 15.440);
+      tl.fromTo("#cap15", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 16.320);
+      tl.fromTo("#cap16", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 17.120);
+      tl.fromTo("#cap17", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 18.080);
+      tl.fromTo("#cap18", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 19.600);
+      tl.fromTo("#cap19", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 20.560);
+      tl.fromTo("#cap20", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 21.805);
+      tl.fromTo("#cap21", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 23.405);
+      tl.fromTo("#cap22", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 24.685);
+      tl.fromTo("#cap23", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 25.885);
+      tl.fromTo("#cap24", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 26.765);
+      tl.fromTo("#cap25", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 27.965);
+      tl.fromTo("#cap26", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 29.565);
+      tl.fromTo("#cap27", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 30.765);
+      tl.fromTo("#cap28", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 31.885);
+      tl.fromTo("#cap29", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 32.685);
+      tl.fromTo("#cap30", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 33.568);
+      tl.fromTo("#cap31", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 34.768);
+      tl.fromTo("#cap32", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 35.648);
+      tl.fromTo("#cap33", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 36.848);
+      tl.fromTo("#cap34", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 37.648);
+      tl.fromTo("#cap35", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 38.528);
+      tl.fromTo("#cap36", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 39.568);
+      tl.fromTo("#cap37", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 40.448);
+      tl.fromTo("#cap38", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 41.408);
+      tl.fromTo("#cap39", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 42.344);
+      tl.fromTo("#cap40", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 43.624);
+      tl.fromTo("#cap41", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 44.184);
+      tl.fromTo("#cap42", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 45.784);
+      tl.fromTo("#cap43", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 47.144);
+      tl.fromTo("#cap44", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 47.864);
+      tl.fromTo("#cap45", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 48.904);
+      tl.fromTo("#cap46", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 49.784);
+      tl.fromTo("#cap47", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 51.077);
+      tl.fromTo("#cap48", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 52.357);
+      tl.fromTo("#cap49", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 53.237);
+      tl.fromTo("#cap50", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 53.877);
+      tl.fromTo("#cap51", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 54.917);
+      tl.fromTo("#cap52", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 55.637);
+      tl.fromTo("#cap53", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 56.277);
+      tl.fromTo("#cap54", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 57.549);
+      tl.fromTo("#cap55", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 58.509);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

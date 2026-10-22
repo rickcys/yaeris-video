@@ -1,0 +1,13 @@
+﻿node.exe : {"type":"progress","phase":"transcription","model":"parakeet-tdt-0.6b-v3","status":"started","durationSecond
+s":2.093125}
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ({"type":"progre...onds":2.093125}:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+{"type":"words","model":"parakeet-tdt-0.6b-v3","words":[{"text":"Follow","start":0,"end":0.48},{"text":"for","start":0.
+48,"end":0.64},{"text":"more","start":0.64,"end":0.88},{"text":"of","start":0.88,"end":0.96},{"text":"this","start":0.9
+6,"end":1.12},{"text":"kind","start":1.12,"end":1.28},{"text":"of","start":1.28,"end":1.44},{"text":"content.","start":
+1.44,"end":2}],"through":2.0906875}
+{"type":"progress","phase":"transcription","model":"parakeet-tdt-0.6b-v3","status":"completed"}

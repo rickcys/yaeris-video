@@ -1,0 +1,104 @@
+[
+  {
+    "id": "w0",
+    "text": "There",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "are",
+    "start": 0.24,
+    "end": 0.4
+  },
+  {
+    "id": "w2",
+    "text": "two",
+    "start": 0.4,
+    "end": 0.72
+  },
+  {
+    "id": "w3",
+    "text": "fundamentally",
+    "start": 0.72,
+    "end": 1.36
+  },
+  {
+    "id": "w4",
+    "text": "different",
+    "start": 1.36,
+    "end": 1.76
+  },
+  {
+    "id": "w5",
+    "text": "amounts",
+    "start": 1.76,
+    "end": 2.16
+  },
+  {
+    "id": "w6",
+    "text": "of",
+    "start": 2.16,
+    "end": 2.32
+  },
+  {
+    "id": "w7",
+    "text": "new",
+    "start": 2.32,
+    "end": 2.64
+  },
+  {
+    "id": "w8",
+    "text": "work",
+    "start": 2.64,
+    "end": 2.96
+  },
+  {
+    "id": "w9",
+    "text": "people",
+    "start": 2.96,
+    "end": 3.2
+  },
+  {
+    "id": "w10",
+    "text": "expect",
+    "start": 3.2,
+    "end": 3.68
+  },
+  {
+    "id": "w11",
+    "text": "here,",
+    "start": 3.68,
+    "end": 4.16
+  },
+  {
+    "id": "w12",
+    "text": "and",
+    "start": 4.16,
+    "end": 4.4
+  },
+  {
+    "id": "w13",
+    "text": "only",
+    "start": 4.4,
+    "end": 4.64
+  },
+  {
+    "id": "w14",
+    "text": "one",
+    "start": 4.64,
+    "end": 4.88
+  },
+  {
+    "id": "w15",
+    "text": "matches",
+    "start": 4.88,
+    "end": 5.44
+  },
+  {
+    "id": "w16",
+    "text": "reality.",
+    "start": 5.44,
+    "end": 5.92
+  }
+]

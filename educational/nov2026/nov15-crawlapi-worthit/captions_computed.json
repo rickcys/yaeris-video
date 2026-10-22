@@ -1,0 +1,230 @@
+[
+  {
+    "id": "cap0",
+    "start": 0,
+    "duration": 2.08,
+    "text": "\"Is Crawl API worth it\""
+  },
+  {
+    "id": "cap1",
+    "start": 2.24,
+    "duration": 1.36,
+    "text": "depends on whether the sites"
+  },
+  {
+    "id": "cap2",
+    "start": 3.6,
+    "duration": 1.84,
+    "text": "you're actually targeting fight back"
+  },
+  {
+    "id": "cap3",
+    "start": 5.44,
+    "duration": 0.4,
+    "text": "or not."
+  },
+  {
+    "id": "cap4",
+    "start": 6.109,
+    "duration": 1.76,
+    "text": "There are two fundamentally different"
+  },
+  {
+    "id": "cap5",
+    "start": 7.869,
+    "duration": 2,
+    "text": "answers, and the deciding factor"
+  },
+  {
+    "id": "cap6",
+    "start": 9.869,
+    "duration": 1.2,
+    "text": "is your targets, not"
+  },
+  {
+    "id": "cap7",
+    "start": 11.069,
+    "duration": 0.56,
+    "text": "the tool."
+  },
+  {
+    "id": "cap8",
+    "start": 11.877,
+    "duration": 1.92,
+    "text": "Not a fit: simple static"
+  },
+  {
+    "id": "cap9",
+    "start": 13.797,
+    "duration": 1.68,
+    "text": "pages with no real bot"
+  },
+  {
+    "id": "cap10",
+    "start": 15.477,
+    "duration": 2.24,
+    "text": "protection. A basic fetch call"
+  },
+  {
+    "id": "cap11",
+    "start": 17.717,
+    "duration": 1.68,
+    "text": "is already enough, no reason"
+  },
+  {
+    "id": "cap12",
+    "start": 19.397,
+    "duration": 0.88,
+    "text": "to reach for more."
+  },
+  {
+    "id": "cap13",
+    "start": 20.632,
+    "duration": 1.84,
+    "text": "A real fit: sites with"
+  },
+  {
+    "id": "cap14",
+    "start": 22.472,
+    "duration": 2,
+    "text": "genuine bot detection or rate"
+  },
+  {
+    "id": "cap15",
+    "start": 24.472,
+    "duration": 1.44,
+    "text": "limiting, and a need for"
+  },
+  {
+    "id": "cap16",
+    "start": 25.912,
+    "duration": 1.44,
+    "text": "both a REST endpoint in"
+  },
+  {
+    "id": "cap17",
+    "start": 27.352,
+    "duration": 2.4,
+    "text": "your backend and MCP access"
+  },
+  {
+    "id": "cap18",
+    "start": 29.752,
+    "duration": 1.68,
+    "text": "for an AI agent, from"
+  },
+  {
+    "id": "cap19",
+    "start": 31.432,
+    "duration": 0.88,
+    "text": "the same key."
+  },
+  {
+    "id": "cap20",
+    "start": 32.565,
+    "duration": 2,
+    "text": "The test is three questions."
+  },
+  {
+    "id": "cap21",
+    "start": 34.565,
+    "duration": 1.28,
+    "text": "Do your targets have real"
+  },
+  {
+    "id": "cap22",
+    "start": 36.005,
+    "duration": 1.68,
+    "text": "bot protection? Do you need"
+  },
+  {
+    "id": "cap23",
+    "start": 37.685,
+    "duration": 2.72,
+    "text": "both REST and MCP access?"
+  },
+  {
+    "id": "cap24",
+    "start": 40.405,
+    "duration": 1.44,
+    "text": "Can you validate your actual"
+  },
+  {
+    "id": "cap25",
+    "start": 41.845,
+    "duration": 2.16,
+    "text": "use case inside 100 free"
+  },
+  {
+    "id": "cap26",
+    "start": 44.005,
+    "duration": 1.76,
+    "text": "credits before paying anything?"
+  },
+  {
+    "id": "cap27",
+    "start": 45.992,
+    "duration": 2.4,
+    "text": "That validation step exists specifically"
+  },
+  {
+    "id": "cap28",
+    "start": 48.472,
+    "duration": 1.52,
+    "text": "so you're not guessing 100"
+  },
+  {
+    "id": "cap29",
+    "start": 49.992,
+    "duration": 2.64,
+    "text": "free credits, no card required,"
+  },
+  {
+    "id": "cap30",
+    "start": 52.632,
+    "duration": 1.12,
+    "text": "test against your real"
+  },
+  {
+    "id": "cap31",
+    "start": 53.752,
+    "duration": 0.88,
+    "text": "targets first."
+  },
+  {
+    "id": "cap32",
+    "start": 54.981,
+    "duration": 1.52,
+    "text": "The fit question here was"
+  },
+  {
+    "id": "cap33",
+    "start": 56.501,
+    "duration": 2.08,
+    "text": "never really about the API."
+  },
+  {
+    "id": "cap34",
+    "start": 58.581,
+    "duration": 1.28,
+    "text": "It's about what you're actually"
+  },
+  {
+    "id": "cap35",
+    "start": 59.861,
+    "duration": 0.88,
+    "text": "trying to scrape."
+  },
+  {
+    "id": "cap36",
+    "start": 61.048,
+    "duration": 1.12,
+    "text": "Follow for more of this"
+  },
+  {
+    "id": "cap37",
+    "start": 62.168,
+    "duration": 0.88,
+    "text": "kind of content."
+  }
+]

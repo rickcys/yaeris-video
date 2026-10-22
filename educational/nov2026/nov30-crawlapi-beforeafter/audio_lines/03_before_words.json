@@ -1,0 +1,176 @@
+[
+  {
+    "id": "w0",
+    "text": "Before,",
+    "start": 0,
+    "end": 0.72
+  },
+  {
+    "id": "w1",
+    "text": "a",
+    "start": 0.72,
+    "end": 0.88
+  },
+  {
+    "id": "w2",
+    "text": "custom",
+    "start": 0.88,
+    "end": 1.28
+  },
+  {
+    "id": "w3",
+    "text": "scraper",
+    "start": 1.28,
+    "end": 1.84
+  },
+  {
+    "id": "w4",
+    "text": "that",
+    "start": 1.84,
+    "end": 2
+  },
+  {
+    "id": "w5",
+    "text": "breaks",
+    "start": 2,
+    "end": 2.4
+  },
+  {
+    "id": "w6",
+    "text": "the",
+    "start": 2.4,
+    "end": 2.56
+  },
+  {
+    "id": "w7",
+    "text": "moment",
+    "start": 2.56,
+    "end": 2.8
+  },
+  {
+    "id": "w8",
+    "text": "a",
+    "start": 2.88,
+    "end": 3.04
+  },
+  {
+    "id": "w9",
+    "text": "target",
+    "start": 3.04,
+    "end": 3.44
+  },
+  {
+    "id": "w10",
+    "text": "site,",
+    "start": 3.44,
+    "end": 4
+  },
+  {
+    "id": "w11",
+    "text": "adds",
+    "start": 4,
+    "end": 4.32
+  },
+  {
+    "id": "w12",
+    "text": "rate",
+    "start": 4.32,
+    "end": 4.72
+  },
+  {
+    "id": "w13",
+    "text": "limiting,",
+    "start": 4.72,
+    "end": 5.2
+  },
+  {
+    "id": "w14",
+    "text": "or",
+    "start": 5.2,
+    "end": 5.44
+  },
+  {
+    "id": "w15",
+    "text": "starts",
+    "start": 5.44,
+    "end": 5.84
+  },
+  {
+    "id": "w16",
+    "text": "needing",
+    "start": 5.84,
+    "end": 6.16
+  },
+  {
+    "id": "w17",
+    "text": "real",
+    "start": 6.16,
+    "end": 6.32
+  },
+  {
+    "id": "w18",
+    "text": "JavaScript",
+    "start": 6.48,
+    "end": 7.44
+  },
+  {
+    "id": "w19",
+    "text": "rendering,",
+    "start": 7.44,
+    "end": 8.16
+  },
+  {
+    "id": "w20",
+    "text": "and",
+    "start": 8.16,
+    "end": 8.4
+  },
+  {
+    "id": "w21",
+    "text": "nobody",
+    "start": 8.4,
+    "end": 8.88
+  },
+  {
+    "id": "w22",
+    "text": "notices",
+    "start": 8.88,
+    "end": 9.44
+  },
+  {
+    "id": "w23",
+    "text": "until",
+    "start": 9.44,
+    "end": 9.76
+  },
+  {
+    "id": "w24",
+    "text": "the",
+    "start": 9.76,
+    "end": 9.92
+  },
+  {
+    "id": "w25",
+    "text": "data",
+    "start": 9.92,
+    "end": 10.24
+  },
+  {
+    "id": "w26",
+    "text": "is",
+    "start": 10.24,
+    "end": 10.4
+  },
+  {
+    "id": "w27",
+    "text": "already",
+    "start": 10.4,
+    "end": 10.72
+  },
+  {
+    "id": "w28",
+    "text": "missing.",
+    "start": 10.72,
+    "end": 11.2
+  }
+]

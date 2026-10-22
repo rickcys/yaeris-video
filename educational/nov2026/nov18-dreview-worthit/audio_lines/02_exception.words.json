@@ -1,0 +1,98 @@
+[
+  {
+    "id": "w0",
+    "text": "There",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "are",
+    "start": 0.24,
+    "end": 0.4
+  },
+  {
+    "id": "w2",
+    "text": "two",
+    "start": 0.4,
+    "end": 0.72
+  },
+  {
+    "id": "w3",
+    "text": "fundamentally",
+    "start": 0.72,
+    "end": 1.44
+  },
+  {
+    "id": "w4",
+    "text": "different",
+    "start": 1.44,
+    "end": 1.84
+  },
+  {
+    "id": "w5",
+    "text": "situations",
+    "start": 1.84,
+    "end": 2.48
+  },
+  {
+    "id": "w6",
+    "text": "here,",
+    "start": 2.48,
+    "end": 2.96
+  },
+  {
+    "id": "w7",
+    "text": "and",
+    "start": 2.96,
+    "end": 3.2
+  },
+  {
+    "id": "w8",
+    "text": "only",
+    "start": 3.2,
+    "end": 3.44
+  },
+  {
+    "id": "w9",
+    "text": "one",
+    "start": 3.44,
+    "end": 3.68
+  },
+  {
+    "id": "w10",
+    "text": "of",
+    "start": 3.68,
+    "end": 3.76
+  },
+  {
+    "id": "w11",
+    "text": "them",
+    "start": 3.76,
+    "end": 4
+  },
+  {
+    "id": "w12",
+    "text": "applies",
+    "start": 4,
+    "end": 4.4
+  },
+  {
+    "id": "w13",
+    "text": "to",
+    "start": 4.4,
+    "end": 4.56
+  },
+  {
+    "id": "w14",
+    "text": "most",
+    "start": 4.56,
+    "end": 4.8
+  },
+  {
+    "id": "w15",
+    "text": "builders.",
+    "start": 4.8,
+    "end": 5.44
+  }
+]

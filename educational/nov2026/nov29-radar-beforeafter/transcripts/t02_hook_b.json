@@ -1,0 +1,80 @@
+[
+  {
+    "id": "w0",
+    "text": "There",
+    "start": 0.0,
+    "end": 0.14
+  },
+  {
+    "id": "w1",
+    "text": "are",
+    "start": 0.14,
+    "end": 0.28
+  },
+  {
+    "id": "w2",
+    "text": "two",
+    "start": 0.28,
+    "end": 0.54
+  },
+  {
+    "id": "w3",
+    "text": "fundamentally",
+    "start": 0.54,
+    "end": 1.08
+  },
+  {
+    "id": "w4",
+    "text": "different",
+    "start": 1.08,
+    "end": 1.62
+  },
+  {
+    "id": "w5",
+    "text": "workflows",
+    "start": 1.62,
+    "end": 2.22
+  },
+  {
+    "id": "w6",
+    "text": "hiding",
+    "start": 2.22,
+    "end": 2.88
+  },
+  {
+    "id": "w7",
+    "text": "behind",
+    "start": 2.88,
+    "end": 3.34
+  },
+  {
+    "id": "w8",
+    "text": "that",
+    "start": 3.34,
+    "end": 3.6
+  },
+  {
+    "id": "w9",
+    "text": "same",
+    "start": 3.6,
+    "end": 3.96
+  },
+  {
+    "id": "w10",
+    "text": "weekly",
+    "start": 3.96,
+    "end": 4.26
+  },
+  {
+    "id": "w11",
+    "text": "time",
+    "start": 4.26,
+    "end": 4.64
+  },
+  {
+    "id": "w12",
+    "text": "budget.",
+    "start": 4.64,
+    "end": 5.0
+  }
+]

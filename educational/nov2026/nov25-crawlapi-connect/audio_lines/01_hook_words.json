@@ -1,0 +1,129 @@
+{
+  "words": [
+    {
+      "word": "Adding",
+      "start": 0.0,
+      "end": 0.26
+    },
+    {
+      "word": "a",
+      "start": 0.26,
+      "end": 0.42
+    },
+    {
+      "word": "scraping",
+      "start": 0.42,
+      "end": 0.76
+    },
+    {
+      "word": "layer",
+      "start": 0.76,
+      "end": 1.12
+    },
+    {
+      "word": "to",
+      "start": 1.12,
+      "end": 1.42
+    },
+    {
+      "word": "an",
+      "start": 1.42,
+      "end": 1.52
+    },
+    {
+      "word": "existing",
+      "start": 1.52,
+      "end": 1.92
+    },
+    {
+      "word": "system",
+      "start": 1.92,
+      "end": 2.48
+    },
+    {
+      "word": "sounds",
+      "start": 2.48,
+      "end": 3.12
+    },
+    {
+      "word": "like",
+      "start": 3.12,
+      "end": 3.36
+    },
+    {
+      "word": "it",
+      "start": 3.36,
+      "end": 3.5
+    },
+    {
+      "word": "means",
+      "start": 3.5,
+      "end": 3.76
+    },
+    {
+      "word": "standing",
+      "start": 3.76,
+      "end": 4.16
+    },
+    {
+      "word": "up",
+      "start": 4.16,
+      "end": 4.44
+    },
+    {
+      "word": "a",
+      "start": 4.44,
+      "end": 4.6
+    },
+    {
+      "word": "brand",
+      "start": 4.6,
+      "end": 4.84
+    },
+    {
+      "word": "new",
+      "start": 4.84,
+      "end": 5.1
+    },
+    {
+      "word": "back",
+      "start": 5.1,
+      "end": 5.3
+    },
+    {
+      "word": "-end",
+      "start": 5.3,
+      "end": 5.52
+    },
+    {
+      "word": "service.",
+      "start": 5.52,
+      "end": 5.92
+    },
+    {
+      "word": "Usually",
+      "start": 6.7,
+      "end": 6.92
+    },
+    {
+      "word": "it",
+      "start": 6.92,
+      "end": 7.2
+    },
+    {
+      "word": "doesn't",
+      "start": 7.2,
+      "end": 7.46
+    },
+    {
+      "word": "have",
+      "start": 7.46,
+      "end": 7.64
+    },
+    {
+      "word": "to.",
+      "start": 7.64,
+      "end": 7.88
+    }
+  ]
+}

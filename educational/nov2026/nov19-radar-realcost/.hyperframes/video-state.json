@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "historyId": "03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "BRIEF.md": {
+      "hash": "376c55e945fda87e9b9c98939a8b594969b6fa8db187aa61579f977d4024dd14",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\37\\376c55e945fda87e9b9c98939a8b594969b6fa8db187aa61579f977d4024dd14"
+    },
+    "SCRIPT.md": {
+      "hash": "4976a32ee0a3e27fc8dbe349dad1ebe4ff5404d0f536391e9e89d10cb40703b7",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\49\\4976a32ee0a3e27fc8dbe349dad1ebe4ff5404d0f536391e9e89d10cb40703b7"
+    },
+    "audio_lines/01_hook.wav": {
+      "hash": "072bce94e36248770ae691277253c51e0c9e578fb27952a61a5400112b317a57",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\07\\072bce94e36248770ae691277253c51e0c9e578fb27952a61a5400112b317a57"
+    },
+    "audio_lines/02_vagueversion.wav": {
+      "hash": "0b7e028fd51010e1c5d50065e9d59a5ea08e9a523d357188d851224730f70ea5",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\0b\\0b7e028fd51010e1c5d50065e9d59a5ea08e9a523d357188d851224730f70ea5"
+    },
+    "audio_lines/03_actualmath.wav": {
+      "hash": "a175108435f55df4f3a35f5c609c41364edef7973762cdaabf792deab4621f1e",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\a1\\a175108435f55df4f3a35f5c609c41364edef7973762cdaabf792deab4621f1e"
+    },
+    "audio_lines/04_thetest.wav": {
+      "hash": "049350e8d649020265c98aa431593b30f74c0d8ad33c01d41db2daeea6c2f049",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\04\\049350e8d649020265c98aa431593b30f74c0d8ad33c01d41db2daeea6c2f049"
+    },
+    "audio_lines/05_grounding.wav": {
+      "hash": "6daaadf9715ee37c32898abacb4e578afdd55e125a1bffb8d6d258eacf330101",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\6d\\6daaadf9715ee37c32898abacb4e578afdd55e125a1bffb8d6d258eacf330101"
+    },
+    "audio_lines/06_reframe.wav": {
+      "hash": "c9366eb53f59280b3318df2a1b4009d38edfa45c0a67eb918e9c7eaa36b2b5cf",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\c9\\c9366eb53f59280b3318df2a1b4009d38edfa45c0a67eb918e9c7eaa36b2b5cf"
+    },
+    "audio_lines/07_followcta.wav": {
+      "hash": "2a62d2ad9c50c6e732e9f256f9b463a918ec2cd2332df3a59b609ea9aa41ea09",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\2a\\2a62d2ad9c50c6e732e9f256f9b463a918ec2cd2332df3a59b609ea9aa41ea09"
+    },
+    "audio_lines/transcript.json": {
+      "hash": "fd2d29382ce786018a0b7349300798054be9c0a55988eae9fdadde3cb7ccf206",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\fd\\fd2d29382ce786018a0b7349300798054be9c0a55988eae9fdadde3cb7ccf206"
+    },
+    "hyperframes.json": {
+      "hash": "9313260261b6e431830877ee35083331270bc6b9a32d50650abe2bd58bdf558d",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\93\\9313260261b6e431830877ee35083331270bc6b9a32d50650abe2bd58bdf558d"
+    },
+    "index.html": {
+      "hash": "e365c207b3937b8ec4c130fb18996bfe56ec32eed06c209a2eae66377754b79c",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\e3\\e365c207b3937b8ec4c130fb18996bfe56ec32eed06c209a2eae66377754b79c"
+    },
+    "meta.json": {
+      "hash": "05692e829539bdb733ad851209f49a5d0d77c8f36e59179d0172f1f52201287d",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\05\\05692e829539bdb733ad851209f49a5d0d77c8f36e59179d0172f1f52201287d"
+    },
+    "package.json": {
+      "hash": "886ead5fb6b139f5531ee247f1b4b8860395eb598973ebe228973e1a76a41f80",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\88\\886ead5fb6b139f5531ee247f1b4b8860395eb598973ebe228973e1a76a41f80"
+    },
+    "transcripts/01_hook.json": {
+      "hash": "ef247d4da9e0816eede59da7081275cf3783389e7fda194911c04d8b95aa16c7",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\ef\\ef247d4da9e0816eede59da7081275cf3783389e7fda194911c04d8b95aa16c7"
+    },
+    "transcripts/02_vagueversion.json": {
+      "hash": "b727a4624b7fd2ee2910142934620f36c44b0bd24e0e92d878f0fec5fc25ba3a",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\b7\\b727a4624b7fd2ee2910142934620f36c44b0bd24e0e92d878f0fec5fc25ba3a"
+    },
+    "transcripts/03_actualmath.json": {
+      "hash": "a04274e63f55126953a83b8bc8840b78a443d15944fca25fc128336717382fce",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\a0\\a04274e63f55126953a83b8bc8840b78a443d15944fca25fc128336717382fce"
+    },
+    "transcripts/04_thetest.json": {
+      "hash": "b871cf5a1f05bc456ce0a90d2c5c12960ac3ec5f55c34e3fb679944fd83e8bee",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\b8\\b871cf5a1f05bc456ce0a90d2c5c12960ac3ec5f55c34e3fb679944fd83e8bee"
+    },
+    "transcripts/05_grounding.json": {
+      "hash": "5001fa7bd7d200481359eee14d2d073a85fa269c27f11e5b25083177256ffad7",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\50\\5001fa7bd7d200481359eee14d2d073a85fa269c27f11e5b25083177256ffad7"
+    },
+    "transcripts/06_reframe.json": {
+      "hash": "f093093a3c9958a6d3368dd583145c29a7880e43da916912577966452977d21d",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\f0\\f093093a3c9958a6d3368dd583145c29a7880e43da916912577966452977d21d"
+    },
+    "transcripts/07_followcta.json": {
+      "hash": "fd2d29382ce786018a0b7349300798054be9c0a55988eae9fdadde3cb7ccf206",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\03c4c0f4-0e9f-43f2-bfe6-28b5b7b09128\\blobs\\fd\\fd2d29382ce786018a0b7349300798054be9c0a55988eae9fdadde3cb7ccf206"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": {
+      "revision": null,
+      "id": "e3760f0f-6b03-4134-ae22-756693e775b0"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "id": "1afe2f3d-9c85-44af-81f0-583f92a1e0d0",
+        "scope": "project",
+        "report": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov19-radar-realcost\\.hyperframes\\artifacts\\checks\\1afe2f3d-9c85-44af-81f0-583f92a1e0d0.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1792667594408,
+        "contentHash": "1c08c30f85af5facbc4b342031a19490ee228d36da2e10f96de863cf8e495555",
+        "revision": null,
+        "inputFingerprint": "8cf7c7f87de661f37a0226cd2a1eac8ffe624fc5f1530910733997ddef5be884",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "e3760f0f-6b03-4134-ae22-756693e775b0",
+        "scope": "project",
+        "report": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov19-radar-realcost\\.hyperframes\\artifacts\\checks\\e3760f0f-6b03-4134-ae22-756693e775b0.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1792667631418,
+        "contentHash": "1c08c30f85af5facbc4b342031a19490ee228d36da2e10f96de863cf8e495555",
+        "revision": null,
+        "inputFingerprint": "8cf7c7f87de661f37a0226cd2a1eac8ffe624fc5f1530910733997ddef5be884",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "033921f6-b199-429b-b9c3-d5c0aa16515c",
+      "completedAt": 1792667925325,
+      "output": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov19-radar-realcost\\renders\\video.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}

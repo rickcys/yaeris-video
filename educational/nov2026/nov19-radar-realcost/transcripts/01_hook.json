@@ -1,0 +1,104 @@
+[
+  {
+    "id": "w0",
+    "text": "Credit",
+    "start": 0,
+    "end": 0.4
+  },
+  {
+    "id": "w1",
+    "text": "based",
+    "start": 0.48,
+    "end": 0.8
+  },
+  {
+    "id": "w2",
+    "text": "pricing",
+    "start": 0.8,
+    "end": 1.28
+  },
+  {
+    "id": "w3",
+    "text": "looks",
+    "start": 1.28,
+    "end": 1.52
+  },
+  {
+    "id": "w4",
+    "text": "confusing",
+    "start": 1.52,
+    "end": 2.16
+  },
+  {
+    "id": "w5",
+    "text": "right",
+    "start": 2.16,
+    "end": 2.48
+  },
+  {
+    "id": "w6",
+    "text": "up",
+    "start": 2.48,
+    "end": 2.72
+  },
+  {
+    "id": "w7",
+    "text": "until",
+    "start": 2.8,
+    "end": 3.2
+  },
+  {
+    "id": "w8",
+    "text": "you",
+    "start": 3.2,
+    "end": 3.36
+  },
+  {
+    "id": "w9",
+    "text": "actually",
+    "start": 3.36,
+    "end": 3.76
+  },
+  {
+    "id": "w10",
+    "text": "sit",
+    "start": 3.76,
+    "end": 4.08
+  },
+  {
+    "id": "w11",
+    "text": "down",
+    "start": 4.08,
+    "end": 4.4
+  },
+  {
+    "id": "w12",
+    "text": "and",
+    "start": 4.4,
+    "end": 4.64
+  },
+  {
+    "id": "w13",
+    "text": "do",
+    "start": 4.64,
+    "end": 4.8
+  },
+  {
+    "id": "w14",
+    "text": "the",
+    "start": 4.8,
+    "end": 4.96
+  },
+  {
+    "id": "w15",
+    "text": "math",
+    "start": 4.96,
+    "end": 5.28
+  },
+  {
+    "id": "w16",
+    "text": "once.",
+    "start": 5.28,
+    "end": 5.76
+  }
+]

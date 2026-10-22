@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0E0E1F; }
+      #root { width: 100%; height: 100%; position: relative; font-family: Inter, sans-serif; background: #0E0E1F; }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 150px 90px; }
+
+      .eyebrow { font-family: 'Space Mono', monospace; font-size: 27px; letter-spacing: 0.16em; color: #7FCBF0; text-transform: uppercase; margin-bottom: 22px; opacity: 0; }
+      .headline { font-family: Outfit, sans-serif; font-weight: 900; font-size: 70px; line-height: 1.14; color: #FBFBF8; letter-spacing: -0.01em; opacity: 0; }
+      .sub-line { font-family: Inter, sans-serif; font-size: 32px; line-height: 1.5; color: #A9A9BE; margin-top: 28px; opacity: 0; max-width: 860px; }
+      .source-tag { position: absolute; left: 90px; bottom: 90px; font-family: 'Space Mono', monospace; font-size: 21px; letter-spacing: 0.06em; color: #7A7A8F; opacity: 0; max-width: 700px; line-height: 1.5; }
+
+      /* Hook */
+      .hook-wrap { align-items: center; justify-content: center; text-align: center; }
+      .hook-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 60px; line-height: 1.2; color: #FBFBF8; letter-spacing: -0.01em; opacity: 0; }
+      .hook-text.second { font-size: 50px; color: #A9A9BE; font-weight: 700; margin-top: 44px; }
+
+      /* Mechanism setup (text-only beat) */
+      .mech-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+      /* Chip flows (fear / reality / test / grounding) */
+      .chip-flow-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 26px; align-items: stretch; }
+      .chip { display: flex; align-items: center; gap: 20px; border-radius: 20px; padding: 26px 40px; opacity: 0; }
+      .chip-1 { background: rgba(155,111,214,0.14); border: 3px solid #9B6FD6; }
+      .chip-2 { background: rgba(27,127,168,0.16); border: 3px solid #1B7FA8; }
+      .chip-3 { background: rgba(37,211,102,0.14); border: 3px solid #25D366; }
+      .chip-muted { background: rgba(169,169,190,0.07); border: 3px solid #4F4F63; }
+      .chip-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 33px; color: #F4F4F5; }
+      .chip-muted .chip-text { color: #C7C7D6; }
+      .chip-tail { margin-top: 10px; font-family: Inter, sans-serif; font-size: 28px; color: #A9A9BE; text-align: center; opacity: 0; }
+
+      /* Closing / reframe */
+      .closing-wrap { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
+      .closing-text { font-family: Outfit, sans-serif; font-weight: 800; font-size: 64px; line-height: 1.24; color: #F4F4F5; opacity: 0; }
+      .closing-text .accent { color: #9B6FD6; }
+
+      /* Follow CTA */
+      .follow-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .follow-label { font-family: Outfit, sans-serif; font-weight: 900; font-size: 96px; color: #FBFBF8; line-height: 1.05; opacity: 0; }
+      .follow-sub { font-family: Inter, sans-serif; font-size: 32px; color: #A9A9BE; line-height: 1.5; max-width: 780px; opacity: 0; }
+      .follow-tag { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #25D366; text-transform: uppercase; margin-top: 12px; opacity: 0; }
+      .follow-chevron { font-size: 60px; color: #7FCBF0; opacity: 0; margin-top: 10px; }
+
+      /* ---- captions (matches Brand Kit caption-pill spec) ---- */
+      .caption-pill {
+        position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%);
+        background: rgba(10,9,16,0.86); color: #fff; font-family: Inter, sans-serif; font-weight: 500;
+        font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%;
+        text-align: center; line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="65.896"
+      data-width="1080"
+      data-height="1920"
+    >
+      <audio id="a1" class="clip" data-start="0" data-duration="8.704" data-track-index="1" src="audio_lines/01_hook.wav"></audio>
+      <audio id="a2" class="clip" data-start="8.904" data-duration="8.106667" data-track-index="1" src="audio_lines/02_setup.wav"></audio>
+      <audio id="a3" class="clip" data-start="17.210667" data-duration="7.381333" data-track-index="1" src="audio_lines/03_fear.wav"></audio>
+      <audio id="a4" class="clip" data-start="24.792" data-duration="10.730667" data-track-index="1" src="audio_lines/04_pattern.wav"></audio>
+      <audio id="a5" class="clip" data-start="35.722667" data-duration="8.021333" data-track-index="1" src="audio_lines/05_thetest.wav"></audio>
+      <audio id="a6" class="clip" data-start="43.944" data-duration="7.808" data-track-index="1" src="audio_lines/06_grounding.wav"></audio>
+      <audio id="a7" class="clip" data-start="51.952" data-duration="7.744" data-track-index="1" src="audio_lines/07_reframe.wav"></audio>
+      <audio id="a8" class="clip" data-start="59.896" data-duration="2.090667" data-track-index="1" src="audio_lines/08_followcta.wav"></audio>
+
+      <!-- Beat 1: Hook, 0 - 8.904s -->
+      <div class="beat hook-wrap clip" id="beat1" data-start="0" data-duration="8.904" data-track-index="0">
+        <div class="eyebrow" id="b1-eyebrow" style="opacity:1">The Migration Myth</div>
+        <div class="hook-text" id="b1-text1">Switching hosts sounds like it means migrating your database along with everything else.</div>
+        <div class="hook-text second" id="b1-text2">For a bring-your-own-database host, it genuinely doesn't.</div>
+      </div>
+
+      <!-- Beat 2: Setup, 8.904 - 17.210667s -->
+      <div class="beat clip" id="beat2" data-start="8.904" data-duration="8.306667" data-track-index="0">
+        <div class="eyebrow" id="b2-eyebrow">Two Things, Conflated</div>
+        <div class="mech-wrap">
+          <div class="headline" id="b2-headline">Two different things.<br />Only one matters.</div>
+          <div class="sub-line" id="b2-sub">Keep them separate and<br />the decision changes.</div>
+        </div>
+      </div>
+
+      <!-- Beat 3: The Fear, 17.210667 - 24.792s -->
+      <div class="beat clip" id="beat3" data-start="17.210667" data-duration="7.581333" data-track-index="0">
+        <div class="eyebrow" id="b3-eyebrow">The Fear</div>
+        <div class="headline" id="b3-headline">New host.<br />New database?</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-muted" id="b3-chip1"><div class="chip-text">A real migration project</div></div>
+          <div class="chip chip-muted" id="b3-chip2"><div class="chip-text">Real risk of data loss or downtime</div></div>
+          <div class="chip-tail" id="b3-tail">That's the scenario everyone pictures.</div>
+        </div>
+      </div>
+
+      <!-- Beat 4: The Actual Pattern, 24.792 - 35.722667s -->
+      <div class="beat clip" id="beat4" data-start="24.792" data-duration="10.930667" data-track-index="0">
+        <div class="eyebrow" id="b4-eyebrow">The Actual Pattern</div>
+        <div class="headline" id="b4-headline">Your database<br />doesn't move.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-2" id="b4-chip1"><div class="chip-text">Postgres or MySQL stays exactly where it is</div></div>
+          <div class="chip chip-3" id="b4-chip2"><div class="chip-text">Only where the app runs changes</div></div>
+        </div>
+      </div>
+
+      <!-- Beat 5: The Test, 35.722667 - 43.944s -->
+      <div class="beat clip" id="beat5" data-start="35.722667" data-duration="8.221333" data-track-index="0">
+        <div class="eyebrow" id="b5-eyebrow">The Test</div>
+        <div class="headline" id="b5-headline">Take your data?<br />Or just ask where?</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="b5-chip1"><div class="chip-text">Check which one a host is doing</div></div>
+          <div class="chip-tail" id="b5-tail">That's the whole test.</div>
+        </div>
+      </div>
+
+      <!-- Beat 6: Grounding -- Launchpad, 43.944 - 51.952s -->
+      <div class="beat clip" id="beat6" data-start="43.944" data-duration="8.008" data-track-index="0">
+        <div class="eyebrow" id="b6-eyebrow">Launchpad</div>
+        <div class="headline" id="b6-headline">Same repo.<br />Same push.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-3" id="b6-chip1"><div class="chip-text">Connects to the Git repo you already have</div></div>
+          <div class="chip chip-3" id="b6-chip2"><div class="chip-text">Never touches the database itself</div></div>
+        </div>
+      </div>
+
+      <!-- Beat 7: Reframe, 51.952 - 59.896s -->
+      <div class="beat closing-wrap clip" id="beat7" data-start="51.952" data-duration="7.944" data-track-index="0">
+        <div class="closing-text" id="b7-text">The only thing that actually changes is where the app runs <span class="accent">everything else stays exactly where your team left it.</span></div>
+      </div>
+
+      <!-- Beat 8: Follow CTA, 59.896 - 65.896s -->
+      <div class="beat follow-wrap clip" id="beat8" data-start="59.896" data-duration="6.0" data-track-index="0">
+        <div class="eyebrow" id="b8-eyebrow">Before You Go</div>
+        <div class="follow-label" id="b8-label">Follow for<br />More</div>
+        <div class="follow-sub" id="b8-sub">More of this kind of content &mdash; real, fact-checked walkthroughs on hosting, lead-gen &amp; dev tooling</div>
+        <div class="follow-tag" id="b8-tag">New video every day</div>
+        <div class="follow-chevron" id="b8-chevron">&#8593;</div>
+      </div>
+
+      <!-- ===== CAPTIONS (real word-level timestamps via parakeet transcription) ===== -->
+      <div class="caption-pill clip" id="cap0" data-start="0" data-duration="1.44" data-track-index="5">Switching hosts sounds</div>
+      <div class="caption-pill clip" id="cap1" data-start="1.44" data-duration="1.28" data-track-index="5">like it means migrating</div>
+      <div class="caption-pill clip" id="cap2" data-start="2.72" data-duration="1.36" data-track-index="5">your database along with</div>
+      <div class="caption-pill clip" id="cap3" data-start="4.08" data-duration="1.12" data-track-index="5">everything else.</div>
+      <div class="caption-pill clip" id="cap4" data-start="5.2" data-duration="1.2" data-track-index="5">For a bring your own</div>
+      <div class="caption-pill clip" id="cap5" data-start="6.4" data-duration="2.16" data-track-index="5">database host, it genuinely doesn't.</div>
+      <div class="caption-pill clip" id="cap6" data-start="8.904" data-duration="1.44" data-track-index="5">There are two fundamentally</div>
+      <div class="caption-pill clip" id="cap7" data-start="10.344" data-duration="1.84" data-track-index="5">different things people conflate</div>
+      <div class="caption-pill clip" id="cap8" data-start="12.184" data-duration="0.8" data-track-index="5">when they think about</div>
+      <div class="caption-pill clip" id="cap9" data-start="12.984" data-duration="1.28" data-track-index="5">switching hosts,</div>
+      <div class="caption-pill clip" id="cap10" data-start="14.264" data-duration="1.28" data-track-index="5">and keeping them separate</div>
+      <div class="caption-pill clip" id="cap11" data-start="15.544" data-duration="1.36" data-track-index="5">changes the whole decision.</div>
+      <div class="caption-pill clip" id="cap12" data-start="17.210667" data-duration="1.68" data-track-index="5">The Fear, New Host,</div>
+      <div class="caption-pill clip" id="cap13" data-start="18.890667" data-duration="1.36" data-track-index="5">New Database, a real</div>
+      <div class="caption-pill clip" id="cap14" data-start="20.410667" data-duration="1.84" data-track-index="5">migration project with real risk</div>
+      <div class="caption-pill clip" id="cap15" data-start="22.250667" data-duration="1.04" data-track-index="5">of data loss or</div>
+      <div class="caption-pill clip" id="cap16" data-start="23.290667" data-duration="1.2" data-track-index="5">downtime attached.</div>
+      <div class="caption-pill clip" id="cap17" data-start="24.792" data-duration="1.52" data-track-index="5">The actual pattern here,</div>
+      <div class="caption-pill clip" id="cap18" data-start="26.312" data-duration="2.72" data-track-index="5">your existing Postgres or MySQL</div>
+      <div class="caption-pill clip" id="cap19" data-start="29.032" data-duration="2.56" data-track-index="5">instance stays exactly where it is.</div>
+      <div class="caption-pill clip" id="cap20" data-start="31.592" data-duration="1.84" data-track-index="5">You're changing where the application</div>
+      <div class="caption-pill clip" id="cap21" data-start="33.432" data-duration="2.08" data-track-index="5">runs, not where the data lives.</div>
+      <div class="caption-pill clip" id="cap22" data-start="35.722667" data-duration="1.12" data-track-index="5">The test is simple</div>
+      <div class="caption-pill clip" id="cap23" data-start="36.922667" data-duration="1.44" data-track-index="5">check whether a host is</div>
+      <div class="caption-pill clip" id="cap24" data-start="38.362667" data-duration="1.04" data-track-index="5">asking to take over</div>
+      <div class="caption-pill clip" id="cap25" data-start="39.402667" data-duration="1.44" data-track-index="5">your data, or just</div>
+      <div class="caption-pill clip" id="cap26" data-start="40.842667" data-duration="1.6" data-track-index="5">asking where your application</div>
+      <div class="caption-pill clip" id="cap27" data-start="42.442667" data-duration="1.2" data-track-index="5">should run from now on.</div>
+      <div class="caption-pill clip" id="cap28" data-start="43.944" data-duration="2.0" data-track-index="5">Launchpad connects to the Git repo</div>
+      <div class="caption-pill clip" id="cap29" data-start="45.944" data-duration="1.68" data-track-index="5">you already have, deploys</div>
+      <div class="caption-pill clip" id="cap30" data-start="47.624" data-duration="1.2" data-track-index="5">the way your team already</div>
+      <div class="caption-pill clip" id="cap31" data-start="48.824" data-duration="1.6" data-track-index="5">pushes, and never touches</div>
+      <div class="caption-pill clip" id="cap32" data-start="50.424" data-duration="1.2" data-track-index="5">the database itself.</div>
+      <div class="caption-pill clip" id="cap33" data-start="51.952" data-duration="1.36" data-track-index="5">The only thing that actually</div>
+      <div class="caption-pill clip" id="cap34" data-start="53.312" data-duration="1.68" data-track-index="5">changes a switch like this</div>
+      <div class="caption-pill clip" id="cap35" data-start="54.992" data-duration="1.84" data-track-index="5">is where the app runs.</div>
+      <div class="caption-pill clip" id="cap36" data-start="56.832" data-duration="1.2" data-track-index="5">Everything else stays exactly</div>
+      <div class="caption-pill clip" id="cap37" data-start="58.032" data-duration="1.6" data-track-index="5">where your team left it.</div>
+      <div class="caption-pill clip" id="cap38" data-start="59.896" data-duration="0.96" data-track-index="5">Follow for more of</div>
+      <div class="caption-pill clip" id="cap39" data-start="60.856" data-duration="1.04" data-track-index="5">this kind of content.</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Beat 1: Hook
+      tl.fromTo("#b1-text1", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.15);
+      tl.fromTo("#b1-text2", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 5.3);
+      tl.to("#beat1", { opacity: 0, duration: 0.2 }, 8.704);
+
+      // Beat 2: Setup
+      tl.fromTo("#b2-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 9.054);
+      tl.fromTo("#b2-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 9.254);
+      tl.fromTo("#b2-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4 }, 14.304);
+      tl.to("#beat2", { opacity: 0, duration: 0.2 }, 17.010667);
+
+      // Beat 3: The Fear
+      tl.fromTo("#b3-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 17.360667);
+      tl.fromTo("#b3-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 17.560667);
+      tl.fromTo("#b3-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 20.010667);
+      tl.fromTo("#b3-chip2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 21.710667);
+      tl.fromTo("#b3-tail", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 23.510667);
+      tl.to("#beat3", { opacity: 0, duration: 0.2 }, 24.592);
+
+      // Beat 4: The Actual Pattern
+      tl.fromTo("#b4-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 24.942);
+      tl.fromTo("#b4-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 25.142);
+      tl.fromTo("#b4-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 26.392);
+      tl.fromTo("#b4-chip2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 31.692);
+      tl.to("#beat4", { opacity: 0, duration: 0.2 }, 35.522667);
+
+      // Beat 5: The Test
+      tl.fromTo("#b5-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 35.872667);
+      tl.fromTo("#b5-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 36.072667);
+      tl.fromTo("#b5-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 37.022667);
+      tl.fromTo("#b5-tail", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 40.922667);
+      tl.to("#beat5", { opacity: 0, duration: 0.2 }, 43.744);
+
+      // Beat 6: Grounding -- Launchpad
+      tl.fromTo("#b6-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 44.094);
+      tl.fromTo("#b6-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 44.294);
+      tl.fromTo("#b6-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 44.744);
+      tl.fromTo("#b6-chip2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 49.644);
+      tl.to("#beat6", { opacity: 0, duration: 0.2 }, 51.752);
+
+      // Beat 7: Reframe
+      tl.fromTo("#b7-text", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 52.252);
+      tl.to("#beat7", { opacity: 0, duration: 0.2 }, 59.696);
+
+      // Beat 8: Follow CTA
+      tl.fromTo("#b8-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 60.196);
+      tl.fromTo("#b8-label", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 60.496);
+      tl.fromTo("#b8-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 61.356);
+      tl.fromTo("#b8-tag", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 61.956);
+      tl.fromTo("#b8-chevron", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, 62.356);
+      tl.to("#b8-chevron", { y: -14, duration: 0.6, repeat: 4, yoyo: true, ease: "sine.inOut" }, 62.756);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

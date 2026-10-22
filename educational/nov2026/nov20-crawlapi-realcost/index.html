@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0E0E1F; }
+      #root { width: 100%; height: 100%; position: relative; font-family: Inter, sans-serif; background: #0E0E1F; }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 150px 90px; }
+
+      .eyebrow { font-family: 'Space Mono', monospace; font-size: 27px; letter-spacing: 0.16em; color: #7FCBF0; text-transform: uppercase; margin-bottom: 22px; opacity: 0; }
+      .headline { font-family: Outfit, sans-serif; font-weight: 900; font-size: 70px; line-height: 1.14; color: #FBFBF8; letter-spacing: -0.01em; opacity: 0; }
+      .sub-line { font-family: Inter, sans-serif; font-size: 32px; line-height: 1.5; color: #A9A9BE; margin-top: 28px; opacity: 0; max-width: 860px; }
+      .source-tag { position: absolute; left: 90px; bottom: 90px; font-family: 'Space Mono', monospace; font-size: 21px; letter-spacing: 0.06em; color: #7A7A8F; opacity: 0; max-width: 700px; line-height: 1.5; }
+
+      /* Hook */
+      .hook-wrap { align-items: center; justify-content: center; text-align: center; }
+      .hook-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 58px; line-height: 1.2; color: #FBFBF8; letter-spacing: -0.01em; opacity: 0; }
+      .hook-text.second { font-size: 48px; color: #A9A9BE; font-weight: 700; margin-top: 44px; }
+
+      /* Mechanism setup (text-only beat) */
+      .mech-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+      /* Chip flows */
+      .chip-flow-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 26px; align-items: stretch; }
+      .chip { display: flex; align-items: center; gap: 20px; border-radius: 20px; padding: 26px 40px; opacity: 0; }
+      .chip-1 { background: rgba(155,111,214,0.14); border: 3px solid #9B6FD6; }
+      .chip-2 { background: rgba(27,127,168,0.18); border: 3px solid #1B7FA8; }
+      .chip-3 { background: rgba(37,211,102,0.14); border: 3px solid #25D366; }
+      .chip-muted { background: rgba(169,169,190,0.07); border: 3px solid #4F4F63; }
+      .chip-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 33px; color: #F4F4F5; }
+      .chip-muted .chip-text { color: #C7C7D6; }
+      .chip-tail { margin-top: 10px; font-family: Inter, sans-serif; font-size: 28px; color: #A9A9BE; text-align: center; opacity: 0; }
+
+      /* Closing / reframe */
+      .closing-wrap { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
+      .closing-text { font-family: Outfit, sans-serif; font-weight: 800; font-size: 62px; line-height: 1.24; color: #F4F4F5; opacity: 0; }
+      .closing-text .accent { color: #1B7FA8; }
+
+      /* Follow CTA */
+      .follow-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .follow-label { font-family: Outfit, sans-serif; font-weight: 900; font-size: 96px; color: #FBFBF8; line-height: 1.05; opacity: 0; }
+      .follow-sub { font-family: Inter, sans-serif; font-size: 32px; color: #A9A9BE; line-height: 1.5; max-width: 780px; opacity: 0; }
+      .follow-tag { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #25D366; text-transform: uppercase; margin-top: 12px; opacity: 0; }
+      .follow-chevron { font-size: 60px; color: #7FCBF0; opacity: 0; margin-top: 10px; }
+
+      /* ---- captions (matches Brand Kit caption-pill spec) ---- */
+      .caption-pill {
+        position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%);
+        background: rgba(10,9,16,0.86); color: #fff; font-family: Inter, sans-serif; font-weight: 500;
+        font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%;
+        text-align: center; line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="68.392"
+      data-width="1080"
+      data-height="1920"
+    >
+      <audio id="a1" class="clip" data-start="0" data-duration="6.122667" data-track-index="1" src="audio_lines/01_hook.wav"></audio>
+      <audio id="a2" class="clip" data-start="6.322667" data-duration="6.784" data-track-index="1" src="audio_lines/02_twoways.wav"></audio>
+      <audio id="a3" class="clip" data-start="13.306667" data-duration="6.378667" data-track-index="1" src="audio_lines/03_vague.wav"></audio>
+      <audio id="a4" class="clip" data-start="19.885333" data-duration="9.941333" data-track-index="1" src="audio_lines/04_actualmath.wav"></audio>
+      <audio id="a5" class="clip" data-start="30.026667" data-duration="13.418667" data-track-index="1" src="audio_lines/05_thetest.wav"></audio>
+      <audio id="a6" class="clip" data-start="43.645333" data-duration="7.274667" data-track-index="1" src="audio_lines/06_nofees.wav"></audio>
+      <audio id="a7" class="clip" data-start="51.12" data-duration="11.072" data-track-index="1" src="audio_lines/07_reframe.wav"></audio>
+      <audio id="a8" class="clip" data-start="62.392" data-duration="2.090667" data-track-index="1" src="audio_lines/08_followcta.wav"></audio>
+
+      <!-- Beat 1: Hook, 0 - 6.122667s -->
+      <div class="beat hook-wrap clip" id="beat1" data-start="0" data-duration="6.122667" data-track-index="0">
+        <div class="eyebrow" id="b1-eyebrow" style="opacity:1">Crawl API</div>
+        <div class="hook-text" id="b1-text1">Scraping cost estimates are usually vague marketing language,</div>
+        <div class="hook-text second" id="b1-text2">&hellip;not actual math you can run yourself.</div>
+      </div>
+
+      <!-- Beat 2: Two ways to price this, 6.322667 - 13.106667s -->
+      <div class="beat clip" id="beat2" data-start="6.322667" data-duration="6.784" data-track-index="0">
+        <div class="eyebrow" id="b2-eyebrow">Two Ways To Price This</div>
+        <div class="mech-wrap">
+          <div class="headline" id="b2-headline">Only one of them<br />has a real number.</div>
+          <div class="sub-line" id="b2-sub">The other is just vocabulary.</div>
+        </div>
+      </div>
+
+      <!-- Beat 3: The vague version, 13.306667 - 19.685333s -->
+      <div class="beat clip" id="beat3" data-start="13.306667" data-duration="6.378667" data-track-index="0">
+        <div class="eyebrow" id="b3-eyebrow">The Vague Version</div>
+        <div class="headline" id="b3-headline">"Affordable."<br />No number attached.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-muted" id="b3-chip1"><div class="chip-text">No number attached</div></div>
+          <div class="chip chip-muted" id="b3-chip2"><div class="chip-text">Nothing to calculate against your volume</div></div>
+          <div class="chip-tail" id="b3-tail">Vocabulary isn't a pricing model.</div>
+        </div>
+      </div>
+
+      <!-- Beat 4: The actual math, 19.885333 - 29.826667s -->
+      <div class="beat clip" id="beat4" data-start="19.885333" data-duration="9.941333" data-track-index="0">
+        <div class="eyebrow" id="b4-eyebrow">The Actual Math</div>
+        <div class="headline" id="b4-headline">2 credits.<br />2 cents.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-2" id="b4-chip1"><div class="chip-text">Per crawl</div></div>
+          <div class="chip chip-1" id="b4-chip2"><div class="chip-text">Proxy rotation included</div></div>
+          <div class="chip chip-1" id="b4-chip3"><div class="chip-text">Headless browser escalation included</div></div>
+          <div class="chip chip-3" id="b4-chip4"><div class="chip-text">Only when a page needs it</div></div>
+        </div>
+      </div>
+
+      <!-- Beat 5: The test, 30.026667 - 43.445333s -->
+      <div class="beat clip" id="beat5" data-start="30.026667" data-duration="13.418667" data-track-index="0">
+        <div class="eyebrow" id="b5-eyebrow">The Test</div>
+        <div class="headline" id="b5-headline">10,000 pages/month<br />&asymp; $200.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-2" id="b5-chip1"><div class="chip-text">Your real page volume</div></div>
+          <div class="chip chip-1" id="b5-chip2"><div class="chip-text">Same formula, every time</div></div>
+          <div class="chip chip-3" id="b5-chip3"><div class="chip-text">No charge for harder pages</div></div>
+          <div class="chip-tail" id="b5-tail">Just the pages you actually have.</div>
+        </div>
+      </div>
+
+      <!-- Beat 6: No hidden fees -- Crawl API, 43.645333 - 50.92s -->
+      <div class="beat clip" id="beat6" data-start="43.645333" data-duration="7.274667" data-track-index="0">
+        <div class="eyebrow" id="b6-eyebrow">Crawl API</div>
+        <div class="headline" id="b6-headline">No separate fees.<br />Ever.</div>
+        <div class="chip-flow-wrap" style="gap:20px">
+          <div class="chip chip-3" id="b6-chip1"><div class="chip-text">No separate proxy fee</div></div>
+          <div class="chip chip-2" id="b6-chip2"><div class="chip-text">No separate browser-rendering fee</div></div>
+          <div class="chip chip-1" id="b6-chip3"><div class="chip-text">Credits never expire</div></div>
+        </div>
+        <div class="source-tag" id="b6-source">Even if volume drops one month.</div>
+      </div>
+
+      <!-- Beat 7: Reframe, 51.12 - 62.192s -->
+      <div class="beat closing-wrap clip" id="beat7" data-start="51.12" data-duration="11.072" data-track-index="0">
+        <div class="closing-text" id="b7-text">The real comparison was never against a competitor's vague pricing page. <span class="accent">It's against what building and maintaining that infrastructure yourself would actually cost.</span></div>
+      </div>
+
+      <!-- Beat 8: Follow CTA, 62.392 - 68.392s -->
+      <div class="beat follow-wrap clip" id="beat8" data-start="62.392" data-duration="6.0" data-track-index="0">
+        <div class="eyebrow" id="b8-eyebrow">Before You Go</div>
+        <div class="follow-label" id="b8-label">Follow for<br />More</div>
+        <div class="follow-sub" id="b8-sub">More of this kind of content &mdash; real, fact-checked walkthroughs on hosting, lead-gen &amp; dev tooling</div>
+        <div class="follow-tag" id="b8-tag">New video every day</div>
+        <div class="follow-chevron" id="b8-chevron">&#8593;</div>
+      </div>
+
+      <!-- ===== CAPTIONS (real word-level timestamps via Parakeet transcription) ===== -->
+      <div class="caption-pill clip" id="cap0" data-start="0" data-duration="1.76" data-track-index="5">Scraping cost estimates are</div>
+      <div class="caption-pill clip" id="cap1" data-start="1.76" data-duration="2.24" data-track-index="5">usually vague marketing language,</div>
+      <div class="caption-pill clip" id="cap2" data-start="4.0" data-duration="1.2" data-track-index="5">not actual math you can</div>
+      <div class="caption-pill clip" id="cap3" data-start="5.2" data-duration="0.8" data-track-index="5">run yourself.</div>
+
+      <div class="caption-pill clip" id="cap4" data-start="6.322667" data-duration="1.36" data-track-index="5">There are two fundamentally</div>
+      <div class="caption-pill clip" id="cap5" data-start="7.682667" data-duration="1.68" data-track-index="5">different ways this pricing</div>
+      <div class="caption-pill clip" id="cap6" data-start="9.362667" data-duration="1.36" data-track-index="5">gets described, and only</div>
+      <div class="caption-pill clip" id="cap7" data-start="10.722667" data-duration="0.96" data-track-index="5">one of them has a</div>
+      <div class="caption-pill clip" id="cap8" data-start="11.682667" data-duration="1.36" data-track-index="5">real number attached.</div>
+
+      <div class="caption-pill clip" id="cap9" data-start="13.306667" data-duration="1.2" data-track-index="5">The vague version.</div>
+      <div class="caption-pill clip" id="cap10" data-start="14.506667" data-duration="1.92" data-track-index="5">Affordable, cost effective,</div>
+      <div class="caption-pill clip" id="cap11" data-start="16.426667" data-duration="0.96" data-track-index="5">with nothing you can</div>
+      <div class="caption-pill clip" id="cap12" data-start="17.386667" data-duration="1.36" data-track-index="5">actually calculate against your</div>
+      <div class="caption-pill clip" id="cap13" data-start="18.746667" data-duration="0.8" data-track-index="5">own volume.</div>
+
+      <div class="caption-pill clip" id="cap14" data-start="19.885333" data-duration="1.28" data-track-index="5">The actual math:</div>
+      <div class="caption-pill clip" id="cap15" data-start="21.165333" data-duration="1.6" data-track-index="5">two credits, two cents</div>
+      <div class="caption-pill clip" id="cap16" data-start="22.765333" data-duration="1.2" data-track-index="5">per crawl, and that</div>
+      <div class="caption-pill clip" id="cap17" data-start="23.965333" data-duration="2.24" data-track-index="5">covers everything, including proxy</div>
+      <div class="caption-pill clip" id="cap18" data-start="26.205333" data-duration="1.84" data-track-index="5">rotation and headless browser</div>
+      <div class="caption-pill clip" id="cap19" data-start="28.045333" data-duration="1.28" data-track-index="5">escalation when a page</div>
+      <div class="caption-pill clip" id="cap20" data-start="29.325333" data-duration="0.48" data-track-index="5">needs it.</div>
+
+      <div class="caption-pill clip" id="cap21" data-start="30.026667" data-duration="1.2" data-track-index="5">The test is running</div>
+      <div class="caption-pill clip" id="cap22" data-start="31.226667" data-duration="1.28" data-track-index="5">your own real page</div>
+      <div class="caption-pill clip" id="cap23" data-start="32.506667" data-duration="1.68" data-track-index="5">volume through that number.</div>
+      <div class="caption-pill clip" id="cap24" data-start="34.346667" data-duration="2.08" data-track-index="5">10,000 pages a month</div>
+      <div class="caption-pill clip" id="cap25" data-start="36.426667" data-duration="1.12" data-track-index="5">comes out to roughly</div>
+      <div class="caption-pill clip" id="cap26" data-start="37.546667" data-duration="2.0" data-track-index="5">$200, no separate charge</div>
+      <div class="caption-pill clip" id="cap27" data-start="39.546667" data-duration="1.36" data-track-index="5">for the harder pages</div>
+      <div class="caption-pill clip" id="cap28" data-start="40.906667" data-duration="1.52" data-track-index="5">that needed more than</div>
+      <div class="caption-pill clip" id="cap29" data-start="42.426667" data-duration="0.96" data-track-index="5">a simple fetch.</div>
+
+      <div class="caption-pill clip" id="cap30" data-start="43.645333" data-duration="1.44" data-track-index="5">There's no separate proxy</div>
+      <div class="caption-pill clip" id="cap31" data-start="45.085333" data-duration="2.08" data-track-index="5">fee, no separate browser-rendering</div>
+      <div class="caption-pill clip" id="cap32" data-start="47.165333" data-duration="1.28" data-track-index="5">fee, and the credits</div>
+      <div class="caption-pill clip" id="cap33" data-start="48.445333" data-duration="1.44" data-track-index="5">never expire if volume</div>
+      <div class="caption-pill clip" id="cap34" data-start="49.885333" data-duration="0.88" data-track-index="5">drops one month.</div>
+
+      <div class="caption-pill clip" id="cap35" data-start="51.12" data-duration="1.84" data-track-index="5">The real comparison was</div>
+      <div class="caption-pill clip" id="cap36" data-start="52.96" data-duration="1.12" data-track-index="5">never this number against</div>
+      <div class="caption-pill clip" id="cap37" data-start="54.08" data-duration="1.6" data-track-index="5">a competitor's vague pricing</div>
+      <div class="caption-pill clip" id="cap38" data-start="55.68" data-duration="1.68" data-track-index="5">page. It's this number</div>
+      <div class="caption-pill clip" id="cap39" data-start="57.36" data-duration="1.28" data-track-index="5">against what building and</div>
+      <div class="caption-pill clip" id="cap40" data-start="58.64" data-duration="2.4" data-track-index="5">maintaining that infrastructure yourself</div>
+      <div class="caption-pill clip" id="cap41" data-start="61.04" data-duration="1.04" data-track-index="5">would actually cost.</div>
+
+      <div class="caption-pill clip" id="cap42" data-start="62.392" data-duration="1.12" data-track-index="5">Follow for more of</div>
+      <div class="caption-pill clip" id="cap43" data-start="63.512" data-duration="0.88" data-track-index="5">this kind of content.</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Beat 1: Hook
+      tl.fromTo("#b1-text1", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.15);
+      tl.fromTo("#b1-text2", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 4.0);
+      tl.to("#beat1", { opacity: 0, duration: 0.2 }, 5.922667);
+
+      // Beat 2: Two ways to price this
+      tl.fromTo("#b2-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 6.522667);
+      tl.fromTo("#b2-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 6.722667);
+      tl.fromTo("#b2-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4 }, 10.722667);
+      tl.to("#beat2", { opacity: 0, duration: 0.2 }, 12.906667);
+
+      // Beat 3: The vague version
+      tl.fromTo("#b3-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 13.506667);
+      tl.fromTo("#b3-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 13.706667);
+      tl.fromTo("#b3-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 14.506667);
+      tl.fromTo("#b3-chip2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 17.386667);
+      tl.fromTo("#b3-tail", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 19.066667);
+      tl.to("#beat3", { opacity: 0, duration: 0.2 }, 19.485333);
+
+      // Beat 4: The actual math
+      tl.fromTo("#b4-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 20.085333);
+      tl.fromTo("#b4-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 20.285333);
+      tl.fromTo("#b4-chip1", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 22.925333);
+      tl.fromTo("#b4-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 25.645333);
+      tl.fromTo("#b4-chip3", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 26.925333);
+      tl.fromTo("#b4-chip4", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 28.685333);
+      tl.to("#beat4", { opacity: 0, duration: 0.2 }, 29.626667);
+
+      // Beat 5: The test
+      tl.fromTo("#b5-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 30.226667);
+      tl.fromTo("#b5-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 30.426667);
+      tl.fromTo("#b5-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 32.506667);
+      tl.fromTo("#b5-chip2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 33.546667);
+      tl.fromTo("#b5-chip3", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 38.826667);
+      tl.fromTo("#b5-tail", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 42.026667);
+      tl.to("#beat5", { opacity: 0, duration: 0.2 }, 43.245333);
+
+      // Beat 6: No hidden fees -- Crawl API
+      tl.fromTo("#b6-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 43.845333);
+      tl.fromTo("#b6-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 44.045333);
+      tl.fromTo("#b6-chip1", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 45.085333);
+      tl.fromTo("#b6-chip2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 46.205333);
+      tl.fromTo("#b6-chip3", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 47.885333);
+      tl.fromTo("#b6-source", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 49.165333);
+      tl.to("#beat6", { opacity: 0, duration: 0.2 }, 50.72);
+
+      // Beat 7: Reframe
+      tl.fromTo("#b7-text", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 51.42);
+      tl.to("#beat7", { opacity: 0, duration: 0.2 }, 61.992);
+
+      // Beat 8: Follow CTA
+      tl.fromTo("#b8-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 62.692);
+      tl.fromTo("#b8-label", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 62.992);
+      tl.fromTo("#b8-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 63.792);
+      tl.fromTo("#b8-tag", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 64.292);
+      tl.fromTo("#b8-chevron", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, 64.692);
+      tl.to("#b8-chevron", { y: -14, duration: 0.6, repeat: -1, yoyo: true, ease: "sine.inOut" }, 65.092);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

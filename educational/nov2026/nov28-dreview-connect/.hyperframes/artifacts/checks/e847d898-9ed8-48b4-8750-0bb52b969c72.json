@@ -1,0 +1,835 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 12,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "overlapping_gsap_tweens",
+        "severity": "warning",
+        "message": "GSAP tweens overlap on \"#h-chevron\" for y between 59.50s and 59.80s.",
+        "selector": "#h-chevron",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov28-dreview-connect\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Shorten the earlier tween, move the later tween, or add `overwrite: \"auto\"`."
+      },
+      {
+        "code": "gsap_infinite_repeat",
+        "severity": "warning",
+        "message": "GSAP tween uses `repeat: -1` (infinite), but the composition declares a finite 59.64s window. HyperFrames clips deterministic seeking and export to that explicit duration.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov28-dreview-connect\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Keep the explicit finite composition `data-duration`. Use a finite repeat count only when the loop itself must end before the composition does."
+      },
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 0 has 8 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov28-dreview-connect\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 5 has 56 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov28-dreview-connect\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beatA\"> is a timeline element that contains nested <div id=\"a-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beatA",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov28-dreview-connect\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beatA\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beatB\"> is a timeline element that contains nested <div id=\"b-text\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beatB",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov28-dreview-connect\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beatB\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beatC\"> is a timeline element that contains nested <div id=\"c-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beatC",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov28-dreview-connect\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beatC\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beatD\"> is a timeline element that contains nested <div id=\"d-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beatD",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov28-dreview-connect\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beatD\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beatE\"> is a timeline element that contains nested <div id=\"e-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beatE",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov28-dreview-connect\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beatE\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beatF\"> is a timeline element that contains nested <div id=\"f-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beatF",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov28-dreview-connect\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beatF\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beatG\"> is a timeline element that contains nested <div id=\"g-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beatG",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov28-dreview-connect\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beatG\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beatH\"> is a timeline element that contains nested <div id=\"h-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beatH",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov28-dreview-connect\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beatH\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 59.64,
+    "samples": [
+      3.313,
+      9.94,
+      16.567,
+      23.193,
+      29.82,
+      36.447,
+      43.073,
+      49.7,
+      56.327
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      3.313,
+      16.567,
+      29.82,
+      43.073,
+      56.327
+    ],
+    "checked": 20,
+    "passed": 20
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 29,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"sounds like it\" (3 words) is on screen 0.66 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "sounds like it",
+        "selector": "#cap1",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 439.81,
+          "y": 1692.61,
+          "width": 200.19,
+          "height": 39
+        },
+        "time": 1.505,
+        "words": 3,
+        "seconds": 0.663,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"might mean building\" (3 words) is on screen 0.60 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "might mean building",
+        "selector": "#cap2",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 384.73,
+          "y": 1695.6,
+          "width": 310.53999999999996,
+          "height": 39
+        },
+        "time": 2.371,
+        "words": 3,
+        "seconds": 0.6,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"a whole separate\" (3 words) is on screen 0.83 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "a whole separate",
+        "selector": "#cap3",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 409.22,
+          "y": 1693.23,
+          "width": 261.28,
+          "height": 39
+        },
+        "time": 3.338,
+        "words": 3,
+        "seconds": 0.834,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"It mostly just\" (3 words) is on screen 0.83 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "It mostly just",
+        "selector": "#cap6",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 442.33,
+          "y": 1692.61,
+          "width": 195.17000000000002,
+          "height": 39
+        },
+        "time": 6.371,
+        "words": 3,
+        "seconds": 0.835,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"points at what\" (3 words) is on screen 0.73 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "points at what",
+        "selector": "#cap7",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 432.27,
+          "y": 1692.61,
+          "width": 215.23000000000002,
+          "height": 39
+        },
+        "time": 7.268,
+        "words": 3,
+        "seconds": 0.733,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"different amounts of\" (3 words) is on screen 0.94 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "different amounts of",
+        "selector": "#cap10",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 384.72,
+          "y": 1692.62,
+          "width": 310.28,
+          "height": 39
+        },
+        "time": 10.636,
+        "words": 3,
+        "seconds": 0.936,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"new work people\" (3 words) is on screen 0.83 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "new work people",
+        "selector": "#cap11",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 409.23,
+          "y": 1694.89,
+          "width": 261.77,
+          "height": 39
+        },
+        "time": 11.604,
+        "words": 3,
+        "seconds": 0.834,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"running alongside the\" (3 words) is on screen 0.90 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "running alongside the",
+        "selector": "#cap18",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 374.19,
+          "y": 1692.83,
+          "width": 331.81,
+          "height": 39
+        },
+        "time": 19.667,
+        "words": 3,
+        "seconds": 0.904,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"and the same client\" (4 words) is on screen 1.10 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "and the same client",
+        "selector": "#cap26",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 391.08,
+          "y": 1692.8,
+          "width": 297.92,
+          "height": 39
+        },
+        "time": 29.601,
+        "words": 4,
+        "seconds": 1.1,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"you'd already hand\" (4 words) is on screen 0.76 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "you'd already hand",
+        "selector": "#cap28",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 393.58,
+          "y": 1695.46,
+          "width": 292.84,
+          "height": 39
+        },
+        "time": 31.941,
+        "words": 4,
+        "seconds": 0.765,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"The test is simple\" (4 words) is on screen 1.00 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "The test is simple",
+        "selector": "#cap30",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 406.31,
+          "y": 1692.86,
+          "width": 267.69,
+          "height": 39
+        },
+        "time": 33.641,
+        "words": 4,
+        "seconds": 0.998,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"check how many\" (3 words) is on screen 0.83 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "check how many",
+        "selector": "#cap31",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 410.72,
+          "y": 1692.61,
+          "width": 258.28,
+          "height": 39
+        },
+        "time": 34.834,
+        "words": 3,
+        "seconds": 0.834,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"of the required fields\" (4 words) is on screen 1.16 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "of the required fields",
+        "selector": "#cap32",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 380.81,
+          "y": 1692.61,
+          "width": 318.19,
+          "height": 39
+        },
+        "time": 35.707,
+        "words": 4,
+        "seconds": 1.162,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"you could fill in\" (4 words) is on screen 0.77 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "you could fill in",
+        "selector": "#cap33",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 424.7,
+          "y": 1695.18,
+          "width": 230.59999999999997,
+          "height": 39
+        },
+        "time": 36.901,
+        "words": 4,
+        "seconds": 0.772,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"using things you've\" (4 words) is on screen 1.04 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "using things you've",
+        "selector": "#cap35",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 390.8,
+          "y": 1692.61,
+          "width": 298.2,
+          "height": 39
+        },
+        "time": 38.57,
+        "words": 4,
+        "seconds": 1.037,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"The only genuinely new\" (4 words) is on screen 1.23 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "The only genuinely new",
+        "selector": "#cap39",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 358.23,
+          "y": 1694.89,
+          "width": 363.77,
+          "height": 39
+        },
+        "time": 42.406,
+        "words": 4,
+        "seconds": 1.232,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"thing is the\" (3 words) is on screen 0.53 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "thing is the",
+        "selector": "#cap40",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 455.68,
+          "y": 1695.93,
+          "width": 168.63999999999993,
+          "height": 39
+        },
+        "time": 43.669,
+        "words": 3,
+        "seconds": 0.531,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"you submit gets\" (3 words) is on screen 0.83 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "you submit gets",
+        "selector": "#cap45",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 418.45,
+          "y": 1692.61,
+          "width": 243.55,
+          "height": 39
+        },
+        "time": 48.973,
+        "words": 3,
+        "seconds": 0.834,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"The submission is really\" (4 words) is on screen 1.23 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "The submission is really",
+        "selector": "#cap47",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 356.02,
+          "y": 1694.86,
+          "width": 367.48,
+          "height": 39
+        },
+        "time": 51.14,
+        "words": 4,
+        "seconds": 1.232,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"just a pointer\" (3 words) is on screen 0.87 s (±0.06 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "just a pointer",
+        "selector": "#cap48",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 440.58,
+          "y": 1695.9,
+          "width": 198.83999999999997,
+          "height": 39
+        },
+        "time": 52.403,
+        "words": 3,
+        "seconds": 0.874,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"to what you've\" (4 words) is on screen 0.50 s (±0.06 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "to what you've",
+        "selector": "#cap49",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 427.6,
+          "y": 1692.61,
+          "width": 224.80000000000007,
+          "height": 39
+        },
+        "time": 53.402,
+        "words": 4,
+        "seconds": 0.499,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"It was never\" (3 words) is on screen 0.75 s (±0.06 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "It was never",
+        "selector": "#cap51",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 447.05,
+          "y": 1693.37,
+          "width": 185.45,
+          "height": 39
+        },
+        "time": 55.024,
+        "words": 3,
+        "seconds": 0.748,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"a second project.\" (3 words) is on screen 0.87 s (±0.06 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "a second project.",
+        "selector": "#cap53",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 407.55,
+          "y": 1693.12,
+          "width": 264.90000000000003,
+          "height": 39
+        },
+        "time": 56.396,
+        "words": 3,
+        "seconds": 0.874,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Follow for more of\" (4 words) is on screen 1.00 s (±0.06 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Follow for more of",
+        "selector": "#cap54",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 401.57,
+          "y": 1693.32,
+          "width": 276.86000000000007,
+          "height": 39
+        },
+        "time": 57.644,
+        "words": 4,
+        "seconds": 0.998,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"Before You Go\" (3 words) is on screen 1.93 s (±0.06 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "Before You Go",
+        "selector": "#h-eyebrow",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 399.48,
+          "y": 658.51,
+          "width": 281.02,
+          "height": 41
+        },
+        "time": 57.768,
+        "words": 3,
+        "seconds": 1.934,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"Follow forMore\" (2 words) is on screen 1.56 s (±0.06 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "Follow forMore",
+        "selector": "#h-label",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 308.39,
+          "y": 738.66,
+          "width": 463.22,
+          "height": 220.89
+        },
+        "time": 58.143,
+        "words": 2,
+        "seconds": 1.56,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"this kind of content.\" (4 words) is on screen 1.06 s (±0.06 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "this kind of content.",
+        "selector": "#cap55",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 388.22,
+          "y": 1692.61,
+          "width": 303.78,
+          "height": 39
+        },
+        "time": 58.642,
+        "words": 4,
+        "seconds": 1.06,
+        "floorSeconds": 2
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"Real integration help for your AI tool or MCP server, DRe...\" (12 words) is on screen 0.94 s (±0.06 s), under the 3.07 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "Real integration help for your AI tool or MCP server, DReview-style",
+        "selector": "#h-sub",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 151.95,
+          "y": 978.8,
+          "width": 776.0999999999999,
+          "height": 87
+        },
+        "time": 58.767,
+        "words": 12,
+        "seconds": 0.935,
+        "floorSeconds": 3.075
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "The film's last line \"New video every day\" (4 words) is on screen 0.56 s (±0.06 s), under the 2.00 s a closing line needs: hold it about 0.5 s + 0.3 s a word and at least 2 s before the film ends; see references/motion.md.",
+        "text": "New video every day",
+        "selector": "#h-tag",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 325.67,
+          "y": 1106.8,
+          "width": 428.63999999999993,
+          "height": 45
+        },
+        "time": 59.141,
+        "words": 4,
+        "seconds": 0.562,
+        "floorSeconds": 2
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 478
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

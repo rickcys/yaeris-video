@@ -1,0 +1,204 @@
+{
+  "words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.12
+    },
+    {
+      "word": "test",
+      "start": 0.12,
+      "end": 0.48
+    },
+    {
+      "word": "is",
+      "start": 0.48,
+      "end": 0.74
+    },
+    {
+      "word": "three",
+      "start": 0.74,
+      "end": 1.06
+    },
+    {
+      "word": "questions.",
+      "start": 1.06,
+      "end": 1.54
+    },
+    {
+      "word": "Do",
+      "start": 2.22,
+      "end": 2.32
+    },
+    {
+      "word": "you",
+      "start": 2.32,
+      "end": 2.44
+    },
+    {
+      "word": "need",
+      "start": 2.44,
+      "end": 2.56
+    },
+    {
+      "word": "outreach,",
+      "start": 2.56,
+      "end": 2.98
+    },
+    {
+      "word": "not",
+      "start": 3.24,
+      "end": 3.36
+    },
+    {
+      "word": "just",
+      "start": 3.36,
+      "end": 3.62
+    },
+    {
+      "word": "data?",
+      "start": 3.62,
+      "end": 3.88
+    },
+    {
+      "word": "Have",
+      "start": 4.46,
+      "end": 4.6
+    },
+    {
+      "word": "you",
+      "start": 4.6,
+      "end": 4.74
+    },
+    {
+      "word": "tested",
+      "start": 4.74,
+      "end": 5.02
+    },
+    {
+      "word": "it",
+      "start": 5.02,
+      "end": 5.24
+    },
+    {
+      "word": "with",
+      "start": 5.24,
+      "end": 5.4
+    },
+    {
+      "word": "the",
+      "start": 5.4,
+      "end": 5.54
+    },
+    {
+      "word": "100",
+      "start": 5.54,
+      "end": 5.98
+    },
+    {
+      "word": "free",
+      "start": 5.98,
+      "end": 6.44
+    },
+    {
+      "word": "credits",
+      "start": 6.44,
+      "end": 6.9
+    },
+    {
+      "word": "before",
+      "start": 6.9,
+      "end": 7.32
+    },
+    {
+      "word": "committing",
+      "start": 7.32,
+      "end": 7.64
+    },
+    {
+      "word": "real",
+      "start": 7.64,
+      "end": 7.94
+    },
+    {
+      "word": "budget?",
+      "start": 7.94,
+      "end": 8.34
+    },
+    {
+      "word": "Does",
+      "start": 9.04,
+      "end": 9.2
+    },
+    {
+      "word": "Pay",
+      "start": 9.2,
+      "end": 9.42
+    },
+    {
+      "word": "As",
+      "start": 9.42,
+      "end": 9.58
+    },
+    {
+      "word": "You",
+      "start": 9.58,
+      "end": 9.68
+    },
+    {
+      "word": "Go",
+      "start": 9.68,
+      "end": 9.84
+    },
+    {
+      "word": "actually",
+      "start": 9.84,
+      "end": 10.3
+    },
+    {
+      "word": "fit",
+      "start": 10.3,
+      "end": 10.6
+    },
+    {
+      "word": "how",
+      "start": 10.6,
+      "end": 10.76
+    },
+    {
+      "word": "your",
+      "start": 10.76,
+      "end": 10.9
+    },
+    {
+      "word": "volume",
+      "start": 10.9,
+      "end": 11.2
+    },
+    {
+      "word": "moves",
+      "start": 11.2,
+      "end": 11.64
+    },
+    {
+      "word": "versus",
+      "start": 11.64,
+      "end": 12.22
+    },
+    {
+      "word": "a",
+      "start": 12.22,
+      "end": 12.5
+    },
+    {
+      "word": "flat",
+      "start": 12.5,
+      "end": 12.78
+    },
+    {
+      "word": "subscription?",
+      "start": 12.78,
+      "end": 13.24
+    }
+  ]
+}

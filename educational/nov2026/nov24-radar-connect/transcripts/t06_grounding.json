@@ -1,0 +1,140 @@
+[
+  {
+    "id": "w0",
+    "text": "SERP",
+    "start": 0,
+    "end": 0.4
+  },
+  {
+    "id": "w1",
+    "text": "Lookup,",
+    "start": 0.48,
+    "end": 0.96
+  },
+  {
+    "id": "w2",
+    "text": "The",
+    "start": 0.96,
+    "end": 1.04
+  },
+  {
+    "id": "w3",
+    "text": "Crawler,",
+    "start": 1.04,
+    "end": 1.52
+  },
+  {
+    "id": "w4",
+    "text": "and",
+    "start": 1.52,
+    "end": 1.68
+  },
+  {
+    "id": "w5",
+    "text": "Outreach",
+    "start": 1.68,
+    "end": 2.24
+  },
+  {
+    "id": "w6",
+    "text": "all",
+    "start": 2.4,
+    "end": 2.64
+  },
+  {
+    "id": "w7",
+    "text": "run",
+    "start": 2.64,
+    "end": 2.88
+  },
+  {
+    "id": "w8",
+    "text": "from",
+    "start": 2.88,
+    "end": 3.04
+  },
+  {
+    "id": "w9",
+    "text": "one",
+    "start": 3.04,
+    "end": 3.28
+  },
+  {
+    "id": "w10",
+    "text": "account,",
+    "start": 3.28,
+    "end": 4
+  },
+  {
+    "id": "w11",
+    "text": "and",
+    "start": 4,
+    "end": 4.24
+  },
+  {
+    "id": "w12",
+    "text": "nothing",
+    "start": 4.24,
+    "end": 4.64
+  },
+  {
+    "id": "w13",
+    "text": "about",
+    "start": 4.64,
+    "end": 4.8
+  },
+  {
+    "id": "w14",
+    "text": "that",
+    "start": 4.8,
+    "end": 5.04
+  },
+  {
+    "id": "w15",
+    "text": "requires",
+    "start": 5.04,
+    "end": 5.6
+  },
+  {
+    "id": "w16",
+    "text": "abandoning",
+    "start": 5.6,
+    "end": 6.08
+  },
+  {
+    "id": "w17",
+    "text": "the",
+    "start": 6.08,
+    "end": 6.24
+  },
+  {
+    "id": "w18",
+    "text": "CRM",
+    "start": 6.24,
+    "end": 6.96
+  },
+  {
+    "id": "w19",
+    "text": "your",
+    "start": 7.04,
+    "end": 7.2
+  },
+  {
+    "id": "w20",
+    "text": "team",
+    "start": 7.2,
+    "end": 7.44
+  },
+  {
+    "id": "w21",
+    "text": "already",
+    "start": 7.44,
+    "end": 7.76
+  },
+  {
+    "id": "w22",
+    "text": "knows.",
+    "start": 7.76,
+    "end": 8.08
+  }
+]

@@ -1,0 +1,116 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "actual",
+    "start": 0.24,
+    "end": 0.64
+  },
+  {
+    "id": "w2",
+    "text": "risk",
+    "start": 0.64,
+    "end": 1.04
+  },
+  {
+    "id": "w3",
+    "text": "was",
+    "start": 1.04,
+    "end": 1.28
+  },
+  {
+    "id": "w4",
+    "text": "never",
+    "start": 1.28,
+    "end": 1.68
+  },
+  {
+    "id": "w5",
+    "text": "usage",
+    "start": 1.68,
+    "end": 2.08
+  },
+  {
+    "id": "w6",
+    "text": "based",
+    "start": 2.16,
+    "end": 2.56
+  },
+  {
+    "id": "w7",
+    "text": "pricing.",
+    "start": 2.56,
+    "end": 3.36
+  },
+  {
+    "id": "w8",
+    "text": "It's",
+    "start": 3.36,
+    "end": 3.68
+  },
+  {
+    "id": "w9",
+    "text": "making",
+    "start": 3.68,
+    "end": 4
+  },
+  {
+    "id": "w10",
+    "text": "a",
+    "start": 4,
+    "end": 4.16
+  },
+  {
+    "id": "w11",
+    "text": "pricing",
+    "start": 4.16,
+    "end": 4.56
+  },
+  {
+    "id": "w12",
+    "text": "decision",
+    "start": 4.56,
+    "end": 5.04
+  },
+  {
+    "id": "w13",
+    "text": "without",
+    "start": 5.12,
+    "end": 5.52
+  },
+  {
+    "id": "w14",
+    "text": "knowing",
+    "start": 5.52,
+    "end": 5.92
+  },
+  {
+    "id": "w15",
+    "text": "your",
+    "start": 5.92,
+    "end": 6.08
+  },
+  {
+    "id": "w16",
+    "text": "own",
+    "start": 6.08,
+    "end": 6.32
+  },
+  {
+    "id": "w17",
+    "text": "usage",
+    "start": 6.32,
+    "end": 6.72
+  },
+  {
+    "id": "w18",
+    "text": "first.",
+    "start": 6.72,
+    "end": 7.12
+  }
+]

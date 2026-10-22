@@ -1,0 +1,92 @@
+[
+  {
+    "id": "w0",
+    "text": "Scraping",
+    "start": 0,
+    "end": 0.64
+  },
+  {
+    "id": "w1",
+    "text": "cost",
+    "start": 0.64,
+    "end": 0.96
+  },
+  {
+    "id": "w2",
+    "text": "estimates",
+    "start": 0.96,
+    "end": 1.6
+  },
+  {
+    "id": "w3",
+    "text": "are",
+    "start": 1.6,
+    "end": 1.76
+  },
+  {
+    "id": "w4",
+    "text": "usually",
+    "start": 1.76,
+    "end": 2.16
+  },
+  {
+    "id": "w5",
+    "text": "vague",
+    "start": 2.16,
+    "end": 2.64
+  },
+  {
+    "id": "w6",
+    "text": "marketing",
+    "start": 2.64,
+    "end": 3.12
+  },
+  {
+    "id": "w7",
+    "text": "language,",
+    "start": 3.12,
+    "end": 4
+  },
+  {
+    "id": "w8",
+    "text": "not",
+    "start": 4,
+    "end": 4.24
+  },
+  {
+    "id": "w9",
+    "text": "actual",
+    "start": 4.24,
+    "end": 4.64
+  },
+  {
+    "id": "w10",
+    "text": "math",
+    "start": 4.64,
+    "end": 4.96
+  },
+  {
+    "id": "w11",
+    "text": "you",
+    "start": 5.04,
+    "end": 5.2
+  },
+  {
+    "id": "w12",
+    "text": "can",
+    "start": 5.2,
+    "end": 5.36
+  },
+  {
+    "id": "w13",
+    "text": "run",
+    "start": 5.36,
+    "end": 5.6
+  },
+  {
+    "id": "w14",
+    "text": "yourself.",
+    "start": 5.6,
+    "end": 6
+  }
+]

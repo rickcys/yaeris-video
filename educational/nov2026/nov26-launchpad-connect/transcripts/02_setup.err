@@ -1,0 +1,18 @@
+﻿node.exe : {"type":"progress","phase":"transcription","model":"parakeet-tdt-0.6b-v3","status":"started","durationSecond
+s":8.109125}
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ({"type":"progre...onds":8.109125}:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+{"type":"words","model":"parakeet-tdt-0.6b-v3","words":[{"text":"There","start":0,"end":0.24},{"text":"are","start":0.2
+4,"end":0.4},{"text":"two","start":0.4,"end":0.72},{"text":"fundamentally","start":0.72,"end":1.44},{"text":"different"
+,"start":1.44,"end":1.76},{"text":"things","start":1.76,"end":2.24},{"text":"people","start":2.24,"end":2.56},{"text":"
+conflate","start":2.56,"end":3.28},{"text":"when","start":3.28,"end":3.44},{"text":"they","start":3.44,"end":3.6},{"tex
+t":"think","start":3.6,"end":3.84},{"text":"about","start":3.84,"end":4.08},{"text":"switching","start":4.08,"end":4.56
+},{"text":"hosts,","start":4.56,"end":5.36},{"text":"and","start":5.36,"end":5.6},{"text":"keeping","start":5.6,"end":5
+.92},{"text":"them","start":5.92,"end":6.08},{"text":"separate","start":6.08,"end":6.64},{"text":"changes","start":6.64
+,"end":7.04},{"text":"the","start":7.04,"end":7.2},{"text":"whole","start":7.2,"end":7.44},{"text":"decision.","start":
+7.44,"end":8}],"through":8.1066875}
+{"type":"progress","phase":"transcription","model":"parakeet-tdt-0.6b-v3","status":"completed"}

@@ -1,0 +1,753 @@
+{
+  "ok": true,
+  "strict": false,
+  "browserSkipped": false,
+  "lint": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 12,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "gsap_infinite_repeat",
+        "severity": "warning",
+        "message": "GSAP tween uses `repeat: -1` (infinite), but the composition declares a finite 65.346s window. HyperFrames clips deterministic seeking and export to that explicit duration.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov17-mcpserver-worthit\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Keep the explicit finite composition `data-duration`. Use a finite repeat count only when the loop itself must end before the composition does."
+      },
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 0 has 9 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov17-mcpserver-worthit\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "timeline_track_too_dense",
+        "severity": "warning",
+        "message": "Track 5 has 38 timed elements in this HTML file. Smaller sub-compositions keep timelines easier to read, iterate on, and diff.",
+        "selector": "[data-composition-id]",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov17-mcpserver-worthit\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move coherent scene groups into separate .html files under compositions/ and mount them from the parent with data-composition-src so the timeline stays easier to inspect, revise, and validate."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beat1\"> is a timeline element that contains nested <div id=\"b1-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beat1",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov17-mcpserver-worthit\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beat1\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beat2\"> is a timeline element that contains nested <div id=\"b2-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beat2",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov17-mcpserver-worthit\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beat2\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beat3\"> is a timeline element that contains nested <div id=\"b3-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beat3",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov17-mcpserver-worthit\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beat3\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beat4\"> is a timeline element that contains nested <div id=\"b4-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beat4",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov17-mcpserver-worthit\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beat4\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beat5\"> is a timeline element that contains nested <div id=\"b5-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beat5",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov17-mcpserver-worthit\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beat5\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beat6\"> is a timeline element that contains nested <div id=\"b6-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beat6",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov17-mcpserver-worthit\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beat6\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beat7\"> is a timeline element that contains nested <div id=\"b7-text\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beat7",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov17-mcpserver-worthit\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beat7\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"endCard\"> is a timeline element that contains nested <div id=\"end-brand\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#endCard",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov17-mcpserver-worthit\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"endCard\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      },
+      {
+        "code": "nested_structure_needs_subcomposition",
+        "severity": "warning",
+        "message": "<div id=\"beat8\"> is a timeline element that contains nested <div id=\"b8-eyebrow\">. The timeline shows one row per top-level element, and the root composition is built only from sub-compositions.",
+        "selector": "#beat8",
+        "dataAttributes": {},
+        "sourceFile": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov17-mcpserver-worthit\\index.html",
+        "bbox": {
+          "x": 0,
+          "y": 0,
+          "width": 0,
+          "height": 0
+        },
+        "time": 0,
+        "fixHint": "Move <div id=\"beat8\"> and its contents into a sub-composition file and mount it with data-composition-src."
+      }
+    ],
+    "filesScanned": 1
+  },
+  "runtime": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": []
+  },
+  "layout": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "duration": 65.346,
+    "samples": [
+      3.63,
+      10.891,
+      18.152,
+      25.412,
+      32.673,
+      39.934,
+      47.194,
+      54.455,
+      61.716
+    ],
+    "transitionSamples": [],
+    "transitionSamplesDropped": 0,
+    "tolerance": 2,
+    "totalIssueCount": 0,
+    "truncated": false
+  },
+  "motion": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": false,
+    "samples": 0
+  },
+  "contrast": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 0,
+    "infoCount": 0,
+    "findings": [],
+    "enabled": true,
+    "samples": [
+      3.63,
+      18.152,
+      32.673,
+      47.194,
+      61.716
+    ],
+    "checked": 28,
+    "passed": 28
+  },
+  "craft": {
+    "ok": true,
+    "errorCount": 0,
+    "warningCount": 19,
+    "infoCount": 0,
+    "findings": [
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"and scale is what decides it.\" (6 words) is on screen 1.67 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "and scale is what decides it.",
+        "selector": "#cap5",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 324.69,
+          "y": 1692.61,
+          "width": 430.61999999999995,
+          "height": 39
+        },
+        "time": 10.137,
+        "words": 6,
+        "seconds": 1.671,
+        "floorSeconds": 1.725
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"don't overthink that case.\" (5 words) is on screen 1.23 s (±0.01 s), under its 1.50 s floor: hold it about 0.5 s + 0.3 s a word (2.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "don't overthink that case.",
+        "selector": "#cap9",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 344.86,
+          "y": 1695.18,
+          "width": 390.14,
+          "height": 39
+        },
+        "time": 18.101,
+        "words": 5,
+        "seconds": 1.233,
+        "floorSeconds": 1.5
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"and you don't want to\" (6 words) is on screen 0.87 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "and you don't want to",
+        "selector": "#cap11",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 374.03,
+          "y": 1692.78,
+          "width": 331.47,
+          "height": 39
+        },
+        "time": 22.17,
+        "words": 6,
+        "seconds": 0.867,
+        "floorSeconds": 1.725
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"✓ this is the real fit\" (5 words) is on screen 1.41 s (±0.01 s), under its 1.50 s floor: hold it about 0.5 s + 0.3 s a word (2.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "✓ this is the real fit",
+        "selector": "#b4-tally",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 363.17,
+          "y": 1226.23,
+          "width": 353.63999999999993,
+          "height": 38
+        },
+        "time": 24.567,
+        "words": 5,
+        "seconds": 1.405,
+        "floorSeconds": 1.5
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Does your agent need\" (4 words) is on screen 1.06 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Does your agent need",
+        "selector": "#cap15",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 371.62,
+          "y": 1693.02,
+          "width": 336.38,
+          "height": 39
+        },
+        "time": 28.44,
+        "words": 4,
+        "seconds": 1.063,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"more than one or two\" (5 words) is on screen 1.04 s (±0.01 s), under its 1.50 s floor: hold it about 0.5 s + 0.3 s a word (2.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "more than one or two",
+        "selector": "#cap16",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 377.14,
+          "y": 1692.72,
+          "width": 325.86,
+          "height": 39
+        },
+        "time": 29.534,
+        "words": 5,
+        "seconds": 1.038,
+        "floorSeconds": 1.5
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Do you want that\" (4 words) is on screen 0.76 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Do you want that",
+        "selector": "#cap18",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 410.55,
+          "y": 1693.85,
+          "width": 258.45,
+          "height": 39
+        },
+        "time": 31.939,
+        "words": 4,
+        "seconds": 0.765,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"actually fit how often\" (4 words) is on screen 1.16 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "actually fit how often",
+        "selector": "#cap23",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 380,
+          "y": 1692.85,
+          "width": 320,
+          "height": 39
+        },
+        "time": 37.803,
+        "words": 4,
+        "seconds": 1.164,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"it gets used?\" (3 words) is on screen 0.66 s (±0.01 s), under its 1.05 s floor: hold it about 0.5 s + 0.3 s a word (1.40 s here) before it leaves or changes; see references/motion.md.",
+        "text": "it gets used?",
+        "selector": "#cap24",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 442.58,
+          "y": 1692.61,
+          "width": 194.42000000000002,
+          "height": 39
+        },
+        "time": 39.006,
+        "words": 3,
+        "seconds": 0.663,
+        "floorSeconds": 1.05
+      },
+      {
+        "code": "text_below_floor",
+        "severity": "warning",
+        "message": "Type floor is 28 px (2.6% of the 1080 px short side, what a phone can read) and 13 text elements stay under it for 0.5 s or more, the smallest \"Free Account\" at 24 px: set reading text to at least 28 px, or put data-layout-ignore on text that is texture rather than reading; see references/look.md.",
+        "text": "Free Account",
+        "selector": "#b6-chip1",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 283.02,
+          "y": 1123.33,
+          "width": 176.26,
+          "height": 36
+        },
+        "time": 41.981,
+        "times": [
+          0,
+          8.121,
+          12.37,
+          18.242,
+          19.991,
+          24.614,
+          26.613,
+          40.357,
+          41.981,
+          44.48,
+          47.854,
+          58.849,
+          61.223
+        ],
+        "fontPx": 24,
+        "floorPx": 28,
+        "seconds": 7.747,
+        "elements": [
+          {
+            "selector": "#b6-chip1",
+            "text": "Free Account",
+            "fontPx": 24,
+            "time": 41.981,
+            "seconds": 7.747
+          },
+          {
+            "selector": "#b6-chip2",
+            "text": "1 OAuth 2.1 Login",
+            "fontPx": 24,
+            "time": 44.48,
+            "seconds": 5.248
+          },
+          {
+            "selector": "#b6-chip3",
+            "text": "Per Connection, Not Per Task",
+            "fontPx": 24,
+            "time": 47.854,
+            "seconds": 1.874
+          },
+          {
+            "selector": "#b3-tally",
+            "text": "× genuinely simpler here",
+            "fontPx": 26,
+            "time": 18.242,
+            "seconds": 1.124
+          },
+          {
+            "selector": "#b4-tally",
+            "text": "✓ this is the real fit",
+            "fontPx": 26,
+            "time": 24.614,
+            "seconds": 1.375
+          },
+          {
+            "selector": "#end-sub",
+            "text": "mcp.yaeris.com",
+            "fontPx": 26,
+            "time": 58.849,
+            "seconds": 1.624
+          },
+          {
+            "selector": "#b1-eyebrow",
+            "text": "MCP Server",
+            "fontPx": 27,
+            "time": 0,
+            "seconds": 7.497
+          },
+          {
+            "selector": "#b2-eyebrow",
+            "text": "Scale Decides It",
+            "fontPx": 27,
+            "time": 8.121,
+            "seconds": 3.624
+          },
+          {
+            "selector": "#b3-eyebrow",
+            "text": "Not A Fit",
+            "fontPx": 27,
+            "time": 12.37,
+            "seconds": 6.996
+          },
+          {
+            "selector": "#b4-eyebrow",
+            "text": "A Real Fit",
+            "fontPx": 27,
+            "time": 19.991,
+            "seconds": 5.998
+          },
+          {
+            "selector": "#b5-eyebrow",
+            "text": "The Test",
+            "fontPx": 27,
+            "time": 26.613,
+            "seconds": 13.119
+          },
+          {
+            "selector": "#b6-eyebrow",
+            "text": "What You Actually Get",
+            "fontPx": 27,
+            "time": 40.357,
+            "seconds": 9.371
+          },
+          {
+            "selector": "#b8-eyebrow",
+            "text": "Before You Go",
+            "fontPx": 27,
+            "time": 61.223,
+            "seconds": 4.123
+          }
+        ]
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"once you're in, and\" (5 words) is on screen 1.10 s (±0.01 s), under its 1.50 s floor: hold it about 0.5 s + 0.3 s a word (2.00 s here) before it leaves or changes; see references/motion.md.",
+        "text": "once you're in, and",
+        "selector": "#cap28",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 393.72,
+          "y": 1693.29,
+          "width": 292.28,
+          "height": 39
+        },
+        "time": 46.573,
+        "words": 5,
+        "seconds": 1.102,
+        "floorSeconds": 1.5
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"you only pay for\" (4 words) is on screen 0.76 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "you only pay for",
+        "selector": "#cap29",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 416.59,
+          "y": 1694.29,
+          "width": 246.41000000000003,
+          "height": 39
+        },
+        "time": 47.706,
+        "words": 4,
+        "seconds": 0.765,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"what you actually connect.\" (4 words) is on screen 1.17 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "what you actually connect.",
+        "selector": "#cap30",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 334.66,
+          "y": 1692.61,
+          "width": 410.68,
+          "height": 39
+        },
+        "time": 48.501,
+        "words": 4,
+        "seconds": 1.172,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"The fit question here\" (4 words) is on screen 1.16 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "The fit question here",
+        "selector": "#cap31",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 381.54,
+          "y": 1692.66,
+          "width": 316.92,
+          "height": 39
+        },
+        "time": 50.041,
+        "words": 4,
+        "seconds": 1.163,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"was never really about\" (4 words) is on screen 1.17 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "was never really about",
+        "selector": "#cap32",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 367.39,
+          "y": 1692.61,
+          "width": 345.11,
+          "height": 39
+        },
+        "time": 51.235,
+        "words": 4,
+        "seconds": 1.172,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"It's about how many integrations\" (6 words) is on screen 1.66 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "It's about how many integrations",
+        "selector": "#cap34",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 385.7,
+          "y": 1652.06,
+          "width": 308.59999999999997,
+          "height": 80.58999999999992
+        },
+        "time": 54.437,
+        "words": 6,
+        "seconds": 1.663,
+        "floorSeconds": 1.725
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"you're willing to own yourself.\" (6 words) is on screen 1.40 s (±0.01 s), under its 1.72 s floor: hold it about 0.5 s + 0.3 s a word (2.30 s here) before it leaves or changes; see references/motion.md.",
+        "text": "you're willing to own yourself.",
+        "selector": "#cap35",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 311.7,
+          "y": 1692.61,
+          "width": 456.3,
+          "height": 39
+        },
+        "time": 56.139,
+        "words": 6,
+        "seconds": 1.397,
+        "floorSeconds": 1.725
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"Follow for more of\" (4 words) is on screen 0.94 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "Follow for more of",
+        "selector": "#cap36",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 401.57,
+          "y": 1693.57,
+          "width": 276.86000000000007,
+          "height": 39
+        },
+        "time": 60.801,
+        "words": 4,
+        "seconds": 0.938,
+        "floorSeconds": 1.275
+      },
+      {
+        "code": "line_unread",
+        "severity": "warning",
+        "message": "\"this kind of content.\" (4 words) is on screen 1.00 s (±0.01 s), under its 1.27 s floor: hold it about 0.5 s + 0.3 s a word (1.70 s here) before it leaves or changes; see references/motion.md.",
+        "text": "this kind of content.",
+        "selector": "#cap37",
+        "dataAttributes": {},
+        "sourceFile": "index.html",
+        "bbox": {
+          "x": 388.22,
+          "y": 1692.61,
+          "width": 303.78,
+          "height": 39
+        },
+        "time": 61.77,
+        "words": 4,
+        "seconds": 0.999,
+        "floorSeconds": 1.275
+      }
+    ],
+    "enabled": true,
+    "step": 0.125,
+    "samples": 523
+  },
+  "hdr": {
+    "autoPromotion": null,
+    "inspection": "available"
+  },
+  "snapshots": {
+    "enabled": false,
+    "files": [],
+    "times": [],
+    "findingFiles": []
+  }
+}

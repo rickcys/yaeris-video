@@ -1,0 +1,104 @@
+{
+  "words": [
+    {
+      "word": "those",
+      "start": 0.0,
+      "end": 0.2
+    },
+    {
+      "word": "100",
+      "start": 0.2,
+      "end": 0.8
+    },
+    {
+      "word": "free",
+      "start": 0.8,
+      "end": 1.12
+    },
+    {
+      "word": "credits",
+      "start": 1.12,
+      "end": 1.56
+    },
+    {
+      "word": "come",
+      "start": 1.56,
+      "end": 1.88
+    },
+    {
+      "word": "with",
+      "start": 1.88,
+      "end": 2.08
+    },
+    {
+      "word": "no",
+      "start": 2.08,
+      "end": 2.34
+    },
+    {
+      "word": "card",
+      "start": 2.34,
+      "end": 2.68
+    },
+    {
+      "word": "required,",
+      "start": 2.68,
+      "end": 3.32
+    },
+    {
+      "word": "specifically",
+      "start": 3.78,
+      "end": 4.28
+    },
+    {
+      "word": "so",
+      "start": 4.28,
+      "end": 4.7
+    },
+    {
+      "word": "you",
+      "start": 4.7,
+      "end": 4.86
+    },
+    {
+      "word": "can",
+      "start": 4.86,
+      "end": 4.98
+    },
+    {
+      "word": "answer",
+      "start": 4.98,
+      "end": 5.34
+    },
+    {
+      "word": "that",
+      "start": 5.34,
+      "end": 5.58
+    },
+    {
+      "word": "third",
+      "start": 5.58,
+      "end": 5.84
+    },
+    {
+      "word": "question",
+      "start": 5.84,
+      "end": 6.36
+    },
+    {
+      "word": "before",
+      "start": 6.36,
+      "end": 6.92
+    },
+    {
+      "word": "spending",
+      "start": 6.92,
+      "end": 7.26
+    },
+    {
+      "word": "anything.",
+      "start": 7.26,
+      "end": 7.66
+    }
+  ]
+}

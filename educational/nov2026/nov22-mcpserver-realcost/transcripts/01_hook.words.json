@@ -1,0 +1,116 @@
+[
+  {
+    "id": "w0",
+    "text": "Per",
+    "start": 0,
+    "end": 0.16
+  },
+  {
+    "id": "w1",
+    "text": "task",
+    "start": 0.32,
+    "end": 0.56
+  },
+  {
+    "id": "w2",
+    "text": "AI",
+    "start": 0.72,
+    "end": 1.12
+  },
+  {
+    "id": "w3",
+    "text": "pricing",
+    "start": 1.12,
+    "end": 1.76
+  },
+  {
+    "id": "w4",
+    "text": "multiplies",
+    "start": 1.76,
+    "end": 2.48
+  },
+  {
+    "id": "w5",
+    "text": "fast",
+    "start": 2.48,
+    "end": 2.8
+  },
+  {
+    "id": "w6",
+    "text": "at",
+    "start": 2.96,
+    "end": 3.12
+  },
+  {
+    "id": "w7",
+    "text": "real",
+    "start": 3.12,
+    "end": 3.44
+  },
+  {
+    "id": "w8",
+    "text": "volume.",
+    "start": 3.44,
+    "end": 4.24
+  },
+  {
+    "id": "w9",
+    "text": "The",
+    "start": 4.24,
+    "end": 4.48
+  },
+  {
+    "id": "w10",
+    "text": "question",
+    "start": 4.48,
+    "end": 4.88
+  },
+  {
+    "id": "w11",
+    "text": "is",
+    "start": 4.88,
+    "end": 5.12
+  },
+  {
+    "id": "w12",
+    "text": "whether",
+    "start": 5.12,
+    "end": 5.52
+  },
+  {
+    "id": "w13",
+    "text": "that's",
+    "start": 5.52,
+    "end": 5.84
+  },
+  {
+    "id": "w14",
+    "text": "actually",
+    "start": 5.84,
+    "end": 6.16
+  },
+  {
+    "id": "w15",
+    "text": "how",
+    "start": 6.16,
+    "end": 6.32
+  },
+  {
+    "id": "w16",
+    "text": "this",
+    "start": 6.32,
+    "end": 6.48
+  },
+  {
+    "id": "w17",
+    "text": "gets",
+    "start": 6.48,
+    "end": 6.8
+  },
+  {
+    "id": "w18",
+    "text": "billed.",
+    "start": 6.8,
+    "end": 7.28
+  }
+]

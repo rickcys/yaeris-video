@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "historyId": "8f925b3e-0e76-4b2b-9625-eca27e73ec60",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "BRIEF.md": {
+      "hash": "ffc3fd17e846b7d129b2f5fccb0a24a4692691eeede636c032959d2fb10f850b",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\ff\\ffc3fd17e846b7d129b2f5fccb0a24a4692691eeede636c032959d2fb10f850b"
+    },
+    "SCRIPT.md": {
+      "hash": "07baadafd00f36854bd4de18854d8bfcc0df2dc3d2e3aa7b554baf1fbe19ca19",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\07\\07baadafd00f36854bd4de18854d8bfcc0df2dc3d2e3aa7b554baf1fbe19ca19"
+    },
+    "audio_lines/01_hook.wav": {
+      "hash": "66ff2fd29ea1a605bfd36b110c245983285f411762509e167c4baecb3baf17c3",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\66\\66ff2fd29ea1a605bfd36b110c245983285f411762509e167c4baecb3baf17c3"
+    },
+    "audio_lines/01_hook.words.json": {
+      "hash": "b2454c0e68cf54230261a60c2789f2cfd3f96a8080b734d8b16b18ac3c68f08e",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\b2\\b2454c0e68cf54230261a60c2789f2cfd3f96a8080b734d8b16b18ac3c68f08e"
+    },
+    "audio_lines/02_structures.wav": {
+      "hash": "1d6dc47c129762e3a512607ee1fb8255333f9c5a4dbcc09a7e28af41aab2615c",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\1d\\1d6dc47c129762e3a512607ee1fb8255333f9c5a4dbcc09a7e28af41aab2615c"
+    },
+    "audio_lines/02_structures.words.json": {
+      "hash": "79ae9355d0c9f7894ef0ae694bf5e60489fea07abd56da32700d340a658e6396",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\79\\79ae9355d0c9f7894ef0ae694bf5e60489fea07abd56da32700d340a658e6396"
+    },
+    "audio_lines/03_usual.wav": {
+      "hash": "1a8a1c744b6b2598d5b3acfc677f1ff2b135cb59e71efd1019edf7cab91fe2ba",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\1a\\1a8a1c744b6b2598d5b3acfc677f1ff2b135cb59e71efd1019edf7cab91fe2ba"
+    },
+    "audio_lines/03_usual.words.json": {
+      "hash": "53b32f9406c324b7a49305b156b79601f08189f33eae25fd8b07128170a13f38",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\53\\53b32f9406c324b7a49305b156b79601f08189f33eae25fd8b07128170a13f38"
+    },
+    "audio_lines/04_thiscase.wav": {
+      "hash": "8e4253a892acf26a087ceb52ade3962cbe740dcbaeb371315aaaea2626422cd2",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\8e\\8e4253a892acf26a087ceb52ade3962cbe740dcbaeb371315aaaea2626422cd2"
+    },
+    "audio_lines/04_thiscase.words.json": {
+      "hash": "5dcbe1447a93a46f7467bafedcae934303f7c516178edce7637450a87b55831e",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\5d\\5dcbe1447a93a46f7467bafedcae934303f7c516178edce7637450a87b55831e"
+    },
+    "audio_lines/05_test.wav": {
+      "hash": "5f5171e8edab0dff1e02f73e0763258357b321c0fd5127423895a12f5b7e2597",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\5f\\5f5171e8edab0dff1e02f73e0763258357b321c0fd5127423895a12f5b7e2597"
+    },
+    "audio_lines/05_test.words.json": {
+      "hash": "d6d2d06c318f50be2c79dc869b5cfc665a856250bff610cfb0437ef54facdb19",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\d6\\d6d2d06c318f50be2c79dc869b5cfc665a856250bff610cfb0437ef54facdb19"
+    },
+    "audio_lines/06_grounding.wav": {
+      "hash": "dbfefc404aac9431f0c0964fb80b8fc75ee829c9cbcc4d86869f78269742c177",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\db\\dbfefc404aac9431f0c0964fb80b8fc75ee829c9cbcc4d86869f78269742c177"
+    },
+    "audio_lines/06_grounding.words.json": {
+      "hash": "3f6190bbbfd873fa55179243c76b1d7977ec5e4b08909de0ec11b9524831d905",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\3f\\3f6190bbbfd873fa55179243c76b1d7977ec5e4b08909de0ec11b9524831d905"
+    },
+    "audio_lines/07_reframe.wav": {
+      "hash": "95ba5c37ce84dc99df42551c718d02aa6bbffd8f8ddf52df752953e913a460b0",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\95\\95ba5c37ce84dc99df42551c718d02aa6bbffd8f8ddf52df752953e913a460b0"
+    },
+    "audio_lines/07_reframe.words.json": {
+      "hash": "1f41f0e5c2ac19fe589d8cfc9a3207fd4a9baae9d5415090203c63be2431d04e",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\1f\\1f41f0e5c2ac19fe589d8cfc9a3207fd4a9baae9d5415090203c63be2431d04e"
+    },
+    "audio_lines/08_follow.wav": {
+      "hash": "2a62d2ad9c50c6e732e9f256f9b463a918ec2cd2332df3a59b609ea9aa41ea09",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\2a\\2a62d2ad9c50c6e732e9f256f9b463a918ec2cd2332df3a59b609ea9aa41ea09"
+    },
+    "audio_lines/08_follow.words.json": {
+      "hash": "fd2d29382ce786018a0b7349300798054be9c0a55988eae9fdadde3cb7ccf206",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\fd\\fd2d29382ce786018a0b7349300798054be9c0a55988eae9fdadde3cb7ccf206"
+    },
+    "audio_lines/transcript.json": {
+      "hash": "fd2d29382ce786018a0b7349300798054be9c0a55988eae9fdadde3cb7ccf206",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\fd\\fd2d29382ce786018a0b7349300798054be9c0a55988eae9fdadde3cb7ccf206"
+    },
+    "hyperframes.json": {
+      "hash": "9313260261b6e431830877ee35083331270bc6b9a32d50650abe2bd58bdf558d",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\93\\9313260261b6e431830877ee35083331270bc6b9a32d50650abe2bd58bdf558d"
+    },
+    "index.html": {
+      "hash": "bd52bffd963d6c3b16cf0a608e0a99a004087f1fdba1c9514d7ace90978b5f6d",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\bd\\bd52bffd963d6c3b16cf0a608e0a99a004087f1fdba1c9514d7ace90978b5f6d"
+    },
+    "package.json": {
+      "hash": "424f8c2b766f8ffba3e6b1f912a84a0f8d821c462738a3926d84bf9e4dec8468",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\42\\424f8c2b766f8ffba3e6b1f912a84a0f8d821c462738a3926d84bf9e4dec8468"
+    },
+    "transcribe_err.log": {
+      "hash": "8c5c96ffd6d90d40f91f4ac6f8217504406f32bbe2d4a2977f8e7d80ec677501",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\8f925b3e-0e76-4b2b-9625-eca27e73ec60\\blobs\\8c\\8c5c96ffd6d90d40f91f4ac6f8217504406f32bbe2d4a2977f8e7d80ec677501"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": {
+      "revision": null,
+      "id": "4fb36cfb-d95a-433a-b841-13767cf2837d"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "id": "4fb36cfb-d95a-433a-b841-13767cf2837d",
+        "scope": "project",
+        "report": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov23-dreview-realcost\\.hyperframes\\artifacts\\checks\\4fb36cfb-d95a-433a-b841-13767cf2837d.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1792667601482,
+        "contentHash": "0ff434d0268157fdc3a8990e5c94d2db063608144b73b2be245a468875e392f1",
+        "revision": null,
+        "inputFingerprint": "9a39a8fc9c2515ef67b10ee965c52b81a09502ed05e5ee04a51c3ab5c9baee04",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "f5d8d399-4980-484a-be7a-2ac14bdc3ff1",
+      "completedAt": 1792667794375,
+      "output": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov23-dreview-realcost\\renders\\video.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}

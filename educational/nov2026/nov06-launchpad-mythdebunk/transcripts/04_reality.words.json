@@ -1,0 +1,206 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "reality,",
+    "start": 0.24,
+    "end": 0.8
+  },
+  {
+    "id": "w2",
+    "text": "at",
+    "start": 0.8,
+    "end": 0.96
+  },
+  {
+    "id": "w3",
+    "text": "least",
+    "start": 0.96,
+    "end": 1.2
+  },
+  {
+    "id": "w4",
+    "text": "for",
+    "start": 1.2,
+    "end": 1.36
+  },
+  {
+    "id": "w5",
+    "text": "a",
+    "start": 1.36,
+    "end": 1.44
+  },
+  {
+    "id": "w6",
+    "text": "host",
+    "start": 1.44,
+    "end": 1.84
+  },
+  {
+    "id": "w7",
+    "text": "like",
+    "start": 1.84,
+    "end": 2.08
+  },
+  {
+    "id": "w8",
+    "text": "this,",
+    "start": 2.08,
+    "end": 2.48
+  },
+  {
+    "id": "w9",
+    "text": "flat",
+    "start": 2.72,
+    "end": 3.04
+  },
+  {
+    "id": "w10",
+    "text": "monthly",
+    "start": 3.2,
+    "end": 3.68
+  },
+  {
+    "id": "w11",
+    "text": "tiers,",
+    "start": 3.68,
+    "end": 4.48
+  },
+  {
+    "id": "w12",
+    "text": "each",
+    "start": 4.48,
+    "end": 4.72
+  },
+  {
+    "id": "w13",
+    "text": "one",
+    "start": 4.72,
+    "end": 5.04
+  },
+  {
+    "id": "w14",
+    "text": "including",
+    "start": 5.04,
+    "end": 5.44
+  },
+  {
+    "id": "w15",
+    "text": "a",
+    "start": 5.44,
+    "end": 5.6
+  },
+  {
+    "id": "w16",
+    "text": "real",
+    "start": 5.6,
+    "end": 5.76
+  },
+  {
+    "id": "w17",
+    "text": "usage",
+    "start": 5.92,
+    "end": 6.32
+  },
+  {
+    "id": "w18",
+    "text": "allowance,",
+    "start": 6.32,
+    "end": 6.96
+  },
+  {
+    "id": "w19",
+    "text": "with",
+    "start": 6.96,
+    "end": 7.2
+  },
+  {
+    "id": "w20",
+    "text": "the",
+    "start": 7.2,
+    "end": 7.36
+  },
+  {
+    "id": "w21",
+    "text": "rate",
+    "start": 7.36,
+    "end": 7.6
+  },
+  {
+    "id": "w22",
+    "text": "for",
+    "start": 7.6,
+    "end": 7.76
+  },
+  {
+    "id": "w23",
+    "text": "anything",
+    "start": 7.76,
+    "end": 8.16
+  },
+  {
+    "id": "w24",
+    "text": "beyond",
+    "start": 8.16,
+    "end": 8.48
+  },
+  {
+    "id": "w25",
+    "text": "that",
+    "start": 8.48,
+    "end": 8.72
+  },
+  {
+    "id": "w26",
+    "text": "stated",
+    "start": 8.72,
+    "end": 9.28
+  },
+  {
+    "id": "w27",
+    "text": "upfront,",
+    "start": 9.28,
+    "end": 10
+  },
+  {
+    "id": "w28",
+    "text": "not",
+    "start": 10,
+    "end": 10.24
+  },
+  {
+    "id": "w29",
+    "text": "hidden",
+    "start": 10.24,
+    "end": 10.64
+  },
+  {
+    "id": "w30",
+    "text": "until",
+    "start": 10.64,
+    "end": 10.96
+  },
+  {
+    "id": "w31",
+    "text": "the",
+    "start": 10.96,
+    "end": 11.12
+  },
+  {
+    "id": "w32",
+    "text": "bill",
+    "start": 11.12,
+    "end": 11.36
+  },
+  {
+    "id": "w33",
+    "text": "arrives.",
+    "start": 11.36,
+    "end": 11.84
+  }
+]

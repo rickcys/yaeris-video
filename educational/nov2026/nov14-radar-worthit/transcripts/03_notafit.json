@@ -1,0 +1,104 @@
+{
+  "words": [
+    {
+      "word": "Not",
+      "start": 0.0,
+      "end": 0.28
+    },
+    {
+      "word": "a",
+      "start": 0.28,
+      "end": 0.42
+    },
+    {
+      "word": "fit.",
+      "start": 0.42,
+      "end": 0.66
+    },
+    {
+      "word": "If",
+      "start": 1.1,
+      "end": 1.22
+    },
+    {
+      "word": "you",
+      "start": 1.22,
+      "end": 1.32
+    },
+    {
+      "word": "only",
+      "start": 1.32,
+      "end": 1.54
+    },
+    {
+      "word": "need",
+      "start": 1.54,
+      "end": 1.76
+    },
+    {
+      "word": "ranking",
+      "start": 1.76,
+      "end": 2.02
+    },
+    {
+      "word": "data,",
+      "start": 2.02,
+      "end": 2.42
+    },
+    {
+      "word": "no",
+      "start": 2.76,
+      "end": 2.98
+    },
+    {
+      "word": "outreach",
+      "start": 2.98,
+      "end": 3.34
+    },
+    {
+      "word": "attached,",
+      "start": 3.34,
+      "end": 3.84
+    },
+    {
+      "word": "the",
+      "start": 4.26,
+      "end": 4.46
+    },
+    {
+      "word": "full",
+      "start": 4.46,
+      "end": 4.68
+    },
+    {
+      "word": "platform",
+      "start": 4.68,
+      "end": 5.12
+    },
+    {
+      "word": "is",
+      "start": 5.12,
+      "end": 5.38
+    },
+    {
+      "word": "more",
+      "start": 5.38,
+      "end": 5.58
+    },
+    {
+      "word": "than",
+      "start": 5.58,
+      "end": 5.74
+    },
+    {
+      "word": "you",
+      "start": 5.74,
+      "end": 5.86
+    },
+    {
+      "word": "need.",
+      "start": 5.86,
+      "end": 6.1
+    }
+  ]
+}

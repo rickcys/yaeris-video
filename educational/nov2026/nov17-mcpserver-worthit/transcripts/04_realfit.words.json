@@ -1,0 +1,116 @@
+[
+  {
+    "id": "w0",
+    "text": "A",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "real",
+    "start": 0.24,
+    "end": 0.56
+  },
+  {
+    "id": "w2",
+    "text": "fit,",
+    "start": 0.56,
+    "end": 1.36
+  },
+  {
+    "id": "w3",
+    "text": "multiple",
+    "start": 1.36,
+    "end": 1.92
+  },
+  {
+    "id": "w4",
+    "text": "tools,",
+    "start": 1.92,
+    "end": 2.48
+  },
+  {
+    "id": "w5",
+    "text": "and",
+    "start": 2.48,
+    "end": 2.72
+  },
+  {
+    "id": "w6",
+    "text": "you",
+    "start": 2.72,
+    "end": 2.8
+  },
+  {
+    "id": "w7",
+    "text": "don't",
+    "start": 2.8,
+    "end": 3.04
+  },
+  {
+    "id": "w8",
+    "text": "want",
+    "start": 3.04,
+    "end": 3.2
+  },
+  {
+    "id": "w9",
+    "text": "to",
+    "start": 3.2,
+    "end": 3.36
+  },
+  {
+    "id": "w10",
+    "text": "own",
+    "start": 3.36,
+    "end": 3.6
+  },
+  {
+    "id": "w11",
+    "text": "the",
+    "start": 3.6,
+    "end": 3.68
+  },
+  {
+    "id": "w12",
+    "text": "integration",
+    "start": 3.68,
+    "end": 4.32
+  },
+  {
+    "id": "w13",
+    "text": "maintenance",
+    "start": 4.32,
+    "end": 4.8
+  },
+  {
+    "id": "w14",
+    "text": "for",
+    "start": 4.8,
+    "end": 4.96
+  },
+  {
+    "id": "w15",
+    "text": "each",
+    "start": 4.96,
+    "end": 5.2
+  },
+  {
+    "id": "w16",
+    "text": "one",
+    "start": 5.2,
+    "end": 5.44
+  },
+  {
+    "id": "w17",
+    "text": "yourself",
+    "start": 5.44,
+    "end": 5.84
+  },
+  {
+    "id": "w18",
+    "text": "forever.",
+    "start": 5.84,
+    "end": 6.4
+  }
+]

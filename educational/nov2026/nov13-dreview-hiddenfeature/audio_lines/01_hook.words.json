@@ -1,0 +1,110 @@
+[
+  {
+    "id": "w0",
+    "text": "Most",
+    "start": 0,
+    "end": 0.32
+  },
+  {
+    "id": "w1",
+    "text": "people",
+    "start": 0.32,
+    "end": 0.56
+  },
+  {
+    "id": "w2",
+    "text": "submit",
+    "start": 0.56,
+    "end": 0.96
+  },
+  {
+    "id": "w3",
+    "text": "to",
+    "start": 0.96,
+    "end": 1.12
+  },
+  {
+    "id": "w4",
+    "text": "D",
+    "start": 1.12,
+    "end": 1.28
+  },
+  {
+    "id": "w5",
+    "text": "review",
+    "start": 1.44,
+    "end": 1.84
+  },
+  {
+    "id": "w6",
+    "text": "once,",
+    "start": 1.84,
+    "end": 2.24
+  },
+  {
+    "id": "w7",
+    "text": "get",
+    "start": 2.24,
+    "end": 2.48
+  },
+  {
+    "id": "w8",
+    "text": "approved,",
+    "start": 2.48,
+    "end": 3.04
+  },
+  {
+    "id": "w9",
+    "text": "and",
+    "start": 3.04,
+    "end": 3.2
+  },
+  {
+    "id": "w10",
+    "text": "treat",
+    "start": 3.2,
+    "end": 3.52
+  },
+  {
+    "id": "w11",
+    "text": "the",
+    "start": 3.52,
+    "end": 3.68
+  },
+  {
+    "id": "w12",
+    "text": "listing",
+    "start": 3.68,
+    "end": 4
+  },
+  {
+    "id": "w13",
+    "text": "as",
+    "start": 4,
+    "end": 4.16
+  },
+  {
+    "id": "w14",
+    "text": "finished",
+    "start": 4.16,
+    "end": 4.56
+  },
+  {
+    "id": "w15",
+    "text": "forever.",
+    "start": 4.56,
+    "end": 5.28
+  },
+  {
+    "id": "w16",
+    "text": "It",
+    "start": 5.28,
+    "end": 5.52
+  },
+  {
+    "id": "w17",
+    "text": "isn't.",
+    "start": 5.52,
+    "end": 5.92
+  }
+]

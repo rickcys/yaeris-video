@@ -1,0 +1,50 @@
+[
+  {
+    "id": "w0",
+    "text": "Follow",
+    "start": 0,
+    "end": 0.48
+  },
+  {
+    "id": "w1",
+    "text": "for",
+    "start": 0.48,
+    "end": 0.64
+  },
+  {
+    "id": "w2",
+    "text": "more",
+    "start": 0.64,
+    "end": 0.88
+  },
+  {
+    "id": "w3",
+    "text": "of",
+    "start": 0.88,
+    "end": 0.96
+  },
+  {
+    "id": "w4",
+    "text": "this",
+    "start": 0.96,
+    "end": 1.12
+  },
+  {
+    "id": "w5",
+    "text": "kind",
+    "start": 1.12,
+    "end": 1.28
+  },
+  {
+    "id": "w6",
+    "text": "of",
+    "start": 1.28,
+    "end": 1.44
+  },
+  {
+    "id": "w7",
+    "text": "content.",
+    "start": 1.44,
+    "end": 2
+  }
+]

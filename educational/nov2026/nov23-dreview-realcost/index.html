@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0E0E1F; }
+      #root { width: 100%; height: 100%; position: relative; font-family: Inter, sans-serif; background: #0E0E1F; }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 150px 90px; }
+
+      .eyebrow { font-family: 'Space Mono', monospace; font-size: 28px; letter-spacing: 0.16em; color: #7FCBF0; text-transform: uppercase; margin-bottom: 22px; opacity: 0; }
+
+      /* Hook beat */
+      .hook-wrap { align-items: center; justify-content: center; text-align: center; }
+      .hook-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 78px; line-height: 1.18; color: #FBFBF8; letter-spacing: -0.01em; }
+
+      /* Problem / statement beat */
+      .problem-wrap { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
+      .problem-text { font-family: Outfit, sans-serif; font-weight: 800; font-size: 62px; line-height: 1.28; color: #F4F4F5; opacity: 0; }
+      .problem-text .strike { color: #DC3545; }
+      .problem-text .accent { color: #25D366; }
+
+      /* Chip flow beat */
+      .chip-flow-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 30px; align-items: center; }
+      .chip { display: flex; align-items: center; gap: 20px; border-radius: 999px; padding: 24px 44px; opacity: 0; }
+      .chip-1 { background: rgba(155,111,214,0.14); border: 3px solid #9B6FD6; }
+      .chip-2 { background: rgba(27,127,168,0.16); border: 3px solid #1B7FA8; }
+      .chip-3 { background: rgba(37,211,102,0.14); border: 3px solid #25D366; }
+      .chip-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 36px; color: #F4F4F5; text-align: center; }
+
+      /* Quote / reframe beat */
+      .quote-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; text-align: center; }
+      .quote-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 68px; line-height: 1.22; color: #FBFBF8; opacity: 0; }
+      .quote-sub { font-family: Inter, sans-serif; font-size: 30px; color: #A9A9BE; opacity: 0; max-width: 780px; }
+      .quote-brand { font-family: 'Space Mono', monospace; font-size: 28px; letter-spacing: 0.14em; color: #29ABE2; text-transform: uppercase; margin-top: 16px; opacity: 0; }
+
+      /* Follow CTA beat */
+      .follow-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .follow-label { font-family: Outfit, sans-serif; font-weight: 900; font-size: 96px; color: #FBFBF8; line-height: 1.05; opacity: 0; }
+      .follow-sub { font-family: Inter, sans-serif; font-size: 32px; color: #A9A9BE; line-height: 1.5; max-width: 780px; opacity: 0; }
+      .follow-tag { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #25D366; text-transform: uppercase; margin-top: 12px; opacity: 0; }
+      .follow-chevron { font-size: 60px; color: #7FCBF0; opacity: 0; margin-top: 10px; }
+
+      /* ---- captions (matches Brand Kit caption-pill spec) ---- */
+      .caption-pill {
+        position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%);
+        background: rgba(10,9,16,0.86); color: #fff; font-family: Inter, sans-serif; font-weight: 500;
+        font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%;
+        text-align: center; line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="58.445"
+      data-width="1080"
+      data-height="1920"
+    >
+      <audio id="a1" class="clip" data-start="0" data-duration="8.320" data-track-index="1" src="audio_lines/01_hook.wav"></audio>
+      <audio id="a2" class="clip" data-start="8.520" data-duration="6.805" data-track-index="1" src="audio_lines/02_structures.wav"></audio>
+      <audio id="a3" class="clip" data-start="15.525" data-duration="5.973" data-track-index="1" src="audio_lines/03_usual.wav"></audio>
+      <audio id="a4" class="clip" data-start="21.698" data-duration="6.016" data-track-index="1" src="audio_lines/04_thiscase.wav"></audio>
+      <audio id="a5" class="clip" data-start="27.914" data-duration="11.072" data-track-index="1" src="audio_lines/05_test.wav"></audio>
+      <audio id="a6" class="clip" data-start="39.186" data-duration="9.707" data-track-index="1" src="audio_lines/06_grounding.wav"></audio>
+      <audio id="a7" class="clip" data-start="49.093" data-duration="7.061" data-track-index="1" src="audio_lines/07_reframe.wav"></audio>
+      <audio id="a8" class="clip" data-start="56.354" data-duration="2.091" data-track-index="1" src="audio_lines/08_follow.wav"></audio>
+
+      <!-- Beat A: Hook, 0 - 8.520s -->
+      <div class="beat hook-wrap clip" id="beatA" data-start="0" data-duration="8.520" data-track-index="0">
+        <div class="eyebrow" id="a-eyebrow" style="opacity:1">DReview</div>
+        <div class="hook-text" id="a-text">Discovery and marketing<br />almost always cost<br />money somewhere.<br />This is the exception.</div>
+      </div>
+
+      <!-- Beat B: Two cost structures, 8.520 - 15.525s -->
+      <div class="beat problem-wrap clip" id="beatB" data-start="8.520" data-duration="7.005" data-track-index="0">
+        <div class="problem-text" id="b-text">There are two<br />completely different<br />cost structures for<br />getting found --<br />most tools fall into<br />only one of them.</div>
+      </div>
+
+      <!-- Beat C: The usual case, 15.525 - 21.698s -->
+      <div class="beat problem-wrap clip" id="beatC" data-start="15.525" data-duration="6.173" data-track-index="0">
+        <div class="eyebrow" id="c-eyebrow">The Usual Case</div>
+        <div class="problem-text" id="c-text">Paid ads.<br />SEO work.<br /><span class="strike">An ongoing bill<br />just to stay visible.</span></div>
+      </div>
+
+      <!-- Beat D: This case, 21.698 - 27.914s -->
+      <div class="beat clip" id="beatD" data-start="21.698" data-duration="6.216" data-track-index="0">
+        <div class="eyebrow" id="d-eyebrow">This Case</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="d-chip1"><div class="chip-text">Free Listing</div></div>
+          <div class="chip chip-2" id="d-chip2"><div class="chip-text">No Per-Listing Fee</div></div>
+          <div class="chip chip-3" id="d-chip3"><div class="chip-text">1 Tool Or 10 &#10003;</div></div>
+        </div>
+      </div>
+
+      <!-- Beat E: The test, 27.914 - 39.186s -->
+      <div class="beat clip" id="beatE" data-start="27.914" data-duration="11.272" data-track-index="0">
+        <div class="eyebrow" id="e-eyebrow">The Test</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="e-chip1"><div class="chip-text">10 Listings Here</div></div>
+          <div class="chip chip-2" id="e-chip2"><div class="chip-text">$10 In Ads Elsewhere</div></div>
+          <div class="chip chip-3" id="e-chip3"><div class="chip-text">One Of Those Is Zero &#10003;</div></div>
+        </div>
+      </div>
+
+      <!-- Beat F: Grounding, 39.186 - 49.093s -->
+      <div class="beat clip" id="beatF" data-start="39.186" data-duration="9.907" data-track-index="0">
+        <div class="eyebrow" id="f-eyebrow">Barely Any Cost</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="f-chip1"><div class="chip-text">Free, No Expiration</div></div>
+          <div class="chip chip-2" id="f-chip2"><div class="chip-text">No Known Premium Tier</div></div>
+          <div class="chip chip-3" id="f-chip3"><div class="chip-text">Just A Few Minutes &#10003;</div></div>
+        </div>
+      </div>
+
+      <!-- Beat G: Reframe, 49.093 - 56.354s -->
+      <div class="beat quote-wrap clip" id="beatG" data-start="49.093" data-duration="7.261" data-track-index="0">
+        <div class="eyebrow" id="g-eyebrow">The Reframe</div>
+        <div class="quote-text" id="g-text">That zero isn't<br />a trial period.<br />It's the real,<br />ongoing price.</div>
+        <div class="quote-sub" id="g-sub">For as many tools as you want to list.</div>
+        <div class="quote-brand" id="g-brand">DReview &middot; Free MCP Directory</div>
+      </div>
+
+      <!-- Beat H: Follow CTA, 56.354 - 58.445s -->
+      <div class="beat follow-wrap clip" id="beatH" data-start="56.354" data-duration="2.091" data-track-index="0">
+        <div class="eyebrow" id="h-eyebrow">Before You Go</div>
+        <div class="follow-label" id="h-label">Follow for<br />More</div>
+        <div class="follow-sub" id="h-sub">Real numbers on getting your AI tool or MCP server discovered</div>
+        <div class="follow-tag" id="h-tag">New video every day</div>
+        <div class="follow-chevron" id="h-chevron">&#8593;</div>
+      </div>
+
+      <!-- ===== CAPTIONS (real word-level timestamps via Parakeet transcription) ===== -->
+      <div class="caption-pill clip" id="cap0" data-start="0.000" data-duration="1.600" data-track-index="5">People assume discovery and</div>
+      <div class="caption-pill clip" id="cap1" data-start="1.600" data-duration="1.840" data-track-index="5">marketing always cost money</div>
+      <div class="caption-pill clip" id="cap2" data-start="3.440" data-duration="1.520" data-track-index="5">somewhere down the line.</div>
+      <div class="caption-pill clip" id="cap3" data-start="4.960" data-duration="0.880" data-track-index="5">This is one of</div>
+      <div class="caption-pill clip" id="cap4" data-start="5.840" data-duration="1.200" data-track-index="5">the rare cases where</div>
+      <div class="caption-pill clip" id="cap5" data-start="7.040" data-duration="1.120" data-track-index="5">it genuinely doesn't.</div>
+
+      <div class="caption-pill clip" id="cap6" data-start="8.520" data-duration="1.360" data-track-index="5">There are two fundamentally</div>
+      <div class="caption-pill clip" id="cap7" data-start="9.880" data-duration="1.600" data-track-index="5">different cost structures for</div>
+      <div class="caption-pill clip" id="cap8" data-start="11.480" data-duration="1.680" data-track-index="5">getting a tool discovered,</div>
+      <div class="caption-pill clip" id="cap9" data-start="13.160" data-duration="1.040" data-track-index="5">and this falls into</div>
+      <div class="caption-pill clip" id="cap10" data-start="14.200" data-duration="1.040" data-track-index="5">the less common one.</div>
+
+      <div class="caption-pill clip" id="cap11" data-start="15.525" data-duration="1.120" data-track-index="5">The usual case,</div>
+      <div class="caption-pill clip" id="cap12" data-start="16.645" data-duration="2.000" data-track-index="5">paid ads, SEO work,</div>
+      <div class="caption-pill clip" id="cap13" data-start="18.645" data-duration="1.440" data-track-index="5">some ongoing line item</div>
+      <div class="caption-pill clip" id="cap14" data-start="20.085" data-duration="1.360" data-track-index="5">attached to staying visible.</div>
+
+      <div class="caption-pill clip" id="cap15" data-start="21.858" data-duration="0.960" data-track-index="5">This case, a free</div>
+      <div class="caption-pill clip" id="cap16" data-start="22.818" data-duration="1.520" data-track-index="5">listing, no per listing</div>
+      <div class="caption-pill clip" id="cap17" data-start="24.338" data-duration="1.440" data-track-index="5">fee, whether you submit</div>
+      <div class="caption-pill clip" id="cap18" data-start="25.778" data-duration="1.840" data-track-index="5">one MCP server or 10.</div>
+
+      <div class="caption-pill clip" id="cap19" data-start="27.914" data-duration="1.040" data-track-index="5">The test is simple</div>
+      <div class="caption-pill clip" id="cap20" data-start="29.114" data-duration="1.280" data-track-index="5">compare the actual dollar</div>
+      <div class="caption-pill clip" id="cap21" data-start="30.474" data-duration="1.280" data-track-index="5">cost of listing 10</div>
+      <div class="caption-pill clip" id="cap22" data-start="31.754" data-duration="1.200" data-track-index="5">different tools here</div>
+      <div class="caption-pill clip" id="cap23" data-start="32.954" data-duration="1.520" data-track-index="5">against even $10 of</div>
+      <div class="caption-pill clip" id="cap24" data-start="34.474" data-duration="2.480" data-track-index="5">paid advertising anywhere else.</div>
+      <div class="caption-pill clip" id="cap25" data-start="36.954" data-duration="1.200" data-track-index="5">One of those numbers</div>
+      <div class="caption-pill clip" id="cap26" data-start="38.154" data-duration="0.720" data-track-index="5">is zero.</div>
+
+      <div class="caption-pill clip" id="cap27" data-start="39.186" data-duration="1.520" data-track-index="5">DReview's listing stays</div>
+      <div class="caption-pill clip" id="cap28" data-start="40.706" data-duration="1.840" data-track-index="5">free with no expiration,</div>
+      <div class="caption-pill clip" id="cap29" data-start="42.546" data-duration="1.440" data-track-index="5">no known premium tier</div>
+      <div class="caption-pill clip" id="cap30" data-start="43.986" data-duration="1.440" data-track-index="5">for better placement, and</div>
+      <div class="caption-pill clip" id="cap31" data-start="45.426" data-duration="1.120" data-track-index="5">the only real cost</div>
+      <div class="caption-pill clip" id="cap32" data-start="46.626" data-duration="0.960" data-track-index="5">is the few minutes</div>
+      <div class="caption-pill clip" id="cap33" data-start="47.586" data-duration="1.200" data-track-index="5">each submission takes.</div>
+
+      <div class="caption-pill clip" id="cap34" data-start="49.093" data-duration="1.200" data-track-index="5">That zero isn't a</div>
+      <div class="caption-pill clip" id="cap35" data-start="50.293" data-duration="1.520" data-track-index="5">limited time trial.</div>
+      <div class="caption-pill clip" id="cap36" data-start="51.813" data-duration="1.120" data-track-index="5">It's the actual,</div>
+      <div class="caption-pill clip" id="cap37" data-start="52.933" data-duration="1.360" data-track-index="5">ongoing price for</div>
+      <div class="caption-pill clip" id="cap38" data-start="54.293" data-duration="0.960" data-track-index="5">as many tools as</div>
+      <div class="caption-pill clip" id="cap39" data-start="55.253" data-duration="0.800" data-track-index="5">you want to list.</div>
+
+      <div class="caption-pill clip" id="cap40" data-start="56.354" data-duration="0.960" data-track-index="5">Follow for more of</div>
+      <div class="caption-pill clip" id="cap41" data-start="57.314" data-duration="1.040" data-track-index="5">this kind of content.</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Beat A: Hook
+      tl.fromTo("#a-text", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.15);
+      tl.to("#beatA", { opacity: 0, duration: 0.2 }, 8.320);
+
+      // Beat B: Two cost structures
+      tl.fromTo("#b-text", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 8.670);
+      tl.to("#beatB", { opacity: 0, duration: 0.2 }, 15.325);
+
+      // Beat C: The usual case
+      tl.fromTo("#c-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 15.625);
+      tl.fromTo("#c-text", { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.4, ease: "power2.out" }, 15.775);
+      tl.to("#beatC", { opacity: 0, duration: 0.2 }, 21.498);
+
+      // Beat D: This case (chip flow)
+      tl.fromTo("#d-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 21.798);
+      tl.fromTo("#d-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35 }, 22.198);
+      tl.fromTo("#d-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35 }, 24.000);
+      tl.fromTo("#d-chip3", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 25.800);
+      tl.to("#beatD", { opacity: 0, duration: 0.2 }, 27.664);
+
+      // Beat E: The test (chip flow)
+      tl.fromTo("#e-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 28.064);
+      tl.fromTo("#e-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35 }, 28.314);
+      tl.fromTo("#e-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35 }, 32.954);
+      tl.fromTo("#e-chip3", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 36.954);
+      tl.to("#beatE", { opacity: 0, duration: 0.2 }, 38.936);
+
+      // Beat F: Grounding (chip flow)
+      tl.fromTo("#f-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 39.286);
+      tl.fromTo("#f-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35 }, 39.586);
+      tl.fromTo("#f-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35 }, 41.586);
+      tl.fromTo("#f-chip3", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 43.586);
+      tl.to("#beatF", { opacity: 0, duration: 0.2 }, 48.843);
+
+      // Beat G: Reframe
+      tl.fromTo("#g-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 49.193);
+      tl.fromTo("#g-text", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 49.443);
+      tl.fromTo("#g-sub", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 49.993);
+      tl.fromTo("#g-brand", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 50.293);
+      tl.to("#beatG", { opacity: 0, duration: 0.2 }, 56.104);
+
+      // Beat H: Follow CTA
+      tl.fromTo("#h-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 56.454);
+      tl.fromTo("#h-label", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 56.754);
+      tl.fromTo("#h-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 57.404);
+      tl.fromTo("#h-tag", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 57.804);
+      tl.fromTo("#h-chevron", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, 58.204);
+      tl.to("#h-chevron", { y: -14, duration: 0.6, repeat: -1, yoyo: true, ease: "sine.inOut" }, 58.304);
+
+      // Captions: quick fade in per chunk (real word-level timestamps)
+      tl.fromTo("#cap0", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 0.000);
+      tl.fromTo("#cap1", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 1.600);
+      tl.fromTo("#cap2", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 3.440);
+      tl.fromTo("#cap3", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 4.960);
+      tl.fromTo("#cap4", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 5.840);
+      tl.fromTo("#cap5", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 7.040);
+      tl.fromTo("#cap6", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 8.520);
+      tl.fromTo("#cap7", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 9.880);
+      tl.fromTo("#cap8", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 11.480);
+      tl.fromTo("#cap9", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 13.160);
+      tl.fromTo("#cap10", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 14.200);
+      tl.fromTo("#cap11", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 15.525);
+      tl.fromTo("#cap12", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 16.645);
+      tl.fromTo("#cap13", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 18.645);
+      tl.fromTo("#cap14", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 20.085);
+      tl.fromTo("#cap15", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 21.858);
+      tl.fromTo("#cap16", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 22.818);
+      tl.fromTo("#cap17", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 24.338);
+      tl.fromTo("#cap18", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 25.778);
+      tl.fromTo("#cap19", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 27.914);
+      tl.fromTo("#cap20", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 29.114);
+      tl.fromTo("#cap21", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 30.474);
+      tl.fromTo("#cap22", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 31.754);
+      tl.fromTo("#cap23", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 32.954);
+      tl.fromTo("#cap24", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 34.474);
+      tl.fromTo("#cap25", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 36.954);
+      tl.fromTo("#cap26", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 38.154);
+      tl.fromTo("#cap27", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 39.186);
+      tl.fromTo("#cap28", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 40.706);
+      tl.fromTo("#cap29", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 42.546);
+      tl.fromTo("#cap30", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 43.986);
+      tl.fromTo("#cap31", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 45.426);
+      tl.fromTo("#cap32", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 46.626);
+      tl.fromTo("#cap33", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 47.586);
+      tl.fromTo("#cap34", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 49.093);
+      tl.fromTo("#cap35", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 50.293);
+      tl.fromTo("#cap36", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 51.813);
+      tl.fromTo("#cap37", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 52.933);
+      tl.fromTo("#cap38", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 54.293);
+      tl.fromTo("#cap39", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 55.253);
+      tl.fromTo("#cap40", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 56.354);
+      tl.fromTo("#cap41", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 57.314);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

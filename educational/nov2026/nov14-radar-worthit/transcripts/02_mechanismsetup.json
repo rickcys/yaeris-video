@@ -1,0 +1,104 @@
+{
+  "words": [
+    {
+      "word": "there",
+      "start": 0.0,
+      "end": 0.14
+    },
+    {
+      "word": "are",
+      "start": 0.14,
+      "end": 0.28
+    },
+    {
+      "word": "two",
+      "start": 0.28,
+      "end": 0.54
+    },
+    {
+      "word": "fundamentally",
+      "start": 0.54,
+      "end": 1.1
+    },
+    {
+      "word": "different",
+      "start": 1.1,
+      "end": 1.66
+    },
+    {
+      "word": "answers",
+      "start": 1.66,
+      "end": 2.08
+    },
+    {
+      "word": "here,",
+      "start": 2.08,
+      "end": 2.42
+    },
+    {
+      "word": "and",
+      "start": 2.78,
+      "end": 2.94
+    },
+    {
+      "word": "the",
+      "start": 2.94,
+      "end": 3.04
+    },
+    {
+      "word": "right",
+      "start": 3.04,
+      "end": 3.22
+    },
+    {
+      "word": "one",
+      "start": 3.22,
+      "end": 3.42
+    },
+    {
+      "word": "depends",
+      "start": 3.42,
+      "end": 3.74
+    },
+    {
+      "word": "on",
+      "start": 3.74,
+      "end": 3.96
+    },
+    {
+      "word": "your",
+      "start": 3.96,
+      "end": 4.04
+    },
+    {
+      "word": "situation,",
+      "start": 4.04,
+      "end": 4.6
+    },
+    {
+      "word": "not",
+      "start": 5.04,
+      "end": 5.32
+    },
+    {
+      "word": "on",
+      "start": 5.32,
+      "end": 5.52
+    },
+    {
+      "word": "the",
+      "start": 5.52,
+      "end": 5.64
+    },
+    {
+      "word": "product",
+      "start": 5.64,
+      "end": 5.96
+    },
+    {
+      "word": "itself.",
+      "start": 5.96,
+      "end": 6.3
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "words": [
+    {
+      "word": "Follow",
+      "start": 0.0,
+      "end": 0.32
+    },
+    {
+      "word": "for",
+      "start": 0.32,
+      "end": 0.6
+    },
+    {
+      "word": "more",
+      "start": 0.6,
+      "end": 0.78
+    },
+    {
+      "word": "of",
+      "start": 0.78,
+      "end": 0.94
+    },
+    {
+      "word": "this",
+      "start": 0.94,
+      "end": 1.1
+    },
+    {
+      "word": "kind",
+      "start": 1.1,
+      "end": 1.3
+    },
+    {
+      "word": "of",
+      "start": 1.3,
+      "end": 1.44
+    },
+    {
+      "word": "content.",
+      "start": 1.44,
+      "end": 1.84
+    }
+  ]
+}

@@ -1,0 +1,171 @@
+{
+  "version": 1,
+  "historyId": "9a54432a-0572-499a-8b6f-ab2af172bf7c",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "BRIEF.md": {
+      "hash": "efc6f51436f6d2a43e6b528b819c957922e839143195bfa8163ce7e63a148a71",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\9a54432a-0572-499a-8b6f-ab2af172bf7c\\blobs\\ef\\efc6f51436f6d2a43e6b528b819c957922e839143195bfa8163ce7e63a148a71"
+    },
+    "SCRIPT.md": {
+      "hash": "4651a8c4438018771abf5cd4a74b7665e4490f3bac14382730ca7c8fb5a96a2b",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\9a54432a-0572-499a-8b6f-ab2af172bf7c\\blobs\\46\\4651a8c4438018771abf5cd4a74b7665e4490f3bac14382730ca7c8fb5a96a2b"
+    },
+    "audio_lines/01_hook.wav": {
+      "hash": "2e00d24ca6980058ab4945f9d31754b9e5fc1d2c650f78d0d31de62804cd4454",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\9a54432a-0572-499a-8b6f-ab2af172bf7c\\blobs\\2e\\2e00d24ca6980058ab4945f9d31754b9e5fc1d2c650f78d0d31de62804cd4454"
+    },
+    "audio_lines/02_twopaths.wav": {
+      "hash": "921bbed55101566e529292adc3a00648e0c4199275bf53b5538170b46f289646",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\9a54432a-0572-499a-8b6f-ab2af172bf7c\\blobs\\92\\921bbed55101566e529292adc3a00648e0c4199275bf53b5538170b46f289646"
+    },
+    "audio_lines/03_organic.wav": {
+      "hash": "ec61a972f282f299b1f0cbde4fadd8f63aa225f6868f5888fac594fc1a9f1132",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\9a54432a-0572-499a-8b6f-ab2af172bf7c\\blobs\\ec\\ec61a972f282f299b1f0cbde4fadd8f63aa225f6868f5888fac594fc1a9f1132"
+    },
+    "audio_lines/04_directory.wav": {
+      "hash": "3dccd3ee55872ee31f0c38b0366e298297608fd58ea2bfe930b4aa604321833a",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\9a54432a-0572-499a-8b6f-ab2af172bf7c\\blobs\\3d\\3dccd3ee55872ee31f0c38b0366e298297608fd58ea2bfe930b4aa604321833a"
+    },
+    "audio_lines/05_test.wav": {
+      "hash": "3a4b17c1e5672737cda266f706c89b5c3bb0ab653a9e1ff96b6f7901c80db763",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\9a54432a-0572-499a-8b6f-ab2af172bf7c\\blobs\\3a\\3a4b17c1e5672737cda266f706c89b5c3bb0ab653a9e1ff96b6f7901c80db763"
+    },
+    "audio_lines/06_dreview.wav": {
+      "hash": "7cfd21adc9c9cc4319a06915942ccdece5fb61d8226cffecfdf5d2168937be97",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\9a54432a-0572-499a-8b6f-ab2af172bf7c\\blobs\\7c\\7cfd21adc9c9cc4319a06915942ccdece5fb61d8226cffecfdf5d2168937be97"
+    },
+    "audio_lines/07_reframe.wav": {
+      "hash": "99d6f10a0c9091d7daf218bdfa0ef0cf6ce1d566ced5238ff1ff4eefe038c3cf",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\9a54432a-0572-499a-8b6f-ab2af172bf7c\\blobs\\99\\99d6f10a0c9091d7daf218bdfa0ef0cf6ce1d566ced5238ff1ff4eefe038c3cf"
+    },
+    "audio_lines/08_follow.wav": {
+      "hash": "2a62d2ad9c50c6e732e9f256f9b463a918ec2cd2332df3a59b609ea9aa41ea09",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\9a54432a-0572-499a-8b6f-ab2af172bf7c\\blobs\\2a\\2a62d2ad9c50c6e732e9f256f9b463a918ec2cd2332df3a59b609ea9aa41ea09"
+    },
+    "audio_lines/transcript.json": {
+      "hash": "fd2d29382ce786018a0b7349300798054be9c0a55988eae9fdadde3cb7ccf206",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\9a54432a-0572-499a-8b6f-ab2af172bf7c\\blobs\\fd\\fd2d29382ce786018a0b7349300798054be9c0a55988eae9fdadde3cb7ccf206"
+    },
+    "hyperframes.json": {
+      "hash": "9313260261b6e431830877ee35083331270bc6b9a32d50650abe2bd58bdf558d",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\9a54432a-0572-499a-8b6f-ab2af172bf7c\\blobs\\93\\9313260261b6e431830877ee35083331270bc6b9a32d50650abe2bd58bdf558d"
+    },
+    "index.html": {
+      "hash": "b07bc93be3eece752b60717e3cf2548b05077013b67c5602b82e6cf2b3beff88",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\9a54432a-0572-499a-8b6f-ab2af172bf7c\\blobs\\b0\\b07bc93be3eece752b60717e3cf2548b05077013b67c5602b82e6cf2b3beff88"
+    },
+    "package.json": {
+      "hash": "b40de3a36b8db9f863972930a3cb3748511180cd74b15afebeaea30ffc0e2e82",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\9a54432a-0572-499a-8b6f-ab2af172bf7c\\blobs\\b4\\b40de3a36b8db9f863972930a3cb3748511180cd74b15afebeaea30ffc0e2e82"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": {
+      "revision": null,
+      "id": "fc67cdb3-70fe-4074-9da4-7c2d364af92d"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "id": "e4cd6271-5db7-4353-b502-5e799f936a52",
+        "scope": "project",
+        "report": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov08-dreview-mythdebunk\\.hyperframes\\artifacts\\checks\\e4cd6271-5db7-4353-b502-5e799f936a52.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1792640986809,
+        "contentHash": "7d71e60256fa8d35dbb2b562bad66a77ed1fcc549ec6756a437afe33ff638820",
+        "revision": null,
+        "inputFingerprint": "3a813def7cab5e4c596e1f78cb1a8991ba5429165632dd2223c5d24735b3ba17",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "51a9ba9a-dc5c-4437-ac7e-68042ede95be",
+        "scope": "project",
+        "report": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov08-dreview-mythdebunk\\.hyperframes\\artifacts\\checks\\51a9ba9a-dc5c-4437-ac7e-68042ede95be.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1792641011589,
+        "contentHash": "7d71e60256fa8d35dbb2b562bad66a77ed1fcc549ec6756a437afe33ff638820",
+        "revision": null,
+        "inputFingerprint": "3a813def7cab5e4c596e1f78cb1a8991ba5429165632dd2223c5d24735b3ba17",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      },
+      {
+        "id": "fc67cdb3-70fe-4074-9da4-7c2d364af92d",
+        "scope": "project",
+        "report": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov08-dreview-mythdebunk\\.hyperframes\\artifacts\\checks\\fc67cdb3-70fe-4074-9da4-7c2d364af92d.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1792642430778,
+        "contentHash": "7d71e60256fa8d35dbb2b562bad66a77ed1fcc549ec6756a437afe33ff638820",
+        "revision": null,
+        "inputFingerprint": "3a813def7cab5e4c596e1f78cb1a8991ba5429165632dd2223c5d24735b3ba17",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "73bc7329-66fe-49d0-a5ff-a6b5b2c0f160",
+      "completedAt": 1792641216380,
+      "output": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov08-dreview-mythdebunk\\renders\\video.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}

@@ -1,0 +1,260 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "test",
+    "start": 0.24,
+    "end": 0.48
+  },
+  {
+    "id": "w2",
+    "text": "is",
+    "start": 0.64,
+    "end": 0.88
+  },
+  {
+    "id": "w3",
+    "text": "three",
+    "start": 0.88,
+    "end": 1.28
+  },
+  {
+    "id": "w4",
+    "text": "questions.",
+    "start": 1.28,
+    "end": 2.08
+  },
+  {
+    "id": "w5",
+    "text": "Do",
+    "start": 2.08,
+    "end": 2.32
+  },
+  {
+    "id": "w6",
+    "text": "you",
+    "start": 2.32,
+    "end": 2.4
+  },
+  {
+    "id": "w7",
+    "text": "want",
+    "start": 2.4,
+    "end": 2.64
+  },
+  {
+    "id": "w8",
+    "text": "the",
+    "start": 2.64,
+    "end": 2.8
+  },
+  {
+    "id": "w9",
+    "text": "people",
+    "start": 2.8,
+    "end": 3.04
+  },
+  {
+    "id": "w10",
+    "text": "already",
+    "start": 3.04,
+    "end": 3.44
+  },
+  {
+    "id": "w11",
+    "text": "searching",
+    "start": 3.44,
+    "end": 3.92
+  },
+  {
+    "id": "w12",
+    "text": "for",
+    "start": 3.92,
+    "end": 4.08
+  },
+  {
+    "id": "w13",
+    "text": "something",
+    "start": 4.08,
+    "end": 4.4
+  },
+  {
+    "id": "w14",
+    "text": "like",
+    "start": 4.4,
+    "end": 4.64
+  },
+  {
+    "id": "w15",
+    "text": "this",
+    "start": 4.64,
+    "end": 4.88
+  },
+  {
+    "id": "w16",
+    "text": "to",
+    "start": 4.88,
+    "end": 5.04
+  },
+  {
+    "id": "w17",
+    "text": "actually",
+    "start": 5.04,
+    "end": 5.44
+  },
+  {
+    "id": "w18",
+    "text": "find",
+    "start": 5.44,
+    "end": 5.76
+  },
+  {
+    "id": "w19",
+    "text": "it?",
+    "start": 5.76,
+    "end": 6.24
+  },
+  {
+    "id": "w20",
+    "text": "Is",
+    "start": 6.24,
+    "end": 6.48
+  },
+  {
+    "id": "w21",
+    "text": "the",
+    "start": 6.48,
+    "end": 6.64
+  },
+  {
+    "id": "w22",
+    "text": "few",
+    "start": 6.64,
+    "end": 6.88
+  },
+  {
+    "id": "w23",
+    "text": "minutes",
+    "start": 6.88,
+    "end": 7.2
+  },
+  {
+    "id": "w24",
+    "text": "the",
+    "start": 7.2,
+    "end": 7.36
+  },
+  {
+    "id": "w25",
+    "text": "submission",
+    "start": 7.36,
+    "end": 7.84
+  },
+  {
+    "id": "w26",
+    "text": "takes",
+    "start": 7.84,
+    "end": 8.24
+  },
+  {
+    "id": "w27",
+    "text": "a",
+    "start": 8.24,
+    "end": 8.4
+  },
+  {
+    "id": "w28",
+    "text": "real",
+    "start": 8.4,
+    "end": 8.64
+  },
+  {
+    "id": "w29",
+    "text": "cost",
+    "start": 8.64,
+    "end": 8.96
+  },
+  {
+    "id": "w30",
+    "text": "worth",
+    "start": 8.96,
+    "end": 9.28
+  },
+  {
+    "id": "w31",
+    "text": "weighing?",
+    "start": 9.28,
+    "end": 10.08
+  },
+  {
+    "id": "w32",
+    "text": "And",
+    "start": 10.08,
+    "end": 10.24
+  },
+  {
+    "id": "w33",
+    "text": "since",
+    "start": 10.24,
+    "end": 10.56
+  },
+  {
+    "id": "w34",
+    "text": "it's",
+    "start": 10.56,
+    "end": 10.72
+  },
+  {
+    "id": "w35",
+    "text": "free",
+    "start": 10.72,
+    "end": 11.04
+  },
+  {
+    "id": "w36",
+    "text": "with",
+    "start": 11.04,
+    "end": 11.2
+  },
+  {
+    "id": "w37",
+    "text": "no",
+    "start": 11.2,
+    "end": 11.44
+  },
+  {
+    "id": "w38",
+    "text": "expiration,",
+    "start": 11.44,
+    "end": 12.4
+  },
+  {
+    "id": "w39",
+    "text": "what's",
+    "start": 12.4,
+    "end": 12.8
+  },
+  {
+    "id": "w40",
+    "text": "the",
+    "start": 12.8,
+    "end": 12.88
+  },
+  {
+    "id": "w41",
+    "text": "actual",
+    "start": 12.88,
+    "end": 13.2
+  },
+  {
+    "id": "w42",
+    "text": "downside?",
+    "start": 13.2,
+    "end": 13.84
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "Exception,",
+    "start": 0.24,
+    "end": 1.2
+  },
+  {
+    "id": "w2",
+    "text": "a",
+    "start": 1.2,
+    "end": 1.36
+  },
+  {
+    "id": "w3",
+    "text": "private,",
+    "start": 1.36,
+    "end": 1.92
+  },
+  {
+    "id": "w4",
+    "text": "internal",
+    "start": 1.92,
+    "end": 2.48
+  },
+  {
+    "id": "w5",
+    "text": "only",
+    "start": 2.48,
+    "end": 2.72
+  },
+  {
+    "id": "w6",
+    "text": "tool",
+    "start": 2.88,
+    "end": 3.28
+  },
+  {
+    "id": "w7",
+    "text": "that",
+    "start": 3.36,
+    "end": 3.6
+  },
+  {
+    "id": "w8",
+    "text": "was",
+    "start": 3.6,
+    "end": 3.76
+  },
+  {
+    "id": "w9",
+    "text": "genuinely",
+    "start": 3.76,
+    "end": 4.4
+  },
+  {
+    "id": "w10",
+    "text": "never",
+    "start": 4.4,
+    "end": 4.64
+  },
+  {
+    "id": "w11",
+    "text": "meant",
+    "start": 4.64,
+    "end": 4.96
+  },
+  {
+    "id": "w12",
+    "text": "to",
+    "start": 4.96,
+    "end": 5.12
+  },
+  {
+    "id": "w13",
+    "text": "be",
+    "start": 5.12,
+    "end": 5.28
+  },
+  {
+    "id": "w14",
+    "text": "discovered",
+    "start": 5.28,
+    "end": 5.84
+  },
+  {
+    "id": "w15",
+    "text": "by",
+    "start": 5.84,
+    "end": 6
+  },
+  {
+    "id": "w16",
+    "text": "anyone",
+    "start": 6,
+    "end": 6.4
+  },
+  {
+    "id": "w17",
+    "text": "outside",
+    "start": 6.4,
+    "end": 6.8
+  },
+  {
+    "id": "w18",
+    "text": "your",
+    "start": 6.8,
+    "end": 7.04
+  },
+  {
+    "id": "w19",
+    "text": "team.",
+    "start": 7.04,
+    "end": 7.36
+  }
+]

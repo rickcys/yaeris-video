@@ -1,0 +1,200 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0.0,
+    "end": 0.16
+  },
+  {
+    "id": "w1",
+    "text": "safety",
+    "start": 0.16,
+    "end": 0.42
+  },
+  {
+    "id": "w2",
+    "text": "net",
+    "start": 0.42,
+    "end": 0.66
+  },
+  {
+    "id": "w3",
+    "text": "half.",
+    "start": 0.66,
+    "end": 1.04
+  },
+  {
+    "id": "w4",
+    "text": "Every",
+    "start": 1.58,
+    "end": 1.82
+  },
+  {
+    "id": "w5",
+    "text": "branch",
+    "start": 1.82,
+    "end": 2.14
+  },
+  {
+    "id": "w6",
+    "text": "gets",
+    "start": 2.14,
+    "end": 2.4
+  },
+  {
+    "id": "w7",
+    "text": "its",
+    "start": 2.4,
+    "end": 2.62
+  },
+  {
+    "id": "w8",
+    "text": "own",
+    "start": 2.62,
+    "end": 2.86
+  },
+  {
+    "id": "w9",
+    "text": "live",
+    "start": 2.86,
+    "end": 3.12
+  },
+  {
+    "id": "w10",
+    "text": "preview",
+    "start": 3.12,
+    "end": 3.56
+  },
+  {
+    "id": "w11",
+    "text": "URL",
+    "start": 3.56,
+    "end": 4.06
+  },
+  {
+    "id": "w12",
+    "text": "automatically.",
+    "start": 4.06,
+    "end": 4.88
+  },
+  {
+    "id": "w13",
+    "text": "And",
+    "start": 5.68,
+    "end": 5.76
+  },
+  {
+    "id": "w14",
+    "text": "if",
+    "start": 5.76,
+    "end": 5.88
+  },
+  {
+    "id": "w15",
+    "text": "a",
+    "start": 5.88,
+    "end": 5.98
+  },
+  {
+    "id": "w16",
+    "text": "deploy",
+    "start": 5.98,
+    "end": 6.34
+  },
+  {
+    "id": "w17",
+    "text": "to",
+    "start": 6.34,
+    "end": 6.56
+  },
+  {
+    "id": "w18",
+    "text": "production",
+    "start": 6.56,
+    "end": 6.92
+  },
+  {
+    "id": "w19",
+    "text": "does",
+    "start": 6.92,
+    "end": 7.22
+  },
+  {
+    "id": "w20",
+    "text": "go",
+    "start": 7.22,
+    "end": 7.46
+  },
+  {
+    "id": "w21",
+    "text": "wrong,",
+    "start": 7.46,
+    "end": 7.84
+  },
+  {
+    "id": "w22",
+    "text": "rollback",
+    "start": 8.3,
+    "end": 8.62
+  },
+  {
+    "id": "w23",
+    "text": "is",
+    "start": 8.62,
+    "end": 8.82
+  },
+  {
+    "id": "w24",
+    "text": "instant.",
+    "start": 8.82,
+    "end": 9.28
+  },
+  {
+    "id": "w25",
+    "text": "No",
+    "start": 9.84,
+    "end": 9.98
+  },
+  {
+    "id": "w26",
+    "text": "redeploy,",
+    "start": 9.98,
+    "end": 10.52
+  },
+  {
+    "id": "w27",
+    "text": "no",
+    "start": 10.96,
+    "end": 11.14
+  },
+  {
+    "id": "w28",
+    "text": "waiting",
+    "start": 11.14,
+    "end": 11.44
+  },
+  {
+    "id": "w29",
+    "text": "on",
+    "start": 11.44,
+    "end": 11.66
+  },
+  {
+    "id": "w30",
+    "text": "a",
+    "start": 11.66,
+    "end": 11.74
+  },
+  {
+    "id": "w31",
+    "text": "new",
+    "start": 11.74,
+    "end": 11.88
+  },
+  {
+    "id": "w32",
+    "text": "build.",
+    "start": 11.88,
+    "end": 12.1
+  }
+]

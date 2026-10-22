@@ -1,0 +1,290 @@
+[
+  {
+    "id": "cap0",
+    "start": 0,
+    "duration": 2.16,
+    "text": "Easy to deploy usually just means"
+  },
+  {
+    "id": "cap1",
+    "start": 2.16,
+    "duration": 1.68,
+    "text": "someone else is quietly doing the"
+  },
+  {
+    "id": "cap2",
+    "start": 3.84,
+    "duration": 1.76,
+    "text": "DevOps work for you."
+  },
+  {
+    "id": "cap3",
+    "start": 5.6,
+    "duration": 1.76,
+    "text": "The question is whether that someone"
+  },
+  {
+    "id": "cap4",
+    "start": 7.36,
+    "duration": 0.4,
+    "text": "is you."
+  },
+  {
+    "id": "cap5",
+    "start": 8.115,
+    "duration": 2.24,
+    "text": "There are two fundamentally different ways"
+  },
+  {
+    "id": "cap6",
+    "start": 10.355,
+    "duration": 2,
+    "text": "to run a headless CMS,"
+  },
+  {
+    "id": "cap7",
+    "start": 12.355,
+    "duration": 1.84,
+    "text": "and most people don't realize which"
+  },
+  {
+    "id": "cap8",
+    "start": 14.195,
+    "duration": 1.52,
+    "text": "one they signed up for until"
+  },
+  {
+    "id": "cap9",
+    "start": 15.715,
+    "duration": 0.72,
+    "text": "something breaks."
+  },
+  {
+    "id": "cap10",
+    "start": 16.763,
+    "duration": 1.44,
+    "text": "The self-hosted way,"
+  },
+  {
+    "id": "cap11",
+    "start": 18.203,
+    "duration": 1.2,
+    "text": "you provision a server,"
+  },
+  {
+    "id": "cap12",
+    "start": 19.563,
+    "duration": 1.84,
+    "text": "write your own deploy script,"
+  },
+  {
+    "id": "cap13",
+    "start": 21.403,
+    "duration": 2.24,
+    "text": "renew your own TLS certificates,"
+  },
+  {
+    "id": "cap14",
+    "start": 23.643,
+    "duration": 2,
+    "text": "set up your own database backups,"
+  },
+  {
+    "id": "cap15",
+    "start": 25.643,
+    "duration": 1.52,
+    "text": "and get paged yourself when disk"
+  },
+  {
+    "id": "cap16",
+    "start": 27.403,
+    "duration": 1.2,
+    "text": "space fills up."
+  },
+  {
+    "id": "cap17",
+    "start": 28.603,
+    "duration": 1.2,
+    "text": "None of that shows up as"
+  },
+  {
+    "id": "cap18",
+    "start": 29.803,
+    "duration": 1.68,
+    "text": "a line item anywhere."
+  },
+  {
+    "id": "cap19",
+    "start": 31.483,
+    "duration": 1.68,
+    "text": "It's just time every week."
+  },
+  {
+    "id": "cap20",
+    "start": 33.496,
+    "duration": 1.52,
+    "text": "The push to deploy way."
+  },
+  {
+    "id": "cap21",
+    "start": 35.016,
+    "duration": 1.6,
+    "text": "You connect a Git repo,"
+  },
+  {
+    "id": "cap22",
+    "start": 36.616,
+    "duration": 1.52,
+    "text": "and every push to your tracked"
+  },
+  {
+    "id": "cap23",
+    "start": 38.136,
+    "duration": 2.8,
+    "text": "branch builds and ships itself automatically,"
+  },
+  {
+    "id": "cap24",
+    "start": 40.936,
+    "duration": 2,
+    "text": "with zero downtime switching to the"
+  },
+  {
+    "id": "cap25",
+    "start": 42.936,
+    "duration": 0.56,
+    "text": "new version."
+  },
+  {
+    "id": "cap26",
+    "start": 43.808,
+    "duration": 1.28,
+    "text": "The tell is simple."
+  },
+  {
+    "id": "cap27",
+    "start": 45.088,
+    "duration": 1.68,
+    "text": "Time how long your actual first"
+  },
+  {
+    "id": "cap28",
+    "start": 46.768,
+    "duration": 2.16,
+    "text": "deploy takes, start to a live"
+  },
+  {
+    "id": "cap29",
+    "start": 48.928,
+    "duration": 2.24,
+    "text": "URL. If it's an afternoon of"
+  },
+  {
+    "id": "cap30",
+    "start": 51.168,
+    "duration": 3.36,
+    "text": "server configuration, that's the self-hosted path."
+  },
+  {
+    "id": "cap31",
+    "start": 54.528,
+    "duration": 1.28,
+    "text": "If it's four steps and a"
+  },
+  {
+    "id": "cap32",
+    "start": 55.808,
+    "duration": 1.44,
+    "text": "few minutes, that's the other one."
+  },
+  {
+    "id": "cap33",
+    "start": 57.597,
+    "duration": 1.92,
+    "text": "This is the category Launchpad is"
+  },
+  {
+    "id": "cap34",
+    "start": 59.517,
+    "duration": 1.28,
+    "text": "built in to connect your Git"
+  },
+  {
+    "id": "cap35",
+    "start": 60.797,
+    "duration": 2.16,
+    "text": "repo, bring your own database,"
+  },
+  {
+    "id": "cap36",
+    "start": 62.957,
+    "duration": 2,
+    "text": "get a live preview URL on"
+  },
+  {
+    "id": "cap37",
+    "start": 64.957,
+    "duration": 2.4,
+    "text": "every branch, and roll back instantly"
+  },
+  {
+    "id": "cap38",
+    "start": 67.357,
+    "duration": 1.44,
+    "text": "if something breaks."
+  },
+  {
+    "id": "cap39",
+    "start": 68.797,
+    "duration": 2.16,
+    "text": "The free personal plan alone covers"
+  },
+  {
+    "id": "cap40",
+    "start": 70.957,
+    "duration": 1.44,
+    "text": "most small projects,"
+  },
+  {
+    "id": "cap41",
+    "start": 72.397,
+    "duration": 2.4,
+    "text": "100 build minutes and 10 gigabytes,"
+  },
+  {
+    "id": "cap42",
+    "start": 74.797,
+    "duration": 1.12,
+    "text": "no card required."
+  },
+  {
+    "id": "cap43",
+    "start": 76.229,
+    "duration": 1.76,
+    "text": "Before you call a host easy,"
+  },
+  {
+    "id": "cap44",
+    "start": 77.989,
+    "duration": 1.92,
+    "text": "ask what happens the week something"
+  },
+  {
+    "id": "cap45",
+    "start": 79.909,
+    "duration": 0.8,
+    "text": "actually breaks."
+  },
+  {
+    "id": "cap46",
+    "start": 81.037,
+    "duration": 1.28,
+    "text": "Follow for more of this kind"
+  },
+  {
+    "id": "cap47",
+    "start": 82.317,
+    "duration": 0.72,
+    "text": "of content."
+  }
+]

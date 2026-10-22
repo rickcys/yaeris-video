@@ -1,0 +1,3 @@
+{"type":"progress","phase":"transcription","model":"parakeet-tdt-0.6b-v3","status":"started","durationSeconds":4.589125}
+{"type":"words","model":"parakeet-tdt-0.6b-v3","words":[{"text":"There","start":0,"end":0.24},{"text":"are","start":0.24,"end":0.4},{"text":"two","start":0.4,"end":0.72},{"text":"fundamentally","start":0.72,"end":1.36},{"text":"different","start":1.36,"end":1.68},{"text":"maintenance","start":1.68,"end":2.24},{"text":"burdens","start":2.24,"end":2.8},{"text":"behind","start":2.96,"end":3.36},{"text":"that","start":3.36,"end":3.6},{"text":"same","start":3.6,"end":3.84},{"text":"project.","start":3.84,"end":4.48}],"through":4.5866875}
+{"type":"progress","phase":"transcription","model":"parakeet-tdt-0.6b-v3","status":"completed"}

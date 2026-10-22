@@ -1,0 +1,139 @@
+{
+  "words": [
+    {
+      "word": "Crawl",
+      "start": 0.0,
+      "end": 0.28
+    },
+    {
+      "word": "API",
+      "start": 0.28,
+      "end": 0.86
+    },
+    {
+      "word": "returns",
+      "start": 0.86,
+      "end": 1.36
+    },
+    {
+      "word": "standard",
+      "start": 1.36,
+      "end": 1.86
+    },
+    {
+      "word": "JSON",
+      "start": 1.86,
+      "end": 2.26
+    },
+    {
+      "word": "over",
+      "start": 2.26,
+      "end": 2.78
+    },
+    {
+      "word": "a",
+      "start": 2.78,
+      "end": 2.94
+    },
+    {
+      "word": "normal",
+      "start": 2.94,
+      "end": 3.22
+    },
+    {
+      "word": "REST",
+      "start": 3.22,
+      "end": 3.46
+    },
+    {
+      "word": "call,",
+      "start": 3.46,
+      "end": 3.76
+    },
+    {
+      "word": "no",
+      "start": 4.24,
+      "end": 4.48
+    },
+    {
+      "word": "proprietary",
+      "start": 4.48,
+      "end": 5.04
+    },
+    {
+      "word": "SDK,",
+      "start": 5.04,
+      "end": 5.64
+    },
+    {
+      "word": "and",
+      "start": 6.38,
+      "end": 6.5
+    },
+    {
+      "word": "the",
+      "start": 6.5,
+      "end": 6.64
+    },
+    {
+      "word": "same",
+      "start": 6.64,
+      "end": 6.9
+    },
+    {
+      "word": "key",
+      "start": 6.9,
+      "end": 7.18
+    },
+    {
+      "word": "works",
+      "start": 7.18,
+      "end": 7.52
+    },
+    {
+      "word": "through",
+      "start": 7.52,
+      "end": 7.82
+    },
+    {
+      "word": "MCP",
+      "start": 7.82,
+      "end": 8.46
+    },
+    {
+      "word": "if",
+      "start": 8.46,
+      "end": 8.96
+    },
+    {
+      "word": "you're",
+      "start": 8.96,
+      "end": 9.1
+    },
+    {
+      "word": "building",
+      "start": 9.1,
+      "end": 9.36
+    },
+    {
+      "word": "with",
+      "start": 9.36,
+      "end": 9.56
+    },
+    {
+      "word": "an",
+      "start": 9.56,
+      "end": 9.7
+    },
+    {
+      "word": "agent",
+      "start": 9.7,
+      "end": 10.04
+    },
+    {
+      "word": "instead.",
+      "start": 10.04,
+      "end": 10.52
+    }
+  ]
+}

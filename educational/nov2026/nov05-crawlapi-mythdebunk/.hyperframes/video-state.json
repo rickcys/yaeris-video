@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "historyId": "72e7b69e-1760-4b13-b49c-b34569f423e1",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "BRIEF.md": {
+      "hash": "3b6eec399484cde842fc08add49a26b3422ec81c41d671794bbc83158ce0716f",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\3b\\3b6eec399484cde842fc08add49a26b3422ec81c41d671794bbc83158ce0716f"
+    },
+    "SCRIPT.md": {
+      "hash": "9335ee977f2d934b1031279db10b5075313aa7244973ea92b19ec811ac51f5bc",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\93\\9335ee977f2d934b1031279db10b5075313aa7244973ea92b19ec811ac51f5bc"
+    },
+    "audio_lines/01_hook.wav": {
+      "hash": "6153f9a5ef774ede45af6c9a747c83976db022ac0e4b4ec05b782b0162b24986",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\61\\6153f9a5ef774ede45af6c9a747c83976db022ac0e4b4ec05b782b0162b24986"
+    },
+    "audio_lines/02_mechanism_setup.wav": {
+      "hash": "c433f526d6915a7a74b1fcd0f0fa0eed2a4d32085f01229d6359c812048fd22b",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\c4\\c433f526d6915a7a74b1fcd0f0fa0eed2a4d32085f01229d6359c812048fd22b"
+    },
+    "audio_lines/03_naivescraper.wav": {
+      "hash": "b9e4f1dcccd283cfab10a98b45deededcdcadc322e82ab4de0f4238196b84182",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\b9\\b9e4f1dcccd283cfab10a98b45deededcdcadc322e82ab4de0f4238196b84182"
+    },
+    "audio_lines/04_escalatingscraper.wav": {
+      "hash": "179964903ccff1c6ca4adbe40eb9bb7395615d6e87eb248e478e2950fb3df9e5",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\17\\179964903ccff1c6ca4adbe40eb9bb7395615d6e87eb248e478e2950fb3df9e5"
+    },
+    "audio_lines/05_thetest.wav": {
+      "hash": "785107cd90eaeff82bd6f4c6e9fda4051811a60ef8e5d28a2374a7a837ec4a98",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\78\\785107cd90eaeff82bd6f4c6e9fda4051811a60ef8e5d28a2374a7a837ec4a98"
+    },
+    "audio_lines/06_grounding.wav": {
+      "hash": "e188cb516ae7c66c4f6f09459302266234aac46c275d6a3942aadfd14a3cd135",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\e1\\e188cb516ae7c66c4f6f09459302266234aac46c275d6a3942aadfd14a3cd135"
+    },
+    "audio_lines/07_reframe.wav": {
+      "hash": "2a3b87fc61c2d24fd75bb973d25e4263e2d062ccc0ccb327bebd4ae5d3a578db",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\2a\\2a3b87fc61c2d24fd75bb973d25e4263e2d062ccc0ccb327bebd4ae5d3a578db"
+    },
+    "audio_lines/08_followcta.wav": {
+      "hash": "2a62d2ad9c50c6e732e9f256f9b463a918ec2cd2332df3a59b609ea9aa41ea09",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\2a\\2a62d2ad9c50c6e732e9f256f9b463a918ec2cd2332df3a59b609ea9aa41ea09"
+    },
+    "captions_final.json": {
+      "hash": "f674cd52140fcb29bb21f40a0ebf6ba1f16814f889cffab7c57d4da6a59bcb7f",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\f6\\f674cd52140fcb29bb21f40a0ebf6ba1f16814f889cffab7c57d4da6a59bcb7f"
+    },
+    "hyperframes.json": {
+      "hash": "9313260261b6e431830877ee35083331270bc6b9a32d50650abe2bd58bdf558d",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\93\\9313260261b6e431830877ee35083331270bc6b9a32d50650abe2bd58bdf558d"
+    },
+    "index.html": {
+      "hash": "40a1ca01fd2f443b11d66b5d3c7ee88b9f9aafd0c143fa8e59c6c16ccdbd8f11",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\40\\40a1ca01fd2f443b11d66b5d3c7ee88b9f9aafd0c143fa8e59c6c16ccdbd8f11"
+    },
+    "meta.json": {
+      "hash": "e9bdd4abf714b5bf66e494418a5f91a222bd6f20818667dcba4d7c164f2f5bea",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\e9\\e9bdd4abf714b5bf66e494418a5f91a222bd6f20818667dcba4d7c164f2f5bea"
+    },
+    "package.json": {
+      "hash": "08a4b744787c843c2ecb682ecddd9729d5d7775d9a0faba3bf42845b11eca16e",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\08\\08a4b744787c843c2ecb682ecddd9729d5d7775d9a0faba3bf42845b11eca16e"
+    },
+    "transcripts/01_hook.json": {
+      "hash": "bd762a2eb2afc8b2e67a81dce07514c9354d862dc5aa6ffd88f2a76ee5a1582b",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\bd\\bd762a2eb2afc8b2e67a81dce07514c9354d862dc5aa6ffd88f2a76ee5a1582b"
+    },
+    "transcripts/02_mechanism_setup.json": {
+      "hash": "56873e983c635998bbe0914151b4f2c1b565d33bcd2ab884b328f4df751158e3",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\56\\56873e983c635998bbe0914151b4f2c1b565d33bcd2ab884b328f4df751158e3"
+    },
+    "transcripts/03_naivescraper.json": {
+      "hash": "3dfcc527cce6a61f855e03fe8d8856ddaf67f936a1bb7b62d9fdf40eb3682fc6",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\3d\\3dfcc527cce6a61f855e03fe8d8856ddaf67f936a1bb7b62d9fdf40eb3682fc6"
+    },
+    "transcripts/04_escalatingscraper.json": {
+      "hash": "dd4920f07fd35b7a72236433b40173a340869d33956763082e12b1d28533eb37",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\dd\\dd4920f07fd35b7a72236433b40173a340869d33956763082e12b1d28533eb37"
+    },
+    "transcripts/05_thetest.json": {
+      "hash": "60a4caa1737f9cabcd32ba52da808e53ebb152f640cec84ed91c4b8b3d560729",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\60\\60a4caa1737f9cabcd32ba52da808e53ebb152f640cec84ed91c4b8b3d560729"
+    },
+    "transcripts/06_grounding.json": {
+      "hash": "ab8421416ab7fda2876db613576b201344dc5c38254d1909c0e956cfaf5ab50f",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\ab\\ab8421416ab7fda2876db613576b201344dc5c38254d1909c0e956cfaf5ab50f"
+    },
+    "transcripts/07_reframe.json": {
+      "hash": "293a6324e440a8d744a54f7e5153336fa4ddb2b06673ea92648cf9d323c4283d",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\29\\293a6324e440a8d744a54f7e5153336fa4ddb2b06673ea92648cf9d323c4283d"
+    },
+    "transcripts/08_followcta.json": {
+      "hash": "cfd9410f0a5586fc1d557e74b1f17620097cb19861903de264c7d8ce9f648eaf",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\72e7b69e-1760-4b13-b49c-b34569f423e1\\blobs\\cf\\cfd9410f0a5586fc1d557e74b1f17620097cb19861903de264c7d8ce9f648eaf"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": {
+      "revision": null,
+      "id": "8e019e0d-fd57-4bf2-8a14-1201009aa442"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "id": "8e019e0d-fd57-4bf2-8a14-1201009aa442",
+        "scope": "project",
+        "report": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov05-crawlapi-mythdebunk\\.hyperframes\\artifacts\\checks\\8e019e0d-fd57-4bf2-8a14-1201009aa442.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1792641167065,
+        "contentHash": "3bb6f1ad27bad895602ab67353e05d64d03e1aff845973bbfc0869767e3f5b8e",
+        "revision": null,
+        "inputFingerprint": "f841b624095210b3e7904cd585b449c996bc866af005ce3078126940d08021c9",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  },
+  "renders": {
+    "latest": {
+      "id": "625098df-93cf-4584-b157-5de2422b9b7a",
+      "completedAt": 1792641427282,
+      "output": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov05-crawlapi-mythdebunk\\renders\\video.mp4",
+      "status": "completed",
+      "revision": null
+    },
+    "retainedRevisions": []
+  },
+  "pendingArtifactCleanup": []
+}

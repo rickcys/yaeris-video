@@ -1,0 +1,149 @@
+{
+  "words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.12
+    },
+    {
+      "word": "actual",
+      "start": 0.12,
+      "end": 0.52
+    },
+    {
+      "word": "pattern",
+      "start": 0.52,
+      "end": 0.84
+    },
+    {
+      "word": "here,",
+      "start": 0.84,
+      "end": 1.2
+    },
+    {
+      "word": "one",
+      "start": 1.76,
+      "end": 2.06
+    },
+    {
+      "word": "API",
+      "start": 2.06,
+      "end": 2.56
+    },
+    {
+      "word": "key,",
+      "start": 2.56,
+      "end": 3.04
+    },
+    {
+      "word": "standard",
+      "start": 3.6,
+      "end": 3.86
+    },
+    {
+      "word": "REST",
+      "start": 3.86,
+      "end": 4.18
+    },
+    {
+      "word": "responses",
+      "start": 4.18,
+      "end": 4.76
+    },
+    {
+      "word": "your",
+      "start": 4.76,
+      "end": 5.04
+    },
+    {
+      "word": "existing",
+      "start": 5.04,
+      "end": 5.5
+    },
+    {
+      "word": "back",
+      "start": 5.5,
+      "end": 5.7
+    },
+    {
+      "word": "end",
+      "start": 5.7,
+      "end": 6.06
+    },
+    {
+      "word": "already",
+      "start": 6.06,
+      "end": 6.48
+    },
+    {
+      "word": "knows",
+      "start": 6.48,
+      "end": 6.8
+    },
+    {
+      "word": "how",
+      "start": 6.8,
+      "end": 7.08
+    },
+    {
+      "word": "to",
+      "start": 7.08,
+      "end": 7.22
+    },
+    {
+      "word": "parse,",
+      "start": 7.22,
+      "end": 7.56
+    },
+    {
+      "word": "or",
+      "start": 7.98,
+      "end": 8.24
+    },
+    {
+      "word": "the",
+      "start": 8.24,
+      "end": 8.4
+    },
+    {
+      "word": "exact",
+      "start": 8.4,
+      "end": 8.78
+    },
+    {
+      "word": "same",
+      "start": 8.78,
+      "end": 9.16
+    },
+    {
+      "word": "key",
+      "start": 9.16,
+      "end": 9.48
+    },
+    {
+      "word": "through",
+      "start": 9.48,
+      "end": 9.82
+    },
+    {
+      "word": "MCP",
+      "start": 9.82,
+      "end": 10.4
+    },
+    {
+      "word": "for",
+      "start": 10.4,
+      "end": 10.86
+    },
+    {
+      "word": "an",
+      "start": 10.86,
+      "end": 11.02
+    },
+    {
+      "word": "agent.",
+      "start": 11.02,
+      "end": 11.3
+    }
+  ]
+}

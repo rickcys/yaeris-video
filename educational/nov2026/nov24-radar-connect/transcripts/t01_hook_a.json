@@ -1,0 +1,116 @@
+[
+  {
+    "id": "w0",
+    "text": "Adding",
+    "start": 0,
+    "end": 0.32
+  },
+  {
+    "id": "w1",
+    "text": "a",
+    "start": 0.32,
+    "end": 0.4
+  },
+  {
+    "id": "w2",
+    "text": "new",
+    "start": 0.4,
+    "end": 0.56
+  },
+  {
+    "id": "w3",
+    "text": "lead",
+    "start": 0.56,
+    "end": 0.88
+  },
+  {
+    "id": "w4",
+    "text": "gen",
+    "start": 0.96,
+    "end": 1.12
+  },
+  {
+    "id": "w5",
+    "text": "tool",
+    "start": 1.44,
+    "end": 1.76
+  },
+  {
+    "id": "w6",
+    "text": "usually",
+    "start": 1.92,
+    "end": 2.4
+  },
+  {
+    "id": "w7",
+    "text": "sounds",
+    "start": 2.4,
+    "end": 2.72
+  },
+  {
+    "id": "w8",
+    "text": "like",
+    "start": 2.72,
+    "end": 2.96
+  },
+  {
+    "id": "w9",
+    "text": "it",
+    "start": 2.96,
+    "end": 3.04
+  },
+  {
+    "id": "w10",
+    "text": "means",
+    "start": 3.2,
+    "end": 3.52
+  },
+  {
+    "id": "w11",
+    "text": "ripping",
+    "start": 3.52,
+    "end": 3.92
+  },
+  {
+    "id": "w12",
+    "text": "out",
+    "start": 3.92,
+    "end": 4.08
+  },
+  {
+    "id": "w13",
+    "text": "the",
+    "start": 4.08,
+    "end": 4.24
+  },
+  {
+    "id": "w14",
+    "text": "CRM",
+    "start": 4.24,
+    "end": 4.96
+  },
+  {
+    "id": "w15",
+    "text": "your",
+    "start": 4.96,
+    "end": 5.12
+  },
+  {
+    "id": "w16",
+    "text": "team",
+    "start": 5.12,
+    "end": 5.36
+  },
+  {
+    "id": "w17",
+    "text": "already",
+    "start": 5.36,
+    "end": 5.68
+  },
+  {
+    "id": "w18",
+    "text": "trusts.",
+    "start": 5.68,
+    "end": 6.16
+  }
+]

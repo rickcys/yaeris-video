@@ -1,0 +1,18 @@
+﻿node.exe : {"type":"progress","phase":"transcription","model":"parakeet-tdt-0.6b-v3","status":"started","durationSecond
+s":7.7464375}
+At line:1 char:1
++ & "C:\Program Files\nodejs/node.exe" "C:\Program Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ({"type":"progre...nds":7.7464375}:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+{"type":"words","model":"parakeet-tdt-0.6b-v3","words":[{"text":"The","start":0,"end":0.24},{"text":"only","start":0.24
+,"end":0.48},{"text":"thing","start":0.48,"end":0.72},{"text":"that","start":0.72,"end":0.96},{"text":"actually","start
+":0.96,"end":1.36},{"text":"changes","start":1.36,"end":2.08},{"text":"a","start":2.08,"end":2.16},{"text":"switch","st
+art":2.16,"end":2.56},{"text":"like","start":2.56,"end":2.8},{"text":"this","start":2.8,"end":3.04},{"text":"is","start
+":3.12,"end":3.36},{"text":"where","start":3.36,"end":3.6},{"text":"the","start":3.6,"end":3.76},{"text":"app","start":
+3.76,"end":4.08},{"text":"runs.","start":4.08,"end":4.88},{"text":"Everything","start":4.88,"end":5.36},{"text":"else",
+"start":5.36,"end":5.68},{"text":"stays","start":5.68,"end":6.08},{"text":"exactly","start":6.08,"end":6.48},{"text":"w
+here","start":6.48,"end":6.72},{"text":"your","start":6.72,"end":6.88},{"text":"team","start":6.88,"end":7.12},{"text":
+"left","start":7.12,"end":7.44},{"text":"it.","start":7.44,"end":7.68}],"through":7.744}
+{"type":"progress","phase":"transcription","model":"parakeet-tdt-0.6b-v3","status":"completed"}

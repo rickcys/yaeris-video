@@ -1,0 +1,104 @@
+{
+  "words": [
+    {
+      "word": "There",
+      "start": 0.0,
+      "end": 0.12
+    },
+    {
+      "word": "are",
+      "start": 0.12,
+      "end": 0.28
+    },
+    {
+      "word": "two",
+      "start": 0.28,
+      "end": 0.54
+    },
+    {
+      "word": "fundamentally",
+      "start": 0.54,
+      "end": 1.1
+    },
+    {
+      "word": "different",
+      "start": 1.1,
+      "end": 1.6
+    },
+    {
+      "word": "ways",
+      "start": 1.6,
+      "end": 2.04
+    },
+    {
+      "word": "a",
+      "start": 2.04,
+      "end": 2.32
+    },
+    {
+      "word": "scraping",
+      "start": 2.32,
+      "end": 2.64
+    },
+    {
+      "word": "tool",
+      "start": 2.64,
+      "end": 3.0
+    },
+    {
+      "word": "can",
+      "start": 3.0,
+      "end": 3.26
+    },
+    {
+      "word": "integrate,",
+      "start": 3.26,
+      "end": 3.72
+    },
+    {
+      "word": "and",
+      "start": 4.18,
+      "end": 4.4
+    },
+    {
+      "word": "only",
+      "start": 4.4,
+      "end": 4.68
+    },
+    {
+      "word": "one",
+      "start": 4.68,
+      "end": 4.86
+    },
+    {
+      "word": "of",
+      "start": 4.86,
+      "end": 4.96
+    },
+    {
+      "word": "them",
+      "start": 4.96,
+      "end": 5.16
+    },
+    {
+      "word": "adds",
+      "start": 5.16,
+      "end": 5.58
+    },
+    {
+      "word": "real",
+      "start": 5.58,
+      "end": 6.0
+    },
+    {
+      "word": "infrastructure",
+      "start": 6.0,
+      "end": 6.52
+    },
+    {
+      "word": "weight.",
+      "start": 6.52,
+      "end": 6.94
+    }
+  ]
+}

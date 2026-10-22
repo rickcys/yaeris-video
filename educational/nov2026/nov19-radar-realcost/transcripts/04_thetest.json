@@ -1,0 +1,182 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "test",
+    "start": 0.24,
+    "end": 0.56
+  },
+  {
+    "id": "w2",
+    "text": "is",
+    "start": 0.56,
+    "end": 0.8
+  },
+  {
+    "id": "w3",
+    "text": "running",
+    "start": 0.8,
+    "end": 1.12
+  },
+  {
+    "id": "w4",
+    "text": "your",
+    "start": 1.12,
+    "end": 1.36
+  },
+  {
+    "id": "w5",
+    "text": "own",
+    "start": 1.36,
+    "end": 1.6
+  },
+  {
+    "id": "w6",
+    "text": "real",
+    "start": 1.6,
+    "end": 1.92
+  },
+  {
+    "id": "w7",
+    "text": "monthly",
+    "start": 2,
+    "end": 2.56
+  },
+  {
+    "id": "w8",
+    "text": "volume",
+    "start": 2.56,
+    "end": 3.04
+  },
+  {
+    "id": "w9",
+    "text": "through",
+    "start": 3.04,
+    "end": 3.36
+  },
+  {
+    "id": "w10",
+    "text": "that",
+    "start": 3.36,
+    "end": 3.6
+  },
+  {
+    "id": "w11",
+    "text": "formula.",
+    "start": 3.6,
+    "end": 4.32
+  },
+  {
+    "id": "w12",
+    "text": "A",
+    "start": 4.56,
+    "end": 4.8
+  },
+  {
+    "id": "w13",
+    "text": "thousand",
+    "start": 4.8,
+    "end": 5.28
+  },
+  {
+    "id": "w14",
+    "text": "emails,",
+    "start": 5.28,
+    "end": 5.92
+  },
+  {
+    "id": "w15",
+    "text": "five",
+    "start": 6.16,
+    "end": 6.48
+  },
+  {
+    "id": "w16",
+    "text": "hundred",
+    "start": 6.48,
+    "end": 6.8
+  },
+  {
+    "id": "w17",
+    "text": "calls,",
+    "start": 6.8,
+    "end": 7.52
+  },
+  {
+    "id": "w18",
+    "text": "five",
+    "start": 7.52,
+    "end": 7.84
+  },
+  {
+    "id": "w19",
+    "text": "hundred",
+    "start": 7.84,
+    "end": 8.16
+  },
+  {
+    "id": "w20",
+    "text": "crawls",
+    "start": 8.16,
+    "end": 8.72
+  },
+  {
+    "id": "w21",
+    "text": "comes",
+    "start": 8.72,
+    "end": 8.96
+  },
+  {
+    "id": "w22",
+    "text": "out",
+    "start": 8.96,
+    "end": 9.12
+  },
+  {
+    "id": "w23",
+    "text": "to",
+    "start": 9.12,
+    "end": 9.36
+  },
+  {
+    "id": "w24",
+    "text": "three",
+    "start": 9.36,
+    "end": 9.6
+  },
+  {
+    "id": "w25",
+    "text": "thousand",
+    "start": 9.6,
+    "end": 10
+  },
+  {
+    "id": "w26",
+    "text": "credits,",
+    "start": 10,
+    "end": 10.56
+  },
+  {
+    "id": "w27",
+    "text": "about",
+    "start": 10.72,
+    "end": 11.04
+  },
+  {
+    "id": "w28",
+    "text": "thirty",
+    "start": 11.04,
+    "end": 11.44
+  },
+  {
+    "id": "w29",
+    "text": "dollars.",
+    "start": 11.44,
+    "end": 11.84
+  }
+]

@@ -1,0 +1,104 @@
+[
+  {
+    "id": "w0",
+    "text": "there",
+    "start": 0.0,
+    "end": 0.12
+  },
+  {
+    "id": "w1",
+    "text": "are",
+    "start": 0.12,
+    "end": 0.28
+  },
+  {
+    "id": "w2",
+    "text": "two",
+    "start": 0.28,
+    "end": 0.54
+  },
+  {
+    "id": "w3",
+    "text": "fundamentally",
+    "start": 0.54,
+    "end": 1.1
+  },
+  {
+    "id": "w4",
+    "text": "different",
+    "start": 1.1,
+    "end": 1.64
+  },
+  {
+    "id": "w5",
+    "text": "answers,",
+    "start": 1.64,
+    "end": 2.12
+  },
+  {
+    "id": "w6",
+    "text": "and",
+    "start": 2.6,
+    "end": 2.8
+  },
+  {
+    "id": "w7",
+    "text": "the",
+    "start": 2.8,
+    "end": 2.9
+  },
+  {
+    "id": "w8",
+    "text": "deciding",
+    "start": 2.9,
+    "end": 3.3
+  },
+  {
+    "id": "w9",
+    "text": "factor",
+    "start": 3.3,
+    "end": 3.8
+  },
+  {
+    "id": "w10",
+    "text": "is",
+    "start": 3.8,
+    "end": 4.22
+  },
+  {
+    "id": "w11",
+    "text": "what",
+    "start": 4.22,
+    "end": 4.38
+  },
+  {
+    "id": "w12",
+    "text": "you're",
+    "start": 4.38,
+    "end": 4.58
+  },
+  {
+    "id": "w13",
+    "text": "actually",
+    "start": 4.58,
+    "end": 4.98
+  },
+  {
+    "id": "w14",
+    "text": "tired",
+    "start": 4.98,
+    "end": 5.36
+  },
+  {
+    "id": "w15",
+    "text": "of",
+    "start": 5.36,
+    "end": 5.54
+  },
+  {
+    "id": "w16",
+    "text": "doing.",
+    "start": 5.54,
+    "end": 5.76
+  }
+]

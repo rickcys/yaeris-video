@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "historyId": "4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f",
+  "currentRevision": null,
+  "pendingChanges": false,
+  "files": {
+    "BRIEF.md": {
+      "hash": "d6965505bd67f0bd61e5cde268c7738ebe5b554b2b66fc3f5094fa0b7ccd12b2",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\d6\\d6965505bd67f0bd61e5cde268c7738ebe5b554b2b66fc3f5094fa0b7ccd12b2"
+    },
+    "SCRIPT.md": {
+      "hash": "b168774ebf6c9d8a8674e02d0650bcbb54bc9c7c5070e0f0e71d5121d6fa5f29",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\b1\\b168774ebf6c9d8a8674e02d0650bcbb54bc9c7c5070e0f0e71d5121d6fa5f29"
+    },
+    "audio_lines/01_hook.wav": {
+      "hash": "c584e0f1a844aaccfe166d6f472e582c57c6f06c5851ac9f41f0e6ae3b349fd0",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\c5\\c584e0f1a844aaccfe166d6f472e582c57c6f06c5851ac9f41f0e6ae3b349fd0"
+    },
+    "audio_lines/02_mechanismsetup.wav": {
+      "hash": "618b0f9d86eb4dc5377c115af02b0534a621c7210a2d35d95d834c2dfb360304",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\61\\618b0f9d86eb4dc5377c115af02b0534a621c7210a2d35d95d834c2dfb360304"
+    },
+    "audio_lines/03_notafit.wav": {
+      "hash": "800e52cb13cf6904300e0fb846d5671536df913f0118cfd625426a499ceedb50",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\80\\800e52cb13cf6904300e0fb846d5671536df913f0118cfd625426a499ceedb50"
+    },
+    "audio_lines/04_realfit.wav": {
+      "hash": "419d499a6965226a2967b01354f8d9790a8e588e31613fe70d70d981f46eeb25",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\41\\419d499a6965226a2967b01354f8d9790a8e588e31613fe70d70d981f46eeb25"
+    },
+    "audio_lines/05_thetest.wav": {
+      "hash": "79054270c06222bda6f81c80df15397d61af4b753a33cf6f4ac6fa81ee96e6d5",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\79\\79054270c06222bda6f81c80df15397d61af4b753a33cf6f4ac6fa81ee96e6d5"
+    },
+    "audio_lines/06_grounding.wav": {
+      "hash": "dea5034eee0c40ad5da9d8e0ca085d8e02c33240e3ec5983ffa797233fcfad86",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\de\\dea5034eee0c40ad5da9d8e0ca085d8e02c33240e3ec5983ffa797233fcfad86"
+    },
+    "audio_lines/07_reframe.wav": {
+      "hash": "3f2d1327333cedb4c740911d111bcc885fcd20c507af192797af39364e122b71",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\3f\\3f2d1327333cedb4c740911d111bcc885fcd20c507af192797af39364e122b71"
+    },
+    "audio_lines/08_followcta.wav": {
+      "hash": "2a62d2ad9c50c6e732e9f256f9b463a918ec2cd2332df3a59b609ea9aa41ea09",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\2a\\2a62d2ad9c50c6e732e9f256f9b463a918ec2cd2332df3a59b609ea9aa41ea09"
+    },
+    "hyperframes.json": {
+      "hash": "9313260261b6e431830877ee35083331270bc6b9a32d50650abe2bd58bdf558d",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\93\\9313260261b6e431830877ee35083331270bc6b9a32d50650abe2bd58bdf558d"
+    },
+    "index.html": {
+      "hash": "c57ca68aa689f8d32ddfb7607fe7a69af4d49a744e016413515e6e8bdb25dc0f",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\c5\\c57ca68aa689f8d32ddfb7607fe7a69af4d49a744e016413515e6e8bdb25dc0f"
+    },
+    "meta.json": {
+      "hash": "a17ae28e1e5b5dafa1cb86573640f8f7bcbaa7c55e561a2ec0d1ab9b08381f25",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\a1\\a17ae28e1e5b5dafa1cb86573640f8f7bcbaa7c55e561a2ec0d1ab9b08381f25"
+    },
+    "package.json": {
+      "hash": "d4aa16bd976355d488eff6b40ce24f74d2f5721c39d2bf38fc93fd8acaedb82d",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\d4\\d4aa16bd976355d488eff6b40ce24f74d2f5721c39d2bf38fc93fd8acaedb82d"
+    },
+    "transcripts/01_hook.json": {
+      "hash": "eabbfc1fa40fc8dcc2d639a45094fc4e50cf76d7770c8c195ef43b967982046a",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\ea\\eabbfc1fa40fc8dcc2d639a45094fc4e50cf76d7770c8c195ef43b967982046a"
+    },
+    "transcripts/02_mechanismsetup.json": {
+      "hash": "f3cb342205f8085aefde327b9f1ce661caed90a60211adf855aef7ea785ece7f",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\f3\\f3cb342205f8085aefde327b9f1ce661caed90a60211adf855aef7ea785ece7f"
+    },
+    "transcripts/03_notafit.json": {
+      "hash": "50f66ed3a054d783998f5e3937d4e1ad69bce9a20c20e39446bab94a96bda4e2",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\50\\50f66ed3a054d783998f5e3937d4e1ad69bce9a20c20e39446bab94a96bda4e2"
+    },
+    "transcripts/04_realfit.json": {
+      "hash": "2aa1722d27cff53b15cc8fade4f0425ef669cf30ad6b14f4f80f771565c4dff8",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\2a\\2aa1722d27cff53b15cc8fade4f0425ef669cf30ad6b14f4f80f771565c4dff8"
+    },
+    "transcripts/05_thetest.json": {
+      "hash": "9c1a03321b5433029c8d70de8fe092b14a136efa78449c9d4932cdeb6755aca3",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\9c\\9c1a03321b5433029c8d70de8fe092b14a136efa78449c9d4932cdeb6755aca3"
+    },
+    "transcripts/06_grounding.json": {
+      "hash": "8cc824c8e23c003658ad97d7840bf7bd37c543581abffbed47a4f0f08730eae9",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\8c\\8cc824c8e23c003658ad97d7840bf7bd37c543581abffbed47a4f0f08730eae9"
+    },
+    "transcripts/07_reframe.json": {
+      "hash": "8fbffd94047c30d83f12c4aa4da3e80c7bdaed1ae7cc34fe12411b5cd1bb279d",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\8f\\8fbffd94047c30d83f12c4aa4da3e80c7bdaed1ae7cc34fe12411b5cd1bb279d"
+    },
+    "transcripts/08_followcta.json": {
+      "hash": "bc3caef30d3dbd7173d6512ba6fec9b7232c7cfbd82b2c147de86382c404f0cb",
+      "content": "C:\\Users\\rickc\\.cache\\hyperframes\\history\\4cc3bd53-1719-40ae-bf8c-6b2eaf87e36f\\blobs\\bc\\bc3caef30d3dbd7173d6512ba6fec9b7232c7cfbd82b2c147de86382c404f0cb"
+    }
+  },
+  "revisions": {},
+  "checks": {
+    "latest": {
+      "revision": null,
+      "id": "02b6ff8b-34c9-48f6-8895-1a4543d3d6bb"
+    },
+    "revisions": {},
+    "unversioned": [
+      {
+        "id": "02b6ff8b-34c9-48f6-8895-1a4543d3d6bb",
+        "scope": "project",
+        "report": "C:\\Users\\rickc\\Documents\\Claude\\Projects\\Yaeris Website\\yaeris-video\\educational\\nov2026\\nov14-radar-worthit\\.hyperframes\\artifacts\\checks\\02b6ff8b-34c9-48f6-8895-1a4543d3d6bb.json",
+        "metadata": {
+          "ok": true,
+          "browserSkipped": false,
+          "options": {
+            "samples": 9,
+            "atTransitions": false,
+            "maxIssues": 80,
+            "collapseStatic": true,
+            "tolerance": 2,
+            "timeout": 3000,
+            "contrast": true,
+            "strict": false,
+            "snapshots": false,
+            "browserGpuMode": "auto"
+          }
+        },
+        "createdAt": 1792667713168,
+        "contentHash": "67594fa551240334392eccdffecc13853e62f6e0de0168b53e2f329be8a24238",
+        "revision": null,
+        "inputFingerprint": "76cfdce74c4db15862f07274208d00ef5414f5f22cd5e6655c8da7d970c335a8",
+        "inputScope": "local-project-files",
+        "attribution": "unversioned"
+      }
+    ]
+  },
+  "snapshots": {
+    "latest": null,
+    "revisions": {},
+    "unversioned": []
+  }
+}

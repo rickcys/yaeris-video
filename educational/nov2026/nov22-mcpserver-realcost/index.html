@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0E0E1F; }
+      #root { width: 100%; height: 100%; position: relative; font-family: Inter, sans-serif; background: #0E0E1F; }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 140px 90px; }
+
+      .eyebrow { font-family: 'Space Mono', monospace; font-size: 27px; letter-spacing: 0.16em; color: #7FCBF0; text-transform: uppercase; margin-bottom: 22px; opacity: 0; }
+      .headline { font-family: Outfit, sans-serif; font-weight: 900; font-size: 68px; line-height: 1.12; color: #F4F4F5; letter-spacing: -0.01em; opacity: 0; }
+
+      /* Beat 1: hook */
+      .hook-wrap { align-items: center; justify-content: center; text-align: center; }
+      .hook-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 68px; line-height: 1.18; color: #F4F4F5; letter-spacing: -0.01em; }
+      .hook-accent { color: #9B6FD6; }
+
+      /* Beat 2: two pricing shapes */
+      .b2-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 64px; }
+      .fork-row { display: flex; flex-direction: column; gap: 32px; align-items: center; }
+      .fork-chip { border-radius: 24px; padding: 40px 56px; width: 100%; max-width: 820px; text-align: center; opacity: 0; }
+      .fork-chip.a { background: rgba(169,169,190,0.10); border: 3px solid rgba(169,169,190,0.5); }
+      .fork-chip.b { background: rgba(155,111,214,0.10); border: 3px solid rgba(155,111,214,0.5); }
+      .fork-chip-label { font-family: Outfit, sans-serif; font-weight: 800; font-size: 44px; color: #F4F4F5; }
+      .fork-vs { font-family: 'Space Mono', monospace; font-size: 30px; color: #6A6A82; letter-spacing: 0.1em; opacity: 0; }
+
+      /* Beat 3/4: mechanism rows */
+      .ptp-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+      .ptp-row { display: flex; align-items: center; gap: 24px; border-radius: 18px; padding: 30px 36px; opacity: 0; }
+      .ptp-row.not { background: rgba(169,169,190,0.08); border: 2px solid rgba(169,169,190,0.4); }
+      .ptp-row.yes { background: rgba(155,111,214,0.08); border: 2px solid rgba(155,111,214,0.4); }
+      .ptp-dot { width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; }
+      .ptp-dot.not { background: #A9A9BE; }
+      .ptp-dot.yes { background: #9B6FD6; }
+      .ptp-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 32px; color: #F4F4F5; }
+      .ptp-col { display: flex; flex-direction: column; }
+      .ptp-tally { font-family: 'Space Mono', monospace; font-size: 26px; text-align: center; opacity: 0; margin-top: 10px; }
+      .ptp-tally.not { color: #A9A9BE; }
+      .ptp-tally.yes { color: #C9A9EC; }
+
+      /* Beat 5: the test */
+      .test-body { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .q-row { display: flex; align-items: center; gap: 24px; background: rgba(27,127,168,0.08); border: 2px solid rgba(27,127,168,0.4); border-radius: 18px; padding: 28px 36px; width: 100%; max-width: 860px; opacity: 0; }
+      .q-num { width: 54px; height: 54px; border-radius: 50%; background: #1B7FA8; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 26px; color: #F4F4F5; }
+      .q-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 32px; color: #F4F4F5; text-align: left; line-height: 1.25; }
+
+      /* Beat 6: grounding */
+      .hero-stat-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; }
+      .hero-num { font-family: Outfit, sans-serif; font-weight: 900; font-size: 190px; color: #1B7FA8; line-height: 1; opacity: 0; }
+      .hero-label { font-family: Outfit, sans-serif; font-weight: 700; font-size: 42px; color: #F4F4F5; text-transform: uppercase; opacity: 0; }
+      .hero-sub { font-family: Inter, sans-serif; font-size: 28px; color: #A9A9BE; opacity: 0; max-width: 780px; }
+      .chip-row { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 44px; }
+      .g-chip { background: rgba(27,127,168,0.14); border: 2px solid #1B7FA8; border-radius: 999px; padding: 20px 32px; font-family: 'Space Mono', monospace; font-size: 26px; color: #7FCBF0; opacity: 0; }
+      .g-chip.alt { background: rgba(37,211,102,0.12); border-color: #25D366; color: #8FE8B4; }
+
+      /* Beat 7: reframe / closing */
+      .closing-wrap { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
+      .closing-text { font-family: Outfit, sans-serif; font-weight: 800; font-size: 60px; line-height: 1.28; color: #F4F4F5; opacity: 0; }
+      .closing-text .accent { color: #9B6FD6; }
+
+      /* End card */
+      .end-card { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; text-align: center; }
+      .end-brand { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #1B7FA8; text-transform: uppercase; opacity: 0; }
+      .end-sub { font-family: Inter, sans-serif; font-size: 26px; color: #8A8AA0; opacity: 0; }
+
+      /* Follow CTA */
+      .follow-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .follow-label { font-family: Outfit, sans-serif; font-weight: 900; font-size: 96px; color: #F4F4F5; line-height: 1.05; opacity: 0; }
+      .follow-sub { font-family: Inter, sans-serif; font-size: 32px; color: #A9A9BE; line-height: 1.5; max-width: 780px; opacity: 0; }
+      .follow-tag { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #25D366; text-transform: uppercase; margin-top: 12px; opacity: 0; }
+      .follow-chevron { font-size: 60px; color: #7FCBF0; opacity: 0; margin-top: 10px; }
+
+      /* ---- captions (matches Brand Kit caption-pill spec) ---- */
+      .caption-pill {
+        position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%);
+        background: rgba(10,9,16,0.86); color: #fff; font-family: Inter, sans-serif; font-weight: 500;
+        font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%;
+        text-align: center; line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="64.342667"
+      data-width="1080"
+      data-height="1920"
+    >
+      <audio id="a1" class="clip" data-start="0.000000" data-duration="7.360000" data-track-index="1" src="audio_lines/01_hook.wav"></audio>
+      <audio id="a2" class="clip" data-start="7.560000" data-duration="5.440000" data-track-index="1" src="audio_lines/02_twoshapes.wav"></audio>
+      <audio id="a3" class="clip" data-start="13.200000" data-duration="8.213333" data-track-index="1" src="audio_lines/03_fear.wav"></audio>
+      <audio id="a4" class="clip" data-start="21.613333" data-duration="5.866667" data-track-index="1" src="audio_lines/04_reality.wav"></audio>
+      <audio id="a5" class="clip" data-start="27.680000" data-duration="11.008000" data-track-index="1" src="audio_lines/05_test.wav"></audio>
+      <audio id="a6" class="clip" data-start="38.888000" data-duration="11.136000" data-track-index="1" src="audio_lines/06_grounding.wav"></audio>
+      <audio id="a7" class="clip" data-start="50.224000" data-duration="6.528000" data-track-index="1" src="audio_lines/07_reframe.wav"></audio>
+      <audio id="a8" class="clip" data-start="59.752000" data-duration="2.090667" data-track-index="1" src="audio_lines/08_follow.wav"></audio>
+
+      <!-- Beat 1: Hook -->
+      <div class="beat hook-wrap clip" id="beat1" data-start="0.000000" data-duration="7.360000" data-track-index="0">
+        <div class="eyebrow" id="b1-eyebrow" style="opacity:1">MCP Server</div>
+        <div class="hook-text" id="b1-text">Per-task AI pricing multiplies fast at real volume. <span class="hook-accent">The question is whether that's actually how this gets billed.</span></div>
+      </div>
+
+      <!-- Beat 2: Two fundamentally different pricing shapes -->
+      <div class="beat clip" id="beat2" data-start="7.560000" data-duration="5.440000" data-track-index="0">
+        <div class="eyebrow" id="b2-eyebrow">Only One Punishes Usage</div>
+        <div class="headline" id="b2-headline">Two fundamentally different pricing shapes.</div>
+        <div class="b2-body">
+          <div class="fork-row">
+            <div class="fork-chip a" id="b2-chip-a"><div class="fork-chip-label">Per Task</div></div>
+            <div class="fork-vs" id="b2-vs">VS</div>
+            <div class="fork-chip b" id="b2-chip-b"><div class="fork-chip-label">Per Connection</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beat 3: The fear -->
+      <div class="beat clip" id="beat3" data-start="13.200000" data-duration="8.213333" data-track-index="0">
+        <div class="eyebrow" id="b3-eyebrow">The Fear</div>
+        <div class="headline" id="b3-headline">Billed per call.<br />Hundreds of times a day.</div>
+        <div class="ptp-body">
+          <div class="ptp-row not" id="b3-row1"><div class="ptp-dot not"></div><div class="ptp-col"><div class="ptp-text">Tool Called Hundreds Of Times A Day</div></div></div>
+          <div class="ptp-row not" id="b3-row2"><div class="ptp-dot not"></div><div class="ptp-col"><div class="ptp-text">Billed Per Call</div></div></div>
+          <div class="ptp-row not" id="b3-row3"><div class="ptp-dot not"></div><div class="ptp-col"><div class="ptp-text">Invoice Scales With Every Request</div></div></div>
+          <div class="ptp-tally not" id="b3-tally">&times; sounds expensive at scale</div>
+        </div>
+      </div>
+
+      <!-- Beat 4: The reality -->
+      <div class="beat clip" id="beat4" data-start="21.613333" data-duration="5.866667" data-track-index="0">
+        <div class="eyebrow" id="b4-eyebrow">The Reality</div>
+        <div class="headline" id="b4-headline">Priced per connection.<br />Not per task.</div>
+        <div class="ptp-body">
+          <div class="ptp-row yes" id="b4-row1"><div class="ptp-dot yes"></div><div class="ptp-col"><div class="ptp-text">Priced Per Connection, Not Per Task</div></div></div>
+          <div class="ptp-row yes" id="b4-row2"><div class="ptp-dot yes"></div><div class="ptp-col"><div class="ptp-text">Call Volume Doesn't Change What You Owe</div></div></div>
+          <div class="ptp-tally yes" id="b4-tally">&check; the bill stays flat</div>
+        </div>
+      </div>
+
+      <!-- Beat 5: The test -->
+      <div class="beat clip" id="beat5" data-start="27.680000" data-duration="11.008000" data-track-index="0">
+        <div class="eyebrow" id="b5-eyebrow">The Test</div>
+        <div class="headline" id="b5-headline">5 calls a day vs. 500.</div>
+        <div class="test-body">
+          <div class="q-row" id="b5-q1"><div class="q-num">5</div><div class="q-text">A tool your agent<br />calls 5 times a day.</div></div>
+          <div class="q-row" id="b5-q2"><div class="q-num">500</div><div class="q-text">Another it calls<br />500 times a day.</div></div>
+          <div class="q-row" id="b5-q3"><div class="q-num">=</div><div class="q-text">Both cost exactly<br />the same to maintain.</div></div>
+        </div>
+      </div>
+
+      <!-- Beat 6: Grounding -->
+      <div class="beat clip" id="beat6" data-start="38.888000" data-duration="11.136000" data-track-index="0">
+        <div class="eyebrow" id="b6-eyebrow">What You Actually Get</div>
+        <div class="hero-stat-wrap">
+          <div class="hero-num" id="b6-num">134</div>
+          <div class="hero-label" id="b6-label">Tools, Free Account</div>
+          <div class="hero-sub" id="b6-sub">The bill tracks how many tools you've connected &mdash; not how often your agent actually uses them</div>
+          <div class="chip-row" id="b6-chips">
+            <div class="g-chip alt" id="b6-chip1">Free Account</div>
+            <div class="g-chip" id="b6-chip2">134 Tools</div>
+            <div class="g-chip alt" id="b6-chip3">Per Connection, Not Per Task</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beat 7: Reframe / closing -->
+      <div class="beat closing-wrap clip" id="beat7" data-start="50.224000" data-duration="6.528000" data-track-index="0">
+        <div class="closing-text" id="b7-text">The real cost driver here was never usage. <span class="accent">It's how many separate connections you're maintaining in the first place.</span></div>
+      </div>
+
+      <!-- End card: unnarrated brand sign-off -->
+      <div class="beat end-card clip" id="endCard" data-start="56.952000" data-duration="2.600000" data-track-index="0">
+        <div class="end-brand" id="end-brand">MCP Server &middot; by Yaeris</div>
+        <div class="end-sub" id="end-sub">mcp.yaeris.com</div>
+      </div>
+
+      <!-- Beat 8: Follow CTA -->
+      <div class="beat follow-wrap clip" id="beat8" data-start="59.752000" data-duration="4.590667" data-track-index="0">
+        <div class="eyebrow" id="b8-eyebrow">Before You Go</div>
+        <div class="follow-label" id="b8-label">Follow for<br />More</div>
+        <div class="follow-sub" id="b8-sub">Real, fact-checked breakdowns on hosting, lead-gen &amp; dev tooling</div>
+        <div class="follow-tag" id="b8-tag">New video every day</div>
+        <div class="follow-chevron" id="b8-chevron">&#8593;</div>
+      </div>
+
+      <!-- Captions (real word-level timestamps via Parakeet transcription of audio_lines/*.wav) -->
+      <div class="caption-pill clip" id="cap0" data-start="0.000000" data-duration="1.760000" data-track-index="5">Per task AI pricing</div>
+      <div class="caption-pill clip" id="cap1" data-start="1.760000" data-duration="1.360000" data-track-index="5">multiplies fast at</div>
+      <div class="caption-pill clip" id="cap2" data-start="3.120000" data-duration="1.600000" data-track-index="5">real volume. The question is whether that's</div>
+      <div class="caption-pill clip" id="cap3" data-start="4.480000" data-duration="1.360000" data-track-index="5">actually how this gets billed.</div>
+
+      <div class="caption-pill clip" id="cap4" data-start="7.560000" data-duration="1.360000" data-track-index="5">There are two fundamentally</div>
+      <div class="caption-pill clip" id="cap5" data-start="8.920000" data-duration="1.280000" data-track-index="5">different pricing shapes</div>
+      <div class="caption-pill clip" id="cap6" data-start="10.200000" data-duration="1.280000" data-track-index="5">here, and only one of them</div>
+      <div class="caption-pill clip" id="cap7" data-start="11.480000" data-duration="1.440000" data-track-index="5">punishes heavy usage.</div>
+
+      <div class="caption-pill clip" id="cap8" data-start="13.200000" data-duration="1.360000" data-track-index="5">The Fear, an agent</div>
+      <div class="caption-pill clip" id="cap9" data-start="14.560000" data-duration="1.360000" data-track-index="5">calling a connected tool</div>
+      <div class="caption-pill clip" id="cap10" data-start="15.920000" data-duration="1.520000" data-track-index="5">hundreds of times a day,</div>
+      <div class="caption-pill clip" id="cap11" data-start="17.440000" data-duration="1.200000" data-track-index="5">build per call,</div>
+      <div class="caption-pill clip" id="cap12" data-start="18.640000" data-duration="1.440000" data-track-index="5">the invoice scaling with</div>
+      <div class="caption-pill clip" id="cap13" data-start="20.080000" data-duration="1.280000" data-track-index="5">every single request.</div>
+
+      <div class="caption-pill clip" id="cap14" data-start="21.613333" data-duration="1.440000" data-track-index="5">The reality, priced per</div>
+      <div class="caption-pill clip" id="cap15" data-start="23.053333" data-duration="1.840000" data-track-index="5">connection, not per task.</div>
+      <div class="caption-pill clip" id="cap16" data-start="24.893333" data-duration="1.520000" data-track-index="5">The call volume itself doesn't</div>
+      <div class="caption-pill clip" id="cap17" data-start="26.413333" data-duration="1.040000" data-track-index="5">change what you owe.</div>
+
+      <div class="caption-pill clip" id="cap18" data-start="27.680000" data-duration="1.200000" data-track-index="5">The test is comparing</div>
+      <div class="caption-pill clip" id="cap19" data-start="28.880000" data-duration="1.120000" data-track-index="5">a tool your agent</div>
+      <div class="caption-pill clip" id="cap20" data-start="30.000000" data-duration="1.440000" data-track-index="5">calls five times a day</div>
+      <div class="caption-pill clip" id="cap21" data-start="31.440000" data-duration="1.120000" data-track-index="5">against one it calls</div>
+      <div class="caption-pill clip" id="cap22" data-start="32.560000" data-duration="1.440000" data-track-index="5">five hundred times.</div>
+      <div class="caption-pill clip" id="cap23" data-start="34.000000" data-duration="2.000000" data-track-index="5">Under per-connection pricing,</div>
+      <div class="caption-pill clip" id="cap24" data-start="36.000000" data-duration="1.520000" data-track-index="5">both cost exactly the</div>
+      <div class="caption-pill clip" id="cap25" data-start="37.520000" data-duration="1.120000" data-track-index="5">same to maintain.</div>
+
+      <div class="caption-pill clip" id="cap26" data-start="38.888000" data-duration="1.120000" data-track-index="5">The account itself is</div>
+      <div class="caption-pill clip" id="cap27" data-start="40.008000" data-duration="1.120000" data-track-index="5">free to create.</div>
+      <div class="caption-pill clip" id="cap28" data-start="41.128000" data-duration="1.040000" data-track-index="5">You're choosing from</div>
+      <div class="caption-pill clip" id="cap29" data-start="42.168000" data-duration="1.680000" data-track-index="5">134 tools once</div>
+      <div class="caption-pill clip" id="cap30" data-start="43.848000" data-duration="0.960000" data-track-index="5">you're in, and the</div>
+      <div class="caption-pill clip" id="cap31" data-start="44.808000" data-duration="1.200000" data-track-index="5">bill tracks how many</div>
+      <div class="caption-pill clip" id="cap32" data-start="46.008000" data-duration="1.440000" data-track-index="5">tools you've connected,</div>
+      <div class="caption-pill clip" id="cap33" data-start="47.448000" data-duration="0.800000" data-track-index="5">not how often</div>
+      <div class="caption-pill clip" id="cap34" data-start="48.248000" data-duration="1.680000" data-track-index="5">your agent actually uses them.</div>
+
+      <div class="caption-pill clip" id="cap35" data-start="50.224000" data-duration="1.360000" data-track-index="5">The real cost driver</div>
+      <div class="caption-pill clip" id="cap36" data-start="51.584000" data-duration="1.680000" data-track-index="5">here was never usage.</div>
+      <div class="caption-pill clip" id="cap37" data-start="53.264000" data-duration="1.120000" data-track-index="5">It's how many separate</div>
+      <div class="caption-pill clip" id="cap38" data-start="54.384000" data-duration="1.360000" data-track-index="5">connections you're maintaining</div>
+      <div class="caption-pill clip" id="cap39" data-start="55.744000" data-duration="0.880000" data-track-index="5">in the first place.</div>
+
+      <div class="caption-pill clip" id="cap40" data-start="59.752000" data-duration="0.960000" data-track-index="5">Follow for more of</div>
+      <div class="caption-pill clip" id="cap41" data-start="60.712000" data-duration="1.040000" data-track-index="5">this kind of content.</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Beat 1: Hook
+      tl.fromTo("#b1-text", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.150000);
+      tl.to("#beat1", { opacity: 0, duration: 0.2 }, 7.160000);
+
+      // Beat 2: Two fundamentally different pricing shapes
+      tl.fromTo("#b2-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 7.760000);
+      tl.fromTo("#b2-headline", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4 }, 7.960000);
+      tl.fromTo("#b2-chip-a", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.35 }, 8.560000);
+      tl.fromTo("#b2-vs", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 9.060000);
+      tl.fromTo("#b2-chip-b", { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.35 }, 9.360000);
+      tl.to("#beat2", { opacity: 0, duration: 0.2 }, 12.800000);
+
+      // Beat 3: The fear
+      tl.fromTo("#b3-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 13.400000);
+      tl.fromTo("#b3-headline", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4 }, 13.600000);
+      tl.fromTo("#b3-row1", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3 }, 14.200000);
+      tl.fromTo("#b3-row2", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3 }, 16.120000);
+      tl.fromTo("#b3-row3", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3 }, 17.700000);
+      tl.fromTo("#b3-tally", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 19.200000);
+      tl.to("#beat3", { opacity: 0, duration: 0.2 }, 21.213333);
+
+      // Beat 4: The reality
+      tl.fromTo("#b4-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 21.813333);
+      tl.fromTo("#b4-headline", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4 }, 22.013333);
+      tl.fromTo("#b4-row1", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3 }, 22.613333);
+      tl.fromTo("#b4-row2", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3 }, 24.493333);
+      tl.fromTo("#b4-tally", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 26.413333);
+      tl.to("#beat4", { opacity: 0, duration: 0.2 }, 27.280000);
+
+      // Beat 5: The test
+      tl.fromTo("#b5-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 27.880000);
+      tl.fromTo("#b5-headline", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4 }, 28.080000);
+      tl.fromTo("#b5-q1", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 29.760000);
+      tl.fromTo("#b5-q2", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 33.280000);
+      tl.fromTo("#b5-q3", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 36.480000);
+      tl.to("#beat5", { opacity: 0, duration: 0.2 }, 38.488000);
+
+      // Beat 6: Grounding
+      tl.fromTo("#b6-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 39.088000);
+      tl.fromTo("#b6-num", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2.2)" }, 39.338000);
+      tl.fromTo("#b6-label", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35 }, 39.738000);
+      tl.fromTo("#b6-sub", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 40.038000);
+      tl.fromTo("#b6-chip1", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3 }, 40.728000);
+      tl.fromTo("#b6-chip2", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3 }, 43.208000);
+      tl.fromTo("#b6-chip3", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3 }, 46.568000);
+      tl.to("#beat6", { opacity: 0, duration: 0.2 }, 49.824000);
+
+      // Beat 7: Reframe / closing
+      tl.fromTo("#b7-text", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 50.724000);
+      tl.to("#beat7", { opacity: 0, duration: 0.25 }, 56.502000);
+
+      // End card
+      tl.fromTo("#end-brand", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 57.252000);
+      tl.fromTo("#end-sub", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 57.602000);
+      tl.to("#endCard", { opacity: 0, duration: 0.2 }, 59.302000);
+
+      // Beat 8: Follow CTA
+      tl.fromTo("#b8-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 60.002000);
+      tl.fromTo("#b8-label", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 60.302000);
+      tl.fromTo("#b8-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 60.952000);
+      tl.fromTo("#b8-tag", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 61.352000);
+      tl.fromTo("#b8-chevron", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, 61.752000);
+      tl.to("#b8-chevron", { y: -14, duration: 0.6, repeat: -1, yoyo: true, ease: "sine.inOut" }, 62.152000);
+
+      // Captions: quick fade in per chunk (real word-level timestamps via Parakeet)
+      tl.fromTo("#cap0", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 0.000000);
+      tl.fromTo("#cap1", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 1.760000);
+      tl.fromTo("#cap2", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 3.120000);
+      tl.fromTo("#cap3", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 4.480000);
+      tl.fromTo("#cap4", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 7.560000);
+      tl.fromTo("#cap5", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 8.920000);
+      tl.fromTo("#cap6", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 10.200000);
+      tl.fromTo("#cap7", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 11.480000);
+      tl.fromTo("#cap8", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 13.200000);
+      tl.fromTo("#cap9", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 14.560000);
+      tl.fromTo("#cap10", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 15.920000);
+      tl.fromTo("#cap11", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 17.440000);
+      tl.fromTo("#cap12", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 18.640000);
+      tl.fromTo("#cap13", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 20.080000);
+      tl.fromTo("#cap14", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 21.613333);
+      tl.fromTo("#cap15", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 23.053333);
+      tl.fromTo("#cap16", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 24.893333);
+      tl.fromTo("#cap17", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 26.413333);
+      tl.fromTo("#cap18", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 27.680000);
+      tl.fromTo("#cap19", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 28.880000);
+      tl.fromTo("#cap20", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 30.000000);
+      tl.fromTo("#cap21", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 31.440000);
+      tl.fromTo("#cap22", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 32.560000);
+      tl.fromTo("#cap23", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 34.000000);
+      tl.fromTo("#cap24", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 36.000000);
+      tl.fromTo("#cap25", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 37.520000);
+      tl.fromTo("#cap26", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 38.888000);
+      tl.fromTo("#cap27", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 40.008000);
+      tl.fromTo("#cap28", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 41.128000);
+      tl.fromTo("#cap29", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 42.168000);
+      tl.fromTo("#cap30", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 43.848000);
+      tl.fromTo("#cap31", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 44.808000);
+      tl.fromTo("#cap32", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 46.008000);
+      tl.fromTo("#cap33", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 47.448000);
+      tl.fromTo("#cap34", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 48.248000);
+      tl.fromTo("#cap35", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 50.224000);
+      tl.fromTo("#cap36", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 51.584000);
+      tl.fromTo("#cap37", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 53.264000);
+      tl.fromTo("#cap38", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 54.384000);
+      tl.fromTo("#cap39", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 55.744000);
+      tl.fromTo("#cap40", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 59.752000);
+      tl.fromTo("#cap41", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 60.712000);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

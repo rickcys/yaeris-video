@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0E0E1F; }
+      #root { width: 100%; height: 100%; position: relative; font-family: Inter, sans-serif; background: #0E0E1F; }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 150px 90px; }
+
+      .eyebrow { font-family: 'Space Mono', monospace; font-size: 27px; letter-spacing: 0.16em; color: #7FCBF0; text-transform: uppercase; margin-bottom: 22px; opacity: 0; }
+      .headline { font-family: Outfit, sans-serif; font-weight: 900; font-size: 70px; line-height: 1.14; color: #FBFBF8; letter-spacing: -0.01em; opacity: 0; }
+      .sub-line { font-family: Inter, sans-serif; font-size: 32px; line-height: 1.5; color: #A9A9BE; margin-top: 28px; opacity: 0; max-width: 860px; }
+      .source-tag { position: absolute; left: 90px; bottom: 90px; font-family: 'Space Mono', monospace; font-size: 21px; letter-spacing: 0.06em; color: #7A7A8F; opacity: 0; max-width: 700px; line-height: 1.5; }
+
+      /* Hook */
+      .hook-wrap { align-items: center; justify-content: center; text-align: center; }
+      .hook-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 56px; line-height: 1.2; color: #FBFBF8; letter-spacing: -0.01em; opacity: 0; }
+      .hook-text.second { font-size: 42px; color: #A9A9BE; font-weight: 700; margin-top: 44px; }
+
+      /* Chip flows */
+      .chip-flow-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 26px; align-items: stretch; }
+      .chip { display: flex; align-items: center; gap: 20px; border-radius: 20px; padding: 26px 40px; opacity: 0; }
+      .chip-1 { background: rgba(155,111,214,0.14); border: 3px solid #9B6FD6; }
+      .chip-2 { background: rgba(27,127,168,0.16); border: 3px solid #1B7FA8; }
+      .chip-3 { background: rgba(37,211,102,0.14); border: 3px solid #25D366; }
+      .chip-muted { background: rgba(169,169,190,0.07); border: 3px solid #4F4F63; }
+      .chip-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 33px; color: #F4F4F5; }
+      .chip-muted .chip-text { color: #C7C7D6; }
+      .chip-tail { margin-top: 10px; font-family: Inter, sans-serif; font-size: 28px; color: #A9A9BE; text-align: center; opacity: 0; }
+
+      /* Two-card comparison */
+      .test-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 44px; }
+      .test-cards { display: flex; gap: 28px; }
+      .test-card { flex: 1; border-radius: 24px; padding: 48px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; opacity: 0; }
+      .test-card.a { background: rgba(169,169,190,0.07); border: 3px solid #4F4F63; }
+      .test-card.b { background: rgba(37,211,102,0.14); border: 3px solid #25D366; }
+      .test-card-label { font-family: 'Space Mono', monospace; font-size: 22px; letter-spacing: 0.08em; text-transform: uppercase; color: #A9A9BE; }
+      .test-card-value { font-family: Outfit, sans-serif; font-weight: 900; font-size: 44px; color: #F4F4F5; line-height: 1.15; }
+      .test-card.b .test-card-value { color: #25D366; }
+      .test-card-sub { font-family: Inter, sans-serif; font-size: 24px; color: #A9A9BE; }
+
+      /* Closing / reframe */
+      .closing-wrap { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
+      .closing-text { font-family: Outfit, sans-serif; font-weight: 800; font-size: 58px; line-height: 1.26; color: #F4F4F5; opacity: 0; }
+      .closing-text .accent { color: #9B6FD6; }
+
+      /* Follow CTA */
+      .follow-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .follow-label { font-family: Outfit, sans-serif; font-weight: 900; font-size: 96px; color: #FBFBF8; line-height: 1.05; opacity: 0; }
+      .follow-sub { font-family: Inter, sans-serif; font-size: 32px; color: #A9A9BE; line-height: 1.5; max-width: 780px; opacity: 0; }
+      .follow-tag { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #25D366; text-transform: uppercase; margin-top: 12px; opacity: 0; }
+      .follow-chevron { font-size: 60px; color: #7FCBF0; opacity: 0; margin-top: 10px; }
+
+      /* ---- captions (matches Brand Kit caption-pill spec) ---- */
+      .caption-pill {
+        position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%);
+        background: rgba(10,9,16,0.86); color: #fff; font-family: Inter, sans-serif; font-weight: 500;
+        font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%;
+        text-align: center; line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="66.174"
+      data-width="1080"
+      data-height="1920"
+    >
+      <audio id="a1" class="clip" data-start="0" data-duration="6.251" data-track-index="1" src="audio_lines/01_hook_a.wav"></audio>
+      <audio id="a2" class="clip" data-start="6.451" data-duration="1.600" data-track-index="1" src="audio_lines/02_hook_b.wav"></audio>
+      <audio id="a3" class="clip" data-start="8.251" data-duration="16.917" data-track-index="1" src="audio_lines/03_fear.wav"></audio>
+      <audio id="a4" class="clip" data-start="25.368" data-duration="9.728" data-track-index="1" src="audio_lines/04_pattern.wav"></audio>
+      <audio id="a5" class="clip" data-start="35.296" data-duration="6.955" data-track-index="1" src="audio_lines/05_test.wav"></audio>
+      <audio id="a6" class="clip" data-start="42.451" data-duration="8.235" data-track-index="1" src="audio_lines/06_grounding.wav"></audio>
+      <audio id="a7" class="clip" data-start="50.886" data-duration="9.088" data-track-index="1" src="audio_lines/07_reframe.wav"></audio>
+      <audio id="a8" class="clip" data-start="60.174" data-duration="2.091" data-track-index="1" src="audio_lines/08_followcta.wav"></audio>
+
+      <!-- Beat 1: Hook, 0 - 8.251s -->
+      <div class="beat hook-wrap clip" id="beat1" data-start="0" data-duration="8.251" data-track-index="0">
+        <div class="eyebrow" id="b1-eyebrow" style="opacity:1">Radar</div>
+        <div class="hook-text" id="b1-text1">Adding a new lead-gen tool usually sounds like it means ripping out the CRM your team already trusts.</div>
+        <div class="hook-text second" id="b1-text2">Usually it doesn't have to.</div>
+      </div>
+
+      <!-- Beat 2: The fear, 8.251 - 25.368s -->
+      <div class="beat clip" id="beat2" data-start="8.251" data-duration="17.117" data-track-index="0">
+        <div class="eyebrow" id="b2-eyebrow">The Fear</div>
+        <div class="headline" id="b2-headline">Two ways to<br />slot it in.</div>
+        <div class="sub-line" id="b2-sub">Only one means<br />starting from zero.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-muted" id="b2-chip1"><div class="chip-text">Rip-and-replace</div></div>
+          <div class="chip chip-muted" id="b2-chip2"><div class="chip-text">Brand-new system of record</div></div>
+          <div class="chip-tail" id="b2-tail">Months re-training everyone on a different interface.</div>
+        </div>
+      </div>
+
+      <!-- Beat 3: The actual pattern, 25.368 - 35.296s -->
+      <div class="beat clip" id="beat3" data-start="25.368" data-duration="9.928" data-track-index="0">
+        <div class="eyebrow" id="b3-eyebrow">The Actual Pattern</div>
+        <div class="headline" id="b3-headline">Radar finds leads.<br />Your CRM keeps them.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="b3-chip1"><div class="chip-text">Radar: find + first contact</div></div>
+          <div class="chip chip-2" id="b3-chip2"><div class="chip-text">Export</div></div>
+          <div class="chip chip-3" id="b3-chip3"><div class="chip-text">The CRM you already run</div></div>
+          <div class="chip-tail" id="b3-tail">Nothing about that moves your system of record.</div>
+        </div>
+      </div>
+
+      <!-- Beat 4: The test, 35.296 - 42.451s -->
+      <div class="beat clip" id="beat4" data-start="35.296" data-duration="7.155" data-track-index="0">
+        <div class="eyebrow" id="b4-eyebrow">The Test</div>
+        <div class="headline" id="b4-headline">Replace it,<br />or just feed it?</div>
+        <div class="test-wrap">
+          <div class="test-cards">
+            <div class="test-card a" id="b4-carda">
+              <div class="test-card-label">Replace</div>
+              <div class="test-card-value">Rip out CRM</div>
+              <div class="test-card-sub">New system of record</div>
+            </div>
+            <div class="test-card b" id="b4-cardb">
+              <div class="test-card-label">Feed</div>
+              <div class="test-card-value">Export to CRM</div>
+              <div class="test-card-sub">Nothing to migrate</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beat 5: Grounding, 42.451 - 50.886s -->
+      <div class="beat clip" id="beat5" data-start="42.451" data-duration="8.435" data-track-index="0">
+        <div class="eyebrow" id="b5-eyebrow">Radar</div>
+        <div class="headline" id="b5-headline">One account.<br />Three tools.</div>
+        <div class="test-wrap">
+          <div class="test-cards">
+            <div class="test-card a" id="b5-carda">
+              <div class="test-card-label">SERP Lookup + Crawler</div>
+              <div class="test-card-value">Find leads</div>
+              <div class="test-card-sub">One account</div>
+            </div>
+            <div class="test-card b" id="b5-cardb">
+              <div class="test-card-label">Outreach</div>
+              <div class="test-card-value">First contact</div>
+              <div class="test-card-sub">Exports to your CRM</div>
+            </div>
+          </div>
+        </div>
+        <div class="source-tag" id="b5-source">All exports into the CRM you already use.</div>
+      </div>
+
+      <!-- Beat 6: Reframe, 50.886 - 60.174s -->
+      <div class="beat closing-wrap clip" id="beat6" data-start="50.886" data-duration="9.288" data-track-index="0">
+        <div class="closing-text" id="b6-text">The gap this fills sits <span class="accent">in front of your CRM</span> &mdash; not instead of it.</div>
+      </div>
+
+      <!-- Beat 7: Follow CTA, 60.174 - 66.174s -->
+      <div class="beat follow-wrap clip" id="beat7" data-start="60.174" data-duration="6.0" data-track-index="0">
+        <div class="eyebrow" id="b7-eyebrow">Before You Go</div>
+        <div class="follow-label" id="b7-label">Follow for<br />More</div>
+        <div class="follow-sub" id="b7-sub">More of this kind of content &mdash; real, fact-checked walkthroughs on hosting, lead-gen &amp; dev tooling</div>
+        <div class="follow-tag" id="b7-tag">New video every day</div>
+        <div class="follow-chevron" id="b7-chevron">&#8593;</div>
+      </div>
+
+      <!-- ===== CAPTIONS (real word-level timestamps via Parakeet transcription) ===== -->
+      <div class="caption-pill clip" id="cap0" data-start="0" data-duration="1.92" data-track-index="5">Adding a new lead-gen tool</div>
+      <div class="caption-pill clip" id="cap1" data-start="1.92" data-duration="1.6" data-track-index="5">usually sounds like it means</div>
+      <div class="caption-pill clip" id="cap2" data-start="3.52" data-duration="1.6" data-track-index="5">ripping out the CRM your</div>
+      <div class="caption-pill clip" id="cap3" data-start="5.12" data-duration="1.331" data-track-index="5">team already trusts.</div>
+      <div class="caption-pill clip" id="cap4" data-start="6.451" data-duration="1.8" data-track-index="5">Usually it doesn't have to.</div>
+
+      <div class="caption-pill clip" id="cap5" data-start="8.251" data-duration="1.36" data-track-index="5">There are two fundamentally</div>
+      <div class="caption-pill clip" id="cap6" data-start="9.611" data-duration="1.44" data-track-index="5">different ways a new tool</div>
+      <div class="caption-pill clip" id="cap7" data-start="11.051" data-duration="1.2" data-track-index="5">can slot into an existing</div>
+      <div class="caption-pill clip" id="cap8" data-start="12.251" data-duration="2.24" data-track-index="5">stack, and the difference matters</div>
+      <div class="caption-pill clip" id="cap9" data-start="14.491" data-duration="1.12" data-track-index="5">a lot to whoever has</div>
+      <div class="caption-pill clip" id="cap10" data-start="15.611" data-duration="2.16" data-track-index="5">to actually migrate anything.</div>
+      <div class="caption-pill clip" id="cap11" data-start="17.771" data-duration="2.4" data-track-index="5">The fear. Rip and replace,</div>
+      <div class="caption-pill clip" id="cap12" data-start="20.171" data-duration="1.28" data-track-index="5">a brand new system of</div>
+      <div class="caption-pill clip" id="cap13" data-start="21.451" data-duration="2.4" data-track-index="5">record, months of retraining everyone</div>
+      <div class="caption-pill clip" id="cap14" data-start="23.851" data-duration="1.517" data-track-index="5">on a different interface.</div>
+
+      <div class="caption-pill clip" id="cap15" data-start="25.368" data-duration="1.6" data-track-index="5">The actual pattern here.</div>
+      <div class="caption-pill clip" id="cap16" data-start="26.968" data-duration="2.0" data-track-index="5">Radar handles finding leads</div>
+      <div class="caption-pill clip" id="cap17" data-start="28.968" data-duration="1.6" data-track-index="5">and making first contact,</div>
+      <div class="caption-pill clip" id="cap18" data-start="30.568" data-duration="1.36" data-track-index="5">and the results export</div>
+      <div class="caption-pill clip" id="cap19" data-start="31.928" data-duration="1.28" data-track-index="5">to whatever CRM you're</div>
+      <div class="caption-pill clip" id="cap20" data-start="33.208" data-duration="2.088" data-track-index="5">already running pipeline through.</div>
+
+      <div class="caption-pill clip" id="cap21" data-start="35.296" data-duration="1.6" data-track-index="5">The test is simple, check</div>
+      <div class="caption-pill clip" id="cap22" data-start="36.896" data-duration="1.28" data-track-index="5">whether a given tool is</div>
+      <div class="caption-pill clip" id="cap23" data-start="38.176" data-duration="1.44" data-track-index="5">asking to replace your system</div>
+      <div class="caption-pill clip" id="cap24" data-start="39.616" data-duration="1.44" data-track-index="5">of record, or just asking</div>
+      <div class="caption-pill clip" id="cap25" data-start="41.056" data-duration="1.395" data-track-index="5">to feed it.</div>
+
+      <div class="caption-pill clip" id="cap26" data-start="42.451" data-duration="2.4" data-track-index="5">SERP Lookup, the Crawler, and Outreach</div>
+      <div class="caption-pill clip" id="cap27" data-start="44.851" data-duration="1.6" data-track-index="5">all run from one account,</div>
+      <div class="caption-pill clip" id="cap28" data-start="46.451" data-duration="1.6" data-track-index="5">and nothing about that requires</div>
+      <div class="caption-pill clip" id="cap29" data-start="48.051" data-duration="1.44" data-track-index="5">abandoning the CRM</div>
+      <div class="caption-pill clip" id="cap30" data-start="49.491" data-duration="1.395" data-track-index="5">your team already knows.</div>
+
+      <div class="caption-pill clip" id="cap31" data-start="50.886" data-duration="1.52" data-track-index="5">The gap this actually fills</div>
+      <div class="caption-pill clip" id="cap32" data-start="52.406" data-duration="0.88" data-track-index="5">sits in front of your</div>
+      <div class="caption-pill clip" id="cap33" data-start="53.286" data-duration="1.84" data-track-index="5">CRM, not instead of</div>
+      <div class="caption-pill clip" id="cap34" data-start="55.126" data-duration="1.04" data-track-index="5">it &mdash; the part between</div>
+      <div class="caption-pill clip" id="cap35" data-start="56.166" data-duration="1.12" data-track-index="5">finding a lead and</div>
+      <div class="caption-pill clip" id="cap36" data-start="57.286" data-duration="1.04" data-track-index="5">getting that lead into</div>
+      <div class="caption-pill clip" id="cap37" data-start="58.326" data-duration="1.848" data-track-index="5">your pipeline in the first place.</div>
+
+      <div class="caption-pill clip" id="cap38" data-start="60.174" data-duration="1.28" data-track-index="5">Follow for more of this kind</div>
+      <div class="caption-pill clip" id="cap39" data-start="61.454" data-duration="0.72" data-track-index="5">of content.</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Beat 1: Hook
+      tl.fromTo("#b1-text1", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.15);
+      tl.fromTo("#b1-text2", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 6.551);
+      tl.to("#beat1", { opacity: 0, duration: 0.2 }, 8.051);
+
+      // Beat 2: The fear
+      tl.fromTo("#b2-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 8.351);
+      tl.fromTo("#b2-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 8.551);
+      tl.fromTo("#b2-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4 }, 10.251);
+      tl.fromTo("#b2-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 17.771);
+      tl.fromTo("#b2-chip2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 20.171);
+      tl.fromTo("#b2-tail", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 21.451);
+      tl.to("#beat2", { opacity: 0, duration: 0.2 }, 25.168);
+
+      // Beat 3: The actual pattern
+      tl.fromTo("#b3-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 25.468);
+      tl.fromTo("#b3-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 25.668);
+      tl.fromTo("#b3-chip1", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 26.968);
+      tl.fromTo("#b3-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 30.568);
+      tl.fromTo("#b3-chip3", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 31.928);
+      tl.fromTo("#b3-tail", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 33.208);
+      tl.to("#beat3", { opacity: 0, duration: 0.2 }, 35.096);
+
+      // Beat 4: The test
+      tl.fromTo("#b4-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 35.396);
+      tl.fromTo("#b4-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 35.596);
+      tl.fromTo("#b4-carda", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 38.176);
+      tl.fromTo("#b4-cardb", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 39.616);
+      tl.to("#beat4", { opacity: 0, duration: 0.2 }, 42.251);
+
+      // Beat 5: Grounding
+      tl.fromTo("#b5-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 42.551);
+      tl.fromTo("#b5-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 42.751);
+      tl.fromTo("#b5-carda", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 44.851);
+      tl.fromTo("#b5-cardb", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.8)" }, 48.051);
+      tl.fromTo("#b5-source", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 49.491);
+      tl.to("#beat5", { opacity: 0, duration: 0.2 }, 50.586);
+
+      // Beat 6: Reframe
+      tl.fromTo("#b6-text", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 51.386);
+      tl.to("#beat6", { opacity: 0, duration: 0.2 }, 59.974);
+
+      // Beat 7: Follow CTA
+      tl.fromTo("#b7-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 60.474);
+      tl.fromTo("#b7-label", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 60.774);
+      tl.fromTo("#b7-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 61.634);
+      tl.fromTo("#b7-tag", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 62.234);
+      tl.fromTo("#b7-chevron", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, 62.634);
+      tl.to("#b7-chevron", { y: -14, duration: 0.6, repeat: -1, yoyo: true, ease: "sine.inOut" }, 63.034);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "w0",
+    "text": "For",
+    "start": 0.0,
+    "end": 0.14
+  },
+  {
+    "id": "w1",
+    "text": "most",
+    "start": 0.14,
+    "end": 0.36
+  },
+  {
+    "id": "w2",
+    "text": "small",
+    "start": 0.36,
+    "end": 0.72
+  },
+  {
+    "id": "w3",
+    "text": "-to",
+    "start": 0.72,
+    "end": 0.84
+  },
+  {
+    "id": "w4",
+    "text": "-mid",
+    "start": 0.84,
+    "end": 0.98
+  },
+  {
+    "id": "w5",
+    "text": "projects,",
+    "start": 0.98,
+    "end": 1.56
+  },
+  {
+    "id": "w6",
+    "text": "that",
+    "start": 2.14,
+    "end": 2.26
+  },
+  {
+    "id": "w7",
+    "text": "free",
+    "start": 2.26,
+    "end": 2.54
+  },
+  {
+    "id": "w8",
+    "text": "tier",
+    "start": 2.54,
+    "end": 2.84
+  },
+  {
+    "id": "w9",
+    "text": "already",
+    "start": 2.84,
+    "end": 3.26
+  },
+  {
+    "id": "w10",
+    "text": "covers",
+    "start": 3.26,
+    "end": 3.6
+  },
+  {
+    "id": "w11",
+    "text": "the",
+    "start": 3.6,
+    "end": 3.8
+  },
+  {
+    "id": "w12",
+    "text": "answer",
+    "start": 3.8,
+    "end": 4.1
+  },
+  {
+    "id": "w13",
+    "text": "to",
+    "start": 4.1,
+    "end": 4.3
+  },
+  {
+    "id": "w14",
+    "text": "the",
+    "start": 4.3,
+    "end": 4.42
+  },
+  {
+    "id": "w15",
+    "text": "second",
+    "start": 4.42,
+    "end": 4.66
+  },
+  {
+    "id": "w16",
+    "text": "question",
+    "start": 4.66,
+    "end": 5.14
+  },
+  {
+    "id": "w17",
+    "text": "at",
+    "start": 5.14,
+    "end": 5.54
+  },
+  {
+    "id": "w18",
+    "text": "zero",
+    "start": 5.54,
+    "end": 5.86
+  },
+  {
+    "id": "w19",
+    "text": "cost.",
+    "start": 5.86,
+    "end": 6.2
+  }
+]

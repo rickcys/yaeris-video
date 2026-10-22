@@ -1,0 +1,266 @@
+[
+  {
+    "id": "w0",
+    "text": "There",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "are",
+    "start": 0.24,
+    "end": 0.4
+  },
+  {
+    "id": "w2",
+    "text": "two",
+    "start": 0.4,
+    "end": 0.72
+  },
+  {
+    "id": "w3",
+    "text": "fundamentally",
+    "start": 0.72,
+    "end": 1.36
+  },
+  {
+    "id": "w4",
+    "text": "different",
+    "start": 1.36,
+    "end": 1.68
+  },
+  {
+    "id": "w5",
+    "text": "ways",
+    "start": 1.68,
+    "end": 2.16
+  },
+  {
+    "id": "w6",
+    "text": "people",
+    "start": 2.16,
+    "end": 2.4
+  },
+  {
+    "id": "w7",
+    "text": "relate",
+    "start": 2.4,
+    "end": 2.8
+  },
+  {
+    "id": "w8",
+    "text": "to",
+    "start": 2.8,
+    "end": 2.96
+  },
+  {
+    "id": "w9",
+    "text": "this",
+    "start": 2.96,
+    "end": 3.2
+  },
+  {
+    "id": "w10",
+    "text": "pricing,",
+    "start": 3.2,
+    "end": 3.92
+  },
+  {
+    "id": "w11",
+    "text": "and",
+    "start": 3.92,
+    "end": 4.16
+  },
+  {
+    "id": "w12",
+    "text": "only",
+    "start": 4.16,
+    "end": 4.4
+  },
+  {
+    "id": "w13",
+    "text": "one",
+    "start": 4.4,
+    "end": 4.56
+  },
+  {
+    "id": "w14",
+    "text": "of",
+    "start": 4.56,
+    "end": 4.72
+  },
+  {
+    "id": "w15",
+    "text": "them",
+    "start": 4.72,
+    "end": 4.88
+  },
+  {
+    "id": "w16",
+    "text": "is",
+    "start": 4.88,
+    "end": 5.12
+  },
+  {
+    "id": "w17",
+    "text": "based",
+    "start": 5.12,
+    "end": 5.52
+  },
+  {
+    "id": "w18",
+    "text": "on",
+    "start": 5.52,
+    "end": 5.68
+  },
+  {
+    "id": "w19",
+    "text": "real",
+    "start": 5.68,
+    "end": 6
+  },
+  {
+    "id": "w20",
+    "text": "numbers.",
+    "start": 6,
+    "end": 6.88
+  },
+  {
+    "id": "w21",
+    "text": "The",
+    "start": 6.88,
+    "end": 7.12
+  },
+  {
+    "id": "w22",
+    "text": "vague",
+    "start": 7.12,
+    "end": 7.6
+  },
+  {
+    "id": "w23",
+    "text": "version,",
+    "start": 7.6,
+    "end": 8.32
+  },
+  {
+    "id": "w24",
+    "text": "pay",
+    "start": 8.32,
+    "end": 8.64
+  },
+  {
+    "id": "w25",
+    "text": "as",
+    "start": 8.64,
+    "end": 8.88
+  },
+  {
+    "id": "w26",
+    "text": "you",
+    "start": 8.88,
+    "end": 9.04
+  },
+  {
+    "id": "w27",
+    "text": "go,",
+    "start": 9.04,
+    "end": 9.44
+  },
+  {
+    "id": "w28",
+    "text": "with",
+    "start": 9.44,
+    "end": 9.68
+  },
+  {
+    "id": "w29",
+    "text": "no",
+    "start": 9.68,
+    "end": 9.92
+  },
+  {
+    "id": "w30",
+    "text": "actual",
+    "start": 9.92,
+    "end": 10.32
+  },
+  {
+    "id": "w31",
+    "text": "number",
+    "start": 10.32,
+    "end": 10.64
+  },
+  {
+    "id": "w32",
+    "text": "attached,",
+    "start": 10.64,
+    "end": 11.36
+  },
+  {
+    "id": "w33",
+    "text": "which",
+    "start": 11.36,
+    "end": 11.6
+  },
+  {
+    "id": "w34",
+    "text": "is",
+    "start": 11.6,
+    "end": 11.76
+  },
+  {
+    "id": "w35",
+    "text": "exactly",
+    "start": 11.76,
+    "end": 12.16
+  },
+  {
+    "id": "w36",
+    "text": "what",
+    "start": 12.16,
+    "end": 12.4
+  },
+  {
+    "id": "w37",
+    "text": "makes",
+    "start": 12.4,
+    "end": 12.64
+  },
+  {
+    "id": "w38",
+    "text": "it",
+    "start": 12.64,
+    "end": 12.8
+  },
+  {
+    "id": "w39",
+    "text": "feel",
+    "start": 12.8,
+    "end": 13.04
+  },
+  {
+    "id": "w40",
+    "text": "riskier",
+    "start": 13.04,
+    "end": 13.6
+  },
+  {
+    "id": "w41",
+    "text": "than",
+    "start": 13.6,
+    "end": 13.76
+  },
+  {
+    "id": "w42",
+    "text": "it",
+    "start": 13.76,
+    "end": 13.92
+  },
+  {
+    "id": "w43",
+    "text": "is.",
+    "start": 13.92,
+    "end": 14.16
+  }
+]

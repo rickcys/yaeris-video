@@ -1,0 +1,110 @@
+[
+  {
+    "id": "w0",
+    "text": "There",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "really",
+    "start": 0.24,
+    "end": 0.48
+  },
+  {
+    "id": "w2",
+    "text": "isn't",
+    "start": 0.48,
+    "end": 0.72
+  },
+  {
+    "id": "w3",
+    "text": "much",
+    "start": 0.72,
+    "end": 0.88
+  },
+  {
+    "id": "w4",
+    "text": "of",
+    "start": 0.88,
+    "end": 1.04
+  },
+  {
+    "id": "w5",
+    "text": "one",
+    "start": 1.04,
+    "end": 1.28
+  },
+  {
+    "id": "w6",
+    "text": "free,",
+    "start": 1.36,
+    "end": 2
+  },
+  {
+    "id": "w7",
+    "text": "no",
+    "start": 2,
+    "end": 2.24
+  },
+  {
+    "id": "w8",
+    "text": "expiration,",
+    "start": 2.24,
+    "end": 3.28
+  },
+  {
+    "id": "w9",
+    "text": "a",
+    "start": 3.28,
+    "end": 3.44
+  },
+  {
+    "id": "w10",
+    "text": "few",
+    "start": 3.44,
+    "end": 3.6
+  },
+  {
+    "id": "w11",
+    "text": "minutes",
+    "start": 3.6,
+    "end": 3.92
+  },
+  {
+    "id": "w12",
+    "text": "to",
+    "start": 3.92,
+    "end": 4.08
+  },
+  {
+    "id": "w13",
+    "text": "fill",
+    "start": 4.08,
+    "end": 4.32
+  },
+  {
+    "id": "w14",
+    "text": "in",
+    "start": 4.32,
+    "end": 4.48
+  },
+  {
+    "id": "w15",
+    "text": "the",
+    "start": 4.48,
+    "end": 4.64
+  },
+  {
+    "id": "w16",
+    "text": "required",
+    "start": 4.64,
+    "end": 5.04
+  },
+  {
+    "id": "w17",
+    "text": "fields.",
+    "start": 5.04,
+    "end": 5.6
+  }
+]

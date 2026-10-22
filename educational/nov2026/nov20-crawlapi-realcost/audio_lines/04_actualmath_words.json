@@ -1,0 +1,152 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "actual",
+    "start": 0.24,
+    "end": 0.56
+  },
+  {
+    "id": "w2",
+    "text": "math",
+    "start": 0.56,
+    "end": 1.04
+  },
+  {
+    "id": "w3",
+    "text": "two",
+    "start": 1.28,
+    "end": 1.44
+  },
+  {
+    "id": "w4",
+    "text": "credits,",
+    "start": 1.6,
+    "end": 2.24
+  },
+  {
+    "id": "w5",
+    "text": "two",
+    "start": 2.24,
+    "end": 2.32
+  },
+  {
+    "id": "w6",
+    "text": "cents",
+    "start": 2.48,
+    "end": 2.8
+  },
+  {
+    "id": "w7",
+    "text": "per",
+    "start": 2.88,
+    "end": 3.04
+  },
+  {
+    "id": "w8",
+    "text": "crawl,",
+    "start": 3.04,
+    "end": 3.68
+  },
+  {
+    "id": "w9",
+    "text": "and",
+    "start": 3.68,
+    "end": 3.84
+  },
+  {
+    "id": "w10",
+    "text": "that",
+    "start": 3.84,
+    "end": 4.08
+  },
+  {
+    "id": "w11",
+    "text": "covers",
+    "start": 4.08,
+    "end": 4.48
+  },
+  {
+    "id": "w12",
+    "text": "everything,",
+    "start": 4.48,
+    "end": 5.2
+  },
+  {
+    "id": "w13",
+    "text": "including",
+    "start": 5.2,
+    "end": 5.76
+  },
+  {
+    "id": "w14",
+    "text": "proxy",
+    "start": 5.76,
+    "end": 6.32
+  },
+  {
+    "id": "w15",
+    "text": "rotation",
+    "start": 6.32,
+    "end": 6.88
+  },
+  {
+    "id": "w16",
+    "text": "and",
+    "start": 6.88,
+    "end": 7.04
+  },
+  {
+    "id": "w17",
+    "text": "headless",
+    "start": 7.04,
+    "end": 7.6
+  },
+  {
+    "id": "w18",
+    "text": "browser",
+    "start": 7.6,
+    "end": 8.16
+  },
+  {
+    "id": "w19",
+    "text": "escalation",
+    "start": 8.16,
+    "end": 8.8
+  },
+  {
+    "id": "w20",
+    "text": "when",
+    "start": 8.8,
+    "end": 9.04
+  },
+  {
+    "id": "w21",
+    "text": "a",
+    "start": 9.04,
+    "end": 9.12
+  },
+  {
+    "id": "w22",
+    "text": "page",
+    "start": 9.12,
+    "end": 9.44
+  },
+  {
+    "id": "w23",
+    "text": "needs",
+    "start": 9.44,
+    "end": 9.68
+  },
+  {
+    "id": "w24",
+    "text": "it.",
+    "start": 9.68,
+    "end": 9.92
+  }
+]

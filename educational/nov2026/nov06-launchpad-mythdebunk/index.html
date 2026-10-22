@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0E0E1F; }
+      #root { width: 100%; height: 100%; position: relative; font-family: Inter, sans-serif; background: #0E0E1F; }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 150px 90px; }
+
+      .eyebrow { font-family: 'Space Mono', monospace; font-size: 27px; letter-spacing: 0.16em; color: #7FCBF0; text-transform: uppercase; margin-bottom: 22px; opacity: 0; }
+      .headline { font-family: Outfit, sans-serif; font-weight: 900; font-size: 70px; line-height: 1.14; color: #FBFBF8; letter-spacing: -0.01em; opacity: 0; }
+      .sub-line { font-family: Inter, sans-serif; font-size: 32px; line-height: 1.5; color: #A9A9BE; margin-top: 28px; opacity: 0; max-width: 860px; }
+      .source-tag { position: absolute; left: 90px; bottom: 90px; font-family: 'Space Mono', monospace; font-size: 21px; letter-spacing: 0.06em; color: #7A7A8F; opacity: 0; max-width: 700px; line-height: 1.5; }
+
+      /* Hook */
+      .hook-wrap { align-items: center; justify-content: center; text-align: center; }
+      .hook-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 60px; line-height: 1.2; color: #FBFBF8; letter-spacing: -0.01em; opacity: 0; }
+      .hook-text.second { font-size: 50px; color: #A9A9BE; font-weight: 700; margin-top: 44px; }
+
+      /* Mechanism setup (text-only beat) */
+      .mech-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+      /* Chip flows (fear / reality / grounding) */
+      .chip-flow-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 26px; align-items: stretch; }
+      .chip { display: flex; align-items: center; gap: 20px; border-radius: 20px; padding: 26px 40px; opacity: 0; }
+      .chip-1 { background: rgba(155,111,214,0.14); border: 3px solid #9B6FD6; }
+      .chip-2 { background: rgba(27,127,168,0.16); border: 3px solid #1B7FA8; }
+      .chip-3 { background: rgba(37,211,102,0.14); border: 3px solid #25D366; }
+      .chip-muted { background: rgba(169,169,190,0.07); border: 3px solid #4F4F63; }
+      .chip-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 33px; color: #F4F4F5; }
+      .chip-muted .chip-text { color: #C7C7D6; }
+      .chip-tail { margin-top: 10px; font-family: Inter, sans-serif; font-size: 28px; color: #A9A9BE; text-align: center; opacity: 0; }
+
+      /* The test: two-card comparison */
+      .test-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 44px; }
+      .test-cards { display: flex; gap: 28px; }
+      .test-card { flex: 1; border-radius: 24px; padding: 48px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; opacity: 0; }
+      .test-card.a { background: rgba(169,169,190,0.07); border: 3px solid #4F4F63; }
+      .test-card.b { background: rgba(37,211,102,0.14); border: 3px solid #25D366; }
+      .test-card-label { font-family: 'Space Mono', monospace; font-size: 22px; letter-spacing: 0.08em; text-transform: uppercase; color: #A9A9BE; }
+      .test-card-value { font-family: Outfit, sans-serif; font-weight: 900; font-size: 54px; color: #F4F4F5; line-height: 1.1; }
+      .test-card.b .test-card-value { color: #25D366; }
+      .test-card-sub { font-family: Inter, sans-serif; font-size: 24px; color: #A9A9BE; }
+
+      /* Closing / reframe */
+      .closing-wrap { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
+      .closing-text { font-family: Outfit, sans-serif; font-weight: 800; font-size: 64px; line-height: 1.24; color: #F4F4F5; opacity: 0; }
+      .closing-text .accent { color: #9B6FD6; }
+
+      /* Follow CTA */
+      .follow-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .follow-label { font-family: Outfit, sans-serif; font-weight: 900; font-size: 96px; color: #FBFBF8; line-height: 1.05; opacity: 0; }
+      .follow-sub { font-family: Inter, sans-serif; font-size: 32px; color: #A9A9BE; line-height: 1.5; max-width: 780px; opacity: 0; }
+      .follow-tag { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #25D366; text-transform: uppercase; margin-top: 12px; opacity: 0; }
+      .follow-chevron { font-size: 60px; color: #7FCBF0; opacity: 0; margin-top: 10px; }
+
+      /* ---- captions (matches Brand Kit caption-pill spec) ---- */
+      .caption-pill {
+        position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%);
+        background: rgba(10,9,16,0.86); color: #fff; font-family: Inter, sans-serif; font-weight: 500;
+        font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%;
+        text-align: center; line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="79.229"
+      data-width="1080"
+      data-height="1920"
+    >
+      <audio id="a1" class="clip" data-start="0" data-duration="6.272" data-track-index="1" src="audio_lines/01_hook.wav"></audio>
+      <audio id="a2" class="clip" data-start="6.472" data-duration="7.787" data-track-index="1" src="audio_lines/02_mechanism_setup.wav"></audio>
+      <audio id="a3" class="clip" data-start="14.459" data-duration="7.104" data-track-index="1" src="audio_lines/03_fear.wav"></audio>
+      <audio id="a4" class="clip" data-start="21.763" data-duration="11.989" data-track-index="1" src="audio_lines/04_reality.wav"></audio>
+      <audio id="a5" class="clip" data-start="33.952" data-duration="16.256" data-track-index="1" src="audio_lines/05_thetest.wav"></audio>
+      <audio id="a6" class="clip" data-start="50.408" data-duration="15.168" data-track-index="1" src="audio_lines/06_grounding.wav"></audio>
+      <audio id="a7" class="clip" data-start="65.776" data-duration="7.253" data-track-index="1" src="audio_lines/07_reframe.wav"></audio>
+      <audio id="a8" class="clip" data-start="73.229" data-duration="2.091" data-track-index="1" src="audio_lines/08_followcta.wav"></audio>
+
+      <!-- Beat 1: Hook, 0 - 6.272s -->
+      <div class="beat hook-wrap clip" id="beat1" data-start="0" data-duration="6.272" data-track-index="0">
+        <div class="eyebrow" id="b1-eyebrow" style="opacity:1">Pricing Myth</div>
+        <div class="hook-text" id="b1-text1">&ldquo;Usage-based pricing&rdquo; sounds like a trap</div>
+        <div class="hook-text second" id="b1-text2">right up until you actually check your own numbers.</div>
+      </div>
+
+      <!-- Beat 2: Mechanism setup, 6.472 - 14.259s -->
+      <div class="beat clip" id="beat2" data-start="6.472" data-duration="7.787" data-track-index="0">
+        <div class="eyebrow" id="b2-eyebrow">The Real Question</div>
+        <div class="mech-wrap">
+          <div class="headline" id="b2-headline">Two fears.<br />Only one is real.</div>
+          <div class="sub-line" id="b2-sub">Only one of them matches how this<br />pricing actually works.</div>
+        </div>
+      </div>
+
+      <!-- Beat 3: The Fear (Mechanism A), 14.459 - 21.563s -->
+      <div class="beat clip" id="beat3" data-start="14.459" data-duration="7.104" data-track-index="0">
+        <div class="eyebrow" id="b3-eyebrow">The Fear</div>
+        <div class="headline" id="b3-headline">No ceiling.<br />No warning.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-muted" id="b3-chip1"><div class="chip-text">Metered billing, no ceiling</div></div>
+          <div class="chip chip-muted" id="b3-chip2"><div class="chip-text">Surprise invoice at month's end</div></div>
+          <div class="chip chip-muted" id="b3-chip3"><div class="chip-text">No way to predict it in advance</div></div>
+          <div class="chip-tail" id="b3-tail">That's the story everyone already believes.</div>
+        </div>
+      </div>
+
+      <!-- Beat 4: The Reality (Mechanism B), 21.763 - 33.752s -->
+      <div class="beat clip" id="beat4" data-start="21.763" data-duration="11.989" data-track-index="0">
+        <div class="eyebrow" id="b4-eyebrow">The Reality</div>
+        <div class="headline" id="b4-headline">Flat tiers.<br />Stated upfront.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-3" id="b4-chip1"><div class="chip-text">Flat monthly tiers</div></div>
+          <div class="chip chip-3" id="b4-chip2"><div class="chip-text">Real usage allowance included</div></div>
+          <div class="chip chip-3" id="b4-chip3"><div class="chip-text">Overage rate stated upfront, not hidden</div></div>
+        </div>
+      </div>
+
+      <!-- Beat 5: The test, 33.952 - 50.208s -->
+      <div class="beat clip" id="beat5" data-start="33.952" data-duration="16.256" data-track-index="0">
+        <div class="eyebrow" id="b5-eyebrow">The Test</div>
+        <div class="headline" id="b5-headline">Check your own numbers<br />before judging the price.</div>
+        <div class="test-wrap">
+          <div class="test-cards">
+            <div class="test-card a" id="b5-carda">
+              <div class="test-card-label">Most Teams</div>
+              <div class="test-card-value">Don't<br />Know</div>
+              <div class="test-card-sub">their monthly usage at all</div>
+            </div>
+            <div class="test-card b" id="b5-cardb">
+              <div class="test-card-label">The Fix</div>
+              <div class="test-card-value">Check It</div>
+              <div class="test-card-sub">a few minutes, before you judge</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beat 6: Grounding -- Launchpad, 50.408 - 65.576s -->
+      <div class="beat clip" id="beat6" data-start="50.408" data-duration="15.168" data-track-index="0">
+        <div class="eyebrow" id="b6-eyebrow">Launchpad</div>
+        <div class="headline" id="b6-headline">Built with flat,<br />predictable tiers.</div>
+        <div class="chip-flow-wrap" style="gap:20px">
+          <div class="chip chip-1" id="b6-chip1"><div class="chip-text">Free Personal: 100 build-min + 10GB</div></div>
+          <div class="chip chip-2" id="b6-chip2"><div class="chip-text">Flat Pro &amp; Team tiers</div></div>
+          <div class="chip chip-1" id="b6-chip3"><div class="chip-text">Bring your own database</div></div>
+          <div class="chip chip-2" id="b6-chip4"><div class="chip-text">Hosted in Singapore</div></div>
+        </div>
+      </div>
+
+      <!-- Beat 7: Reframe, 65.776 - 73.029s -->
+      <div class="beat closing-wrap clip" id="beat7" data-start="65.776" data-duration="7.253" data-track-index="0">
+        <div class="closing-text" id="b7-text">The real risk was never usage-based pricing. <span class="accent">It's not knowing your own usage first.</span></div>
+      </div>
+
+      <!-- Beat 8: Follow CTA, 73.229 - 79.229s -->
+      <div class="beat follow-wrap clip" id="beat8" data-start="73.229" data-duration="6.0" data-track-index="0">
+        <div class="eyebrow" id="b8-eyebrow">Before You Go</div>
+        <div class="follow-label" id="b8-label">Follow for<br />More</div>
+        <div class="follow-sub" id="b8-sub">More of this kind of content &mdash; real, fact-checked walkthroughs on hosting, lead-gen &amp; dev tooling</div>
+        <div class="follow-tag" id="b8-tag">New video every day</div>
+        <div class="follow-chevron" id="b8-chevron">&#8593;</div>
+      </div>
+
+      <!-- ===== CAPTIONS (real word-level timestamps via Parakeet transcription) ===== -->
+      <div class="caption-pill clip" id="cap0" data-start="0" data-duration="2.16" data-track-index="5">Usage based pricing sounds like</div>
+      <div class="caption-pill clip" id="cap1" data-start="2.16" data-duration="1.68" data-track-index="5">a trap right up until</div>
+      <div class="caption-pill clip" id="cap2" data-start="3.84" data-duration="1.2" data-track-index="5">you actually sit down and</div>
+      <div class="caption-pill clip" id="cap3" data-start="5.04" data-duration="1.12" data-track-index="5">check your own numbers.</div>
+      <div class="caption-pill clip" id="cap4" data-start="6.472" data-duration="1.36" data-track-index="5">There are two fundamentally different</div>
+      <div class="caption-pill clip" id="cap5" data-start="7.832" data-duration="1.76" data-track-index="5">fears people bring into that</div>
+      <div class="caption-pill clip" id="cap6" data-start="9.592" data-duration="1.84" data-track-index="5">conversation, and only one of</div>
+      <div class="caption-pill clip" id="cap7" data-start="11.432" data-duration="1.36" data-track-index="5">them matches how this pricing</div>
+      <div class="caption-pill clip" id="cap8" data-start="12.792" data-duration="1.36" data-track-index="5">actually works.</div>
+      <div class="caption-pill clip" id="cap9" data-start="14.459" data-duration="1.92" data-track-index="5">The fear, metered billing with</div>
+      <div class="caption-pill clip" id="cap10" data-start="16.379" data-duration="2.08" data-track-index="5">no ceiling, a surprise invoice</div>
+      <div class="caption-pill clip" id="cap11" data-start="18.459" data-duration="1.2" data-track-index="5">at the end of the month,</div>
+      <div class="caption-pill clip" id="cap12" data-start="19.659" data-duration="1.28" data-track-index="5">no way to predict it in</div>
+      <div class="caption-pill clip" id="cap13" data-start="20.939" data-duration="0.48" data-track-index="5">advance.</div>
+      <div class="caption-pill clip" id="cap14" data-start="21.763" data-duration="1.36" data-track-index="5">The reality, at least for</div>
+      <div class="caption-pill clip" id="cap15" data-start="23.123" data-duration="1.68" data-track-index="5">a host like this, flat</div>
+      <div class="caption-pill clip" id="cap16" data-start="24.803" data-duration="2.4" data-track-index="5">monthly tiers, each one including</div>
+      <div class="caption-pill clip" id="cap17" data-start="27.203" data-duration="1.76" data-track-index="5">a real usage allowance, with</div>
+      <div class="caption-pill clip" id="cap18" data-start="28.963" data-duration="1.28" data-track-index="5">the rate for anything beyond</div>
+      <div class="caption-pill clip" id="cap19" data-start="30.243" data-duration="2.16" data-track-index="5">that stated upfront, not hidden</div>
+      <div class="caption-pill clip" id="cap20" data-start="32.403" data-duration="1.2" data-track-index="5">until the bill arrives.</div>
+      <div class="caption-pill clip" id="cap21" data-start="33.952" data-duration="1.6" data-track-index="5">The tell is simple. Before</div>
+      <div class="caption-pill clip" id="cap22" data-start="35.552" data-duration="2.0" data-track-index="5">judging the pricing as risky,</div>
+      <div class="caption-pill clip" id="cap23" data-start="37.552" data-duration="1.52" data-track-index="5">actually check your own build</div>
+      <div class="caption-pill clip" id="cap24" data-start="39.072" data-duration="1.68" data-track-index="5">minute and bandwidth numbers for</div>
+      <div class="caption-pill clip" id="cap25" data-start="40.752" data-duration="1.28" data-track-index="5">a typical month.</div>
+      <div class="caption-pill clip" id="cap26" data-start="42.032" data-duration="1.76" data-track-index="5">Most small projects already know</div>
+      <div class="caption-pill clip" id="cap27" data-start="43.792" data-duration="2.08" data-track-index="5">almost nothing about that number,</div>
+      <div class="caption-pill clip" id="cap28" data-start="45.872" data-duration="1.28" data-track-index="5">which is usually the real</div>
+      <div class="caption-pill clip" id="cap29" data-start="47.152" data-duration="1.52" data-track-index="5">source of the fear, not</div>
+      <div class="caption-pill clip" id="cap30" data-start="48.672" data-duration="1.44" data-track-index="5">the pricing model itself.</div>
+      <div class="caption-pill clip" id="cap31" data-start="50.408" data-duration="1.6" data-track-index="5">This is the category Launchpad</div>
+      <div class="caption-pill clip" id="cap32" data-start="52.008" data-duration="1.36" data-track-index="5">is built into a free</div>
+      <div class="caption-pill clip" id="cap33" data-start="53.368" data-duration="1.68" data-track-index="5">personal plan with 100 build</div>
+      <div class="caption-pill clip" id="cap34" data-start="55.048" data-duration="2.88" data-track-index="5">minutes and 10 gigabytes included.</div>
+      <div class="caption-pill clip" id="cap35" data-start="57.928" data-duration="1.68" data-track-index="5">Flat Pro and Team tiers</div>
+      <div class="caption-pill clip" id="cap36" data-start="59.608" data-duration="1.68" data-track-index="5">beyond that, bring your own</div>
+      <div class="caption-pill clip" id="cap37" data-start="61.288" data-duration="2.32" data-track-index="5">database, hosted in Singapore for</div>
+      <div class="caption-pill clip" id="cap38" data-start="63.608" data-duration="1.92" data-track-index="5">low Southeast Asia latency.</div>
+      <div class="caption-pill clip" id="cap39" data-start="65.776" data-duration="1.68" data-track-index="5">The actual risk was never</div>
+      <div class="caption-pill clip" id="cap40" data-start="67.456" data-duration="1.68" data-track-index="5">usage based pricing.</div>
+      <div class="caption-pill clip" id="cap41" data-start="69.136" data-duration="1.76" data-track-index="5">It's making a pricing decision</div>
+      <div class="caption-pill clip" id="cap42" data-start="70.896" data-duration="1.6" data-track-index="5">without knowing your own usage</div>
+      <div class="caption-pill clip" id="cap43" data-start="72.496" data-duration="0.4" data-track-index="5">first.</div>
+      <div class="caption-pill clip" id="cap44" data-start="73.229" data-duration="1.28" data-track-index="5">Follow for more of this kind</div>
+      <div class="caption-pill clip" id="cap45" data-start="74.509" data-duration="0.72" data-track-index="5">of content.</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Beat 1: Hook
+      tl.fromTo("#b1-text1", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.15);
+      tl.fromTo("#b1-text2", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 2.95);
+      tl.to("#beat1", { opacity: 0, duration: 0.2 }, 6.057);
+
+      // Beat 2: Mechanism setup
+      tl.fromTo("#b2-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 6.657);
+      tl.fromTo("#b2-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 6.857);
+      tl.fromTo("#b2-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4 }, 8.957);
+      tl.to("#beat2", { opacity: 0, duration: 0.2 }, 14.059);
+
+      // Beat 3: The Fear
+      tl.fromTo("#b3-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 14.644);
+      tl.fromTo("#b3-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 14.844);
+      tl.fromTo("#b3-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 16.059);
+      tl.fromTo("#b3-chip2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 17.459);
+      tl.fromTo("#b3-chip3", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 19.359);
+      tl.fromTo("#b3-tail", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 20.759);
+      tl.to("#beat3", { opacity: 0, duration: 0.2 }, 21.363);
+
+      // Beat 4: The Reality
+      tl.fromTo("#b4-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 21.948);
+      tl.fromTo("#b4-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 22.148);
+      tl.fromTo("#b4-chip1", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 24.663);
+      tl.fromTo("#b4-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 26.663);
+      tl.fromTo("#b4-chip3", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 28.923);
+      tl.to("#beat4", { opacity: 0, duration: 0.2 }, 33.552);
+
+      // Beat 5: The test
+      tl.fromTo("#b5-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 34.137);
+      tl.fromTo("#b5-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 34.337);
+      tl.fromTo("#b5-carda", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4 }, 42.252);
+      tl.fromTo("#b5-cardb", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.6)" }, 47.752);
+      tl.to("#beat5", { opacity: 0, duration: 0.2 }, 50.008);
+
+      // Beat 6: Grounding -- Launchpad
+      tl.fromTo("#b6-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 50.593);
+      tl.fromTo("#b6-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 50.793);
+      tl.fromTo("#b6-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 52.708);
+      tl.fromTo("#b6-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 58.008);
+      tl.fromTo("#b6-chip3", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 60.408);
+      tl.fromTo("#b6-chip4", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 62.308);
+      tl.to("#beat6", { opacity: 0, duration: 0.2 }, 65.376);
+
+      // Beat 7: Reframe
+      tl.fromTo("#b7-text", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 66.076);
+      tl.to("#beat7", { opacity: 0, duration: 0.2 }, 72.829);
+
+      // Beat 8: Follow CTA
+      tl.fromTo("#b8-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 73.532);
+      tl.fromTo("#b8-label", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 73.832);
+      tl.fromTo("#b8-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 74.692);
+      tl.fromTo("#b8-tag", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 75.292);
+      tl.fromTo("#b8-chevron", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, 75.692);
+      tl.to("#b8-chevron", { y: -14, duration: 0.6, repeat: -1, yoyo: true, ease: "sine.inOut" }, 76.092);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

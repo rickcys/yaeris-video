@@ -1,0 +1,116 @@
+[
+  {
+    "id": "w0",
+    "text": "Same",
+    "start": 0.0,
+    "end": 0.3
+  },
+  {
+    "id": "w1",
+    "text": "hours",
+    "start": 0.3,
+    "end": 0.8
+  },
+  {
+    "id": "w2",
+    "text": "spent",
+    "start": 0.8,
+    "end": 1.18
+  },
+  {
+    "id": "w3",
+    "text": "on",
+    "start": 1.18,
+    "end": 1.4
+  },
+  {
+    "id": "w4",
+    "text": "lead",
+    "start": 1.4,
+    "end": 1.58
+  },
+  {
+    "id": "w5",
+    "text": "gen",
+    "start": 1.58,
+    "end": 1.92
+  },
+  {
+    "id": "w6",
+    "text": "before",
+    "start": 1.92,
+    "end": 2.44
+  },
+  {
+    "id": "w7",
+    "text": "and",
+    "start": 2.44,
+    "end": 2.66
+  },
+  {
+    "id": "w8",
+    "text": "after",
+    "start": 2.66,
+    "end": 2.92
+  },
+  {
+    "id": "w9",
+    "text": "switching.",
+    "start": 2.92,
+    "end": 3.36
+  },
+  {
+    "id": "w10",
+    "text": "Wildly",
+    "start": 4.28,
+    "end": 4.66
+  },
+  {
+    "id": "w11",
+    "text": "different",
+    "start": 4.66,
+    "end": 4.88
+  },
+  {
+    "id": "w12",
+    "text": "amount",
+    "start": 4.88,
+    "end": 5.24
+  },
+  {
+    "id": "w13",
+    "text": "of",
+    "start": 5.24,
+    "end": 5.4
+  },
+  {
+    "id": "w14",
+    "text": "actual",
+    "start": 5.4,
+    "end": 5.8
+  },
+  {
+    "id": "w15",
+    "text": "outreach",
+    "start": 5.8,
+    "end": 6.2
+  },
+  {
+    "id": "w16",
+    "text": "completed",
+    "start": 6.2,
+    "end": 6.72
+  },
+  {
+    "id": "w17",
+    "text": "in",
+    "start": 6.72,
+    "end": 7.02
+  },
+  {
+    "id": "w18",
+    "text": "them.",
+    "start": 7.02,
+    "end": 7.16
+  }
+]

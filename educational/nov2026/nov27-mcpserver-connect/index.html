@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0E0E1F; }
+      #root { width: 100%; height: 100%; position: relative; font-family: Inter, sans-serif; background: #0E0E1F; }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 140px 90px; }
+
+      .eyebrow { font-family: 'Space Mono', monospace; font-size: 27px; letter-spacing: 0.16em; color: #7FCBF0; text-transform: uppercase; margin-bottom: 22px; opacity: 0; }
+      .headline { font-family: Outfit, sans-serif; font-weight: 900; font-size: 68px; line-height: 1.12; color: #F4F4F5; letter-spacing: -0.01em; opacity: 0; }
+
+      /* Beat 1: hook */
+      .hook-wrap { align-items: center; justify-content: center; text-align: center; }
+      .hook-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 68px; line-height: 1.18; color: #F4F4F5; letter-spacing: -0.01em; }
+      .hook-accent { color: #9B6FD6; }
+
+      /* Beat 2: two fork shapes */
+      .b2-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 64px; }
+      .fork-row { display: flex; flex-direction: column; gap: 32px; align-items: center; }
+      .fork-chip { border-radius: 24px; padding: 40px 56px; width: 100%; max-width: 820px; text-align: center; opacity: 0; }
+      .fork-chip.a { background: rgba(169,169,190,0.10); border: 3px solid rgba(169,169,190,0.5); }
+      .fork-chip.b { background: rgba(155,111,214,0.10); border: 3px solid rgba(155,111,214,0.5); }
+      .fork-chip-label { font-family: Outfit, sans-serif; font-weight: 800; font-size: 40px; color: #F4F4F5; }
+      .fork-vs { font-family: 'Space Mono', monospace; font-size: 30px; color: #6A6A82; letter-spacing: 0.1em; opacity: 0; }
+
+      /* Beat 3/4: mechanism rows */
+      .ptp-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+      .ptp-row { display: flex; align-items: center; gap: 24px; border-radius: 18px; padding: 30px 36px; opacity: 0; }
+      .ptp-row.not { background: rgba(169,169,190,0.08); border: 2px solid rgba(169,169,190,0.4); }
+      .ptp-row.yes { background: rgba(155,111,214,0.08); border: 2px solid rgba(155,111,214,0.4); }
+      .ptp-dot { width: 20px; height: 20px; border-radius: 50%; flex-shrink: 0; }
+      .ptp-dot.not { background: #A9A9BE; }
+      .ptp-dot.yes { background: #9B6FD6; }
+      .ptp-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 32px; color: #F4F4F5; }
+      .ptp-col { display: flex; flex-direction: column; }
+      .ptp-tally { font-family: 'Space Mono', monospace; font-size: 26px; text-align: center; opacity: 0; margin-top: 10px; }
+      .ptp-tally.not { color: #A9A9BE; }
+      .ptp-tally.yes { color: #C9A9EC; }
+
+      /* Beat 5: the test */
+      .test-body { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .q-row { display: flex; align-items: center; gap: 24px; background: rgba(27,127,168,0.08); border: 2px solid rgba(27,127,168,0.4); border-radius: 18px; padding: 28px 36px; width: 100%; max-width: 860px; opacity: 0; }
+      .q-num { width: 54px; height: 54px; border-radius: 50%; background: #1B7FA8; flex-shrink: 0; display: flex; align-items: center; justify-content: center; font-family: 'Space Mono', monospace; font-weight: 700; font-size: 26px; color: #F4F4F5; }
+      .q-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 32px; color: #F4F4F5; text-align: left; line-height: 1.25; }
+
+      /* Beat 6: grounding */
+      .hero-stat-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; }
+      .hero-num { font-family: Outfit, sans-serif; font-weight: 900; font-size: 190px; color: #1B7FA8; line-height: 1; opacity: 0; }
+      .hero-label { font-family: Outfit, sans-serif; font-weight: 700; font-size: 42px; color: #F4F4F5; text-transform: uppercase; opacity: 0; }
+      .hero-sub { font-family: Inter, sans-serif; font-size: 28px; color: #A9A9BE; opacity: 0; max-width: 820px; }
+      .chip-row { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 44px; }
+      .g-chip { background: rgba(27,127,168,0.14); border: 2px solid #1B7FA8; border-radius: 999px; padding: 20px 32px; font-family: 'Space Mono', monospace; font-size: 26px; color: #7FCBF0; opacity: 0; }
+      .g-chip.alt { background: rgba(37,211,102,0.12); border-color: #25D366; color: #8FE8B4; }
+
+      /* Beat 7: reframe / closing */
+      .closing-wrap { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
+      .closing-text { font-family: Outfit, sans-serif; font-weight: 800; font-size: 60px; line-height: 1.28; color: #F4F4F5; opacity: 0; }
+      .closing-text .accent { color: #9B6FD6; }
+
+      /* End card */
+      .end-card { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; text-align: center; }
+      .end-brand { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #1B7FA8; text-transform: uppercase; opacity: 0; }
+      .end-sub { font-family: Inter, sans-serif; font-size: 26px; color: #8A8AA0; opacity: 0; }
+
+      /* Follow CTA */
+      .follow-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .follow-label { font-family: Outfit, sans-serif; font-weight: 900; font-size: 96px; color: #F4F4F5; line-height: 1.05; opacity: 0; }
+      .follow-sub { font-family: Inter, sans-serif; font-size: 32px; color: #A9A9BE; line-height: 1.5; max-width: 780px; opacity: 0; }
+      .follow-tag { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #25D366; text-transform: uppercase; margin-top: 12px; opacity: 0; }
+      .follow-chevron { font-size: 60px; color: #7FCBF0; opacity: 0; margin-top: 10px; }
+
+      /* ---- captions (matches Brand Kit caption-pill spec) ---- */
+      .caption-pill {
+        position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%);
+        background: rgba(10,9,16,0.86); color: #fff; font-family: Inter, sans-serif; font-weight: 500;
+        font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%;
+        text-align: center; line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="68.801334"
+      data-width="1080"
+      data-height="1920"
+    >
+      <audio id="a1" class="clip" data-start="0.000000" data-duration="8.256000" data-track-index="1" src="audio_lines/01_hook.wav"></audio>
+      <audio id="a2" class="clip" data-start="8.456000" data-duration="6.997333" data-track-index="1" src="audio_lines/02_twoassumptions.wav"></audio>
+      <audio id="a3" class="clip" data-start="15.653333" data-duration="5.141333" data-track-index="1" src="audio_lines/03_fear.wav"></audio>
+      <audio id="a4" class="clip" data-start="20.994667" data-duration="15.125333" data-track-index="1" src="audio_lines/04_pattern.wav"></audio>
+      <audio id="a5" class="clip" data-start="36.320000" data-duration="8.362667" data-track-index="1" src="audio_lines/05_test.wav"></audio>
+      <audio id="a6" class="clip" data-start="44.882667" data-duration="10.325333" data-track-index="1" src="audio_lines/06_grounding.wav"></audio>
+      <audio id="a7" class="clip" data-start="55.408000" data-duration="5.802667" data-track-index="1" src="audio_lines/07_reframe.wav"></audio>
+      <audio id="a8" class="clip" data-start="64.210667" data-duration="2.090667" data-track-index="1" src="audio_lines/08_follow.wav"></audio>
+
+      <!-- Beat 1: Hook -->
+      <div class="beat hook-wrap clip" id="beat1" data-start="0.000000" data-duration="8.256000" data-track-index="0">
+        <div class="eyebrow" id="b1-eyebrow" style="opacity:1">MCP Server</div>
+        <div class="hook-text" id="b1-text">Adopting MCP sounds like it means replacing the tool stack a team already runs. <span class="hook-accent">The actual marketplace tells a different story.</span></div>
+      </div>
+
+      <!-- Beat 2: Two fundamentally different assumptions -->
+      <div class="beat clip" id="beat2" data-start="8.456000" data-duration="6.997333" data-track-index="0">
+        <div class="eyebrow" id="b2-eyebrow">Only One Matches Reality</div>
+        <div class="headline" id="b2-headline">Two fundamentally different assumptions.</div>
+        <div class="b2-body">
+          <div class="fork-row">
+            <div class="fork-chip a" id="b2-chip-a"><div class="fork-chip-label">Replace Everything</div></div>
+            <div class="fork-vs" id="b2-vs">VS</div>
+            <div class="fork-chip b" id="b2-chip-b"><div class="fork-chip-label">Reuse What You Have</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beat 3: The fear -->
+      <div class="beat clip" id="beat3" data-start="15.653333" data-duration="5.141333" data-track-index="0">
+        <div class="eyebrow" id="b3-eyebrow">The Fear</div>
+        <div class="headline" id="b3-headline">New tools.<br />New accounts. Start over.</div>
+        <div class="ptp-body">
+          <div class="ptp-row not" id="b3-row1"><div class="ptp-dot not"></div><div class="ptp-col"><div class="ptp-text">New Tools To Learn</div></div></div>
+          <div class="ptp-row not" id="b3-row2"><div class="ptp-dot not"></div><div class="ptp-col"><div class="ptp-text">New Accounts To Create</div></div></div>
+          <div class="ptp-row not" id="b3-row3"><div class="ptp-dot not"></div><div class="ptp-col"><div class="ptp-text">Starting The Whole Stack Over</div></div></div>
+          <div class="ptp-tally not" id="b3-tally">&times; sounds like a rebuild</div>
+        </div>
+      </div>
+
+      <!-- Beat 4: The actual pattern -->
+      <div class="beat clip" id="beat4" data-start="20.994667" data-duration="15.125333" data-track-index="0">
+        <div class="eyebrow" id="b4-eyebrow">The Actual Pattern</div>
+        <div class="headline" id="b4-headline">134 tools.<br />Not hypothetical replacements.</div>
+        <div class="ptp-body">
+          <div class="ptp-row yes" id="b4-row1"><div class="ptp-dot yes"></div><div class="ptp-col"><div class="ptp-text">WordPress, WooCommerce, Webflow, ClickUp</div></div></div>
+          <div class="ptp-row yes" id="b4-row2"><div class="ptp-dot yes"></div><div class="ptp-col"><div class="ptp-text">The Exact Stack Teams Already Run</div></div></div>
+          <div class="ptp-tally yes" id="b4-tally">&check; already in the marketplace</div>
+        </div>
+      </div>
+
+      <!-- Beat 5: The test -->
+      <div class="beat clip" id="beat5" data-start="36.320000" data-duration="8.362667" data-track-index="0">
+        <div class="eyebrow" id="b5-eyebrow">The Test</div>
+        <div class="headline" id="b5-headline">Check before you assume.</div>
+        <div class="test-body">
+          <div class="q-row" id="b5-q1"><div class="q-num">1</div><div class="q-text">List the tools your<br />team runs today.</div></div>
+          <div class="q-row" id="b5-q2"><div class="q-num">2</div><div class="q-text">Search the marketplace<br />for each one.</div></div>
+          <div class="q-row" id="b5-q3"><div class="q-num">=</div><div class="q-text">If it's there, no new<br />account needed.</div></div>
+        </div>
+      </div>
+
+      <!-- Beat 6: Grounding -->
+      <div class="beat clip" id="beat6" data-start="44.882667" data-duration="10.325333" data-track-index="0">
+        <div class="eyebrow" id="b6-eyebrow">What's Actually In There</div>
+        <div class="hero-stat-wrap">
+          <div class="hero-num" id="b6-num">134</div>
+          <div class="hero-label" id="b6-label">Tools, One Marketplace</div>
+          <div class="hero-sub" id="b6-sub">WordPress, WooCommerce, Webflow and ClickUp are already in the catalog &mdash; each with its own OAuth 2.1 login</div>
+          <div class="chip-row" id="b6-chips">
+            <div class="g-chip alt" id="b6-chip1">OAuth 2.1 Per Tool</div>
+            <div class="g-chip" id="b6-chip2">Encrypted Credentials</div>
+            <div class="g-chip alt" id="b6-chip3">No Custom Integration Code</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beat 7: Reframe / closing -->
+      <div class="beat closing-wrap clip" id="beat7" data-start="55.408000" data-duration="5.802667" data-track-index="0">
+        <div class="closing-text" id="b7-text">This connects an agent to accounts your team already holds. <span class="accent">It was never asking you to open new ones.</span></div>
+      </div>
+
+      <!-- End card: unnarrated brand sign-off -->
+      <div class="beat end-card clip" id="endCard" data-start="61.410667" data-duration="2.600000" data-track-index="0">
+        <div class="end-brand" id="end-brand">MCP Server &middot; by Yaeris</div>
+        <div class="end-sub" id="end-sub">mcp.yaeris.com</div>
+      </div>
+
+      <!-- Beat 8: Follow CTA -->
+      <div class="beat follow-wrap clip" id="beat8" data-start="64.210667" data-duration="4.590667" data-track-index="0">
+        <div class="eyebrow" id="b8-eyebrow">Before You Go</div>
+        <div class="follow-label" id="b8-label">Follow for<br />More</div>
+        <div class="follow-sub" id="b8-sub">Real, fact-checked breakdowns on hosting, lead-gen &amp; dev tooling</div>
+        <div class="follow-tag" id="b8-tag">New video every day</div>
+        <div class="follow-chevron" id="b8-chevron">&#8593;</div>
+      </div>
+
+      <!-- Captions (real word-level timestamps via Parakeet transcription of audio_lines/*.wav) -->
+      <div class="caption-pill clip" id="cap0" data-start="0.000000" data-duration="2.000000" data-track-index="5">Adopting MCP sounds like</div>
+      <div class="caption-pill clip" id="cap1" data-start="2.000000" data-duration="1.040000" data-track-index="5">it means replacing the</div>
+      <div class="caption-pill clip" id="cap2" data-start="3.040000" data-duration="1.360000" data-track-index="5">tool stack a team</div>
+      <div class="caption-pill clip" id="cap3" data-start="4.560000" data-duration="0.880000" data-track-index="5">already runs.</div>
+      <div class="caption-pill clip" id="cap4" data-start="5.680000" data-duration="1.680000" data-track-index="5">The actual marketplace tells</div>
+      <div class="caption-pill clip" id="cap5" data-start="7.360000" data-duration="0.800000" data-track-index="5">a different story.</div>
+
+      <div class="caption-pill clip" id="cap6" data-start="8.456000" data-duration="1.440000" data-track-index="5">There are two fundamentally</div>
+      <div class="caption-pill clip" id="cap7" data-start="9.896000" data-duration="1.680000" data-track-index="5">different assumptions people bring</div>
+      <div class="caption-pill clip" id="cap8" data-start="11.576000" data-duration="1.280000" data-track-index="5">to this, and only one</div>
+      <div class="caption-pill clip" id="cap9" data-start="12.856000" data-duration="1.200000" data-track-index="5">of them matches what's</div>
+      <div class="caption-pill clip" id="cap10" data-start="14.056000" data-duration="1.360000" data-track-index="5">actually in the catalog.</div>
+
+      <div class="caption-pill clip" id="cap11" data-start="15.653333" data-duration="1.520000" data-track-index="5">The fear, new tools,</div>
+      <div class="caption-pill clip" id="cap12" data-start="17.173333" data-duration="1.920000" data-track-index="5">new accounts, effectively starting</div>
+      <div class="caption-pill clip" id="cap13" data-start="19.093333" data-duration="0.960000" data-track-index="5">the whole stack over</div>
+      <div class="caption-pill clip" id="cap14" data-start="20.133333" data-duration="0.640000" data-track-index="5">from scratch.</div>
+
+      <div class="caption-pill clip" id="cap15" data-start="20.994667" data-duration="1.680000" data-track-index="5">The actual pattern here.</div>
+      <div class="caption-pill clip" id="cap16" data-start="22.674667" data-duration="2.000000" data-track-index="5">The 134 tools in</div>
+      <div class="caption-pill clip" id="cap17" data-start="24.674667" data-duration="2.160000" data-track-index="5">MCP Server's marketplace aren't</div>
+      <div class="caption-pill clip" id="cap18" data-start="26.834667" data-duration="2.320000" data-track-index="5">hypothetical replacements. They include</div>
+      <div class="caption-pill clip" id="cap19" data-start="29.154667" data-duration="2.720000" data-track-index="5">WordPress, WooCommerce, Webflow,</div>
+      <div class="caption-pill clip" id="cap20" data-start="31.874667" data-duration="1.360000" data-track-index="5">ClickUp, and more</div>
+      <div class="caption-pill clip" id="cap21" data-start="33.234667" data-duration="1.280000" data-track-index="5">the exact stack a lot</div>
+      <div class="caption-pill clip" id="cap22" data-start="34.514667" data-duration="1.600000" data-track-index="5">of teams are already running.</div>
+
+      <div class="caption-pill clip" id="cap23" data-start="36.320000" data-duration="1.120000" data-track-index="5">The test is simple</div>
+      <div class="caption-pill clip" id="cap24" data-start="37.600000" data-duration="1.520000" data-track-index="5">check whether your team's</div>
+      <div class="caption-pill clip" id="cap25" data-start="39.120000" data-duration="1.760000" data-track-index="5">existing tools already show</div>
+      <div class="caption-pill clip" id="cap26" data-start="40.880000" data-duration="1.280000" data-track-index="5">up in that marketplace</div>
+      <div class="caption-pill clip" id="cap27" data-start="42.240000" data-duration="1.360000" data-track-index="5">before assuming you'd need</div>
+      <div class="caption-pill clip" id="cap28" data-start="43.600000" data-duration="0.960000" data-track-index="5">to replace anything.</div>
+
+      <div class="caption-pill clip" id="cap29" data-start="44.882667" data-duration="1.040000" data-track-index="5">Each one connects with</div>
+      <div class="caption-pill clip" id="cap30" data-start="45.922667" data-duration="2.080000" data-track-index="5">its own OAuth 2.1</div>
+      <div class="caption-pill clip" id="cap31" data-start="48.002667" data-duration="1.200000" data-track-index="5">login to the accounts</div>
+      <div class="caption-pill clip" id="cap32" data-start="49.362667" data-duration="1.200000" data-track-index="5">you already have,</div>
+      <div class="caption-pill clip" id="cap33" data-start="50.562667" data-duration="1.520000" data-track-index="5">encrypted credentials,</div>
+      <div class="caption-pill clip" id="cap34" data-start="52.322667" data-duration="1.680000" data-track-index="5">no custom integration code</div>
+      <div class="caption-pill clip" id="cap35" data-start="54.002667" data-duration="1.120000" data-track-index="5">written per connection.</div>
+
+      <div class="caption-pill clip" id="cap36" data-start="55.408000" data-duration="1.200000" data-track-index="5">This connects an agent</div>
+      <div class="caption-pill clip" id="cap37" data-start="56.608000" data-duration="1.200000" data-track-index="5">to accounts your team</div>
+      <div class="caption-pill clip" id="cap38" data-start="57.808000" data-duration="1.440000" data-track-index="5">already holds. It was</div>
+      <div class="caption-pill clip" id="cap39" data-start="59.248000" data-duration="1.040000" data-track-index="5">never asking you to</div>
+      <div class="caption-pill clip" id="cap40" data-start="60.288000" data-duration="0.800000" data-track-index="5">open new ones.</div>
+
+      <div class="caption-pill clip" id="cap41" data-start="64.210667" data-duration="0.960000" data-track-index="5">Follow for more of</div>
+      <div class="caption-pill clip" id="cap42" data-start="65.170667" data-duration="1.040000" data-track-index="5">this kind of content.</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Beat 1: Hook
+      tl.fromTo("#b1-text", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.150000);
+      tl.to("#beat1", { opacity: 0, duration: 0.2 }, 8.056000);
+
+      // Beat 2: Two fundamentally different assumptions
+      tl.fromTo("#b2-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 8.656000);
+      tl.fromTo("#b2-headline", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4 }, 8.856000);
+      tl.fromTo("#b2-chip-a", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.35 }, 9.456000);
+      tl.fromTo("#b2-vs", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 9.956000);
+      tl.fromTo("#b2-chip-b", { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.35 }, 10.256000);
+      tl.to("#beat2", { opacity: 0, duration: 0.2 }, 15.253333);
+
+      // Beat 3: The fear
+      tl.fromTo("#b3-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 15.853333);
+      tl.fromTo("#b3-headline", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4 }, 16.053333);
+      tl.fromTo("#b3-row1", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3 }, 16.653333);
+      tl.fromTo("#b3-row2", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3 }, 17.653333);
+      tl.fromTo("#b3-row3", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3 }, 18.653333);
+      tl.fromTo("#b3-tally", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 19.853333);
+      tl.to("#beat3", { opacity: 0, duration: 0.2 }, 20.594667);
+
+      // Beat 4: The actual pattern
+      tl.fromTo("#b4-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 21.194667);
+      tl.fromTo("#b4-headline", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4 }, 21.394667);
+      tl.fromTo("#b4-row1", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3 }, 28.954667);
+      tl.fromTo("#b4-row2", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3 }, 32.954667);
+      tl.fromTo("#b4-tally", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 34.714667);
+      tl.to("#beat4", { opacity: 0, duration: 0.2 }, 35.920000);
+
+      // Beat 5: The test
+      tl.fromTo("#b5-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 36.520000);
+      tl.fromTo("#b5-headline", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4 }, 36.720000);
+      tl.fromTo("#b5-q1", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 37.720000);
+      tl.fromTo("#b5-q2", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 40.720000);
+      tl.fromTo("#b5-q3", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.4 }, 43.120000);
+      tl.to("#beat5", { opacity: 0, duration: 0.2 }, 44.482667);
+
+      // Beat 6: Grounding
+      tl.fromTo("#b6-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 45.082667);
+      tl.fromTo("#b6-num", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2.2)" }, 45.332667);
+      tl.fromTo("#b6-label", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35 }, 45.732667);
+      tl.fromTo("#b6-sub", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 46.032667);
+      tl.fromTo("#b6-chip1", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3 }, 49.482667);
+      tl.fromTo("#b6-chip2", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3 }, 52.602667);
+      tl.fromTo("#b6-chip3", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3 }, 54.362667);
+      tl.to("#beat6", { opacity: 0, duration: 0.2 }, 54.907333);
+
+      // Beat 7: Reframe / closing
+      tl.fromTo("#b7-text", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 55.608000);
+      tl.to("#beat7", { opacity: 0, duration: 0.25 }, 60.960667);
+
+      // End card
+      tl.fromTo("#end-brand", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 61.610667);
+      tl.fromTo("#end-sub", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 61.960667);
+      tl.to("#endCard", { opacity: 0, duration: 0.2 }, 63.760667);
+
+      // Beat 8: Follow CTA
+      tl.fromTo("#b8-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 64.460667);
+      tl.fromTo("#b8-label", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 64.760667);
+      tl.fromTo("#b8-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 65.410667);
+      tl.fromTo("#b8-tag", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 65.810667);
+      tl.fromTo("#b8-chevron", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, 66.210667);
+      tl.to("#b8-chevron", { y: -14, duration: 0.6, repeat: -1, yoyo: true, ease: "sine.inOut" }, 66.610667);
+
+      // Captions: quick fade in per chunk (real word-level timestamps via Parakeet)
+      tl.fromTo("#cap0", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 0.000000);
+      tl.fromTo("#cap1", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 2.000000);
+      tl.fromTo("#cap2", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 3.040000);
+      tl.fromTo("#cap3", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 4.560000);
+      tl.fromTo("#cap4", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 5.680000);
+      tl.fromTo("#cap5", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 7.360000);
+      tl.fromTo("#cap6", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 8.456000);
+      tl.fromTo("#cap7", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 9.896000);
+      tl.fromTo("#cap8", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 11.576000);
+      tl.fromTo("#cap9", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 12.856000);
+      tl.fromTo("#cap10", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 14.056000);
+      tl.fromTo("#cap11", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 15.653333);
+      tl.fromTo("#cap12", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 17.173333);
+      tl.fromTo("#cap13", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 19.093333);
+      tl.fromTo("#cap14", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 20.133333);
+      tl.fromTo("#cap15", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 20.994667);
+      tl.fromTo("#cap16", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 22.674667);
+      tl.fromTo("#cap17", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 24.674667);
+      tl.fromTo("#cap18", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 26.834667);
+      tl.fromTo("#cap19", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 29.154667);
+      tl.fromTo("#cap20", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 31.874667);
+      tl.fromTo("#cap21", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 33.234667);
+      tl.fromTo("#cap22", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 34.514667);
+      tl.fromTo("#cap23", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 36.320000);
+      tl.fromTo("#cap24", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 37.600000);
+      tl.fromTo("#cap25", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 39.120000);
+      tl.fromTo("#cap26", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 40.880000);
+      tl.fromTo("#cap27", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 42.240000);
+      tl.fromTo("#cap28", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 43.600000);
+      tl.fromTo("#cap29", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 44.882667);
+      tl.fromTo("#cap30", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 45.922667);
+      tl.fromTo("#cap31", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 48.002667);
+      tl.fromTo("#cap32", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 49.362667);
+      tl.fromTo("#cap33", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 50.562667);
+      tl.fromTo("#cap34", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 52.322667);
+      tl.fromTo("#cap35", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 54.002667);
+      tl.fromTo("#cap36", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 55.408000);
+      tl.fromTo("#cap37", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 56.608000);
+      tl.fromTo("#cap38", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 57.808000);
+      tl.fromTo("#cap39", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 59.248000);
+      tl.fromTo("#cap40", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 60.288000);
+      tl.fromTo("#cap41", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 64.210667);
+      tl.fromTo("#cap42", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 65.170667);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

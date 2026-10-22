@@ -1,0 +1,74 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0.0,
+    "end": 0.12
+  },
+  {
+    "id": "w1",
+    "text": "hours",
+    "start": 0.12,
+    "end": 0.48
+  },
+  {
+    "id": "w2",
+    "text": "spent",
+    "start": 0.48,
+    "end": 0.82
+  },
+  {
+    "id": "w3",
+    "text": "didn't",
+    "start": 0.82,
+    "end": 1.1
+  },
+  {
+    "id": "w4",
+    "text": "really",
+    "start": 1.1,
+    "end": 1.28
+  },
+  {
+    "id": "w5",
+    "text": "change.",
+    "start": 1.28,
+    "end": 1.7
+  },
+  {
+    "id": "w6",
+    "text": "What",
+    "start": 2.26,
+    "end": 2.36
+  },
+  {
+    "id": "w7",
+    "text": "got",
+    "start": 2.36,
+    "end": 2.52
+  },
+  {
+    "id": "w8",
+    "text": "accomplished",
+    "start": 2.52,
+    "end": 3.06
+  },
+  {
+    "id": "w9",
+    "text": "inside",
+    "start": 3.06,
+    "end": 3.54
+  },
+  {
+    "id": "w10",
+    "text": "them",
+    "start": 3.54,
+    "end": 3.76
+  },
+  {
+    "id": "w11",
+    "text": "did.",
+    "start": 3.76,
+    "end": 3.98
+  }
+]

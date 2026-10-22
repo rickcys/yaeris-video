@@ -1,0 +1,146 @@
+[
+  {
+    "id": "w0",
+    "text": "Easy",
+    "start": 0,
+    "end": 0.4
+  },
+  {
+    "id": "w1",
+    "text": "to",
+    "start": 0.4,
+    "end": 0.56
+  },
+  {
+    "id": "w2",
+    "text": "deploy",
+    "start": 0.56,
+    "end": 1.04
+  },
+  {
+    "id": "w3",
+    "text": "usually",
+    "start": 1.04,
+    "end": 1.52
+  },
+  {
+    "id": "w4",
+    "text": "just",
+    "start": 1.52,
+    "end": 1.76
+  },
+  {
+    "id": "w5",
+    "text": "means",
+    "start": 1.76,
+    "end": 2.16
+  },
+  {
+    "id": "w6",
+    "text": "someone",
+    "start": 2.16,
+    "end": 2.48
+  },
+  {
+    "id": "w7",
+    "text": "else",
+    "start": 2.48,
+    "end": 2.72
+  },
+  {
+    "id": "w8",
+    "text": "is",
+    "start": 2.72,
+    "end": 2.88
+  },
+  {
+    "id": "w9",
+    "text": "quietly",
+    "start": 2.88,
+    "end": 3.44
+  },
+  {
+    "id": "w10",
+    "text": "doing",
+    "start": 3.44,
+    "end": 3.68
+  },
+  {
+    "id": "w11",
+    "text": "the",
+    "start": 3.68,
+    "end": 3.84
+  },
+  {
+    "id": "w12",
+    "text": "DevOps",
+    "start": 3.84,
+    "end": 4.56
+  },
+  {
+    "id": "w13",
+    "text": "work",
+    "start": 4.72,
+    "end": 4.96
+  },
+  {
+    "id": "w14",
+    "text": "for",
+    "start": 4.96,
+    "end": 5.12
+  },
+  {
+    "id": "w15",
+    "text": "you.",
+    "start": 5.12,
+    "end": 5.6
+  },
+  {
+    "id": "w16",
+    "text": "The",
+    "start": 5.6,
+    "end": 5.84
+  },
+  {
+    "id": "w17",
+    "text": "question",
+    "start": 5.84,
+    "end": 6.24
+  },
+  {
+    "id": "w18",
+    "text": "is",
+    "start": 6.24,
+    "end": 6.56
+  },
+  {
+    "id": "w19",
+    "text": "whether",
+    "start": 6.56,
+    "end": 6.88
+  },
+  {
+    "id": "w20",
+    "text": "that",
+    "start": 6.88,
+    "end": 7.04
+  },
+  {
+    "id": "w21",
+    "text": "someone",
+    "start": 7.04,
+    "end": 7.36
+  },
+  {
+    "id": "w22",
+    "text": "is",
+    "start": 7.36,
+    "end": 7.52
+  },
+  {
+    "id": "w23",
+    "text": "you.",
+    "start": 7.52,
+    "end": 7.76
+  }
+]

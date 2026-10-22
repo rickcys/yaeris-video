@@ -1,0 +1,68 @@
+[
+  {
+    "id": "w0",
+    "text": "There",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "are",
+    "start": 0.24,
+    "end": 0.4
+  },
+  {
+    "id": "w2",
+    "text": "two",
+    "start": 0.4,
+    "end": 0.72
+  },
+  {
+    "id": "w3",
+    "text": "fundamentally",
+    "start": 0.72,
+    "end": 1.36
+  },
+  {
+    "id": "w4",
+    "text": "different",
+    "start": 1.36,
+    "end": 1.68
+  },
+  {
+    "id": "w5",
+    "text": "maintenance",
+    "start": 1.68,
+    "end": 2.24
+  },
+  {
+    "id": "w6",
+    "text": "burdens",
+    "start": 2.24,
+    "end": 2.8
+  },
+  {
+    "id": "w7",
+    "text": "behind",
+    "start": 2.96,
+    "end": 3.36
+  },
+  {
+    "id": "w8",
+    "text": "that",
+    "start": 3.36,
+    "end": 3.6
+  },
+  {
+    "id": "w9",
+    "text": "same",
+    "start": 3.6,
+    "end": 3.84
+  },
+  {
+    "id": "w10",
+    "text": "project.",
+    "start": 3.84,
+    "end": 4.48
+  }
+]

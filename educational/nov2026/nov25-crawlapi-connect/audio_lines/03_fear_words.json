@@ -1,0 +1,104 @@
+{
+  "words": [
+    {
+      "word": "The",
+      "start": 0.0,
+      "end": 0.12
+    },
+    {
+      "word": "fear,",
+      "start": 0.12,
+      "end": 0.38
+    },
+    {
+      "word": "new",
+      "start": 0.84,
+      "end": 1.06
+    },
+    {
+      "word": "service",
+      "start": 1.06,
+      "end": 1.46
+    },
+    {
+      "word": "to",
+      "start": 1.46,
+      "end": 1.68
+    },
+    {
+      "word": "deploy,",
+      "start": 1.68,
+      "end": 2.04
+    },
+    {
+      "word": "new",
+      "start": 2.36,
+      "end": 2.6
+    },
+    {
+      "word": "infrastructure",
+      "start": 2.6,
+      "end": 3.04
+    },
+    {
+      "word": "to",
+      "start": 3.04,
+      "end": 3.38
+    },
+    {
+      "word": "maintain,",
+      "start": 3.38,
+      "end": 3.88
+    },
+    {
+      "word": "a",
+      "start": 4.46,
+      "end": 4.5
+    },
+    {
+      "word": "proprietary",
+      "start": 4.5,
+      "end": 5.02
+    },
+    {
+      "word": "SDK",
+      "start": 5.02,
+      "end": 5.64
+    },
+    {
+      "word": "your",
+      "start": 5.64,
+      "end": 6.02
+    },
+    {
+      "word": "team",
+      "start": 6.02,
+      "end": 6.3
+    },
+    {
+      "word": "has",
+      "start": 6.3,
+      "end": 6.56
+    },
+    {
+      "word": "to",
+      "start": 6.56,
+      "end": 6.76
+    },
+    {
+      "word": "learn",
+      "start": 6.76,
+      "end": 6.92
+    },
+    {
+      "word": "from",
+      "start": 6.92,
+      "end": 7.18
+    },
+    {
+      "word": "scratch.",
+      "start": 7.18,
+      "end": 7.46
+    }
+  ]
+}

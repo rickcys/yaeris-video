@@ -1,0 +1,86 @@
+[
+  {
+    "id": "w0",
+    "text": "Same",
+    "start": 0,
+    "end": 0.4
+  },
+  {
+    "id": "w1",
+    "text": "credits,",
+    "start": 0.4,
+    "end": 0.96
+  },
+  {
+    "id": "w2",
+    "text": "same",
+    "start": 0.96,
+    "end": 1.2
+  },
+  {
+    "id": "w3",
+    "text": "automatic",
+    "start": 1.2,
+    "end": 1.68
+  },
+  {
+    "id": "w4",
+    "text": "three-tier",
+    "start": 1.68,
+    "end": 2.32
+  },
+  {
+    "id": "w5",
+    "text": "escalation,",
+    "start": 2.32,
+    "end": 3.12
+  },
+  {
+    "id": "w6",
+    "text": "same",
+    "start": 3.12,
+    "end": 3.52
+  },
+  {
+    "id": "w7",
+    "text": "robots,",
+    "start": 3.52,
+    "end": 4.4
+  },
+  {
+    "id": "w8",
+    "text": "TXD",
+    "start": 4.4,
+    "end": 5.2
+  },
+  {
+    "id": "w9",
+    "text": "compliance,",
+    "start": 5.2,
+    "end": 5.76
+  },
+  {
+    "id": "w10",
+    "text": "whichever",
+    "start": 5.76,
+    "end": 6.16
+  },
+  {
+    "id": "w11",
+    "text": "path",
+    "start": 6.16,
+    "end": 6.48
+  },
+  {
+    "id": "w12",
+    "text": "you",
+    "start": 6.48,
+    "end": 6.64
+  },
+  {
+    "id": "w13",
+    "text": "use.",
+    "start": 6.64,
+    "end": 6.96
+  }
+]

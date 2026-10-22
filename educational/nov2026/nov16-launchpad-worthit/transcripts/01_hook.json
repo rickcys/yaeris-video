@@ -1,0 +1,98 @@
+[
+  {
+    "id": "w0",
+    "text": "Is",
+    "start": 0.0,
+    "end": 0.18
+  },
+  {
+    "id": "w1",
+    "text": "Launchpad",
+    "start": 0.18,
+    "end": 0.76
+  },
+  {
+    "id": "w2",
+    "text": "worth",
+    "start": 0.76,
+    "end": 1.02
+  },
+  {
+    "id": "w3",
+    "text": "it?",
+    "start": 1.02,
+    "end": 1.38
+  },
+  {
+    "id": "w4",
+    "text": "Depends",
+    "start": 1.86,
+    "end": 2.08
+  },
+  {
+    "id": "w5",
+    "text": "on",
+    "start": 2.08,
+    "end": 2.22
+  },
+  {
+    "id": "w6",
+    "text": "whether",
+    "start": 2.22,
+    "end": 2.46
+  },
+  {
+    "id": "w7",
+    "text": "DevOps",
+    "start": 2.46,
+    "end": 3.02
+  },
+  {
+    "id": "w8",
+    "text": "overhead",
+    "start": 3.02,
+    "end": 3.42
+  },
+  {
+    "id": "w9",
+    "text": "is",
+    "start": 3.42,
+    "end": 3.76
+  },
+  {
+    "id": "w10",
+    "text": "actually",
+    "start": 3.76,
+    "end": 4.26
+  },
+  {
+    "id": "w11",
+    "text": "the",
+    "start": 4.26,
+    "end": 4.46
+  },
+  {
+    "id": "w12",
+    "text": "thing",
+    "start": 4.46,
+    "end": 4.66
+  },
+  {
+    "id": "w13",
+    "text": "slowing",
+    "start": 4.66,
+    "end": 4.98
+  },
+  {
+    "id": "w14",
+    "text": "you",
+    "start": 4.98,
+    "end": 5.26
+  },
+  {
+    "id": "w15",
+    "text": "down.",
+    "start": 5.26,
+    "end": 5.5
+  }
+]

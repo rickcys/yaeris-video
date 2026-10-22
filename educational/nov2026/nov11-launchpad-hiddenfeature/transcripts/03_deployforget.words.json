@@ -1,0 +1,116 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0.0,
+    "end": 0.14
+  },
+  {
+    "id": "w1",
+    "text": "deploy",
+    "start": 0.14,
+    "end": 0.46
+  },
+  {
+    "id": "w2",
+    "text": "and",
+    "start": 0.46,
+    "end": 0.68
+  },
+  {
+    "id": "w3",
+    "text": "forget",
+    "start": 0.68,
+    "end": 0.94
+  },
+  {
+    "id": "w4",
+    "text": "half.",
+    "start": 0.94,
+    "end": 1.28
+  },
+  {
+    "id": "w5",
+    "text": "Connect",
+    "start": 1.76,
+    "end": 1.96
+  },
+  {
+    "id": "w6",
+    "text": "the",
+    "start": 1.96,
+    "end": 2.14
+  },
+  {
+    "id": "w7",
+    "text": "repo,",
+    "start": 2.14,
+    "end": 2.4
+  },
+  {
+    "id": "w8",
+    "text": "push",
+    "start": 2.76,
+    "end": 2.88
+  },
+  {
+    "id": "w9",
+    "text": "to",
+    "start": 2.88,
+    "end": 3.06
+  },
+  {
+    "id": "w10",
+    "text": "production,",
+    "start": 3.06,
+    "end": 3.44
+  },
+  {
+    "id": "w11",
+    "text": "ship.",
+    "start": 3.74,
+    "end": 3.92
+  },
+  {
+    "id": "w12",
+    "text": "That's",
+    "start": 4.46,
+    "end": 4.78
+  },
+  {
+    "id": "w13",
+    "text": "where",
+    "start": 4.78,
+    "end": 4.88
+  },
+  {
+    "id": "w14",
+    "text": "most",
+    "start": 4.88,
+    "end": 5.06
+  },
+  {
+    "id": "w15",
+    "text": "setups",
+    "start": 5.06,
+    "end": 5.38
+  },
+  {
+    "id": "w16",
+    "text": "start",
+    "start": 5.38,
+    "end": 5.78
+  },
+  {
+    "id": "w17",
+    "text": "and",
+    "start": 5.78,
+    "end": 5.98
+  },
+  {
+    "id": "w18",
+    "text": "stop.",
+    "start": 5.98,
+    "end": 6.28
+  }
+]

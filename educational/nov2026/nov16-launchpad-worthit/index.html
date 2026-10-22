@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0E0E1F; }
+      #root { width: 100%; height: 100%; position: relative; font-family: Inter, sans-serif; background: #0E0E1F; }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 150px 90px; }
+
+      .eyebrow { font-family: 'Space Mono', monospace; font-size: 27px; letter-spacing: 0.16em; color: #7FCBF0; text-transform: uppercase; margin-bottom: 22px; opacity: 0; }
+      .headline { font-family: Outfit, sans-serif; font-weight: 900; font-size: 70px; line-height: 1.14; color: #FBFBF8; letter-spacing: -0.01em; opacity: 0; }
+      .sub-line { font-family: Inter, sans-serif; font-size: 32px; line-height: 1.5; color: #A9A9BE; margin-top: 28px; opacity: 0; max-width: 860px; }
+      .source-tag { position: absolute; left: 90px; bottom: 90px; font-family: 'Space Mono', monospace; font-size: 21px; letter-spacing: 0.06em; color: #7A7A8F; opacity: 0; max-width: 700px; line-height: 1.5; }
+
+      /* Hook */
+      .hook-wrap { align-items: center; justify-content: center; text-align: center; }
+      .hook-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 60px; line-height: 1.2; color: #FBFBF8; letter-spacing: -0.01em; opacity: 0; }
+      .hook-text.second { font-size: 50px; color: #A9A9BE; font-weight: 700; margin-top: 44px; }
+
+      /* Mechanism setup (text-only beat) */
+      .mech-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+      /* Chip flows (not-a-fit / real-fit / the test / grounding) */
+      .chip-flow-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 26px; align-items: stretch; }
+      .chip { display: flex; align-items: center; gap: 20px; border-radius: 20px; padding: 26px 40px; opacity: 0; }
+      .chip-1 { background: rgba(155,111,214,0.14); border: 3px solid #9B6FD6; }
+      .chip-2 { background: rgba(27,127,168,0.16); border: 3px solid #1B7FA8; }
+      .chip-3 { background: rgba(37,211,102,0.14); border: 3px solid #25D366; }
+      .chip-muted { background: rgba(169,169,190,0.07); border: 3px solid #4F4F63; }
+      .chip-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 33px; color: #F4F4F5; }
+      .chip-muted .chip-text { color: #C7C7D6; }
+      .chip-tail { margin-top: 10px; font-family: Inter, sans-serif; font-size: 28px; color: #A9A9BE; text-align: center; opacity: 0; }
+
+      /* The test: two-card comparison (unused this episode, kept for house-style parity) */
+      .test-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 44px; }
+      .test-cards { display: flex; gap: 28px; }
+      .test-card { flex: 1; border-radius: 24px; padding: 48px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; opacity: 0; }
+      .test-card.a { background: rgba(169,169,190,0.07); border: 3px solid #4F4F63; }
+      .test-card.b { background: rgba(37,211,102,0.14); border: 3px solid #25D366; }
+      .test-card-label { font-family: 'Space Mono', monospace; font-size: 22px; letter-spacing: 0.08em; text-transform: uppercase; color: #A9A9BE; }
+      .test-card-value { font-family: Outfit, sans-serif; font-weight: 900; font-size: 54px; color: #F4F4F5; line-height: 1.1; }
+      .test-card.b .test-card-value { color: #25D366; }
+      .test-card-sub { font-family: Inter, sans-serif; font-size: 24px; color: #A9A9BE; }
+
+      /* Closing / reframe */
+      .closing-wrap { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
+      .closing-text { font-family: Outfit, sans-serif; font-weight: 800; font-size: 64px; line-height: 1.24; color: #F4F4F5; opacity: 0; }
+      .closing-text .accent { color: #9B6FD6; }
+
+      /* Follow CTA */
+      .follow-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .follow-label { font-family: Outfit, sans-serif; font-weight: 900; font-size: 96px; color: #FBFBF8; line-height: 1.05; opacity: 0; }
+      .follow-sub { font-family: Inter, sans-serif; font-size: 32px; color: #A9A9BE; line-height: 1.5; max-width: 780px; opacity: 0; }
+      .follow-tag { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #25D366; text-transform: uppercase; margin-top: 12px; opacity: 0; }
+      .follow-chevron { font-size: 60px; color: #7FCBF0; opacity: 0; margin-top: 10px; }
+
+      /* ---- captions (matches Brand Kit caption-pill spec) ---- */
+      .caption-pill {
+        position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%);
+        background: rgba(10,9,16,0.86); color: #fff; font-family: Inter, sans-serif; font-weight: 500;
+        font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%;
+        text-align: center; line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="67.132"
+      data-width="1080"
+      data-height="1920"
+    >
+      <audio id="a1" class="clip" data-start="0" data-duration="5.717" data-track-index="1" src="audio_lines/01_hook.wav"></audio>
+      <audio id="a2" class="clip" data-start="5.917" data-duration="5.973" data-track-index="1" src="audio_lines/02_setup.wav"></audio>
+      <audio id="a3" class="clip" data-start="12.090" data-duration="7.893" data-track-index="1" src="audio_lines/03_notafit.wav"></audio>
+      <audio id="a4" class="clip" data-start="20.183" data-duration="10.987" data-track-index="1" src="audio_lines/04_realfit.wav"></audio>
+      <audio id="a5" class="clip" data-start="31.370" data-duration="15.744" data-track-index="1" src="audio_lines/05_thetest.wav"></audio>
+      <audio id="a6" class="clip" data-start="47.314" data-duration="6.485" data-track-index="1" src="audio_lines/06_grounding.wav"></audio>
+      <audio id="a7" class="clip" data-start="53.999" data-duration="6.933" data-track-index="1" src="audio_lines/07_reframe.wav"></audio>
+      <audio id="a8" class="clip" data-start="61.132" data-duration="2.091" data-track-index="1" src="audio_lines/08_followcta.wav"></audio>
+
+      <!-- Beat 1: Hook, 0 - 5.717s -->
+      <div class="beat hook-wrap clip" id="beat1" data-start="0" data-duration="5.717" data-track-index="0">
+        <div class="eyebrow" id="b1-eyebrow" style="opacity:1">The Fit Question</div>
+        <div class="hook-text" id="b1-text1">"Is Launchpad worth it?"</div>
+        <div class="hook-text second" id="b1-text2">Depends on whether DevOps overhead is actually the thing slowing you down.</div>
+      </div>
+
+      <!-- Beat 2: Setup, 5.917 - 11.890s -->
+      <div class="beat clip" id="beat2" data-start="5.917" data-duration="5.973" data-track-index="0">
+        <div class="eyebrow" id="b2-eyebrow">Two Different Answers</div>
+        <div class="mech-wrap">
+          <div class="headline" id="b2-headline">Two answers.<br />One deciding factor.</div>
+          <div class="sub-line" id="b2-sub">What you're actually tired<br />of doing.</div>
+        </div>
+      </div>
+
+      <!-- Beat 3: Not a fit, 12.090 - 19.983s -->
+      <div class="beat clip" id="beat3" data-start="12.090" data-duration="7.893" data-track-index="0">
+        <div class="eyebrow" id="b3-eyebrow">Not A Fit</div>
+        <div class="headline" id="b3-headline">Already happy<br />on a generic PaaS?</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-muted" id="b3-chip1"><div class="chip-text">Already happy on a generic global PaaS</div></div>
+          <div class="chip chip-muted" id="b3-chip2"><div class="chip-text">BYO-database flexibility doesn't change anything</div></div>
+          <div class="chip-tail" id="b3-tail">Then nothing here changes for you.</div>
+        </div>
+      </div>
+
+      <!-- Beat 4: A real fit, 20.183 - 31.170s -->
+      <div class="beat clip" id="beat4" data-start="20.183" data-duration="10.987" data-track-index="0">
+        <div class="eyebrow" id="b4-eyebrow">A Real Fit</div>
+        <div class="headline" id="b4-headline">Self-hosting?<br />Tired of DevOps?</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-3" id="b4-chip1"><div class="chip-text">Self-hosting Strapi or a JS app</div></div>
+          <div class="chip chip-3" id="b4-chip2"><div class="chip-text">Genuinely tired of managing your own DevOps</div></div>
+          <div class="chip chip-3" id="b4-chip3"><div class="chip-text">Southeast Asia latency matters to your users</div></div>
+        </div>
+      </div>
+
+      <!-- Beat 5: The test, 31.370 - 47.114s -->
+      <div class="beat clip" id="beat5" data-start="31.370" data-duration="15.744" data-track-index="0">
+        <div class="eyebrow" id="b5-eyebrow">The Test</div>
+        <div class="headline" id="b5-headline">Three questions.<br />Answer honestly.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="b5-chip1"><div class="chip-text">Is DevOps overhead the actual blocker?</div></div>
+          <div class="chip chip-2" id="b5-chip2"><div class="chip-text">Does the free tier (100 build-min + 10GB) cover it?</div></div>
+          <div class="chip chip-3" id="b5-chip3"><div class="chip-text">Do you need Singapore-region latency?</div></div>
+        </div>
+      </div>
+
+      <!-- Beat 6: Grounding -- Launchpad, 47.314 - 53.799s -->
+      <div class="beat clip" id="beat6" data-start="47.314" data-duration="6.485" data-track-index="0">
+        <div class="eyebrow" id="b6-eyebrow">Launchpad</div>
+        <div class="mech-wrap">
+          <div class="headline" id="b6-headline">Free tier.<br />Zero cost.</div>
+          <div class="sub-line" id="b6-sub">For most small-to-mid projects, the free<br />Personal plan already covers it.</div>
+        </div>
+      </div>
+
+      <!-- Beat 7: Reframe, 53.999 - 60.932s -->
+      <div class="beat closing-wrap clip" id="beat7" data-start="53.999" data-duration="6.933" data-track-index="0">
+        <div class="closing-text" id="b7-text">The fit question here was never really about hosting features. <span class="accent">It's about what kind of work you're actually trying to stop doing.</span></div>
+      </div>
+
+      <!-- Beat 8: Follow CTA, 61.132 - 67.132s -->
+      <div class="beat follow-wrap clip" id="beat8" data-start="61.132" data-duration="6.0" data-track-index="0">
+        <div class="eyebrow" id="b8-eyebrow">Before You Go</div>
+        <div class="follow-label" id="b8-label">Follow for<br />More</div>
+        <div class="follow-sub" id="b8-sub">More of this kind of content &mdash; real, fact-checked walkthroughs on hosting, lead-gen &amp; dev tooling</div>
+        <div class="follow-tag" id="b8-tag">New video every day</div>
+        <div class="follow-chevron" id="b8-chevron">&#8593;</div>
+      </div>
+
+      <!-- ===== CAPTIONS (real word-level timestamps via faster-whisper small.en transcription) ===== -->
+      <div class="caption-pill clip" id="cap0" data-start="0" data-duration="1.38" data-track-index="5">Is Launchpad worth it?</div>
+      <div class="caption-pill clip" id="cap1" data-start="1.86" data-duration="1.56" data-track-index="5">Depends on whether DevOps overhead</div>
+      <div class="caption-pill clip" id="cap2" data-start="3.42" data-duration="1.56" data-track-index="5">is actually the thing slowing</div>
+      <div class="caption-pill clip" id="cap3" data-start="4.98" data-duration="0.52" data-track-index="5">you down.</div>
+      <div class="caption-pill clip" id="cap4" data-start="5.917" data-duration="2.12" data-track-index="5">There are two fundamentally different answers,</div>
+      <div class="caption-pill clip" id="cap5" data-start="8.517" data-duration="1.62" data-track-index="5">and the deciding factor is</div>
+      <div class="caption-pill clip" id="cap6" data-start="10.137" data-duration="1.54" data-track-index="5">what you're actually tired of doing.</div>
+      <div class="caption-pill clip" id="cap7" data-start="12.090" data-duration="0.64" data-track-index="5">Not a fit.</div>
+      <div class="caption-pill clip" id="cap8" data-start="13.250" data-duration="1.00" data-track-index="5">You're already happy on</div>
+      <div class="caption-pill clip" id="cap9" data-start="14.250" data-duration="1.56" data-track-index="5">a generic global PaaS,</div>
+      <div class="caption-pill clip" id="cap10" data-start="16.150" data-duration="1.26" data-track-index="5">and bring your own database</div>
+      <div class="caption-pill clip" id="cap11" data-start="17.410" data-duration="1.60" data-track-index="5">flexibility doesn't change</div>
+      <div class="caption-pill clip" id="cap12" data-start="19.010" data-duration="0.84" data-track-index="5">anything for you.</div>
+      <div class="caption-pill clip" id="cap13" data-start="20.183" data-duration="0.80" data-track-index="5">A real fit.</div>
+      <div class="caption-pill clip" id="cap14" data-start="21.583" data-duration="1.26" data-track-index="5">Your self-hosting Strapi</div>
+      <div class="caption-pill clip" id="cap15" data-start="22.843" data-duration="1.32" data-track-index="5">or a JS app,</div>
+      <div class="caption-pill clip" id="cap16" data-start="24.583" data-duration="1.32" data-track-index="5">genuinely tired of managing</div>
+      <div class="caption-pill clip" id="cap17" data-start="25.903" data-duration="1.70" data-track-index="5">your own DevOps, and</div>
+      <div class="caption-pill clip" id="cap18" data-start="27.603" data-duration="2.12" data-track-index="5">Southeast Asia latency specifically</div>
+      <div class="caption-pill clip" id="cap19" data-start="29.723" data-duration="1.12" data-track-index="5">matters to your users.</div>
+      <div class="caption-pill clip" id="cap20" data-start="31.370" data-duration="1.58" data-track-index="5">The test is three questions.</div>
+      <div class="caption-pill clip" id="cap21" data-start="33.750" data-duration="2.08" data-track-index="5">Is DevOps overhead the actual blocker,</div>
+      <div class="caption-pill clip" id="cap22" data-start="36.270" data-duration="1.00" data-track-index="5">not just an annoyance?</div>
+      <div class="caption-pill clip" id="cap23" data-start="38.070" data-duration="1.34" data-track-index="5">Does the free personal plan's</div>
+      <div class="caption-pill clip" id="cap24" data-start="39.410" data-duration="1.78" data-track-index="5">100 build minutes and</div>
+      <div class="caption-pill clip" id="cap25" data-start="41.190" data-duration="1.38" data-track-index="5">10 gigabytes realistically</div>
+      <div class="caption-pill clip" id="cap26" data-start="42.570" data-duration="1.10" data-track-index="5">cover your project?</div>
+      <div class="caption-pill clip" id="cap27" data-start="44.390" data-duration="0.54" data-track-index="5">Do you need that</div>
+      <div class="caption-pill clip" id="cap28" data-start="44.930" data-duration="1.82" data-track-index="5">Singapore region latency specifically?</div>
+      <div class="caption-pill clip" id="cap29" data-start="47.314" data-duration="1.56" data-track-index="5">For most small-to-mid projects,</div>
+      <div class="caption-pill clip" id="cap30" data-start="49.454" data-duration="1.46" data-track-index="5">that free tier already covers</div>
+      <div class="caption-pill clip" id="cap31" data-start="50.914" data-duration="1.06" data-track-index="5">the answer to the second</div>
+      <div class="caption-pill clip" id="cap32" data-start="51.974" data-duration="1.54" data-track-index="5">question at zero cost.</div>
+      <div class="caption-pill clip" id="cap33" data-start="53.999" data-duration="1.52" data-track-index="5">The fit question here was</div>
+      <div class="caption-pill clip" id="cap34" data-start="55.519" data-duration="1.78" data-track-index="5">never really about hosting features.</div>
+      <div class="caption-pill clip" id="cap35" data-start="57.979" data-duration="0.88" data-track-index="5">It's about what kind of</div>
+      <div class="caption-pill clip" id="cap36" data-start="58.859" data-duration="1.10" data-track-index="5">work you're actually trying</div>
+      <div class="caption-pill clip" id="cap37" data-start="59.959" data-duration="0.76" data-track-index="5">to stop doing.</div>
+      <div class="caption-pill clip" id="cap38" data-start="61.132" data-duration="0.94" data-track-index="5">Follow for more of</div>
+      <div class="caption-pill clip" id="cap39" data-start="62.072" data-duration="0.90" data-track-index="5">this kind of content.</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Beat 1: Hook
+      tl.fromTo("#b1-text1", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.15);
+      tl.fromTo("#b1-text2", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 2.6);
+      tl.to("#beat1", { opacity: 0, duration: 0.2 }, 5.502);
+
+      // Beat 2: Setup
+      tl.fromTo("#b2-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 6.067);
+      tl.fromTo("#b2-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 6.267);
+      tl.fromTo("#b2-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4 }, 8.417);
+      tl.to("#beat2", { opacity: 0, duration: 0.2 }, 11.690);
+
+      // Beat 3: Not a fit
+      tl.fromTo("#b3-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 12.240);
+      tl.fromTo("#b3-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 12.440);
+      tl.fromTo("#b3-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 13.250);
+      tl.fromTo("#b3-chip2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 16.150);
+      tl.fromTo("#b3-tail", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 19.010);
+      tl.to("#beat3", { opacity: 0, duration: 0.2 }, 19.783);
+
+      // Beat 4: A real fit
+      tl.fromTo("#b4-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 20.333);
+      tl.fromTo("#b4-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 20.533);
+      tl.fromTo("#b4-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 21.583);
+      tl.fromTo("#b4-chip2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 24.583);
+      tl.fromTo("#b4-chip3", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 27.603);
+      tl.to("#beat4", { opacity: 0, duration: 0.2 }, 30.970);
+
+      // Beat 5: The test
+      tl.fromTo("#b5-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 31.520);
+      tl.fromTo("#b5-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 31.720);
+      tl.fromTo("#b5-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 33.750);
+      tl.fromTo("#b5-chip2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 38.070);
+      tl.fromTo("#b5-chip3", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 44.390);
+      tl.to("#beat5", { opacity: 0, duration: 0.2 }, 46.914);
+
+      // Beat 6: Grounding -- Launchpad
+      tl.fromTo("#b6-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 47.464);
+      tl.fromTo("#b6-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 47.664);
+      tl.fromTo("#b6-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4 }, 48.814);
+      tl.to("#beat6", { opacity: 0, duration: 0.2 }, 53.599);
+
+      // Beat 7: Reframe
+      tl.fromTo("#b7-text", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 54.299);
+      tl.to("#beat7", { opacity: 0, duration: 0.2 }, 60.732);
+
+      // Beat 8: Follow CTA
+      tl.fromTo("#b8-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 61.432);
+      tl.fromTo("#b8-label", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 61.732);
+      tl.fromTo("#b8-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 62.592);
+      tl.fromTo("#b8-tag", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 63.192);
+      tl.fromTo("#b8-chevron", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, 63.592);
+      tl.to("#b8-chevron", { y: -14, duration: 0.6, repeat: -1, yoyo: true, ease: "sine.inOut" }, 63.992);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

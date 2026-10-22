@@ -1,0 +1,109 @@
+{
+  "words": [
+    {
+      "word": "A",
+      "start": 0.0,
+      "end": 0.12
+    },
+    {
+      "word": "scraping",
+      "start": 0.12,
+      "end": 0.46
+    },
+    {
+      "word": "layer",
+      "start": 0.46,
+      "end": 0.88
+    },
+    {
+      "word": "that",
+      "start": 0.88,
+      "end": 1.26
+    },
+    {
+      "word": "needs",
+      "start": 1.26,
+      "end": 1.54
+    },
+    {
+      "word": "its",
+      "start": 1.54,
+      "end": 1.8
+    },
+    {
+      "word": "own",
+      "start": 1.8,
+      "end": 2.12
+    },
+    {
+      "word": "stand",
+      "start": 2.12,
+      "end": 2.52
+    },
+    {
+      "word": "-alone",
+      "start": 2.52,
+      "end": 2.84
+    },
+    {
+      "word": "infrastructure",
+      "start": 2.84,
+      "end": 3.48
+    },
+    {
+      "word": "isn't",
+      "start": 3.48,
+      "end": 4.42
+    },
+    {
+      "word": "actually",
+      "start": 4.42,
+      "end": 4.86
+    },
+    {
+      "word": "simplifying",
+      "start": 4.86,
+      "end": 5.54
+    },
+    {
+      "word": "anything.",
+      "start": 5.54,
+      "end": 5.96
+    },
+    {
+      "word": "It's",
+      "start": 6.66,
+      "end": 6.84
+    },
+    {
+      "word": "just",
+      "start": 6.84,
+      "end": 6.98
+    },
+    {
+      "word": "moving",
+      "start": 6.98,
+      "end": 7.28
+    },
+    {
+      "word": "the",
+      "start": 7.28,
+      "end": 7.48
+    },
+    {
+      "word": "complexity",
+      "start": 7.48,
+      "end": 7.92
+    },
+    {
+      "word": "somewhere",
+      "start": 7.92,
+      "end": 8.4
+    },
+    {
+      "word": "else.",
+      "start": 8.4,
+      "end": 8.7
+    }
+  ]
+}

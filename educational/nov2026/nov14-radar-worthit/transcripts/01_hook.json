@@ -1,0 +1,84 @@
+{
+  "words": [
+    {
+      "word": "Is",
+      "start": 0.0,
+      "end": 0.18
+    },
+    {
+      "word": "radar",
+      "start": 0.18,
+      "end": 0.58
+    },
+    {
+      "word": "worth",
+      "start": 0.58,
+      "end": 0.9
+    },
+    {
+      "word": "it?",
+      "start": 0.9,
+      "end": 1.2
+    },
+    {
+      "word": "Depends",
+      "start": 1.58,
+      "end": 1.82
+    },
+    {
+      "word": "entirely",
+      "start": 1.82,
+      "end": 2.2
+    },
+    {
+      "word": "on",
+      "start": 2.2,
+      "end": 2.72
+    },
+    {
+      "word": "which",
+      "start": 2.72,
+      "end": 2.88
+    },
+    {
+      "word": "half",
+      "start": 2.88,
+      "end": 3.12
+    },
+    {
+      "word": "of",
+      "start": 3.12,
+      "end": 3.28
+    },
+    {
+      "word": "the",
+      "start": 3.28,
+      "end": 3.38
+    },
+    {
+      "word": "job",
+      "start": 3.38,
+      "end": 3.6
+    },
+    {
+      "word": "you",
+      "start": 3.6,
+      "end": 3.82
+    },
+    {
+      "word": "actually",
+      "start": 3.82,
+      "end": 4.24
+    },
+    {
+      "word": "need",
+      "start": 4.24,
+      "end": 4.5
+    },
+    {
+      "word": "done.",
+      "start": 4.5,
+      "end": 4.74
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "w0",
+    "text": "Is",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "listing",
+    "start": 0.24,
+    "end": 0.56
+  },
+  {
+    "id": "w2",
+    "text": "on",
+    "start": 0.56,
+    "end": 0.72
+  },
+  {
+    "id": "w3",
+    "text": "D",
+    "start": 0.72,
+    "end": 0.96
+  },
+  {
+    "id": "w4",
+    "text": "review",
+    "start": 1.04,
+    "end": 1.28
+  },
+  {
+    "id": "w5",
+    "text": "worth",
+    "start": 1.44,
+    "end": 1.68
+  },
+  {
+    "id": "w6",
+    "text": "it",
+    "start": 1.68,
+    "end": 1.92
+  },
+  {
+    "id": "w7",
+    "text": "is",
+    "start": 2,
+    "end": 2.24
+  },
+  {
+    "id": "w8",
+    "text": "almost",
+    "start": 2.24,
+    "end": 2.56
+  },
+  {
+    "id": "w9",
+    "text": "always",
+    "start": 2.56,
+    "end": 2.96
+  },
+  {
+    "id": "w10",
+    "text": "yes,",
+    "start": 2.96,
+    "end": 3.68
+  },
+  {
+    "id": "w11",
+    "text": "with",
+    "start": 3.68,
+    "end": 3.92
+  },
+  {
+    "id": "w12",
+    "text": "one",
+    "start": 3.92,
+    "end": 4.16
+  },
+  {
+    "id": "w13",
+    "text": "specific",
+    "start": 4.16,
+    "end": 4.64
+  },
+  {
+    "id": "w14",
+    "text": "exception.",
+    "start": 4.64,
+    "end": 5.2
+  }
+]

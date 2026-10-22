@@ -1,0 +1,146 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "actual",
+    "start": 0.24,
+    "end": 0.64
+  },
+  {
+    "id": "w2",
+    "text": "pattern",
+    "start": 0.64,
+    "end": 1.04
+  },
+  {
+    "id": "w3",
+    "text": "here.",
+    "start": 1.04,
+    "end": 1.6
+  },
+  {
+    "id": "w4",
+    "text": "Radar",
+    "start": 1.6,
+    "end": 2.24
+  },
+  {
+    "id": "w5",
+    "text": "handles",
+    "start": 2.24,
+    "end": 2.72
+  },
+  {
+    "id": "w6",
+    "text": "finding",
+    "start": 2.72,
+    "end": 3.12
+  },
+  {
+    "id": "w7",
+    "text": "leads",
+    "start": 3.12,
+    "end": 3.6
+  },
+  {
+    "id": "w8",
+    "text": "and",
+    "start": 3.6,
+    "end": 3.76
+  },
+  {
+    "id": "w9",
+    "text": "making",
+    "start": 3.76,
+    "end": 4.08
+  },
+  {
+    "id": "w10",
+    "text": "first",
+    "start": 4.08,
+    "end": 4.24
+  },
+  {
+    "id": "w11",
+    "text": "contact,",
+    "start": 4.4,
+    "end": 5.2
+  },
+  {
+    "id": "w12",
+    "text": "and",
+    "start": 5.2,
+    "end": 5.44
+  },
+  {
+    "id": "w13",
+    "text": "the",
+    "start": 5.44,
+    "end": 5.52
+  },
+  {
+    "id": "w14",
+    "text": "results",
+    "start": 5.52,
+    "end": 6.08
+  },
+  {
+    "id": "w15",
+    "text": "export",
+    "start": 6.08,
+    "end": 6.56
+  },
+  {
+    "id": "w16",
+    "text": "to",
+    "start": 6.56,
+    "end": 6.72
+  },
+  {
+    "id": "w17",
+    "text": "whatever",
+    "start": 6.72,
+    "end": 7.12
+  },
+  {
+    "id": "w18",
+    "text": "CRM",
+    "start": 7.12,
+    "end": 7.84
+  },
+  {
+    "id": "w19",
+    "text": "you're",
+    "start": 7.84,
+    "end": 8.08
+  },
+  {
+    "id": "w20",
+    "text": "already",
+    "start": 8.08,
+    "end": 8.4
+  },
+  {
+    "id": "w21",
+    "text": "running",
+    "start": 8.4,
+    "end": 8.72
+  },
+  {
+    "id": "w22",
+    "text": "pipeline",
+    "start": 8.72,
+    "end": 9.36
+  },
+  {
+    "id": "w23",
+    "text": "through.",
+    "start": 9.36,
+    "end": 9.68
+  }
+]

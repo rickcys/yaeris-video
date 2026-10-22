@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0E0E1F; }
+      #root { width: 100%; height: 100%; position: relative; font-family: Inter, sans-serif; background: #0E0E1F; }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 150px 90px; }
+
+      .eyebrow { font-family: 'Space Mono', monospace; font-size: 27px; letter-spacing: 0.16em; color: #7FCBF0; text-transform: uppercase; margin-bottom: 22px; opacity: 0; }
+      .headline { font-family: Outfit, sans-serif; font-weight: 900; font-size: 70px; line-height: 1.14; color: #FBFBF8; letter-spacing: -0.01em; opacity: 0; }
+      .sub-line { font-family: Inter, sans-serif; font-size: 32px; line-height: 1.5; color: #A9A9BE; margin-top: 28px; opacity: 0; max-width: 860px; }
+      .source-tag { position: absolute; left: 90px; bottom: 90px; font-family: 'Space Mono', monospace; font-size: 21px; letter-spacing: 0.06em; color: #7A7A8F; opacity: 0; max-width: 700px; line-height: 1.5; }
+
+      /* Hook */
+      .hook-wrap { align-items: center; justify-content: center; text-align: center; }
+      .hook-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 60px; line-height: 1.2; color: #FBFBF8; letter-spacing: -0.01em; opacity: 0; }
+      .hook-text.second { font-size: 42px; color: #A9A9BE; font-weight: 700; margin-top: 44px; }
+
+      /* Mechanism setup (text-only beat) */
+      .mech-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+      /* Chip flows (dashboard / connected / grounding) */
+      .chip-flow-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 26px; align-items: stretch; }
+      .chip { display: flex; align-items: center; gap: 20px; border-radius: 20px; padding: 26px 40px; opacity: 0; }
+      .chip-1 { background: rgba(155,111,214,0.14); border: 3px solid #9B6FD6; }
+      .chip-2 { background: rgba(27,127,168,0.16); border: 3px solid #1B7FA8; }
+      .chip-3 { background: rgba(37,211,102,0.14); border: 3px solid #25D366; }
+      .chip-muted { background: rgba(169,169,190,0.07); border: 3px solid #4F4F63; }
+      .chip-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 33px; color: #F4F4F5; }
+      .chip-muted .chip-text { color: #C7C7D6; }
+      .chip-tail { margin-top: 10px; font-family: Inter, sans-serif; font-size: 28px; color: #A9A9BE; text-align: center; opacity: 0; }
+
+      /* The test: two-card comparison */
+      .test-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 44px; }
+      .test-cards { display: flex; gap: 28px; }
+      .test-card { flex: 1; border-radius: 24px; padding: 48px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; opacity: 0; }
+      .test-card.a { background: rgba(169,169,190,0.07); border: 3px solid #4F4F63; }
+      .test-card.b { background: rgba(37,211,102,0.14); border: 3px solid #25D366; }
+      .test-card-label { font-family: 'Space Mono', monospace; font-size: 22px; letter-spacing: 0.08em; text-transform: uppercase; color: #A9A9BE; }
+      .test-card-value { font-family: Outfit, sans-serif; font-weight: 900; font-size: 54px; color: #F4F4F5; line-height: 1.1; }
+      .test-card.b .test-card-value { color: #25D366; }
+      .test-card-sub { font-family: Inter, sans-serif; font-size: 24px; color: #A9A9BE; }
+
+      /* Closing / reframe */
+      .closing-wrap { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
+      .closing-text { font-family: Outfit, sans-serif; font-weight: 800; font-size: 64px; line-height: 1.24; color: #F4F4F5; opacity: 0; }
+      .closing-text .accent { color: #9B6FD6; }
+
+      /* Follow CTA */
+      .follow-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .follow-label { font-family: Outfit, sans-serif; font-weight: 900; font-size: 96px; color: #FBFBF8; line-height: 1.05; opacity: 0; }
+      .follow-sub { font-family: Inter, sans-serif; font-size: 32px; color: #A9A9BE; line-height: 1.5; max-width: 780px; opacity: 0; }
+      .follow-tag { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #25D366; text-transform: uppercase; margin-top: 12px; opacity: 0; }
+      .follow-chevron { font-size: 60px; color: #7FCBF0; opacity: 0; margin-top: 10px; }
+
+      /* ---- captions (matches Brand Kit caption-pill spec) ---- */
+      .caption-pill {
+        position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%);
+        background: rgba(10,9,16,0.86); color: #fff; font-family: Inter, sans-serif; font-weight: 500;
+        font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%;
+        text-align: center; line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="63.337"
+      data-width="1080"
+      data-height="1920"
+    >
+      <audio id="a1" class="clip" data-start="0" data-duration="4.907" data-track-index="1" src="audio_lines/01_hook.wav"></audio>
+      <audio id="a2" class="clip" data-start="5.107" data-duration="6.635" data-track-index="1" src="audio_lines/02_mechanismsetup.wav"></audio>
+      <audio id="a3" class="clip" data-start="11.942" data-duration="6.315" data-track-index="1" src="audio_lines/03_notafit.wav"></audio>
+      <audio id="a4" class="clip" data-start="18.457" data-duration="8.875" data-track-index="1" src="audio_lines/04_realfit.wav"></audio>
+      <audio id="a5" class="clip" data-start="27.532" data-duration="13.632" data-track-index="1" src="audio_lines/05_thetest.wav"></audio>
+      <audio id="a6" class="clip" data-start="41.364" data-duration="7.893" data-track-index="1" src="audio_lines/06_grounding.wav"></audio>
+      <audio id="a7" class="clip" data-start="49.457" data-duration="7.68" data-track-index="1" src="audio_lines/07_reframe.wav"></audio>
+      <audio id="a8" class="clip" data-start="57.337" data-duration="2.091" data-track-index="1" src="audio_lines/08_followcta.wav"></audio>
+
+      <!-- Beat 1: Hook, 0 - 4.907s -->
+      <div class="beat hook-wrap clip" id="beat1" data-start="0" data-duration="4.907" data-track-index="0">
+        <div class="eyebrow" id="b1-eyebrow" style="opacity:1">Radar</div>
+        <div class="hook-text" id="b1-text1">"Is Radar worth it?"</div>
+        <div class="hook-text second" id="b1-text2">Depends entirely on which half of the job you need done.</div>
+      </div>
+
+      <!-- Beat 2: Mechanism setup, 5.107 - 11.742s -->
+      <div class="beat clip" id="beat2" data-start="5.107" data-duration="6.635" data-track-index="0">
+        <div class="eyebrow" id="b2-eyebrow">The Setup</div>
+        <div class="mech-wrap">
+          <div class="headline" id="b2-headline">Two fundamentally<br />different answers.</div>
+          <div class="sub-line" id="b2-sub">The right one depends on<br />your situation, not the product.</div>
+        </div>
+      </div>
+
+      <!-- Beat 3: Not a fit, 11.942 - 18.257s -->
+      <div class="beat clip" id="beat3" data-start="11.942" data-duration="6.315" data-track-index="0">
+        <div class="eyebrow" id="b3-eyebrow">Not A Fit</div>
+        <div class="headline" id="b3-headline">Pure ranking data,<br />no outreach attached.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-muted" id="b3-chip1"><div class="chip-text">Ranking data only</div></div>
+          <div class="chip chip-muted" id="b3-chip2"><div class="chip-text">No outreach attached</div></div>
+          <div class="chip-tail" id="b3-tail">The full platform is more than you need.</div>
+        </div>
+      </div>
+
+      <!-- Beat 4: A real fit, 18.457 - 27.332s -->
+      <div class="beat clip" id="beat4" data-start="18.457" data-duration="8.875" data-track-index="0">
+        <div class="eyebrow" id="b4-eyebrow">A Real Fit</div>
+        <div class="headline" id="b4-headline">Finding leads AND<br />contacting them.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="b4-chip1"><div class="chip-text">Find leads</div></div>
+          <div class="chip chip-3" id="b4-chip2"><div class="chip-text">Email + AI Calls</div></div>
+          <div class="chip chip-3" id="b4-chip3"><div class="chip-text">Volume varies monthly</div></div>
+        </div>
+      </div>
+
+      <!-- Beat 5: The test, 27.532 - 41.164s -->
+      <div class="beat clip" id="beat5" data-start="27.532" data-duration="13.632" data-track-index="0">
+        <div class="eyebrow" id="b5-eyebrow">The Test</div>
+        <div class="headline" id="b5-headline">Three questions.<br />Answer honestly.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="b5-chip1"><div class="chip-text">Need outreach, not just data?</div></div>
+          <div class="chip chip-2" id="b5-chip2"><div class="chip-text">Tested the 100 free credits?</div></div>
+          <div class="chip chip-3" id="b5-chip3"><div class="chip-text">Does pay-as-you-go fit your volume?</div></div>
+        </div>
+      </div>
+
+      <!-- Beat 6: Grounding -- Radar, 41.364 - 49.257s -->
+      <div class="beat clip" id="beat6" data-start="41.364" data-duration="7.893" data-track-index="0">
+        <div class="eyebrow" id="b6-eyebrow">Radar</div>
+        <div class="headline" id="b6-headline">100 free credits.<br />No card required.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="b6-chip1"><div class="chip-text">No card required</div></div>
+          <div class="chip chip-2" id="b6-chip2"><div class="chip-text">Test before committing</div></div>
+          <div class="chip chip-3" id="b6-chip3"><div class="chip-text">Answer question 3 first</div></div>
+        </div>
+        <div class="source-tag" id="b6-source">100 free credits, no card needed</div>
+      </div>
+
+      <!-- Beat 7: Reframe, 49.457 - 57.137s -->
+      <div class="beat closing-wrap clip" id="beat7" data-start="49.457" data-duration="7.68" data-track-index="0">
+        <div class="closing-text" id="b7-text">"Worth it" was never a universal answer here &mdash; it's a <span class="accent">fit question.</span></div>
+      </div>
+
+      <!-- Beat 8: Follow CTA, 57.337 - 63.337s -->
+      <div class="beat follow-wrap clip" id="beat8" data-start="57.337" data-duration="6.0" data-track-index="0">
+        <div class="eyebrow" id="b8-eyebrow">Before You Go</div>
+        <div class="follow-label" id="b8-label">Follow for<br />More</div>
+        <div class="follow-sub" id="b8-sub">More of this kind of content &mdash; real, fact-checked walkthroughs on hosting, lead-gen &amp; dev tooling</div>
+        <div class="follow-tag" id="b8-tag">New video every day</div>
+        <div class="follow-chevron" id="b8-chevron">&#8593;</div>
+      </div>
+
+      <!-- ===== CAPTIONS (real word-level timestamps via faster-whisper small.en transcription) ===== -->
+      <div class="caption-pill clip" id="cap0" data-start="0" data-duration="1.2" data-track-index="5">Is radar worth it?</div>
+      <div class="caption-pill clip" id="cap1" data-start="1.58" data-duration="1.54" data-track-index="5">Depends entirely on which half</div>
+      <div class="caption-pill clip" id="cap2" data-start="3.12" data-duration="1.12" data-track-index="5">of the job you actually</div>
+      <div class="caption-pill clip" id="cap3" data-start="4.24" data-duration="0.5" data-track-index="5">need done.</div>
+      <div class="caption-pill clip" id="cap4" data-start="5.107" data-duration="1.66" data-track-index="5">there are two fundamentally different</div>
+      <div class="caption-pill clip" id="cap5" data-start="6.767" data-duration="1.56" data-track-index="5">answers here, and the right</div>
+      <div class="caption-pill clip" id="cap6" data-start="8.327" data-duration="1.38" data-track-index="5">one depends on your situation,</div>
+      <div class="caption-pill clip" id="cap7" data-start="10.147" data-duration="1.26" data-track-index="5">not on the product itself.</div>
+      <div class="caption-pill clip" id="cap8" data-start="11.942" data-duration="0.66" data-track-index="5">Not a fit.</div>
+      <div class="caption-pill clip" id="cap9" data-start="13.042" data-duration="0.92" data-track-index="5">If you only need ranking</div>
+      <div class="caption-pill clip" id="cap10" data-start="13.962" data-duration="1.82" data-track-index="5">data, no outreach attached,</div>
+      <div class="caption-pill clip" id="cap11" data-start="16.202" data-duration="1.32" data-track-index="5">the full platform is more</div>
+      <div class="caption-pill clip" id="cap12" data-start="17.522" data-duration="0.52" data-track-index="5">than you need.</div>
+      <div class="caption-pill clip" id="cap13" data-start="18.457" data-duration="0.74" data-track-index="5">A real fit.</div>
+      <div class="caption-pill clip" id="cap14" data-start="19.817" data-duration="0.88" data-track-index="5">You need to both find</div>
+      <div class="caption-pill clip" id="cap15" data-start="20.697" data-duration="1.88" data-track-index="5">leads and actually contact them,</div>
+      <div class="caption-pill clip" id="cap16" data-start="23.277" data-duration="1.08" data-track-index="5">email and AI calls,</div>
+      <div class="caption-pill clip" id="cap17" data-start="24.837" data-duration="1.12" data-track-index="5">and your volume genuinely varies</div>
+      <div class="caption-pill clip" id="cap18" data-start="26.457" data-duration="0.66" data-track-index="5">month to month.</div>
+      <div class="caption-pill clip" id="cap19" data-start="27.532" data-duration="1.54" data-track-index="5">The test is three questions.</div>
+      <div class="caption-pill clip" id="cap20" data-start="29.752" data-duration="1.14" data-track-index="5">Do you need outreach, not</div>
+      <div class="caption-pill clip" id="cap21" data-start="30.892" data-duration="1.66" data-track-index="5">just data? Have you tested</div>
+      <div class="caption-pill clip" id="cap22" data-start="32.552" data-duration="1.42" data-track-index="5">it with the 100 free</div>
+      <div class="caption-pill clip" id="cap23" data-start="33.972" data-duration="1.9" data-track-index="5">credits before committing real budget?</div>
+      <div class="caption-pill clip" id="cap24" data-start="36.572" data-duration="0.8" data-track-index="5">Does pay as you go</div>
+      <div class="caption-pill clip" id="cap25" data-start="37.372" data-duration="1.36" data-track-index="5">actually fit how your volume</div>
+      <div class="caption-pill clip" id="cap26" data-start="38.732" data-duration="2.04" data-track-index="5">moves versus a flat subscription?</div>
+      <div class="caption-pill clip" id="cap27" data-start="41.364" data-duration="1.88" data-track-index="5">those 100 free credits come</div>
+      <div class="caption-pill clip" id="cap28" data-start="43.244" data-duration="1.44" data-track-index="5">with no card required,</div>
+      <div class="caption-pill clip" id="cap29" data-start="45.144" data-duration="1.56" data-track-index="5">specifically so you can answer</div>
+      <div class="caption-pill clip" id="cap30" data-start="46.704" data-duration="1.92" data-track-index="5">that third question before spending</div>
+      <div class="caption-pill clip" id="cap31" data-start="48.624" data-duration="0.4" data-track-index="5">anything.</div>
+      <div class="caption-pill clip" id="cap32" data-start="49.457" data-duration="1.2" data-track-index="5">Worth it was never a</div>
+      <div class="caption-pill clip" id="cap33" data-start="50.657" data-duration="1.2" data-track-index="5">universal answer here.</div>
+      <div class="caption-pill clip" id="cap34" data-start="52.417" data-duration="0.86" data-track-index="5">It's a fit question,</div>
+      <div class="caption-pill clip" id="cap35" data-start="53.677" data-duration="0.92" data-track-index="5">and the three questions above</div>
+      <div class="caption-pill clip" id="cap36" data-start="54.937" data-duration="1.44" data-track-index="5">answer it faster than any</div>
+      <div class="caption-pill clip" id="cap37" data-start="56.377" data-duration="0.56" data-track-index="5">pitch can.</div>
+      <div class="caption-pill clip" id="cap38" data-start="57.337" data-duration="1.1" data-track-index="5">Follow for more of this</div>
+      <div class="caption-pill clip" id="cap39" data-start="58.437" data-duration="0.74" data-track-index="5">kind of content.</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Beat 1: Hook
+      tl.fromTo("#b1-text1", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.15);
+      tl.fromTo("#b1-text2", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 1.58);
+      tl.to("#beat1", { opacity: 0, duration: 0.2 }, 4.707);
+
+      // Beat 2: Mechanism setup
+      tl.fromTo("#b2-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 5.207);
+      tl.fromTo("#b2-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 5.407);
+      tl.fromTo("#b2-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4 }, 7.507);
+      tl.to("#beat2", { opacity: 0, duration: 0.2 }, 11.542);
+
+      // Beat 3: Not a fit
+      tl.fromTo("#b3-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 12.042);
+      tl.fromTo("#b3-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 12.242);
+      tl.fromTo("#b3-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 13.042);
+      tl.fromTo("#b3-chip2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 13.962);
+      tl.fromTo("#b3-tail", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 16.202);
+      tl.to("#beat3", { opacity: 0, duration: 0.2 }, 18.057);
+
+      // Beat 4: A real fit
+      tl.fromTo("#b4-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 18.557);
+      tl.fromTo("#b4-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 18.757);
+      tl.fromTo("#b4-chip1", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 19.817);
+      tl.fromTo("#b4-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 23.277);
+      tl.fromTo("#b4-chip3", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 24.837);
+      tl.to("#beat4", { opacity: 0, duration: 0.2 }, 27.132);
+
+      // Beat 5: The test
+      tl.fromTo("#b5-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 27.632);
+      tl.fromTo("#b5-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 27.832);
+      tl.fromTo("#b5-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 29.752);
+      tl.fromTo("#b5-chip2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 32.072);
+      tl.fromTo("#b5-chip3", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 36.572);
+      tl.to("#beat5", { opacity: 0, duration: 0.2 }, 40.964);
+
+      // Beat 6: Grounding -- Radar
+      tl.fromTo("#b6-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 41.464);
+      tl.fromTo("#b6-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 41.664);
+      tl.fromTo("#b6-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 43.244);
+      tl.fromTo("#b6-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 45.144);
+      tl.fromTo("#b6-chip3", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 46.704);
+      tl.fromTo("#b6-source", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 48.624);
+      tl.to("#beat6", { opacity: 0, duration: 0.2 }, 49.057);
+
+      // Beat 7: Reframe
+      tl.fromTo("#b7-text", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 49.957);
+      tl.to("#beat7", { opacity: 0, duration: 0.2 }, 56.937);
+
+      // Beat 8: Follow CTA
+      tl.fromTo("#b8-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 57.637);
+      tl.fromTo("#b8-label", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 57.937);
+      tl.fromTo("#b8-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 58.797);
+      tl.fromTo("#b8-tag", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 59.397);
+      tl.fromTo("#b8-chevron", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, 59.797);
+      tl.to("#b8-chevron", { y: -14, duration: 0.6, repeat: -1, yoyo: true, ease: "sine.inOut" }, 60.197);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

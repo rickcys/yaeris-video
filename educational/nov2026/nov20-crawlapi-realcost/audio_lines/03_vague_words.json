@@ -1,0 +1,98 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0,
+    "end": 0.16
+  },
+  {
+    "id": "w1",
+    "text": "vague",
+    "start": 0.16,
+    "end": 0.56
+  },
+  {
+    "id": "w2",
+    "text": "version.",
+    "start": 0.56,
+    "end": 1.2
+  },
+  {
+    "id": "w3",
+    "text": "Affordable,",
+    "start": 1.2,
+    "end": 2
+  },
+  {
+    "id": "w4",
+    "text": "cost",
+    "start": 2,
+    "end": 2.24
+  },
+  {
+    "id": "w5",
+    "text": "effective,",
+    "start": 2.4,
+    "end": 3.12
+  },
+  {
+    "id": "w6",
+    "text": "with",
+    "start": 3.12,
+    "end": 3.36
+  },
+  {
+    "id": "w7",
+    "text": "nothing",
+    "start": 3.36,
+    "end": 3.76
+  },
+  {
+    "id": "w8",
+    "text": "you",
+    "start": 3.76,
+    "end": 3.92
+  },
+  {
+    "id": "w9",
+    "text": "can",
+    "start": 3.92,
+    "end": 4.08
+  },
+  {
+    "id": "w10",
+    "text": "actually",
+    "start": 4.08,
+    "end": 4.48
+  },
+  {
+    "id": "w11",
+    "text": "calculate",
+    "start": 4.48,
+    "end": 5.12
+  },
+  {
+    "id": "w12",
+    "text": "against",
+    "start": 5.12,
+    "end": 5.44
+  },
+  {
+    "id": "w13",
+    "text": "your",
+    "start": 5.44,
+    "end": 5.6
+  },
+  {
+    "id": "w14",
+    "text": "own",
+    "start": 5.6,
+    "end": 5.76
+  },
+  {
+    "id": "w15",
+    "text": "volume.",
+    "start": 5.76,
+    "end": 6.24
+  }
+]

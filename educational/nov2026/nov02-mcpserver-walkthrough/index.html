@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #1a1a19; }
+      #root { width: 100%; height: 100%; position: relative; font-family: Inter, sans-serif; background: #1a1a19; }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 140px 90px; }
+
+      .eyebrow { font-family: 'Space Mono', monospace; font-size: 27px; letter-spacing: 0.16em; color: #7FCBF0; text-transform: uppercase; margin-bottom: 22px; opacity: 0; }
+      .headline { font-family: Outfit, sans-serif; font-weight: 900; font-size: 68px; line-height: 1.12; color: #F4F4F5; letter-spacing: -0.01em; opacity: 0; }
+      .source-tag { position: absolute; left: 90px; bottom: 90px; font-family: 'Space Mono', monospace; font-size: 21px; letter-spacing: 0.06em; color: #7A7A8F; opacity: 0; max-width: 780px; line-height: 1.5; }
+
+      /* Beat 1: hook */
+      .hook-wrap { align-items: center; justify-content: center; text-align: center; }
+      .hook-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 72px; line-height: 1.18; color: #F4F4F5; letter-spacing: -0.01em; }
+      .hook-accent { color: #9B6FD6; }
+
+      /* Beat 2: two ways */
+      .b2-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 64px; }
+      .fork-row { display: flex; flex-direction: column; gap: 32px; align-items: center; }
+      .fork-chip { border-radius: 24px; padding: 40px 56px; width: 100%; max-width: 820px; text-align: center; opacity: 0; }
+      .fork-chip.a { background: rgba(155,111,214,0.10); border: 3px solid rgba(155,111,214,0.5); }
+      .fork-chip.b { background: rgba(27,127,168,0.10); border: 3px solid rgba(27,127,168,0.5); }
+      .fork-chip-label { font-family: Outfit, sans-serif; font-weight: 800; font-size: 44px; color: #F4F4F5; }
+      .fork-vs { font-family: 'Space Mono', monospace; font-size: 30px; color: #6A6A82; letter-spacing: 0.1em; opacity: 0; }
+
+      /* Beat 3: point-to-point mechanism */
+      .ptp-body { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 28px; }
+      .ptp-row { display: flex; align-items: center; gap: 24px; background: rgba(155,111,214,0.08); border: 2px solid rgba(155,111,214,0.4); border-radius: 18px; padding: 30px 36px; opacity: 0; }
+      .ptp-dot { width: 20px; height: 20px; border-radius: 50%; background: #9B6FD6; flex-shrink: 0; }
+      .ptp-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 34px; color: #F4F4F5; }
+      .ptp-sub { font-family: Inter, sans-serif; font-size: 24px; color: #A9A9BE; margin-top: 4px; }
+      .ptp-col { display: flex; flex-direction: column; }
+      .ptp-tally { font-family: 'Space Mono', monospace; font-size: 26px; color: #C9A9EC; text-align: center; opacity: 0; margin-top: 10px; }
+
+      /* Beat 4: gateway mechanism */
+      .gw-body { flex: 1; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 48px; position: relative; }
+      .gw-diagram { position: relative; width: 820px; height: 620px; }
+      .gw-hub { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 220px; height: 220px; border-radius: 50%; background: radial-gradient(circle, rgba(27,127,168,0.3), rgba(27,127,168,0.05)); border: 4px solid #1B7FA8; display: flex; align-items: center; justify-content: center; text-align: center; opacity: 0; }
+      .gw-hub-text { font-family: Outfit, sans-serif; font-weight: 800; font-size: 32px; color: #F4F4F5; line-height: 1.1; }
+      .gw-node { position: absolute; width: 140px; height: 68px; border-radius: 14px; background: rgba(244,244,245,0.06); border: 2px solid #7FCBF0; display: flex; align-items: center; justify-content: center; opacity: 0; }
+      .gw-node-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 24px; color: #F4F4F5; }
+      .gw-caption { font-family: Outfit, sans-serif; font-weight: 700; font-size: 34px; color: #25D366; text-align: center; opacity: 0; max-width: 760px; }
+
+      /* Beat 5: the test */
+      .test-body { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .test-label { font-family: 'Space Mono', monospace; font-size: 28px; letter-spacing: 0.1em; color: #A9A9BE; text-transform: uppercase; opacity: 0; }
+      .test-counter { font-family: Outfit, sans-serif; font-weight: 900; font-size: 190px; color: #F4F4F5; line-height: 1; opacity: 0; }
+      .test-sub { font-family: Outfit, sans-serif; font-weight: 700; font-size: 38px; color: #F4F4F5; opacity: 0; max-width: 800px; line-height: 1.3; }
+      .test-sub .accent { color: #9B6FD6; }
+
+      /* Beat 6: grounding */
+      .hero-stat-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; text-align: center; }
+      .hero-num { font-family: Outfit, sans-serif; font-weight: 900; font-size: 190px; color: #1B7FA8; line-height: 1; opacity: 0; }
+      .hero-label { font-family: Outfit, sans-serif; font-weight: 700; font-size: 42px; color: #F4F4F5; text-transform: uppercase; opacity: 0; }
+      .hero-sub { font-family: Inter, sans-serif; font-size: 28px; color: #A9A9BE; opacity: 0; max-width: 780px; }
+      .chip-row { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 44px; }
+      .g-chip { background: rgba(27,127,168,0.14); border: 2px solid #1B7FA8; border-radius: 999px; padding: 20px 32px; font-family: 'Space Mono', monospace; font-size: 24px; color: #7FCBF0; opacity: 0; }
+      .g-chip.alt { background: rgba(37,211,102,0.12); border-color: #25D366; color: #8FE8B4; }
+
+      /* Beat 7: reframe / closing */
+      .closing-wrap { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
+      .closing-text { font-family: Outfit, sans-serif; font-weight: 800; font-size: 60px; line-height: 1.28; color: #F4F4F5; opacity: 0; }
+      .closing-text .accent { color: #9B6FD6; }
+
+      /* End card */
+      .end-card { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; text-align: center; }
+      .end-brand { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #1B7FA8; text-transform: uppercase; opacity: 0; }
+      .end-sub { font-family: Inter, sans-serif; font-size: 26px; color: #8A8AA0; opacity: 0; }
+
+      /* Follow CTA */
+      .follow-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .follow-label { font-family: Outfit, sans-serif; font-weight: 900; font-size: 96px; color: #F4F4F5; line-height: 1.05; opacity: 0; }
+      .follow-sub { font-family: Inter, sans-serif; font-size: 32px; color: #A9A9BE; line-height: 1.5; max-width: 780px; opacity: 0; }
+      .follow-tag { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #25D366; text-transform: uppercase; margin-top: 12px; opacity: 0; }
+      .follow-chevron { font-size: 60px; color: #7FCBF0; opacity: 0; margin-top: 10px; }
+
+      /* ---- captions (matches Brand Kit caption-pill spec) ---- */
+      .caption-pill {
+        position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%);
+        background: rgba(10,9,16,0.86); color: #fff; font-family: Inter, sans-serif; font-weight: 500;
+        font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%;
+        text-align: center; line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="86.401334"
+      data-width="1080"
+      data-height="1920"
+    >
+      <audio id="a1" class="clip" data-start="0" data-duration="8.768" data-track-index="1" src="audio_lines/01_hook.wav"></audio>
+      <audio id="a2" class="clip" data-start="8.968" data-duration="8.576" data-track-index="1" src="audio_lines/02_twoways.wav"></audio>
+      <audio id="a3" class="clip" data-start="17.744" data-duration="9.557" data-track-index="1" src="audio_lines/03_pointtopoint.wav"></audio>
+      <audio id="a4" class="clip" data-start="27.501" data-duration="13.397" data-track-index="1" src="audio_lines/04_gateway.wav"></audio>
+      <audio id="a5" class="clip" data-start="41.098" data-duration="11.52" data-track-index="1" src="audio_lines/05_test.wav"></audio>
+      <audio id="a6" class="clip" data-start="52.818" data-duration="14.848" data-track-index="1" src="audio_lines/06_grounding.wav"></audio>
+      <audio id="a7" class="clip" data-start="67.866" data-duration="10.944" data-track-index="1" src="audio_lines/07_reframe.wav"></audio>
+      <audio id="a8" class="clip" data-start="81.81" data-duration="2.091334" data-track-index="1" src="audio_lines/08_follow.wav"></audio>
+
+      <!-- Beat 1: Hook -->
+      <div class="beat hook-wrap clip" id="beat1" data-start="0" data-duration="8.768" data-track-index="0">
+        <div class="eyebrow" id="b1-eyebrow" style="opacity:1">MCP Server</div>
+        <div class="hook-text" id="b1-text">Every new tool your AI agent needs isn't a feature you flip on.<br />For most teams, it's <span class="hook-accent">a small integration project</span>, every single time.</div>
+      </div>
+
+      <!-- Beat 2: Two ways -->
+      <div class="beat clip" id="beat2" data-start="8.968" data-duration="8.576" data-track-index="0">
+        <div class="eyebrow" id="b2-eyebrow">Connecting Agents To Tools</div>
+        <div class="headline" id="b2-headline">Two fundamentally different ways to connect.</div>
+        <div class="b2-body">
+          <div class="fork-row">
+            <div class="fork-chip a" id="b2-chip-a"><div class="fork-chip-label">Point-to-Point</div></div>
+            <div class="fork-vs" id="b2-vs">VS</div>
+            <div class="fork-chip b" id="b2-chip-b"><div class="fork-chip-label">Gateway</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beat 3: Point-to-point mechanism -->
+      <div class="beat clip" id="beat3" data-start="17.744" data-duration="9.557" data-track-index="0">
+        <div class="eyebrow" id="b3-eyebrow">Mechanism A: Point-to-Point</div>
+        <div class="headline" id="b3-headline">A custom integration.<br />Every tool. Every agent.</div>
+        <div class="ptp-body">
+          <div class="ptp-row" id="b3-row1"><div class="ptp-dot"></div><div class="ptp-col"><div class="ptp-text">Custom Integration</div></div></div>
+          <div class="ptp-row" id="b3-row2"><div class="ptp-dot"></div><div class="ptp-col"><div class="ptp-text">Its Own Auth Flow</div></div></div>
+          <div class="ptp-row" id="b3-row3"><div class="ptp-dot"></div><div class="ptp-col"><div class="ptp-text">Its Own Error Handling</div></div></div>
+          <div class="ptp-tally" id="b3-tally">&times; every tool, every agent that needs it</div>
+        </div>
+      </div>
+
+      <!-- Beat 4: Gateway mechanism -->
+      <div class="beat clip" id="beat4" data-start="27.501" data-duration="13.397" data-track-index="0">
+        <div class="eyebrow" id="b4-eyebrow">Mechanism B: Gateway</div>
+        <div class="headline" id="b4-headline">One connection point.<br />Every tool reachable the same way.</div>
+        <div class="gw-body">
+          <div class="gw-diagram">
+            <div class="gw-hub" id="gw-hub"><div class="gw-hub-text">Model<br />Context<br />Protocol</div></div>
+            <svg style="position:absolute; inset:0; width:100%; height:100%" viewBox="0 0 820 620">
+              <line id="gw-line1" x1="410" y1="310" x2="410" y2="60" stroke="#1B7FA8" stroke-width="4" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" />
+              <line id="gw-line2" x1="410" y1="310" x2="700" y2="200" stroke="#1B7FA8" stroke-width="4" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" />
+              <line id="gw-line3" x1="410" y1="310" x2="700" y2="440" stroke="#1B7FA8" stroke-width="4" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" />
+              <line id="gw-line4" x1="410" y1="310" x2="120" y2="440" stroke="#1B7FA8" stroke-width="4" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" />
+              <line id="gw-line5" x1="410" y1="310" x2="120" y2="200" stroke="#1B7FA8" stroke-width="4" stroke-linecap="round" pathLength="1" stroke-dasharray="1" stroke-dashoffset="1" />
+            </svg>
+            <div class="gw-node" id="gw-node1" style="left:340px; top:-10px;"><div class="gw-node-text">Tool A</div></div>
+            <div class="gw-node" id="gw-node2" style="left:630px; top:166px;"><div class="gw-node-text">Tool B</div></div>
+            <div class="gw-node" id="gw-node3" style="left:630px; top:406px;"><div class="gw-node-text">Tool C</div></div>
+            <div class="gw-node" id="gw-node4" style="left:50px; top:406px;"><div class="gw-node-text">Tool D</div></div>
+            <div class="gw-node" id="gw-node5" style="left:50px; top:166px;"><div class="gw-node-text">Tool E</div></div>
+          </div>
+          <div class="gw-caption" id="gw-caption">Add a tool once. Every connected agent can use it immediately.</div>
+        </div>
+      </div>
+
+      <!-- Beat 5: The test -->
+      <div class="beat clip" id="beat5" data-start="41.098" data-duration="11.52" data-track-index="0">
+        <div class="eyebrow" id="b5-eyebrow">The Test</div>
+        <div class="test-body">
+          <div class="test-label" id="b5-count-label">Separate Logins &amp; Auth Flows</div>
+          <div class="test-counter" id="b5-counter">1</div>
+          <div class="test-sub" id="b5-sub">If that number keeps climbing with every new tool, you're on the <span class="accent">point-to-point</span> path.</div>
+        </div>
+      </div>
+
+      <!-- Beat 6: Grounding -->
+      <div class="beat clip" id="beat6" data-start="52.818" data-duration="14.848" data-track-index="0">
+        <div class="eyebrow" id="b6-eyebrow">What MCP Server Replaces It With</div>
+        <div class="hero-stat-wrap">
+          <div class="hero-num" id="b6-num">134</div>
+          <div class="hero-label" id="b6-label">Tools, 12 Categories</div>
+          <div class="hero-sub" id="b6-sub">One gateway, already live</div>
+          <div class="chip-row" id="b6-chips">
+            <div class="g-chip" id="b6-chip1">1 OAuth 2.1 Login</div>
+            <div class="g-chip alt" id="b6-chip2">Encrypted At Rest</div>
+            <div class="g-chip" id="b6-chip3">Priced Per Connection, Not Per Task</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beat 7: Reframe / closing -->
+      <div class="beat closing-wrap clip" id="beat7" data-start="67.866" data-duration="10.944" data-track-index="0">
+        <div class="closing-text" id="b7-text">The best model in the world, wired to <span class="accent">zero tools</span>, is just a very articulate conversation. Connection is what actually determines whether an agent can do anything.</div>
+      </div>
+
+      <!-- End card: unnarrated brand sign-off -->
+      <div class="beat end-card clip" id="endCard" data-start="79.01" data-duration="2.6" data-track-index="0">
+        <div class="end-brand" id="end-brand">MCP Server &middot; by Yaeris</div>
+        <div class="end-sub" id="end-sub">mcp.yaeris.com</div>
+      </div>
+
+      <!-- Beat 8: Follow CTA -->
+      <div class="beat follow-wrap clip" id="beat8" data-start="81.81" data-duration="4.591334" data-track-index="0">
+        <div class="eyebrow" id="b8-eyebrow">Before You Go</div>
+        <div class="follow-label" id="b8-label">Follow for<br />More</div>
+        <div class="follow-sub" id="b8-sub">Real, fact-checked breakdowns on hosting, lead-gen &amp; dev tooling</div>
+        <div class="follow-tag" id="b8-tag">New video every day</div>
+        <div class="follow-chevron" id="b8-chevron">&#8593;</div>
+      </div>
+
+      <!-- Captions (real word-level timestamps via Parakeet transcription of audio_lines/*.wav) -->
+      <div class="caption-pill clip" id="cap0" data-start="0" data-duration="1.6" data-track-index="5">Every new tool your AI</div>
+      <div class="caption-pill clip" id="cap1" data-start="1.6" data-duration="1.2" data-track-index="5">agent needs isn't a</div>
+      <div class="caption-pill clip" id="cap2" data-start="2.8" data-duration="1.44" data-track-index="5">feature you flip on.</div>
+      <div class="caption-pill clip" id="cap3" data-start="4.24" data-duration="1.6" data-track-index="5">For most teams, it's a</div>
+      <div class="caption-pill clip" id="cap4" data-start="5.84" data-duration="1.68" data-track-index="5">small integration project,</div>
+      <div class="caption-pill clip" id="cap5" data-start="7.52" data-duration="1.12" data-track-index="5">every single time.</div>
+
+      <div class="caption-pill clip" id="cap6" data-start="8.968" data-duration="1.84" data-track-index="5">There are two fundamentally different</div>
+      <div class="caption-pill clip" id="cap7" data-start="10.808" data-duration="1.6" data-track-index="5">ways to connect an agent</div>
+      <div class="caption-pill clip" id="cap8" data-start="12.408" data-duration="1.52" data-track-index="5">to real tools, and the</div>
+      <div class="caption-pill clip" id="cap9" data-start="13.928" data-duration="1.44" data-track-index="5">difference only shows up once</div>
+      <div class="caption-pill clip" id="cap10" data-start="15.368" data-duration="1.44" data-track-index="5">you're past the second or</div>
+      <div class="caption-pill clip" id="cap11" data-start="16.808" data-duration="0.64" data-track-index="5">third tool.</div>
+
+      <div class="caption-pill clip" id="cap12" data-start="17.744" data-duration="1.76" data-track-index="5">Point to point. A custom</div>
+      <div class="caption-pill clip" id="cap13" data-start="19.504" data-duration="2.24" data-track-index="5">integration, its own auth flow,</div>
+      <div class="caption-pill clip" id="cap14" data-start="21.744" data-duration="1.44" data-track-index="5">its own error handling,</div>
+      <div class="caption-pill clip" id="cap15" data-start="23.184" data-duration="1.6" data-track-index="5">built and maintained separately</div>
+      <div class="caption-pill clip" id="cap16" data-start="24.784" data-duration="1.76" data-track-index="5">for every tool, every agent</div>
+      <div class="caption-pill clip" id="cap17" data-start="26.544" data-duration="0.72" data-track-index="5">that needs it.</div>
+
+      <div class="caption-pill clip" id="cap18" data-start="27.581" data-duration="1.2" data-track-index="5">Gateway through the model</div>
+      <div class="caption-pill clip" id="cap19" data-start="29.021" data-duration="2.32" data-track-index="5">context protocol, one connection</div>
+      <div class="caption-pill clip" id="cap20" data-start="31.341" data-duration="1.36" data-track-index="5">point, and every tool</div>
+      <div class="caption-pill clip" id="cap21" data-start="32.701" data-duration="1.68" data-track-index="5">behind that gateway becomes</div>
+      <div class="caption-pill clip" id="cap22" data-start="34.381" data-duration="2.64" data-track-index="5">reachable the same standardized way.</div>
+      <div class="caption-pill clip" id="cap23" data-start="37.021" data-duration="1.36" data-track-index="5">Add a tool once,</div>
+      <div class="caption-pill clip" id="cap24" data-start="38.381" data-duration="1.44" data-track-index="5">every connected agent can</div>
+      <div class="caption-pill clip" id="cap25" data-start="39.821" data-duration="0.96" data-track-index="5">use it immediately.</div>
+
+      <div class="caption-pill clip" id="cap26" data-start="41.098" data-duration="1.28" data-track-index="5">The tell is simple.</div>
+      <div class="caption-pill clip" id="cap27" data-start="42.378" data-duration="1.52" data-track-index="5">Count how many separate logins</div>
+      <div class="caption-pill clip" id="cap28" data-start="43.978" data-duration="1.68" data-track-index="5">and auth flow your agent's</div>
+      <div class="caption-pill clip" id="cap29" data-start="45.578" data-duration="2.48" data-track-index="5">current toolset actually requires.</div>
+      <div class="caption-pill clip" id="cap30" data-start="48.058" data-duration="1.6" data-track-index="5">If that number keeps climbing</div>
+      <div class="caption-pill clip" id="cap31" data-start="49.658" data-duration="1.2" data-track-index="5">with every new tool,</div>
+      <div class="caption-pill clip" id="cap32" data-start="50.858" data-duration="0.96" data-track-index="5">you're on the point to</div>
+      <div class="caption-pill clip" id="cap33" data-start="51.818" data-duration="0.72" data-track-index="5">point path.</div>
+
+      <div class="caption-pill clip" id="cap34" data-start="52.818" data-duration="1.76" data-track-index="5">This is what MCP Server</div>
+      <div class="caption-pill clip" id="cap35" data-start="54.658" data-duration="1.04" data-track-index="5">is built to replace a</div>
+      <div class="caption-pill clip" id="cap36" data-start="55.698" data-duration="2.56" data-track-index="5">gateway with 134 tools</div>
+      <div class="caption-pill clip" id="cap37" data-start="58.258" data-duration="1.44" data-track-index="5">already live across 12</div>
+      <div class="caption-pill clip" id="cap38" data-start="59.698" data-duration="2.56" data-track-index="5">categories, 1 OAuth 2.1</div>
+      <div class="caption-pill clip" id="cap39" data-start="62.258" data-duration="2.16" data-track-index="5">login, credentials encrypted at</div>
+      <div class="caption-pill clip" id="cap40" data-start="64.498" data-duration="1.44" data-track-index="5">rest, and pricing per</div>
+      <div class="caption-pill clip" id="cap41" data-start="65.938" data-duration="1.6" data-track-index="5">connection, not per task.</div>
+
+      <div class="caption-pill clip" id="cap42" data-start="67.866" data-duration="1.04" data-track-index="5">The best model in the</div>
+      <div class="caption-pill clip" id="cap43" data-start="68.906" data-duration="2.24" data-track-index="5">world, wired to zero tools,</div>
+      <div class="caption-pill clip" id="cap44" data-start="71.306" data-duration="1.84" data-track-index="5">is just a very articulate</div>
+      <div class="caption-pill clip" id="cap45" data-start="73.146" data-duration="2.32" data-track-index="5">conversation. Connection is the</div>
+      <div class="caption-pill clip" id="cap46" data-start="75.466" data-duration="1.52" data-track-index="5">part that actually determines</div>
+      <div class="caption-pill clip" id="cap47" data-start="76.986" data-duration="1.28" data-track-index="5">whether an agent can do</div>
+      <div class="caption-pill clip" id="cap48" data-start="78.266" data-duration="0.4" data-track-index="5">anything.</div>
+
+      <div class="caption-pill clip" id="cap49" data-start="81.81" data-duration="1.12" data-track-index="5">Follow for more of this</div>
+      <div class="caption-pill clip" id="cap50" data-start="82.93" data-duration="0.88" data-track-index="5">kind of content.</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Beat 1: Hook
+      tl.fromTo("#b1-text", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.15);
+      tl.to("#beat1", { opacity: 0, duration: 0.2 }, 8.57);
+
+      // Beat 2: Two ways
+      tl.fromTo("#b2-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 9.17);
+      tl.fromTo("#b2-headline", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4 }, 9.37);
+      tl.fromTo("#b2-chip-a", { opacity: 0, x: -24 }, { opacity: 1, x: 0, duration: 0.35 }, 10.4);
+      tl.fromTo("#b2-vs", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 11.0);
+      tl.fromTo("#b2-chip-b", { opacity: 0, x: 24 }, { opacity: 1, x: 0, duration: 0.35 }, 11.3);
+      tl.to("#beat2", { opacity: 0, duration: 0.2 }, 17.34);
+
+      // Beat 3: Point-to-point
+      tl.fromTo("#b3-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 17.94);
+      tl.fromTo("#b3-headline", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4 }, 18.14);
+      tl.fromTo("#b3-row1", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3 }, 19.9);
+      tl.fromTo("#b3-row2", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3 }, 21.4);
+      tl.fromTo("#b3-row3", { opacity: 0, x: -16 }, { opacity: 1, x: 0, duration: 0.3 }, 22.9);
+      tl.fromTo("#b3-tally", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 24.4);
+      tl.to("#beat3", { opacity: 0, duration: 0.2 }, 27.1);
+
+      // Beat 4: Gateway
+      tl.fromTo("#b4-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 27.7);
+      tl.fromTo("#b4-headline", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4 }, 27.9);
+      tl.fromTo("#gw-hub", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.8)" }, 29.6);
+      tl.fromTo("#gw-line1", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.45, ease: "power2.out" }, 30.3);
+      tl.fromTo("#gw-node1", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 30.6);
+      tl.fromTo("#gw-line2", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.45, ease: "power2.out" }, 30.85);
+      tl.fromTo("#gw-node2", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 31.15);
+      tl.fromTo("#gw-line3", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.45, ease: "power2.out" }, 31.4);
+      tl.fromTo("#gw-node3", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 31.7);
+      tl.fromTo("#gw-line4", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.45, ease: "power2.out" }, 31.95);
+      tl.fromTo("#gw-node4", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 32.25);
+      tl.fromTo("#gw-line5", { strokeDashoffset: 1 }, { strokeDashoffset: 0, duration: 0.45, ease: "power2.out" }, 32.5);
+      tl.fromTo("#gw-node5", { opacity: 0 }, { opacity: 1, duration: 0.25 }, 32.8);
+      tl.fromTo("#gw-caption", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4 }, 38.2);
+      tl.to("#beat4", { opacity: 0, duration: 0.2 }, 40.7);
+
+      // Beat 5: The test
+      tl.fromTo("#b5-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 41.3);
+      tl.fromTo("#b5-count-label", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 41.7);
+      tl.fromTo("#b5-counter", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 42.1);
+      tl.to("#b5-counter", { innerText: 2, duration: 0.01 }, 43.4, "counter1");
+      tl.to("#b5-counter", { innerText: 3, duration: 0.01 }, 44.4);
+      tl.to("#b5-counter", { innerText: 4, duration: 0.01 }, 45.4);
+      tl.to("#b5-counter", { innerText: 5, duration: 0.01 }, 46.4);
+      tl.to("#b5-counter", { innerText: "6+", duration: 0.01, color: "#9B6FD6" }, 47.4);
+      tl.fromTo("#b5-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4 }, 48.1);
+      tl.to("#beat5", { opacity: 0, duration: 0.2 }, 52.32);
+
+      // Beat 6: Grounding
+      tl.fromTo("#b6-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 52.92);
+      tl.fromTo("#b6-num", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(2.2)" }, 53.17);
+      tl.fromTo("#b6-label", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35 }, 53.57);
+      tl.fromTo("#b6-sub", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 53.87);
+      tl.fromTo("#b6-chip1", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3 }, 57.5);
+      tl.fromTo("#b6-chip2", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3 }, 60.5);
+      tl.fromTo("#b6-chip3", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.3 }, 63.0);
+      tl.to("#beat6", { opacity: 0, duration: 0.2 }, 67.37);
+
+      // Beat 7: Reframe / closing
+      tl.fromTo("#b7-text", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 67.97);
+      tl.to("#beat7", { opacity: 0, duration: 0.25 }, 78.41);
+
+      // End card
+      tl.fromTo("#end-brand", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 79.3);
+      tl.fromTo("#end-sub", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 79.65);
+      tl.to("#endCard", { opacity: 0, duration: 0.2 }, 81.4);
+
+      // Beat 8: Follow CTA
+      tl.fromTo("#b8-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 82.1);
+      tl.fromTo("#b8-label", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 82.4);
+      tl.fromTo("#b8-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 83.05);
+      tl.fromTo("#b8-tag", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 83.45);
+      tl.fromTo("#b8-chevron", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, 83.85);
+      tl.to("#b8-chevron", { y: -14, duration: 0.6, repeat: -1, yoyo: true, ease: "sine.inOut" }, 84.25);
+
+      // Captions: quick fade in per chunk (real word-level timestamps via Parakeet)
+      tl.fromTo("#cap0", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 0);
+      tl.fromTo("#cap1", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 1.6);
+      tl.fromTo("#cap2", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 2.8);
+      tl.fromTo("#cap3", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 4.24);
+      tl.fromTo("#cap4", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 5.84);
+      tl.fromTo("#cap5", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 7.52);
+      tl.fromTo("#cap6", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 8.968);
+      tl.fromTo("#cap7", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 10.808);
+      tl.fromTo("#cap8", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 12.408);
+      tl.fromTo("#cap9", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 13.928);
+      tl.fromTo("#cap10", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 15.368);
+      tl.fromTo("#cap11", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 16.808);
+      tl.fromTo("#cap12", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 17.744);
+      tl.fromTo("#cap13", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 19.504);
+      tl.fromTo("#cap14", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 21.744);
+      tl.fromTo("#cap15", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 23.184);
+      tl.fromTo("#cap16", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 24.784);
+      tl.fromTo("#cap17", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 26.544);
+      tl.fromTo("#cap18", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 27.581);
+      tl.fromTo("#cap19", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 29.021);
+      tl.fromTo("#cap20", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 31.341);
+      tl.fromTo("#cap21", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 32.701);
+      tl.fromTo("#cap22", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 34.381);
+      tl.fromTo("#cap23", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 37.021);
+      tl.fromTo("#cap24", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 38.381);
+      tl.fromTo("#cap25", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 39.821);
+      tl.fromTo("#cap26", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 41.098);
+      tl.fromTo("#cap27", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 42.378);
+      tl.fromTo("#cap28", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 43.978);
+      tl.fromTo("#cap29", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 45.578);
+      tl.fromTo("#cap30", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 48.058);
+      tl.fromTo("#cap31", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 49.658);
+      tl.fromTo("#cap32", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 50.858);
+      tl.fromTo("#cap33", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 51.818);
+      tl.fromTo("#cap34", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 52.818);
+      tl.fromTo("#cap35", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 54.658);
+      tl.fromTo("#cap36", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 55.698);
+      tl.fromTo("#cap37", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 58.258);
+      tl.fromTo("#cap38", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 59.698);
+      tl.fromTo("#cap39", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 62.258);
+      tl.fromTo("#cap40", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 64.498);
+      tl.fromTo("#cap41", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 65.938);
+      tl.fromTo("#cap42", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 67.866);
+      tl.fromTo("#cap43", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 68.906);
+      tl.fromTo("#cap44", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 71.306);
+      tl.fromTo("#cap45", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 73.146);
+      tl.fromTo("#cap46", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 75.466);
+      tl.fromTo("#cap47", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 76.986);
+      tl.fromTo("#cap48", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 78.266);
+      tl.fromTo("#cap49", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 81.81);
+      tl.fromTo("#cap50", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 82.93);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

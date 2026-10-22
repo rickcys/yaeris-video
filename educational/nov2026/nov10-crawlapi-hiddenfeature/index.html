@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0E0E1F; }
+      #root { width: 100%; height: 100%; position: relative; font-family: Inter, sans-serif; background: #0E0E1F; }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 150px 90px; }
+
+      .eyebrow { font-family: 'Space Mono', monospace; font-size: 27px; letter-spacing: 0.16em; color: #7FCBF0; text-transform: uppercase; margin-bottom: 22px; opacity: 0; }
+      .headline { font-family: Outfit, sans-serif; font-weight: 900; font-size: 70px; line-height: 1.14; color: #FBFBF8; letter-spacing: -0.01em; opacity: 0; }
+      .sub-line { font-family: Inter, sans-serif; font-size: 32px; line-height: 1.5; color: #A9A9BE; margin-top: 28px; opacity: 0; max-width: 860px; }
+      .source-tag { position: absolute; left: 90px; bottom: 90px; font-family: 'Space Mono', monospace; font-size: 21px; letter-spacing: 0.06em; color: #7A7A8F; opacity: 0; max-width: 700px; line-height: 1.5; }
+
+      /* Hook */
+      .hook-wrap { align-items: center; justify-content: center; text-align: center; }
+      .hook-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 58px; line-height: 1.2; color: #FBFBF8; letter-spacing: -0.01em; opacity: 0; }
+      .hook-text.second { font-size: 48px; color: #A9A9BE; font-weight: 700; margin-top: 44px; }
+
+      /* Mechanism setup (text-only beat) */
+      .mech-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+
+      /* Chip flows */
+      .chip-flow-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 26px; align-items: stretch; }
+      .chip { display: flex; align-items: center; gap: 20px; border-radius: 20px; padding: 26px 40px; opacity: 0; }
+      .chip-1 { background: rgba(155,111,214,0.14); border: 3px solid #9B6FD6; }
+      .chip-2 { background: rgba(27,127,168,0.18); border: 3px solid #1B7FA8; }
+      .chip-3 { background: rgba(37,211,102,0.14); border: 3px solid #25D366; }
+      .chip-muted { background: rgba(169,169,190,0.07); border: 3px solid #4F4F63; }
+      .chip-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 33px; color: #F4F4F5; }
+      .chip-muted .chip-text { color: #C7C7D6; }
+      .chip-tail { margin-top: 10px; font-family: Inter, sans-serif; font-size: 28px; color: #A9A9BE; text-align: center; opacity: 0; }
+
+      /* The test: two-card comparison */
+      .test-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 44px; }
+      .test-cards { display: flex; gap: 28px; }
+      .test-card { flex: 1; border-radius: 24px; padding: 48px 32px; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 14px; opacity: 0; }
+      .test-card.a { background: rgba(169,169,190,0.07); border: 3px solid #4F4F63; }
+      .test-card.b { background: rgba(27,127,168,0.18); border: 3px solid #1B7FA8; }
+      .test-card-label { font-family: 'Space Mono', monospace; font-size: 22px; letter-spacing: 0.08em; text-transform: uppercase; color: #A9A9BE; }
+      .test-card-value { font-family: Outfit, sans-serif; font-weight: 900; font-size: 48px; color: #F4F4F5; line-height: 1.1; }
+      .test-card.b .test-card-value { color: #7FCBF0; }
+      .test-card-sub { font-family: Inter, sans-serif; font-size: 24px; color: #A9A9BE; }
+
+      /* Closing / reframe */
+      .closing-wrap { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
+      .closing-text { font-family: Outfit, sans-serif; font-weight: 800; font-size: 62px; line-height: 1.24; color: #F4F4F5; opacity: 0; }
+      .closing-text .accent { color: #1B7FA8; }
+
+      /* Follow CTA */
+      .follow-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .follow-label { font-family: Outfit, sans-serif; font-weight: 900; font-size: 96px; color: #FBFBF8; line-height: 1.05; opacity: 0; }
+      .follow-sub { font-family: Inter, sans-serif; font-size: 32px; color: #A9A9BE; line-height: 1.5; max-width: 780px; opacity: 0; }
+      .follow-tag { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #25D366; text-transform: uppercase; margin-top: 12px; opacity: 0; }
+      .follow-chevron { font-size: 60px; color: #7FCBF0; opacity: 0; margin-top: 10px; }
+
+      /* ---- captions (matches Brand Kit caption-pill spec) ---- */
+      .caption-pill {
+        position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%);
+        background: rgba(10,9,16,0.86); color: #fff; font-family: Inter, sans-serif; font-weight: 500;
+        font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%;
+        text-align: center; line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="66.025"
+      data-width="1080"
+      data-height="1920"
+    >
+      <audio id="a1" class="clip" data-start="0" data-duration="8.043" data-track-index="1" src="audio_lines/01_hook.wav"></audio>
+      <audio id="a2" class="clip" data-start="8.243" data-duration="6.656" data-track-index="1" src="audio_lines/02_mechanism_setup.wav"></audio>
+      <audio id="a3" class="clip" data-start="15.099" data-duration="7.723" data-track-index="1" src="audio_lines/03_resthalf.wav"></audio>
+      <audio id="a4" class="clip" data-start="23.022" data-duration="9.28" data-track-index="1" src="audio_lines/04_mcphalf.wav"></audio>
+      <audio id="a5" class="clip" data-start="32.502" data-duration="10.795" data-track-index="1" src="audio_lines/05_thetest.wav"></audio>
+      <audio id="a6" class="clip" data-start="43.497" data-duration="7.061" data-track-index="1" src="audio_lines/06_grounding.wav"></audio>
+      <audio id="a7" class="clip" data-start="50.758" data-duration="9.067" data-track-index="1" src="audio_lines/07_reframe.wav"></audio>
+      <audio id="a8" class="clip" data-start="60.025" data-duration="2.091" data-track-index="1" src="audio_lines/08_followcta.wav"></audio>
+
+      <!-- Beat 1: Hook, 0 - 8.043s -->
+      <div class="beat hook-wrap clip" id="beat1" data-start="0" data-duration="8.043" data-track-index="0">
+        <div class="eyebrow" id="b1-eyebrow" style="opacity:1">Crawl API</div>
+        <div class="hook-text" id="b1-text1">Most developers using Crawl API never realize their own API key&hellip;</div>
+        <div class="hook-text second" id="b1-text2">&hellip;already does more than they're actually using it for.</div>
+      </div>
+
+      <!-- Beat 2: Mechanism setup, 8.243 - 14.899s -->
+      <div class="beat clip" id="beat2" data-start="8.243" data-duration="6.656" data-track-index="0">
+        <div class="eyebrow" id="b2-eyebrow">One Key, Two Paths</div>
+        <div class="mech-wrap">
+          <div class="headline" id="b2-headline">Most accounts<br />use half their key.</div>
+          <div class="sub-line" id="b2-sub">A backend call. Or an agent<br />calling the crawler directly.</div>
+        </div>
+      </div>
+
+      <!-- Beat 3: REST half (Mechanism A), 15.099 - 22.822s -->
+      <div class="beat clip" id="beat3" data-start="15.099" data-duration="7.723" data-track-index="0">
+        <div class="eyebrow" id="b3-eyebrow">The REST Half</div>
+        <div class="headline" id="b3-headline">Wire it into<br />a backend call.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-2" id="b3-chip1"><div class="chip-text">Standard API call</div></div>
+          <div class="chip chip-2" id="b3-chip2"><div class="chip-text">Structured data back</div></div>
+          <div class="chip chip-muted" id="b3-chip3"><div class="chip-text">Where most integrations stop</div></div>
+          <div class="chip-tail" id="b3-tail">Simple. But only half the key.</div>
+        </div>
+      </div>
+
+      <!-- Beat 4: MCP half (Mechanism B), 23.022 - 32.302s -->
+      <div class="beat clip" id="beat4" data-start="23.022" data-duration="9.28" data-track-index="0">
+        <div class="eyebrow" id="b4-eyebrow">The MCP Half</div>
+        <div class="headline" id="b4-headline">Same key.<br />Different caller.</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="b4-chip1"><div class="chip-text">An AI agent calls it directly</div></div>
+          <div class="chip chip-1" id="b4-chip2"><div class="chip-text">No second account</div></div>
+          <div class="chip chip-3" id="b4-chip3"><div class="chip-text">No second token to manage</div></div>
+          <div class="chip-tail" id="b4-tail">The other half &mdash; usually untouched.</div>
+        </div>
+      </div>
+
+      <!-- Beat 5: The test, 32.502 - 43.297s -->
+      <div class="beat clip" id="beat5" data-start="32.502" data-duration="10.795" data-track-index="0">
+        <div class="eyebrow" id="b5-eyebrow">The Test</div>
+        <div class="headline" id="b5-headline">How does your<br />agent get data?</div>
+        <div class="test-wrap">
+          <div class="test-cards">
+            <div class="test-card a" id="b5-carda">
+              <div class="test-card-label">Manually Fed</div>
+              <div class="test-card-value">Scraped by<br />hand</div>
+              <div class="test-card-sub">MCP half unused</div>
+            </div>
+            <div class="test-card b" id="b5-cardb">
+              <div class="test-card-label">Calls It Directly</div>
+              <div class="test-card-value">Agent pulls<br />it itself</div>
+              <div class="test-card-sub">MCP half active</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Beat 6: Grounding -- Crawl API, 43.497 - 50.558s -->
+      <div class="beat clip" id="beat6" data-start="43.497" data-duration="7.061" data-track-index="0">
+        <div class="eyebrow" id="b6-eyebrow">Crawl API</div>
+        <div class="headline" id="b6-headline">One key.<br />Both paths covered.</div>
+        <div class="chip-flow-wrap" style="gap:20px">
+          <div class="chip chip-2" id="b6-chip1"><div class="chip-text">Same credits, either path</div></div>
+          <div class="chip chip-1" id="b6-chip2"><div class="chip-text">Automatic 3-tier escalation</div></div>
+          <div class="chip chip-2" id="b6-chip3"><div class="chip-text">robots.txt compliance by default</div></div>
+          <div class="chip chip-3" id="b6-chip4"><div class="chip-text">100 free credits</div></div>
+        </div>
+        <div class="source-tag" id="b6-source">No credit card required</div>
+      </div>
+
+      <!-- Beat 7: Reframe, 50.758 - 59.825s -->
+      <div class="beat closing-wrap clip" id="beat7" data-start="50.758" data-duration="9.067" data-track-index="0">
+        <div class="closing-text" id="b7-text">One integration already covers two genuinely different use cases. <span class="accent">Most accounts only use one.</span></div>
+      </div>
+
+      <!-- Beat 8: Follow CTA, 60.025 - 66.025s -->
+      <div class="beat follow-wrap clip" id="beat8" data-start="60.025" data-duration="6.0" data-track-index="0">
+        <div class="eyebrow" id="b8-eyebrow">Before You Go</div>
+        <div class="follow-label" id="b8-label">Follow for<br />More</div>
+        <div class="follow-sub" id="b8-sub">More of this kind of content &mdash; real, fact-checked walkthroughs on hosting, lead-gen &amp; dev tooling</div>
+        <div class="follow-tag" id="b8-tag">New video every day</div>
+        <div class="follow-chevron" id="b8-chevron">&#8593;</div>
+      </div>
+
+      <!-- ===== CAPTIONS (real word-level timestamps via Parakeet transcription) ===== -->
+      <div class="caption-pill clip" id="cap0" data-start="0" data-duration="2.56" data-track-index="5">Most developers using Crawl API</div>
+      <div class="caption-pill clip" id="cap1" data-start="2.72" data-duration="2.16" data-track-index="5">never realize their own API</div>
+      <div class="caption-pill clip" id="cap2" data-start="4.88" data-duration="1.68" data-track-index="5">key already does more than</div>
+      <div class="caption-pill clip" id="cap3" data-start="6.56" data-duration="1.36" data-track-index="5">they're actually using it for.</div>
+      <div class="caption-pill clip" id="cap4" data-start="8.243" data-duration="1.76" data-track-index="5">There are two fundamentally different</div>
+      <div class="caption-pill clip" id="cap5" data-start="10.003" data-duration="1.52" data-track-index="5">access paths built into</div>
+      <div class="caption-pill clip" id="cap6" data-start="11.523" data-duration="1.6" data-track-index="5">that one key, and most</div>
+      <div class="caption-pill clip" id="cap7" data-start="13.123" data-duration="1.76" data-track-index="5">accounts only ever touch one.</div>
+      <div class="caption-pill clip" id="cap8" data-start="15.099" data-duration="0.8" data-track-index="5">The REST half,</div>
+      <div class="caption-pill clip" id="cap9" data-start="16.059" data-duration="1.44" data-track-index="5">wire the key into a backend</div>
+      <div class="caption-pill clip" id="cap10" data-start="17.659" data-duration="2.32" data-track-index="5">call, get structured data back.</div>
+      <div class="caption-pill clip" id="cap11" data-start="19.979" data-duration="2.72" data-track-index="5">Standard, simple, where most integrations stop.</div>
+      <div class="caption-pill clip" id="cap12" data-start="23.022" data-duration="1.44" data-track-index="5">The MCP half.</div>
+      <div class="caption-pill clip" id="cap13" data-start="24.622" data-duration="1.52" data-track-index="5">The exact same key,</div>
+      <div class="caption-pill clip" id="cap14" data-start="26.142" data-duration="1.52" data-track-index="5">used by an AI agent</div>
+      <div class="caption-pill clip" id="cap15" data-start="27.662" data-duration="1.76" data-track-index="5">to call the crawler directly,</div>
+      <div class="caption-pill clip" id="cap16" data-start="29.422" data-duration="1.52" data-track-index="5">no second account, no</div>
+      <div class="caption-pill clip" id="cap17" data-start="30.942" data-duration="1.2" data-track-index="5">second token to manage.</div>
+      <div class="caption-pill clip" id="cap18" data-start="32.502" data-duration="1.28" data-track-index="5">The tell is simple.</div>
+      <div class="caption-pill clip" id="cap19" data-start="33.782" data-duration="1.68" data-track-index="5">Check how your agent currently</div>
+      <div class="caption-pill clip" id="cap20" data-start="35.462" data-duration="1.2" data-track-index="5">gets web data.</div>
+      <div class="caption-pill clip" id="cap21" data-start="36.662" data-duration="1.68" data-track-index="5">If someone's manually scraping it</div>
+      <div class="caption-pill clip" id="cap22" data-start="38.502" data-duration="1.2" data-track-index="5">and feeding it in by</div>
+      <div class="caption-pill clip" id="cap23" data-start="39.702" data-duration="1.2" data-track-index="5">hand, that's a sign</div>
+      <div class="caption-pill clip" id="cap24" data-start="40.902" data-duration="1.44" data-track-index="5">the MCP half has</div>
+      <div class="caption-pill clip" id="cap25" data-start="42.342" data-duration="0.8" data-track-index="5">never been touched.</div>
+      <div class="caption-pill clip" id="cap26" data-start="43.497" data-duration="1.68" data-track-index="5">Same credits, same automatic</div>
+      <div class="caption-pill clip" id="cap27" data-start="45.177" data-duration="1.84" data-track-index="5">three-tier escalation, same</div>
+      <div class="caption-pill clip" id="cap28" data-start="47.017" data-duration="2.24" data-track-index="5">robots.txt compliance,</div>
+      <div class="caption-pill clip" id="cap29" data-start="49.257" data-duration="1.2" data-track-index="5">whichever path you use.</div>
+      <div class="caption-pill clip" id="cap30" data-start="50.758" data-duration="1.92" data-track-index="5">One integration already covers</div>
+      <div class="caption-pill clip" id="cap31" data-start="52.678" data-duration="1.2" data-track-index="5">two genuinely different</div>
+      <div class="caption-pill clip" id="cap32" data-start="53.878" data-duration="1.2" data-track-index="5">use cases, a</div>
+      <div class="caption-pill clip" id="cap33" data-start="55.078" data-duration="1.76" data-track-index="5">backend and an agent,</div>
+      <div class="caption-pill clip" id="cap34" data-start="56.838" data-duration="1.2" data-track-index="5">and most accounts are</div>
+      <div class="caption-pill clip" id="cap35" data-start="58.038" data-duration="1.04" data-track-index="5">only ever using it</div>
+      <div class="caption-pill clip" id="cap36" data-start="59.078" data-duration="0.64" data-track-index="5">for one of them.</div>
+      <div class="caption-pill clip" id="cap37" data-start="60.025" data-duration="0.96" data-track-index="5">Follow for more of</div>
+      <div class="caption-pill clip" id="cap38" data-start="60.985" data-duration="1.04" data-track-index="5">this kind of content.</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Beat 1: Hook
+      tl.fromTo("#b1-text1", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.15);
+      tl.fromTo("#b1-text2", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 5.52);
+      tl.to("#beat1", { opacity: 0, duration: 0.2 }, 7.843);
+
+      // Beat 2: Mechanism setup
+      tl.fromTo("#b2-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 8.643);
+      tl.fromTo("#b2-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 8.843);
+      tl.fromTo("#b2-sub", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4 }, 10.943);
+      tl.to("#beat2", { opacity: 0, duration: 0.2 }, 14.699);
+
+      // Beat 3: REST half
+      tl.fromTo("#b3-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 15.499);
+      tl.fromTo("#b3-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 15.699);
+      tl.fromTo("#b3-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 17.099);
+      tl.fromTo("#b3-chip2", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 18.859);
+      tl.fromTo("#b3-chip3", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 20.419);
+      tl.fromTo("#b3-tail", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 21.619);
+      tl.to("#beat3", { opacity: 0, duration: 0.2 }, 22.622);
+
+      // Beat 4: MCP half
+      tl.fromTo("#b4-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 23.422);
+      tl.fromTo("#b4-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 23.622);
+      tl.fromTo("#b4-chip1", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 25.422);
+      tl.fromTo("#b4-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 27.422);
+      tl.fromTo("#b4-chip3", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 29.422);
+      tl.fromTo("#b4-tail", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 30.942);
+      tl.to("#beat4", { opacity: 0, duration: 0.2 }, 32.102);
+
+      // Beat 5: The test
+      tl.fromTo("#b5-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 32.902);
+      tl.fromTo("#b5-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 33.102);
+      tl.fromTo("#b5-carda", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4 }, 37.502);
+      tl.fromTo("#b5-cardb", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.6)" }, 39.502);
+      tl.to("#beat5", { opacity: 0, duration: 0.2 }, 43.097);
+
+      // Beat 6: Grounding -- Crawl API
+      tl.fromTo("#b6-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 43.897);
+      tl.fromTo("#b6-headline", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.45 }, 44.097);
+      tl.fromTo("#b6-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 45.497);
+      tl.fromTo("#b6-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.3 }, 46.897);
+      tl.fromTo("#b6-chip3", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.3 }, 48.097);
+      tl.fromTo("#b6-chip4", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 49.257);
+      tl.fromTo("#b6-source", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 49.797);
+      tl.to("#beat6", { opacity: 0, duration: 0.2 }, 50.358);
+
+      // Beat 7: Reframe
+      tl.fromTo("#b7-text", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.5 }, 51.058);
+      tl.to("#beat7", { opacity: 0, duration: 0.2 }, 59.625);
+
+      // Beat 8: Follow CTA
+      tl.fromTo("#b8-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 60.325);
+      tl.fromTo("#b8-label", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 60.625);
+      tl.fromTo("#b8-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 61.425);
+      tl.fromTo("#b8-tag", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 61.925);
+      tl.fromTo("#b8-chevron", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, 62.325);
+      tl.to("#b8-chevron", { y: -14, duration: 0.6, repeat: -1, yoyo: true, ease: "sine.inOut" }, 62.725);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1080, height=1920" />
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1080px; height: 1920px; overflow: hidden; background: #0E0E1F; }
+      #root { width: 100%; height: 100%; position: relative; font-family: Inter, sans-serif; background: #0E0E1F; }
+      .beat { position: absolute; inset: 0; display: flex; flex-direction: column; padding: 150px 90px; }
+
+      .eyebrow { font-family: 'Space Mono', monospace; font-size: 28px; letter-spacing: 0.16em; color: #7FCBF0; text-transform: uppercase; margin-bottom: 22px; opacity: 0; }
+
+      /* Hook beat */
+      .hook-wrap { align-items: center; justify-content: center; text-align: center; }
+      .hook-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 78px; line-height: 1.18; color: #FBFBF8; letter-spacing: -0.01em; }
+
+      /* Problem / statement beat */
+      .problem-wrap { flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; }
+      .problem-text { font-family: Outfit, sans-serif; font-weight: 800; font-size: 62px; line-height: 1.28; color: #F4F4F5; opacity: 0; }
+      .problem-text .strike { color: #DC3545; }
+      .problem-text .accent { color: #25D366; }
+
+      /* Chip flow beat */
+      .chip-flow-wrap { flex: 1; display: flex; flex-direction: column; justify-content: center; gap: 30px; align-items: center; }
+      .chip { display: flex; align-items: center; gap: 20px; border-radius: 999px; padding: 24px 44px; opacity: 0; }
+      .chip-1 { background: rgba(155,111,214,0.14); border: 3px solid #9B6FD6; }
+      .chip-2 { background: rgba(27,127,168,0.16); border: 3px solid #1B7FA8; }
+      .chip-3 { background: rgba(37,211,102,0.14); border: 3px solid #25D366; }
+      .chip-text { font-family: Outfit, sans-serif; font-weight: 700; font-size: 36px; color: #F4F4F5; text-align: center; }
+
+      /* Quote / reframe beat */
+      .quote-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; text-align: center; }
+      .quote-text { font-family: Outfit, sans-serif; font-weight: 900; font-size: 68px; line-height: 1.22; color: #FBFBF8; opacity: 0; }
+      .quote-sub { font-family: Inter, sans-serif; font-size: 30px; color: #A9A9BE; opacity: 0; max-width: 780px; }
+      .quote-brand { font-family: 'Space Mono', monospace; font-size: 28px; letter-spacing: 0.14em; color: #29ABE2; text-transform: uppercase; margin-top: 16px; opacity: 0; }
+
+      /* Follow CTA beat */
+      .follow-wrap { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 24px; text-align: center; }
+      .follow-label { font-family: Outfit, sans-serif; font-weight: 900; font-size: 96px; color: #FBFBF8; line-height: 1.05; opacity: 0; }
+      .follow-sub { font-family: Inter, sans-serif; font-size: 32px; color: #A9A9BE; line-height: 1.5; max-width: 780px; opacity: 0; }
+      .follow-tag { font-family: 'Space Mono', monospace; font-size: 30px; letter-spacing: 0.14em; color: #25D366; text-transform: uppercase; margin-top: 12px; opacity: 0; }
+      .follow-chevron { font-size: 60px; color: #7FCBF0; opacity: 0; margin-top: 10px; }
+
+      /* ---- captions (matches Brand Kit caption-pill spec) ---- */
+      .caption-pill {
+        position: absolute; left: 50%; bottom: 9%; transform: translateX(-50%);
+        background: rgba(10,9,16,0.86); color: #fff; font-family: Inter, sans-serif; font-weight: 500;
+        font-size: 32px; padding: 14px 34px; border-radius: 14px; max-width: 90%;
+        text-align: center; line-height: 1.3;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      id="root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="53.197"
+      data-width="1080"
+      data-height="1920"
+    >
+      <audio id="a1" class="clip" data-start="0" data-duration="5.312" data-track-index="1" src="audio_lines/01_hook.wav"></audio>
+      <audio id="a2" class="clip" data-start="5.512" data-duration="5.547" data-track-index="1" src="audio_lines/02_exception.wav"></audio>
+      <audio id="a3" class="clip" data-start="11.259" data-duration="7.509" data-track-index="1" src="audio_lines/03_private.wav"></audio>
+      <audio id="a4" class="clip" data-start="18.968" data-duration="6.656" data-track-index="1" src="audio_lines/04_everyone.wav"></audio>
+      <audio id="a5" class="clip" data-start="25.824" data-duration="13.995" data-track-index="1" src="audio_lines/05_test.wav"></audio>
+      <audio id="a6" class="clip" data-start="40.019" data-duration="5.717" data-track-index="1" src="audio_lines/06_downside.wav"></audio>
+      <audio id="a7" class="clip" data-start="45.936" data-duration="4.971" data-track-index="1" src="audio_lines/07_reframe.wav"></audio>
+      <audio id="a8" class="clip" data-start="51.107" data-duration="2.091" data-track-index="1" src="audio_lines/08_follow.wav"></audio>
+
+      <!-- Beat A: Hook, 0 - 5.512s -->
+      <div class="beat hook-wrap clip" id="beatA" data-start="0" data-duration="5.512" data-track-index="0">
+        <div class="eyebrow" id="a-eyebrow" style="opacity:1">DReview</div>
+        <div class="hook-text" id="a-text">&ldquo;Is it worth it?&rdquo;<br />Almost always yes --<br />with one exception.</div>
+      </div>
+
+      <!-- Beat B: Two situations, 5.512 - 11.259s -->
+      <div class="beat problem-wrap clip" id="beatB" data-start="5.512" data-duration="5.747" data-track-index="0">
+        <div class="problem-text" id="b-text">There are two<br />fundamentally different<br />situations here --<br />only one applies<br />to most builders.</div>
+      </div>
+
+      <!-- Beat C: The exception, 11.259 - 18.968s -->
+      <div class="beat problem-wrap clip" id="beatC" data-start="11.259" data-duration="7.709" data-track-index="0">
+        <div class="eyebrow" id="c-eyebrow">The Exception</div>
+        <div class="problem-text" id="c-text">A private,<br />internal-only tool.<br /><span class="strike">Never meant to be<br />discovered outside<br />your team.</span></div>
+      </div>
+
+      <!-- Beat D: Everyone else, 18.968 - 25.824s -->
+      <div class="beat clip" id="beatD" data-start="18.968" data-duration="6.856" data-track-index="0">
+        <div class="eyebrow" id="d-eyebrow">Everyone Else</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="d-chip1"><div class="chip-text">Public MCP Server</div></div>
+          <div class="chip chip-2" id="d-chip2"><div class="chip-text">Claude Skill</div></div>
+          <div class="chip chip-3" id="d-chip3"><div class="chip-text">Built To Be Found &#10003;</div></div>
+        </div>
+      </div>
+
+      <!-- Beat E: The 3-question test, 25.824 - 40.019s -->
+      <div class="beat clip" id="beatE" data-start="25.824" data-duration="14.195" data-track-index="0">
+        <div class="eyebrow" id="e-eyebrow">The 3-Question Test</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="e-chip1"><div class="chip-text">Do You Want It Found?</div></div>
+          <div class="chip chip-2" id="e-chip2"><div class="chip-text">Is The Time A Real Cost?</div></div>
+          <div class="chip chip-3" id="e-chip3"><div class="chip-text">What's The Downside?</div></div>
+        </div>
+      </div>
+
+      <!-- Beat F: Grounding, 40.019 - 45.936s -->
+      <div class="beat clip" id="beatF" data-start="40.019" data-duration="5.917" data-track-index="0">
+        <div class="eyebrow" id="f-eyebrow">Barely Any Downside</div>
+        <div class="chip-flow-wrap">
+          <div class="chip chip-1" id="f-chip1"><div class="chip-text">Free To List</div></div>
+          <div class="chip chip-2" id="f-chip2"><div class="chip-text">No Expiration</div></div>
+          <div class="chip chip-3" id="f-chip3"><div class="chip-text">A Few Minutes &#10003;</div></div>
+        </div>
+      </div>
+
+      <!-- Beat G: Reframe, 45.936 - 51.107s -->
+      <div class="beat quote-wrap clip" id="beatG" data-start="45.936" data-duration="5.171" data-track-index="0">
+        <div class="eyebrow" id="g-eyebrow">The Reframe</div>
+        <div class="quote-text" id="g-text">The bar for<br />&ldquo;worth it&rdquo; is lower<br />here than almost<br />anywhere else.</div>
+        <div class="quote-sub" id="g-sub">In this whole series.</div>
+        <div class="quote-brand" id="g-brand">DReview &middot; Free MCP Directory</div>
+      </div>
+
+      <!-- Beat H: Follow CTA, 51.107 - 53.197s -->
+      <div class="beat follow-wrap clip" id="beatH" data-start="51.107" data-duration="2.090" data-track-index="0">
+        <div class="eyebrow" id="h-eyebrow">Before You Go</div>
+        <div class="follow-label" id="h-label">Follow for<br />More</div>
+        <div class="follow-sub" id="h-sub">Real tips on getting the most out of your free DReview listing</div>
+        <div class="follow-tag" id="h-tag">New video every day</div>
+        <div class="follow-chevron" id="h-chevron">&#8593;</div>
+      </div>
+
+      <!-- ===== CAPTIONS (real word-level timestamps via Parakeet transcription) ===== -->
+      <div class="caption-pill clip" id="cap0" data-start="0.000" data-duration="1.680" data-track-index="5">Is listing on DReview worth</div>
+      <div class="caption-pill clip" id="cap1" data-start="1.680" data-duration="2.000" data-track-index="5">it is almost always yes,</div>
+      <div class="caption-pill clip" id="cap2" data-start="3.680" data-duration="1.520" data-track-index="5">with one specific exception.</div>
+
+      <div class="caption-pill clip" id="cap3" data-start="5.512" data-duration="1.840" data-track-index="5">There are two fundamentally different</div>
+      <div class="caption-pill clip" id="cap4" data-start="7.352" data-duration="1.840" data-track-index="5">situations here, and only one</div>
+      <div class="caption-pill clip" id="cap5" data-start="9.192" data-duration="1.120" data-track-index="5">of them applies to most</div>
+      <div class="caption-pill clip" id="cap6" data-start="10.312" data-duration="0.640" data-track-index="5">builders.</div>
+
+      <div class="caption-pill clip" id="cap7" data-start="11.259" data-duration="2.480" data-track-index="5">The Exception, a private, internal</div>
+      <div class="caption-pill clip" id="cap8" data-start="13.739" data-duration="1.920" data-track-index="5">only tool that was genuinely</div>
+      <div class="caption-pill clip" id="cap9" data-start="15.659" data-duration="1.440" data-track-index="5">never meant to be discovered</div>
+      <div class="caption-pill clip" id="cap10" data-start="17.099" data-duration="1.520" data-track-index="5">by anyone outside your team.</div>
+
+      <div class="caption-pill clip" id="cap11" data-start="18.968" data-duration="2.480" data-track-index="5">Everyone else, any public MCP</div>
+      <div class="caption-pill clip" id="cap12" data-start="21.448" data-duration="1.840" data-track-index="5">server or Claude Skill, where</div>
+      <div class="caption-pill clip" id="cap13" data-start="23.288" data-duration="1.040" data-track-index="5">the whole point is for</div>
+      <div class="caption-pill clip" id="cap14" data-start="24.328" data-duration="0.960" data-track-index="5">someone to find and use</div>
+      <div class="caption-pill clip" id="cap15" data-start="25.288" data-duration="0.240" data-track-index="5">it.</div>
+
+      <div class="caption-pill clip" id="cap16" data-start="25.824" data-duration="2.080" data-track-index="5">The test is three questions.</div>
+      <div class="caption-pill clip" id="cap17" data-start="27.904" data-duration="0.960" data-track-index="5">Do you want the people</div>
+      <div class="caption-pill clip" id="cap18" data-start="28.864" data-duration="1.600" data-track-index="5">already searching for something like</div>
+      <div class="caption-pill clip" id="cap19" data-start="30.464" data-duration="1.600" data-track-index="5">this to actually find it?</div>
+      <div class="caption-pill clip" id="cap20" data-start="32.064" data-duration="1.120" data-track-index="5">Is the few minutes the</div>
+      <div class="caption-pill clip" id="cap21" data-start="33.184" data-duration="1.600" data-track-index="5">submission takes a real cost</div>
+      <div class="caption-pill clip" id="cap22" data-start="34.784" data-duration="1.760" data-track-index="5">worth weighing? And since it's</div>
+      <div class="caption-pill clip" id="cap23" data-start="36.544" data-duration="2.080" data-track-index="5">free with no expiration, what's</div>
+      <div class="caption-pill clip" id="cap24" data-start="38.624" data-duration="1.040" data-track-index="5">the actual downside?</div>
+
+      <div class="caption-pill clip" id="cap25" data-start="40.019" data-duration="1.040" data-track-index="5">There really isn't much of</div>
+      <div class="caption-pill clip" id="cap26" data-start="41.059" data-duration="2.240" data-track-index="5">one free, no expiration,</div>
+      <div class="caption-pill clip" id="cap27" data-start="43.299" data-duration="1.040" data-track-index="5">a few minutes to fill</div>
+      <div class="caption-pill clip" id="cap28" data-start="44.339" data-duration="1.280" data-track-index="5">in the required fields.</div>
+
+      <div class="caption-pill clip" id="cap29" data-start="45.936" data-duration="1.120" data-track-index="5">The bar for worth it</div>
+      <div class="caption-pill clip" id="cap30" data-start="47.136" data-duration="1.760" data-track-index="5">here is genuinely lower than</div>
+      <div class="caption-pill clip" id="cap31" data-start="48.896" data-duration="1.200" data-track-index="5">almost anywhere else in this</div>
+      <div class="caption-pill clip" id="cap32" data-start="50.096" data-duration="0.720" data-track-index="5">whole series.</div>
+
+      <div class="caption-pill clip" id="cap33" data-start="51.107" data-duration="1.120" data-track-index="5">Follow for more of this</div>
+      <div class="caption-pill clip" id="cap34" data-start="52.227" data-duration="0.880" data-track-index="5">kind of content.</div>
+    </div>
+    <script>
+      const tl = gsap.timeline({ paused: true });
+
+      // Beat A: Hook
+      tl.fromTo("#a-text", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.15);
+      tl.to("#beatA", { opacity: 0, duration: 0.2 }, 5.262);
+
+      // Beat B: Two situations
+      tl.fromTo("#b-text", { opacity: 0, scale: 0.9 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 5.662);
+      tl.to("#beatB", { opacity: 0, duration: 0.2 }, 11.009);
+
+      // Beat C: The exception
+      tl.fromTo("#c-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 11.359);
+      tl.fromTo("#c-text", { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.4, ease: "power2.out" }, 11.609);
+      tl.to("#beatC", { opacity: 0, duration: 0.2 }, 18.718);
+
+      // Beat D: Everyone else (chip flow)
+      tl.fromTo("#d-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 19.068);
+      tl.fromTo("#d-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35 }, 19.468);
+      tl.fromTo("#d-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35 }, 21.468);
+      tl.fromTo("#d-chip3", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 23.468);
+      tl.to("#beatD", { opacity: 0, duration: 0.2 }, 25.574);
+
+      // Beat E: The 3-question test (chip flow)
+      tl.fromTo("#e-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 25.974);
+      tl.fromTo("#e-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35 }, 27.904);
+      tl.fromTo("#e-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35 }, 32.064);
+      tl.fromTo("#e-chip3", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 36.544);
+      tl.to("#beatE", { opacity: 0, duration: 0.2 }, 39.769);
+
+      // Beat F: Grounding (chip flow)
+      tl.fromTo("#f-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 40.169);
+      tl.fromTo("#f-chip1", { opacity: 0, x: -20 }, { opacity: 1, x: 0, duration: 0.35 }, 40.519);
+      tl.fromTo("#f-chip2", { opacity: 0, x: 20 }, { opacity: 1, x: 0, duration: 0.35 }, 42.019);
+      tl.fromTo("#f-chip3", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.8)" }, 43.519);
+      tl.to("#beatF", { opacity: 0, duration: 0.2 }, 45.686);
+
+      // Beat G: Reframe
+      tl.fromTo("#g-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 46.086);
+      tl.fromTo("#g-text", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 46.336);
+      tl.fromTo("#g-sub", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 46.886);
+      tl.fromTo("#g-brand", { opacity: 0 }, { opacity: 1, duration: 0.35 }, 47.186);
+      tl.to("#beatG", { opacity: 0, duration: 0.2 }, 50.857);
+
+      // Beat H: Follow CTA
+      tl.fromTo("#h-eyebrow", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.3 }, 51.207);
+      tl.fromTo("#h-label", { opacity: 0, scale: 0.85 }, { opacity: 1, scale: 1, duration: 0.55, ease: "back.out(1.8)" }, 51.507);
+      tl.fromTo("#h-sub", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 52.157);
+      tl.fromTo("#h-tag", { opacity: 0 }, { opacity: 1, duration: 0.4 }, 52.557);
+      tl.fromTo("#h-chevron", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4 }, 52.957);
+      tl.to("#h-chevron", { y: -14, duration: 0.6, repeat: -1, yoyo: true, ease: "sine.inOut" }, 53.057);
+
+      // Captions: quick fade in per chunk (real word-level timestamps)
+      tl.fromTo("#cap0", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 0.000);
+      tl.fromTo("#cap1", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 1.680);
+      tl.fromTo("#cap2", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 3.680);
+      tl.fromTo("#cap3", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 5.512);
+      tl.fromTo("#cap4", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 7.352);
+      tl.fromTo("#cap5", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 9.192);
+      tl.fromTo("#cap6", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 10.312);
+      tl.fromTo("#cap7", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 11.259);
+      tl.fromTo("#cap8", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 13.739);
+      tl.fromTo("#cap9", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 15.659);
+      tl.fromTo("#cap10", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 17.099);
+      tl.fromTo("#cap11", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 18.968);
+      tl.fromTo("#cap12", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 21.448);
+      tl.fromTo("#cap13", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 23.288);
+      tl.fromTo("#cap14", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 24.328);
+      tl.fromTo("#cap15", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 25.288);
+      tl.fromTo("#cap16", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 25.824);
+      tl.fromTo("#cap17", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 27.904);
+      tl.fromTo("#cap18", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 28.864);
+      tl.fromTo("#cap19", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 30.464);
+      tl.fromTo("#cap20", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 32.064);
+      tl.fromTo("#cap21", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 33.184);
+      tl.fromTo("#cap22", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 34.784);
+      tl.fromTo("#cap23", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 36.544);
+      tl.fromTo("#cap24", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 38.624);
+      tl.fromTo("#cap25", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 40.019);
+      tl.fromTo("#cap26", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 41.059);
+      tl.fromTo("#cap27", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 43.299);
+      tl.fromTo("#cap28", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 44.339);
+      tl.fromTo("#cap29", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 45.936);
+      tl.fromTo("#cap30", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 47.136);
+      tl.fromTo("#cap31", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 48.896);
+      tl.fromTo("#cap32", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 50.096);
+      tl.fromTo("#cap33", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 51.107);
+      tl.fromTo("#cap34", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.12 }, 52.227);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>

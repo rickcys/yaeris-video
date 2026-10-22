@@ -1,0 +1,86 @@
+[
+  {
+    "id": "w0",
+    "text": "Before",
+    "start": 0,
+    "end": 0.32
+  },
+  {
+    "id": "w1",
+    "text": "you",
+    "start": 0.32,
+    "end": 0.4
+  },
+  {
+    "id": "w2",
+    "text": "call",
+    "start": 0.4,
+    "end": 0.64
+  },
+  {
+    "id": "w3",
+    "text": "a",
+    "start": 0.64,
+    "end": 0.72
+  },
+  {
+    "id": "w4",
+    "text": "host",
+    "start": 0.72,
+    "end": 1.12
+  },
+  {
+    "id": "w5",
+    "text": "easy,",
+    "start": 1.12,
+    "end": 1.76
+  },
+  {
+    "id": "w6",
+    "text": "ask",
+    "start": 1.76,
+    "end": 2.16
+  },
+  {
+    "id": "w7",
+    "text": "what",
+    "start": 2.16,
+    "end": 2.4
+  },
+  {
+    "id": "w8",
+    "text": "happens",
+    "start": 2.4,
+    "end": 2.8
+  },
+  {
+    "id": "w9",
+    "text": "the",
+    "start": 2.8,
+    "end": 2.88
+  },
+  {
+    "id": "w10",
+    "text": "week",
+    "start": 2.88,
+    "end": 3.28
+  },
+  {
+    "id": "w11",
+    "text": "something",
+    "start": 3.28,
+    "end": 3.68
+  },
+  {
+    "id": "w12",
+    "text": "actually",
+    "start": 3.68,
+    "end": 4
+  },
+  {
+    "id": "w13",
+    "text": "breaks.",
+    "start": 4,
+    "end": 4.48
+  }
+]

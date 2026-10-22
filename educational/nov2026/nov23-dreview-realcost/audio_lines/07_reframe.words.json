@@ -1,0 +1,128 @@
+[
+  {
+    "id": "w0",
+    "text": "That",
+    "start": 0,
+    "end": 0.32
+  },
+  {
+    "id": "w1",
+    "text": "zero",
+    "start": 0.32,
+    "end": 0.8
+  },
+  {
+    "id": "w2",
+    "text": "isn't",
+    "start": 0.8,
+    "end": 1.04
+  },
+  {
+    "id": "w3",
+    "text": "a",
+    "start": 1.04,
+    "end": 1.2
+  },
+  {
+    "id": "w4",
+    "text": "limited",
+    "start": 1.2,
+    "end": 1.68
+  },
+  {
+    "id": "w5",
+    "text": "time",
+    "start": 1.68,
+    "end": 2
+  },
+  {
+    "id": "w6",
+    "text": "trial.",
+    "start": 2,
+    "end": 2.72
+  },
+  {
+    "id": "w7",
+    "text": "It's",
+    "start": 2.72,
+    "end": 3.04
+  },
+  {
+    "id": "w8",
+    "text": "the",
+    "start": 3.04,
+    "end": 3.2
+  },
+  {
+    "id": "w9",
+    "text": "actual,",
+    "start": 3.2,
+    "end": 3.84
+  },
+  {
+    "id": "w10",
+    "text": "ongoing",
+    "start": 3.84,
+    "end": 4.48
+  },
+  {
+    "id": "w11",
+    "text": "price",
+    "start": 4.48,
+    "end": 4.88
+  },
+  {
+    "id": "w12",
+    "text": "for",
+    "start": 4.96,
+    "end": 5.2
+  },
+  {
+    "id": "w13",
+    "text": "as",
+    "start": 5.2,
+    "end": 5.36
+  },
+  {
+    "id": "w14",
+    "text": "many",
+    "start": 5.36,
+    "end": 5.6
+  },
+  {
+    "id": "w15",
+    "text": "tools",
+    "start": 5.6,
+    "end": 6
+  },
+  {
+    "id": "w16",
+    "text": "as",
+    "start": 6,
+    "end": 6.16
+  },
+  {
+    "id": "w17",
+    "text": "you",
+    "start": 6.16,
+    "end": 6.32
+  },
+  {
+    "id": "w18",
+    "text": "want",
+    "start": 6.32,
+    "end": 6.48
+  },
+  {
+    "id": "w19",
+    "text": "to",
+    "start": 6.48,
+    "end": 6.64
+  },
+  {
+    "id": "w20",
+    "text": "list.",
+    "start": 6.64,
+    "end": 6.96
+  }
+]

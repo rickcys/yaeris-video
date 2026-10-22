@@ -1,0 +1,98 @@
+[
+  {
+    "id": "w0",
+    "text": "Same",
+    "start": 0,
+    "end": 0.4
+  },
+  {
+    "id": "w1",
+    "text": "scraping",
+    "start": 0.4,
+    "end": 0.88
+  },
+  {
+    "id": "w2",
+    "text": "project,",
+    "start": 0.88,
+    "end": 1.6
+  },
+  {
+    "id": "w3",
+    "text": "same",
+    "start": 1.6,
+    "end": 1.84
+  },
+  {
+    "id": "w4",
+    "text": "end",
+    "start": 1.84,
+    "end": 2
+  },
+  {
+    "id": "w5",
+    "text": "goal,",
+    "start": 2.16,
+    "end": 2.88
+  },
+  {
+    "id": "w6",
+    "text": "wildly",
+    "start": 2.88,
+    "end": 3.36
+  },
+  {
+    "id": "w7",
+    "text": "different",
+    "start": 3.36,
+    "end": 3.68
+  },
+  {
+    "id": "w8",
+    "text": "amount",
+    "start": 3.68,
+    "end": 4
+  },
+  {
+    "id": "w9",
+    "text": "of",
+    "start": 4,
+    "end": 4.16
+  },
+  {
+    "id": "w10",
+    "text": "time",
+    "start": 4.16,
+    "end": 4.4
+  },
+  {
+    "id": "w11",
+    "text": "spent",
+    "start": 4.4,
+    "end": 4.72
+  },
+  {
+    "id": "w12",
+    "text": "just",
+    "start": 4.72,
+    "end": 4.96
+  },
+  {
+    "id": "w13",
+    "text": "keeping",
+    "start": 4.96,
+    "end": 5.28
+  },
+  {
+    "id": "w14",
+    "text": "it",
+    "start": 5.28,
+    "end": 5.44
+  },
+  {
+    "id": "w15",
+    "text": "alive.",
+    "start": 5.44,
+    "end": 5.92
+  }
+]

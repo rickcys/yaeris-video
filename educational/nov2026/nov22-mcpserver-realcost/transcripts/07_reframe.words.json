@@ -1,0 +1,116 @@
+[
+  {
+    "id": "w0",
+    "text": "The",
+    "start": 0,
+    "end": 0.24
+  },
+  {
+    "id": "w1",
+    "text": "real",
+    "start": 0.24,
+    "end": 0.48
+  },
+  {
+    "id": "w2",
+    "text": "cost",
+    "start": 0.48,
+    "end": 0.8
+  },
+  {
+    "id": "w3",
+    "text": "driver",
+    "start": 0.88,
+    "end": 1.36
+  },
+  {
+    "id": "w4",
+    "text": "here",
+    "start": 1.36,
+    "end": 1.68
+  },
+  {
+    "id": "w5",
+    "text": "was",
+    "start": 1.68,
+    "end": 1.92
+  },
+  {
+    "id": "w6",
+    "text": "never",
+    "start": 1.92,
+    "end": 2.32
+  },
+  {
+    "id": "w7",
+    "text": "usage.",
+    "start": 2.32,
+    "end": 3.04
+  },
+  {
+    "id": "w8",
+    "text": "It's",
+    "start": 3.04,
+    "end": 3.36
+  },
+  {
+    "id": "w9",
+    "text": "how",
+    "start": 3.36,
+    "end": 3.52
+  },
+  {
+    "id": "w10",
+    "text": "many",
+    "start": 3.52,
+    "end": 3.76
+  },
+  {
+    "id": "w11",
+    "text": "separate",
+    "start": 3.76,
+    "end": 4.16
+  },
+  {
+    "id": "w12",
+    "text": "connections",
+    "start": 4.16,
+    "end": 4.72
+  },
+  {
+    "id": "w13",
+    "text": "you're",
+    "start": 4.72,
+    "end": 4.96
+  },
+  {
+    "id": "w14",
+    "text": "maintaining",
+    "start": 4.96,
+    "end": 5.52
+  },
+  {
+    "id": "w15",
+    "text": "in",
+    "start": 5.52,
+    "end": 5.68
+  },
+  {
+    "id": "w16",
+    "text": "the",
+    "start": 5.68,
+    "end": 5.84
+  },
+  {
+    "id": "w17",
+    "text": "first",
+    "start": 5.84,
+    "end": 6.08
+  },
+  {
+    "id": "w18",
+    "text": "place.",
+    "start": 6.08,
+    "end": 6.4
+  }
+]

@@ -1,0 +1,302 @@
+[
+  {
+    "id": "w0",
+    "text": "This",
+    "start": 0,
+    "end": 0.16
+  },
+  {
+    "id": "w1",
+    "text": "is",
+    "start": 0.16,
+    "end": 0.32
+  },
+  {
+    "id": "w2",
+    "text": "the",
+    "start": 0.32,
+    "end": 0.4
+  },
+  {
+    "id": "w3",
+    "text": "category",
+    "start": 0.4,
+    "end": 1.04
+  },
+  {
+    "id": "w4",
+    "text": "Launchpad",
+    "start": 1.04,
+    "end": 1.6
+  },
+  {
+    "id": "w5",
+    "text": "is",
+    "start": 1.76,
+    "end": 1.92
+  },
+  {
+    "id": "w6",
+    "text": "built",
+    "start": 1.92,
+    "end": 2.08
+  },
+  {
+    "id": "w7",
+    "text": "in",
+    "start": 2.08,
+    "end": 2.24
+  },
+  {
+    "id": "w8",
+    "text": "to",
+    "start": 2.24,
+    "end": 2.4
+  },
+  {
+    "id": "w9",
+    "text": "connect",
+    "start": 2.4,
+    "end": 2.72
+  },
+  {
+    "id": "w10",
+    "text": "your",
+    "start": 2.72,
+    "end": 2.8
+  },
+  {
+    "id": "w11",
+    "text": "Git",
+    "start": 2.88,
+    "end": 3.2
+  },
+  {
+    "id": "w12",
+    "text": "repo,",
+    "start": 3.2,
+    "end": 3.84
+  },
+  {
+    "id": "w13",
+    "text": "bring",
+    "start": 3.84,
+    "end": 4.16
+  },
+  {
+    "id": "w14",
+    "text": "your",
+    "start": 4.16,
+    "end": 4.32
+  },
+  {
+    "id": "w15",
+    "text": "own",
+    "start": 4.32,
+    "end": 4.48
+  },
+  {
+    "id": "w16",
+    "text": "database,",
+    "start": 4.48,
+    "end": 5.36
+  },
+  {
+    "id": "w17",
+    "text": "get",
+    "start": 5.36,
+    "end": 5.52
+  },
+  {
+    "id": "w18",
+    "text": "a",
+    "start": 5.52,
+    "end": 5.68
+  },
+  {
+    "id": "w19",
+    "text": "live",
+    "start": 5.68,
+    "end": 6
+  },
+  {
+    "id": "w20",
+    "text": "preview",
+    "start": 6,
+    "end": 6.56
+  },
+  {
+    "id": "w21",
+    "text": "URL",
+    "start": 6.56,
+    "end": 7.2
+  },
+  {
+    "id": "w22",
+    "text": "on",
+    "start": 7.2,
+    "end": 7.36
+  },
+  {
+    "id": "w23",
+    "text": "every",
+    "start": 7.36,
+    "end": 7.68
+  },
+  {
+    "id": "w24",
+    "text": "branch,",
+    "start": 7.68,
+    "end": 8.32
+  },
+  {
+    "id": "w25",
+    "text": "and",
+    "start": 8.32,
+    "end": 8.56
+  },
+  {
+    "id": "w26",
+    "text": "roll",
+    "start": 8.56,
+    "end": 8.96
+  },
+  {
+    "id": "w27",
+    "text": "back",
+    "start": 8.96,
+    "end": 9.2
+  },
+  {
+    "id": "w28",
+    "text": "instantly",
+    "start": 9.2,
+    "end": 9.76
+  },
+  {
+    "id": "w29",
+    "text": "if",
+    "start": 9.76,
+    "end": 10
+  },
+  {
+    "id": "w30",
+    "text": "something",
+    "start": 10,
+    "end": 10.4
+  },
+  {
+    "id": "w31",
+    "text": "breaks.",
+    "start": 10.4,
+    "end": 11.2
+  },
+  {
+    "id": "w32",
+    "text": "The",
+    "start": 11.2,
+    "end": 11.36
+  },
+  {
+    "id": "w33",
+    "text": "free",
+    "start": 11.36,
+    "end": 11.76
+  },
+  {
+    "id": "w34",
+    "text": "personal",
+    "start": 11.76,
+    "end": 12.24
+  },
+  {
+    "id": "w35",
+    "text": "plan",
+    "start": 12.24,
+    "end": 12.4
+  },
+  {
+    "id": "w36",
+    "text": "alone",
+    "start": 12.56,
+    "end": 12.96
+  },
+  {
+    "id": "w37",
+    "text": "covers",
+    "start": 12.96,
+    "end": 13.36
+  },
+  {
+    "id": "w38",
+    "text": "most",
+    "start": 13.36,
+    "end": 13.68
+  },
+  {
+    "id": "w39",
+    "text": "small",
+    "start": 13.68,
+    "end": 14
+  },
+  {
+    "id": "w40",
+    "text": "projects,",
+    "start": 14,
+    "end": 14.8
+  },
+  {
+    "id": "w41",
+    "text": "100",
+    "start": 14.8,
+    "end": 15.28
+  },
+  {
+    "id": "w42",
+    "text": "build",
+    "start": 15.28,
+    "end": 15.68
+  },
+  {
+    "id": "w43",
+    "text": "minutes",
+    "start": 15.68,
+    "end": 15.92
+  },
+  {
+    "id": "w44",
+    "text": "and",
+    "start": 16,
+    "end": 16.16
+  },
+  {
+    "id": "w45",
+    "text": "10",
+    "start": 16.16,
+    "end": 16.4
+  },
+  {
+    "id": "w46",
+    "text": "gigabytes,",
+    "start": 16.4,
+    "end": 17.2
+  },
+  {
+    "id": "w47",
+    "text": "no",
+    "start": 17.2,
+    "end": 17.44
+  },
+  {
+    "id": "w48",
+    "text": "card",
+    "start": 17.44,
+    "end": 17.84
+  },
+  {
+    "id": "w49",
+    "text": "required.",
+    "start": 17.84,
+    "end": 18.32
+  }
+]
